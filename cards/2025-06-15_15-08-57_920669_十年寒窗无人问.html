@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.22);
+            max-width: 100%;
+            width: 800px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .svg-container {
+            margin-bottom: 24px;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+            margin-top: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="svg-container">
+            <svg style="overflow: visible;" viewBox="0 0 400 720" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect fill="#f8f3e9" rx="10" ry="10"/>
+  <rect x="30" y="30" fill="#ffffff" rx="5" ry="5" stroke="#e0d6cc" stroke-width="1"/>
+  
+  <!-- 标题 -->
+  <text x="200" y="70" font-family="楷体" font-size="28" fill="#333333" text-anchor="middle" font-weight="bold">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="50" y1="90" x2="350" y2="90" stroke="#e0d6cc" stroke-width="1" stroke-dasharray="5,3"/>
+  
+  <!-- 原词 -->
+  <text x="200" y="130" font-family="明朝体" font-size="22" fill="#555555" text-anchor="middle">十年寒窗无人问</text>
+  <text x="200" y="155" font-family="Times New Roman" font-size="14" fill="#777777" text-anchor="middle">Ten years of cold window, no one asks</text>
+  <text x="200" y="175" font-family="MS Mincho" font-size="14" fill="#777777" text-anchor="middle">十年の窓辺に問う人なし</text>
+  
+  <!-- 解释 - 调整 foreignObject 高度以避免文本裁剪，并调整后续元素位置 -->
+  <foreignObject x="50" y="200">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Noto Serif CJK SC', serif; font-size: 16px; color: #333333; line-height: 1.6; text-align: left;">
+      "十年寒窗无人问"——这句话是学渣们的精神鸦片，学霸们的自我安慰剂。它美化了一种可悲的孤独，仿佛把自己封闭在与世界脱节的小盒子里是种美德。
+      <br/><br/>
+      当代社会把"寒窗"浪漫化，却忘了真正的学习应该是火热的探索，而非冰冷的折磨。这句话本质上是一种自我牺牲的炫耀，好像只有被忽视才能证明你学习够刻苦。
+      <br/><br/>
+      真正的智者从不会将自己与世界割裂，而是在生活的温度中寻找知识的火花。所谓"无人问"，不过是对社交能力缺失的委婉说法罢了。
+    </div>
+  </foreignObject>
+  
+  <!-- 线条图 - 整体下移 120px -->
+  <line x1="80" y1="570" x2="320" y2="570" stroke="#d3c5aa" stroke-width="1"/>
+  <circle cx="130" cy="570" r="5" fill="#e07a5f"/>
+  <text x="130" y="590" font-family="微软雅黑" font-size="12" fill="#666666" text-anchor="middle">自我孤立</text>
+  <circle cx="200" cy="570" r="5" fill="#e07a5f"/>
+  <text x="200" y="590" font-family="微软雅黑" font-size="12" fill="#666666" text-anchor="middle">苦学迷思</text>
+  <circle cx="270" cy="570" r="5" fill="#e07a5f"/>
+  <text x="270" y="590" font-family="微软雅黑" font-size="12" fill="#666666" text-anchor="middle">价值焦虑</text>
+  
+  <!-- 极简总结 - 整体下移 120px -->
+  <rect x="50" y="620" fill="#f5efe6" rx="5" ry="5"/>
+  <text x="200" y="650" font-family="黑体" font-size="16" fill="#555555" text-anchor="middle" font-style="italic">把社交无能包装成学术献身</text>
+  
+  <!-- 装饰图案 - 调整底部图案位置 -->
+  <polygon points="50,30 70,20 90,30" fill="none" stroke="#d3c5aa" stroke-width="1"/>
+  <circle cx="350" cy="700" r="10" fill="none" stroke="#d3c5aa" stroke-width="1"/>
+</svg>
+        </div>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet</p>
+        </footer>
+    </div>
+</body>
+</html>
