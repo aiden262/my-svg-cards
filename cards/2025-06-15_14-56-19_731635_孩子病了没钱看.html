@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人间苦 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.22);
+            max-width: 100%;
+            width: 800px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .svg-container {
+            margin-bottom: 24px;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+            margin-top: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="svg-container">
+            <svg style="overflow: visible;" width="480" height="840" viewBox="0 0 480 840" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @font-face {
+      font-family: 'KingHwa_OldSong';
+      src: local('KingHwa_OldSong');
+    }
+    .title { font: bold 28px 'KingHwa_OldSong', serif; fill: #4a4a4a; }
+    .divider { stroke: #8c7b73; stroke-width: 1; }
+    .input { font: 20px 'KingHwa_OldSong', serif; fill: #5a5a5a; }
+    .response { font: 18px 'KingHwa_OldSong', serif; fill: #6e645a; }
+  </style>
+  
+  <!-- 背景 -->
+  <rect width="100%" height="100%" fill="#f4f1ed" />
+  
+  <!-- 标题 -->
+  <text x="40" y="60" class="title">人间苦</text>
+  
+  <!-- 分隔线 -->
+  <line x1="40" y1="75" x2="440" y2="75" class="divider" />
+  
+  <!-- 用户输入 -->
+  <text x="40" y="110" class="input">孩子病了，没钱看。</text>
+  
+  <!-- 抽象意象 -->
+  <g transform="translate(240, 290)">
+    <line x1="-80" y1="0" x2="80" y2="0" stroke="#8a7472" stroke-width="1" />
+    <circle cx="0" cy="-40" r="30" fill="none" stroke="#b5a99c" stroke-width="1" />
+    <line x1="0" y1="-10" x2="0" y2="60" stroke="#8a7472" stroke-width="1" />
+    <line x1="-40" y1="50" x2="40" y2="50" stroke="#766c62" stroke-width="1.5" stroke-dasharray="5,3" />
+  </g>
+  
+  <!-- 响应文本 -->
+  <!-- 调整 foreignObject 的高度以确保所有文本内容都能完整显示，并相应调整 SVG 的整体高度和 viewBox -->
+  <foreignObject x="40" y="380" width="400" height="440">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'KingHwa_OldSong', serif; font-size: 18px; line-height: 1.6; color: #6e645a; text-align: left;">
+      老王听见孩子又咳了一声，沉闷的，像破旧风箱挤出的最后一口气。
+      <br/><br/>
+      屋角的白酒瓶子空了，借钱的亲戚不接电话了。医院的台阶，他数过，一共二十七级，每一级都像座山。
+      <br/><br/>
+      孩子额头烫得像灶台上的铁锅。老王掐了掐手指，算了算，卖了那只老母鸡，够半瓶药的钱。骨头还能熬汤。
+      <br/><br/>
+      窗外电线上的麻雀叫着，多自在的东西，不用交电费，不用看病。老王看了看自己粗糙的手，指甲里嵌着的泥再也洗不掉了，就像命里刻的字。
+    </div>
+  </foreignObject>
+</svg>
+        </div>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 人间苦 | 模型: anthropic/claude-3.7-sonnet</p>
+        </footer>
+    </div>
+</body>
+</html>
