@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信达雅翻译 by AI</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 95%;
+            width: 800px;
+            text-align: center;
+        }
+        svg {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg width="450" height="800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 800">
+  <defs>
+    <pattern id="paperTexture" patternUnits="userSpaceOnUse" width="100" height="100">
+      <rect width="100" height="100" fill="#f8f6e9"/>
+      <path d="M0 0L100 100M100 0L0 100" stroke="#ebe7d5" stroke-width="0.5" stroke-opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="450" height="800" fill="url(#paperTexture)"/>
+
+  <g font-family="STKaiti, Apple LiSung, SimSun, serif">
+    <!-- 原文 -->
+    <text x="30" y="50" font-size="24" fill="#333333" font-weight="bold">原文</text>
+    <text x="30" y="90" font-size="20" fill="#333333">You are my sunshine</text>
+    
+    <!-- 信 -->
+    <text x="30" y="150" font-size="24" fill="#4a7c59" font-weight="bold">信</text>
+    <text x="30" y="190" font-size="20" fill="#4a7c59">你是我的阳光</text>
+    <text x="30" y="225" font-size="16" fill="#65936b" font-style="italic">
+      直接对应词义翻译，保留原意
+    </text>
+    
+    <!-- 达 -->
+    <text x="30" y="285" font-size="24" fill="#4a7c59" font-weight="bold">达</text>
+    <text x="30" y="325" font-size="20" fill="#4a7c59">你是我生命中的光亮</text>
+    <text x="30" y="360" font-size="16" fill="#65936b" font-style="italic">
+      <tspan x="30" dy="0">考虑语境，"sunshine"在英文中常用作昵称和</tspan>
+      <tspan x="30" dy="1.2em">表达对方给自己带来的温暖与希望</tspan>
+    </text>
+    
+    <!-- 雅 - 诗经风格 -->
+    <text x="30" y="420" font-size="24" fill="#4a7c59" font-weight="bold">雅 - 诗经风格</text>
+    <text x="30" y="460" font-size="20" fill="#4a7c59">
+      <tspan x="30" dy="0">汝为吾光兮</tspan>
+      <tspan x="30" dy="1.6em">如日之照兮</tspan>
+      <tspan x="30" dy="1.6em">吾心悦兮</tspan>
+      <tspan x="30" dy="1.6em">汝之所在兮</tspan>
+    </text>
+    <text x="30" y="620" font-size="16" fill="#65936b" font-style="italic">
+      <tspan x="30" dy="0">以诗经风格表达，采用短句、叠词、兮字结构，</tspan>
+      <tspan x="30" dy="1.2em">传达对对方如阳光般温暖存在的珍视之情</tspan>
+    </text>
+  </g>
+</svg>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 信达雅翻译 | 模型: anthropic/claude-3.7-sonnet</p>
+            <p>灵感来源 <a href="https://github.com/lijigang/prompts" target="_blank">李继刚的提示词工程</a></p>
+        </footer>
+    </div>
+</body>
+</html>
