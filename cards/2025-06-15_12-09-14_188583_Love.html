@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单词卡片 by AI</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 95%;
+            width: 800px;
+            text-align: center;
+        }
+        svg {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg width="700" height="850" viewBox="0 0 700 850" xmlns="http://www.w3.org/2000/svg">
+  <!-- 卡片背景和边框 -->
+  <rect x="20" y="20" width="660" height="810" fill="#f9f9f9" stroke="#ccc" stroke-width="2" rx="10" ry="10"/>
+
+  <!-- 标题 -->
+  <text x="50" y="70" font-family="SimHei, sans-serif" font-size="32" font-weight="bold" fill="#333">单词记忆卡片: LOVE</text>
+
+  <!-- 词根词源 -->
+  <text x="50" y="120" font-family="SimHei, sans-serif" font-size="22" font-weight="bold" fill="#555">词根词源</text>
+  <text x="60" y="150" font-family="SimSun, sans-serif" font-size="18" fill="#666">
+    <tspan x="60" dy="0">- 来自古英语 lufu (爱，亲爱)</tspan>
+    <tspan x="60" dy="25">- 源自原始日耳曼语 *lubō* (喜爱，渴望)</tspan>
+    <tspan x="60" dy="25">- 印欧语根 *leubh-* (关心，渴望，爱)</tspan>
+  </text>
+
+  <!-- 一句话记忆故事 -->
+  <text x="50" y="270" font-family="SimHei, sans-serif" font-size="22" font-weight="bold" fill="#555">一句话记忆故事</text>
+  <text x="60" y="300" font-family="SimSun, sans-serif" font-size="18" fill="#666">
+    <tspan x="60" dy="0">爱(Love)是心灵的阳光，像温暖的光芒(L)环绕(O)充满活力(V)的情感(E)，</tspan>
+    <tspan x="60" dy="25">让生命绽放。</tspan>
+  </text>
+
+  <!-- 例句 -->
+  <text x="50" y="400" font-family="SimHei, sans-serif" font-size="22" font-weight="bold" fill="#555">例句</text>
+  <text x="60" y="430" font-family="SimSun, sans-serif" font-size="18" fill="#666">
+    <tspan x="60" dy="0">1. "Love is patient, love is kind." - 爱是忍耐的，爱是恩慈的。</tspan>
+    <tspan x="60" dy="25">2. "I love spending time with my family." - 我喜欢与家人共度时光。</tspan>
+    <tspan x="60" dy="25">3. "Her love of music inspired her to become a pianist." - 她对音乐的热爱</tspan>
+    <tspan x="60" dy="25">   激励她成为一名钢琴家。</tspan>
+  </text>
+
+  <!-- 垂直分隔线 -->
+  <line x1="370" y1="100" x2="370" y2="550" stroke="#ccc" stroke-width="1"/>
+
+  <!-- 扩展词汇 (右侧栏) -->
+  <text x="400" y="120" font-family="SimHei, sans-serif" font-size="22" font-weight="bold" fill="#555">扩展词汇</text>
+  <text x="410" y="150" font-family="SimSun, sans-serif" font-size="18" fill="#666">
+    <tspan x="410" dy="0">- lovely (可爱的，美好的)</tspan>
+    <tspan x="410" dy="25">- beloved (心爱的，挚爱的)</tspan>
+    <tspan x="410" dy="25">- lovable (可爱的，讨人喜欢的)</tspan>
+    <tspan x="410" dy="25">- loving (充满爱的，有爱心的)</tspan>
+  </text>
+
+  <!-- 助记视觉呈现 (右侧栏，居中) -->
+  <text x="400" y="300" font-family="SimHei, sans-serif" font-size="22" font-weight="bold" fill="#555">助记视觉呈现</text>
+  <text x="470" y="330" font-family="monospace" font-size="20" fill="#CC0000">
+    <tspan x="470" dy="0">     ♥ L ♥</tspan>
+    <tspan x="470" dy="25">   ♥     ♥</tspan>
+    <tspan x="470" dy="25"> ♥  LOVE  ♥</tspan>
+    <tspan x="470" dy="25">   ♥     ♥</tspan>
+    <tspan x="470" dy="25">     ♥ E ♥</tspan>
+  </text>
+
+  <!-- 水平分隔线 -->
+  <line x1="50" y1="580" x2="650" y2="580" stroke="#ccc" stroke-width="1"/>
+
+  <!-- 总结段落 -->
+  <text x="50" y="620" font-family="SimSun, sans-serif" font-size="16" fill="#666">
+    <tspan x="50" dy="0">这个简单而强大的单词是所有语言中最美丽的概念之一。它既是名词(一种深厚的情感)，</tspan>
+    <tspan x="50" dy="20">也可作为动词(表达深厚的情感)，覆盖了从浪漫之爱到家庭之爱，再到对活动或事物的</tspan>
+    <tspan x="50" dy="20">热爱等多种含义。记住这个单词时，想象它如何连接人与人之间最真挚的情感纽带。</tspan>
+  </text>
+
+  <!-- 底部问题 -->
+  <text x="50" y="720" font-family="SimSun, sans-serif" font-size="16" fill="#888">需要我为您生成另一个词的记忆卡片吗？</text>
+</svg>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 单词卡片 | 模型: anthropic/claude-3.7-sonnet</p>
+            <p>灵感来源 <a href="https://github.com/lijigang/prompts" target="_blank">李继刚的提示词工程</a></p>
+        </footer>
+    </div>
+</body>
+</html>
