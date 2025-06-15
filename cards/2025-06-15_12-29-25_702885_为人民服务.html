@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 95%;
+            width: 800px;
+            text-align: center;
+        }
+        svg {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg width="400" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="400" height="600" fill="#f7f3e9" />
+  <rect x="30" y="30" width="340" height="540" fill="#fcfaf5" stroke="#e0d8c9" stroke-width="1" />
+  
+  <!-- 几何装饰 -->
+  <rect x="30" y="30" width="60" height="60" fill="#e94b35" opacity="0.1" />
+  <rect x="310" y="510" width="60" height="60" fill="#2c3e50" opacity="0.1" />
+  
+  <!-- 标题 -->
+  <text x="200" y="80" font-family="楷体, KaiTi" font-size="28" fill="#333333" text-anchor="middle" font-weight="bold">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="80" y1="100" x2="320" y2="100" stroke="#ccc" stroke-width="1" />
+  
+  <!-- 词汇 -->
+  <text x="200" y="140" font-family="宋体, SimSun" font-size="24" fill="#2c3e50" text-anchor="middle">为人民服务</text>
+  <text x="200" y="165" font-family="Times New Roman" font-size="14" fill="#777777" text-anchor="middle">Serve the People</text>
+  <text x="200" y="185" font-family="MS Mincho" font-size="14" fill="#777777" text-anchor="middle">人民に奉仕する</text>
+  
+  <!-- 解释 (原 foreignObject 内容转换为 text/tspan，并调整字体大小和行高以适应空间) -->
+  <text x="50" y="222" font-family="宋体, SimSun" font-size="12" fill="#444" text-anchor="start">
+    <tspan x="50" dy="0">一句被反复念诵到失去意义的咒语。</tspan>
+    <tspan x="50" dy="19.2">当权者挥舞的大旗，让"人民"永远站在道德高地，</tspan>
+    <tspan x="50" dy="19.2">而"服务"二字则巧妙地暗示了层级关系。</tspan>
+    <tspan x="50" dy="19.2">问题是：谁是人民？谁在服务？</tspan>
+    <tspan x="50" dy="19.2">权力的傀儡师总是躲在"人民"幕后拉线，</tspan>
+    <tspan x="50" dy="19.2">而"服务"往往变成了统治的委婉说法。</tspan>
+    <tspan x="50" dy="19.2">这是一个美丽的谎言——用高尚词藻包装的权力游戏，</tspan>
+    <tspan x="50" dy="19.2">让牺牲者心甘情愿地走向祭坛，</tspan>
+    <tspan x="50" dy="19.2">还要满怀感激。</tspan>
+  </text>
+  
+  <!-- 线条图 -->
+  <line x1="100" y1="460" x2="300" y2="460" stroke="#666" stroke-width="1" />
+  <circle cx="150" cy="460" r="5" fill="#e94b35" />
+  <text x="150" y="480" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">理想</text>
+  <circle cx="250" cy="460" r="5" fill="#2c3e50" />
+  <text x="250" y="480" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">现实</text>
+  <path d="M150,460 Q200,420 250,460" stroke="#999" stroke-width="1" fill="none" stroke-dasharray="3,3" />
+  
+  <!-- 极简总结 -->
+  <text x="200" y="520" font-family="黑体, SimHei" font-size="16" fill="#2c3e50" text-anchor="middle" font-style="italic">"道德绑架的最高境界是</text>
+  <text x="200" y="545" font-family="黑体, SimHei" font-size="16" fill="#2c3e50" text-anchor="middle" font-style="italic">让剥削者成为道德范本"</text>
+</svg>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet</p>
+            <p>灵感来源 <a href="https://github.com/lijigang/prompts" target="_blank">李继刚的提示词工程</a></p>
+        </footer>
+    </div>
+</body>
+</html>
