@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.22);
+            max-width: 100%;
+            width: 800px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .svg-container {
+            margin-bottom: 24px;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+            margin-top: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+  <rect width="100%" height="100%" fill="#1E1E1E" rx="10" ry="10"/>
+  <rect x="20" y="40" width="360" height="520" fill="#282828" rx="5" ry="5" stroke="#505050" stroke-width="1"/>
+  
+  <!-- 标题 -->
+  <text x="200" y="80" font-family="'Noto Serif SC', serif" font-size="32" fill="#E0E0E0" text-anchor="middle" font-weight="bold">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="60" y1="100" x2="340" y2="100" stroke="#505050" stroke-width="2"/>
+  
+  <!-- 词汇 -->
+  <text x="200" y="140" font-family="'Noto Serif SC', serif" font-size="28" fill="#B0B0B0" text-anchor="middle">人民医院</text>
+  <text x="200" y="165" font-family="'Noto Serif SC', serif" font-size="16" fill="#909090" text-anchor="middle">People's Hospital</text>
+  <text x="200" y="185" font-family="'Noto Serif SC', serif" font-size="16" fill="#909090" text-anchor="middle">人民病院</text>
+  
+  <!-- 解释 -->
+  <text font-family="'Noto Serif SC', serif" font-size="18" fill="#C0C0C0">
+    <tspan x="40" y="230">一座标榜"人民"二字却常让人民</tspan>
+    <tspan x="40" y="260">望而却步的建筑群。挂号大厅像</tspan>
+    <tspan x="40" y="290">春运车站，专家号如彩票中奖，</tspan>
+    <tspan x="40" y="320">走廊上病人如沙丁鱼罐头。医患</tspan>
+    <tspan x="40" y="350">关系像一场长期冷战，医保报销</tspan>
+    <tspan x="40" y="380">是一场数学马拉松。</tspan>
+  </text>
+  
+  <!-- 线条图 -->
+  <line x1="60" y1="420" x2="340" y2="420" stroke="#505050" stroke-width="2"/>
+  <circle cx="200" cy="470" r="50" fill="none" stroke="#707070" stroke-width="1.5"/>
+  <text x="200" y="475" font-family="'Noto Serif SC', serif" font-size="14" fill="#A0A0A0" text-anchor="middle">人的名义，</text>
+  <text x="200" y="495" font-family="'Noto Serif SC', serif" font-size="14" fill="#A0A0A0" text-anchor="middle">民的困境</text>
+  
+  <!-- 极简总结 -->
+  <text x="200" y="550" font-family="'Noto Serif SC', serif" font-size="16" fill="#B0B0B0" text-anchor="middle" font-style="italic">
+    "人民"是招牌，"医院"是生意
+  </text>
+</svg>
+        </div>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet</p>
+        </footer>
+    </div>
+</body>
+</html>
