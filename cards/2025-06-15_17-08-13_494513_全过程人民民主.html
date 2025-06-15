@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.22);
+            max-width: 100%;
+            width: 800px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .svg-container {
+            margin-bottom: 24px;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+            margin-top: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+    <!-- 背景 - 蒙德里安风格 -->
+    <rect width="100%" height="100%" fill="#1E1E1E" />
+    <rect x="20" y="380" width="140" height="80" fill="#2A2A20" />
+    <rect x="240" y="460" width="140" height="120" fill="#20201A" />
+    
+    <!-- 标题 -->
+    <text x="200" y="60" font-family="'Noto Serif SC', serif" font-size="28" fill="#E0E0E0" text-anchor="middle" font-weight="bold">汉语新解</text>
+    
+    <!-- 分隔线 -->
+    <line x1="80" y1="80" x2="320" y2="80" stroke="#A0A0A0" stroke-width="1.5" />
+    
+    <!-- 词语 -->
+    <text x="200" y="120" font-family="'Noto Serif SC', serif" font-size="24" fill="#F0F0F0" text-anchor="middle">全过程人民民主</text>
+    <text x="200" y="145" font-family="'Noto Serif SC', serif" font-size="14" fill="#B0B0B0" text-anchor="middle">Whole-process people's democracy</text>
+    <text x="200" y="165" font-family="'Noto Serif SC', serif" font-size="14" fill="#B0B0B0" text-anchor="middle">全過程人民民主</text>
+    
+    <!-- 解释 -->
+    <foreignObject x="40" y="200" width="320" height="200">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #E0E0E0; line-height: 1.5;">
+            这是一个被精心设计的百叶窗，看似透光但实际阻隔视线的语言结构。"全过程"暗示没有人被排除，"人民"暗示每个人都参与，"民主"承诺权力归于大众。然而就像一场精心安排的旅行团观光，你能看到的只是预先规划好的风景，能说的只是导游手册上的赞美。你以为自己是旅行者，其实不过是剧本里的临时演员。
+        </div>
+    </foreignObject>
+    
+    <!-- 线条图 - 简化民主图示 -->
+    <circle cx="120" cy="450" r="30" fill="none" stroke="#C0C0C0" stroke-width="1.5" />
+    <polyline points="150,450 230,450" stroke="#C0C0C0" stroke-width="1.5" fill="none" />
+    <rect x="230" y="430" width="40" height="40" fill="none" stroke="#C0C0C0" stroke-width="1.5" />
+    <path d="M270,450 C300,450 300,420 330,420" stroke="#C0C0C0" stroke-width="1.5" fill="none" />
+    <circle cx="330" cy="420" r="10" fill="#C0C0C0" />
+    <path d="M270,450 C300,450 300,480 330,480" stroke="#C0C0C0" stroke-width="1.5" fill="none" stroke-dasharray="5,3" />
+    <circle cx="330" cy="480" r="10" fill="none" stroke="#C0C0C0" stroke-width="1.5" />
+    
+    <!-- 极简总结 -->
+    <text x="200" y="550" font-family="'Noto Serif SC', serif" font-size="16" fill="#F0F0F0" text-anchor="middle" font-style="italic">
+        "民主的橱窗里，摆着人民的塑像"
+    </text>
+</svg>
+        </div>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet</p>
+        </footer>
+    </div>
+</body>
+</html>
