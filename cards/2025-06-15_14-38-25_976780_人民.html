@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        :root {
+            --md-primary: #6200ee;
+            --md-primary-variant: #3700b3;
+            --md-secondary: #03dac6;
+            --md-background: #121212;
+            --md-surface: #1e1e1e;
+            --md-error: #cf6679;
+            --md-on-primary: #ffffff;
+            --md-on-secondary: #000000;
+            --md-on-background: #ffffff;
+            --md-on-surface: #ffffff;
+            --md-on-error: #000000;
+            --md-elevation-1: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+            --md-elevation-2: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+            --md-elevation-3: 0 3px 3px -2px rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 1px 8px 0 rgba(0,0,0,.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--md-background);
+            color: var(--md-on-background);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+        }
+
+        .header {
+            background-color: var(--md-surface);
+            padding: 16px;
+            box-shadow: var(--md-elevation-2);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header h1 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin: 0;
+            color: var(--md-on-surface);
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 95%;
+            margin: 84px auto 24px;
+            padding: 24px;
+            background-color: var(--md-surface);
+            border-radius: 8px;
+            box-shadow: var(--md-elevation-1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow: var(--md-elevation-3);
+        }
+
+        .svg-container {
+            background-color: var(--md-background);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+            box-shadow: var(--md-elevation-1);
+            transition: all 0.3s ease;
+        }
+
+        .svg-container:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--md-elevation-3);
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 16px;
+            background-color: var(--md-surface);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+            text-align: center;
+            box-shadow: var(--md-elevation-1);
+        }
+
+        footer span {
+            display: inline-flex;
+            align-items: center;
+            margin: 0 8px;
+        }
+
+        footer .material-icons {
+            font-size: 1rem;
+            margin-right: 4px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+                margin: 72px 0 0;
+                padding: 16px;
+                border-radius: 0;
+            }
+
+            .header h1 {
+                font-size: 1.1rem;
+            }
+
+            .svg-container {
+                padding: 16px;
+                margin: 16px 0;
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --md-background: #fafafa;
+                --md-surface: #ffffff;
+                --md-on-background: #000000;
+                --md-on-surface: #000000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>汉语新解</h1>
+    </header>
+
+    <div class="container">
+        <div class="svg-container">
+            <svg width="400" height="700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8e8e8" />
+      <stop offset="100%" stop-color="#f5f5f5" />
+    </linearGradient>
+    <pattern id="pattern1" patternUnits="userSpaceOnUse" width="20" height="20">
+      <path d="M0,10 L20,10" stroke="#ddd" stroke-width="1" />
+      <path d="M10,0 L10,20" stroke="#ddd" stroke-width="1" />
+    </pattern>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="400" height="700" fill="url(#bg)" />
+  <rect x="20" y="20" width="360" height="660" fill="white" stroke="#aaa" stroke-width="1" />
+  
+  <!-- 标题 -->
+  <text x="200" y="60" font-family="SimKai, 楷体" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="50" y1="80" x2="350" y2="80" stroke="#888" stroke-width="1" />
+  
+  <!-- 原词 -->
+  <text x="200" y="120" font-family="SimHei, 黑体" font-size="32" fill="#444" text-anchor="middle">人民</text>
+  <text x="200" y="150" font-family="Times New Roman" font-size="16" fill="#666" text-anchor="middle">People</text>
+  <text x="200" y="175" font-family="MS Gothic" font-size="16" fill="#666" text-anchor="middle">人民 (じんみん)</text>
+  
+  <!-- 解释 (原 foreignObject 内容已转换为 SVG text/tspan) -->
+  <text x="40" y="200" font-family="SimSun, 宋体" font-size="18" fill="#333">
+    <tspan x="40" dy="0">一个被神圣化的抽象概念，</tspan>
+    <tspan x="40" dy="27">用来为各种政治决策提供合法性。</tspan>
+    <tspan x="40" dy="27">当你听到"人民的名义"，</tspan>
+    <tspan x="40" dy="27">请记住：没人征求过你的意见。</tspan>
+    <tspan x="40" dy="27">那些高喊"为人民服务"的人，</tspan>
+    <tspan x="40" dy="27">往往最擅长决定谁不配做"人民"。</tspan>
+    <tspan x="40" dy="27">这个词就像一面镜子，照出的</tspan>
+    <tspan x="40" dy="27">不是你我的面孔，而是权力想</tspan>
+    <tspan x="40" dy="27">让你看到的样子。在实际操作中，</tspan>
+    <tspan x="40" dy="27">"人民"的边界总是模糊的，</tspan>
+    <tspan x="40" dy="27">可以随时重新定义，以确保权力</tspan>
+    <tspan x="40" dy="27">永远站在"人民"这一边。</tspan>
+  </text>
+  
+  <!-- 批判图形 (位置已调整以适应文本高度变化) -->
+  <circle cx="110" cy="564" r="40" fill="none" stroke="#555" stroke-width="2" />
+  <circle cx="200" cy="564" r="40" fill="none" stroke="#555" stroke-width="2" />
+  <circle cx="290" cy="564" r="40" fill="none" stroke="#555" stroke-width="2" />
+  <line x1="150" y1="564" x2="160" y2="564" stroke="#555" stroke-width="2" />
+  <line x1="240" y1="564" x2="250" y2="564" stroke="#555" stroke-width="2" />
+  <text x="110" y="569" font-family="SimSun, 宋体" font-size="12" fill="#333" text-anchor="middle">权力</text>
+  <text x="200" y="569" font-family="SimSun, 宋体" font-size="12" fill="#333" text-anchor="middle">定义</text>
+  <text x="290" y="569" font-family="SimSun, 宋体" font-size="12" fill="#333" text-anchor="middle">人民</text>
+  
+  <!-- 总结 (位置已调整以适应文本高度变化) -->
+  <text x="200" y="634" font-family="SimHei, 黑体" font-size="16" fill="#444" text-anchor="middle" font-style="italic">"一个随时可以重新定义的政治工具"</text>
+</svg>
+        </div>
+        <footer>
+            <span><i class="material-icons">brush</i>模式: 汉语新解</span>
+            <span><i class="material-icons">smart_toy</i>模型: anthropic/claude-3.7-sonnet</span>
+        </footer>
+    </div>
+</body>
+</html>
