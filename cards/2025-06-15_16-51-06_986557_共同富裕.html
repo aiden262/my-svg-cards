@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.22);
+            max-width: 100%;
+            width: 800px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .svg-container {
+            margin-bottom: 24px;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+            margin-top: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="svg-container">
+            <svg viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f9f0e6" rx="10" ry="10"/>
+  <line x1="40" y1="80" x2="360" y2="80" stroke="#d3a774" stroke-width="2"/>
+  <line x1="40" y1="520" x2="360" y2="520" stroke="#d3a774" stroke-width="2"/>
+  
+  <text x="200" y="50" fill="#333" font-family="'Noto Serif SC', serif" font-size="28" text-anchor="middle" font-weight="bold">汉语新解</text>
+  
+  <text x="200" y="120" fill="#555" font-family="'Noto Serif SC', serif" font-size="24" text-anchor="middle">共同富裕</text>
+  <text x="200" y="145" fill="#888" font-family="'Noto Serif SC', serif" font-size="14" text-anchor="middle">Common Prosperity</text>
+  <text x="200" y="165" fill="#888" font-family="'Noto Serif SC', serif" font-size="14" text-anchor="middle">共同富裕</text>
+  
+  <text x="40" y="210" fill="#444" font-family="'Noto Serif SC', serif" font-size="18">
+    <tspan x="40" dy="0">一场华丽的数学游戏,</tspan>
+    <tspan x="40" dy="25">将"共同"和"富裕"相乘,</tspan>
+    <tspan x="40" dy="25">却在计算时将"共同"约简为无限接近零的小数。</tspan>
+    <tspan x="40" dy="35">这是一个需要我们等待到宇宙熵死的承诺,</tspan>
+    <tspan x="40" dy="25">是饥饿者面前永远不会凉的一锅热粥。</tspan>
+    <tspan x="40" dy="35">那些朝上爬的梯子总是被描述成通往天堂,</tspan>
+    <tspan x="40" dy="25">却鲜有人提及梯子下方不断扩大的深渊。</tspan>
+  </text>
+  
+  <polygon points="80,440 320,440 300,480 100,480" fill="none" stroke="#888" stroke-width="1"/>
+  <text x="200" y="465" fill="#444" font-family="'Noto Serif SC', serif" font-size="14" text-anchor="middle">财富向上流动的反向重力</text>
+  
+  <text x="200" y="550" fill="#666" font-family="'Noto Serif SC', serif" font-size="16" text-anchor="middle" font-style="italic">饥饿者的童话,富人的安眠药</text>
+  
+  <circle cx="350" cy="50" r="15" fill="none" stroke="#d3a774" stroke-width="1"/>
+  <rect x="40" y="490" width="30" height="15" fill="#d3a774" opacity="0.3"/>
+</svg>
+        </div>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet</p>
+        </footer>
+    </div>
+</body>
+</html>
