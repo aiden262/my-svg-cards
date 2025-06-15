@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.22);
+            max-width: 100%;
+            width: 800px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .svg-container {
+            margin-bottom: 24px;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+            margin-top: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="svg-container">
+            <svg style="overflow: visible;" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="100%" height="100%" fill="#FAFAFA" />
+  <rect x="30" y="30" fill="#F5F5F5" rx="8" />
+  
+  <!-- 标题 -->
+  <text x="200" y="80" font-family="华文楷体, 楷体" font-size="32" fill="#333333" text-anchor="middle" font-weight="bold">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="80" y1="100" x2="320" y2="100" stroke="#888888" stroke-width="2" stroke-dasharray="1,3" />
+  
+  <!-- 原词 -->
+  <text x="200" y="140" font-family="汇文明朝体, serif" font-size="28" fill="#444444" text-anchor="middle">疯狂星期四</text>
+  <text x="200" y="170" font-family="Times New Roman, serif" font-size="18" fill="#666666" text-anchor="middle" font-style="italic">Crazy Thursday</text>
+  <text x="200" y="195" font-family="汇文明朝体, serif" font-size="16" fill="#666666" text-anchor="middle">クレイジー・サーズデー</text>
+  
+  <!-- 主要解释 - 调整foreignObject高度以容纳所有文本，并相应下移后续元素 -->
+  <foreignObject width="320" height="400" x="50" y="220">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Noto Serif CJK SC', serif; font-size: 18px; line-height: 1.6; color: #333;">
+      资本主义消费陷阱的绝妙代名词。表面上是肯德基的促销日，实质是一场精心设计的集体狂欢仪式，让人们心甘情愿地为了所谓"优惠"而排队消费。消费者在自认为占了便宜的幻觉中，将欲望与饥饿混淆，在朋友圈复制转发那句魔咒般的"V我50"——这或许是当代版本的"面包和马戏"，只不过用炸鸡取代了面包，用朋友圈取代了斗兽场。
+    </div>
+  </foreignObject>
+  
+  <!-- 线条图 - 整体下移80px以避免与上方文本重叠 -->
+  <circle cx="100" cy="560" r="15" fill="none" stroke="#888" stroke-width="1" />
+  <text x="100" y="565" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">欲</text>
+  
+  <circle cx="170" cy="540" r="15" fill="none" stroke="#888" stroke-width="1" />
+  <text x="170" y="545" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">饥</text>
+  
+  <circle cx="240" cy="560" r="15" fill="none" stroke="#888" stroke-width="1" />
+  <text x="240" y="565" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">集</text>
+  
+  <circle cx="310" cy="540" r="15" fill="none" stroke="#888" stroke-width="1" />
+  <text x="310" y="545" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">虚</text>
+  
+  <line x1="115" y1="555" x2="155" y2="545" stroke="#888" stroke-width="1" />
+  <line x1="185" y1="545" x2="225" y2="555" stroke="#888" stroke-width="1" />
+  <line x1="255" y1="555" x2="295" y2="545" stroke="#888" stroke-width="1" />
+  
+  <!-- 极简总结 - 整体下移80px -->
+  <text x="200" y="620" font-family="汇文明朝体, serif" font-size="20" fill="#333333" text-anchor="middle" font-style="italic">"一场披着炸鸡外衣的集体自我安慰"</text>
+</svg>
+        </div>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet</p>
+        </footer>
+    </div>
+</body>
+</html>
