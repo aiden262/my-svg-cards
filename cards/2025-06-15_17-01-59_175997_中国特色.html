@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.22);
+            max-width: 100%;
+            width: 800px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .svg-container {
+            margin-bottom: 24px;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+            margin-top: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+  <!-- 背景 - 蒙德里安风格 -->
+  <rect width="100%" height="100%" fill="#f9f7f2" />
+  <rect x="20" y="380" width="120" height="80" fill="#e6e0d4" opacity="0.5" />
+  <rect x="260" y="160" width="120" height="40" fill="#f0e9dd" opacity="0.6" />
+  <rect x="40" y="500" width="80" height="80" fill="#e6e0d4" opacity="0.4" />
+
+  <!-- 标题 -->
+  <text x="200" y="60" font-family="'Noto Serif SC', serif" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">汉语新解</text>
+
+  <!-- 分隔线 -->
+  <line x1="50" y1="80" x2="350" y2="80" stroke="#888" stroke-width="1" />
+
+  <!-- 词汇 -->
+  <text x="200" y="120" font-family="'Noto Serif SC', serif" font-size="32" fill="#444" text-anchor="middle">中国特色</text>
+  <text x="200" y="145" font-family="'Noto Serif SC', serif" font-size="14" fill="#666" text-anchor="middle">Chinese Characteristics | 中国的特色</text>
+
+  <!-- 解释 -->
+  <text x="40" y="190" font-family="'Noto Serif SC', serif" font-size="18" fill="#444">
+    <tspan x="40" y="190">一种魔法咒语，能将任何西方概念</tspan>
+    <tspan x="40" y="220">变形为可接受的本土产物。</tspan>
+    <tspan x="40" y="250">就像是给外来食物撒上了辣椒面，</tspan>
+    <tspan x="40" y="280">不管原料多么不合胃口，总能借此</tspan>
+    <tspan x="40" y="310">宣称："这是我们自己的味道！"</tspan>
+    <tspan x="40" y="340">是解释任何差异的万能牌，更是</tspan>
+    <tspan x="40" y="370">拒绝解释的完美借口。</tspan>
+  </text>
+
+  <!-- 线条图 -->
+  <circle cx="200" cy="450" r="50" fill="none" stroke="#666" stroke-width="1.5" />
+  <circle cx="200" cy="450" r="30" fill="none" stroke="#666" stroke-width="1" />
+  <line x1="150" y1="450" x2="250" y2="450" stroke="#666" stroke-width="1" />
+  <line x1="200" y1="400" x2="200" y2="500" stroke="#666" stroke-width="1" />
+
+  <!-- 总结 -->
+  <text x="200" y="540" font-family="'Noto Serif SC', serif" font-size="16" fill="#333" text-anchor="middle">
+    同形异构：披着传统外衣的现代妥协
+  </text>
+</svg>
+        </div>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet</p>
+        </footer>
+    </div>
+</body>
+</html>
