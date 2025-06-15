@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 95%;
+            width: 800px;
+            text-align: center;
+        }
+        svg {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg width="400" height="600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+  <rect width="100%" height="100%" fill="#f8f4e9" rx="10" ry="10"/>
+  <rect x="40" y="40" width="320" height="520" fill="#fffefc" stroke="#e8e4d8" stroke-width="2" rx="5" ry="5"/>
+  
+  <!-- 装饰图案 -->
+  <line x1="40" y1="90" x2="360" y2="90" stroke="#d8d0c8" stroke-width="2"/>
+  <rect x="330" y="30" width="20" height="20" fill="#d88c7f" opacity="0.6"/>
+  <rect x="50" y="500" width="30" height="30" fill="#7f9ea3" opacity="0.4"/>
+  
+  <!-- 标题 -->
+  <text x="200" y="70" font-family="KaiTi, STKaiti" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">汉语新解</text>
+  
+  <!-- 输入词 -->
+  <text x="200" y="140" font-family="Ming, SimSun" font-size="32" fill="#333" text-anchor="middle" font-weight="bold">清正廉洁</text>
+  <text x="200" y="165" font-family="Times New Roman" font-size="14" fill="#666" text-anchor="middle">qīng zhèng lián jié</text>
+  
+  <!-- 解释 (已将 foreignObject 转换为原生 SVG text，并手动处理文本换行和对齐) -->
+  <!-- 原始 foreignObject 区域: x="60" y="190" width="280" height="250" -->
+  <!-- 字体: 'Noto Serif CJK SC', SimSun; 字号: 18px; 行高: 1.6 (即 18 * 1.6 = 28.8px) -->
+  <!-- 文本起始 Y 坐标调整为 190 + 18 (字号) = 208，以使文本基线位于预期位置 -->
+  <text x="60" y="208" font-family="Noto Serif CJK SC, SimSun" font-size="18" fill="#444" text-anchor="start">
+    <tspan x="60" dy="0">权力舞台上的道德假面，是</tspan>
+    <tspan x="60" dy="28.8">权势者对世人撒的最优雅的谎。</tspan>
+    <tspan x="60" dy="28.8">如同脱裤子放屁一般多余的</tspan>
+    <tspan x="60" dy="28.8">形容词，真正廉洁者何须</tspan>
+    <tspan x="60" dy="28.8">四字加冕？笑看那些高呼</tspan>
+    <tspan x="60" dy="28.8">清廉口号之人，往往是贪腐</tspan>
+    <tspan x="60" dy="28.8">粉饰术的高阶修炼者。</tspan>
+  </text>
+  
+  <!-- 线条图 -->
+  <line x1="100" y1="450" x2="300" y2="450" stroke="#888" stroke-width="1" stroke-dasharray="5,3"/>
+  <circle cx="125" cy="450" r="5" fill="#d88c7f"/>
+  <text x="125" y="470" font-family="sans-serif" font-size="12" fill="#666" text-anchor="middle">口号</text>
+  
+  <circle cx="200" cy="450" r="5" fill="#7f9ea3"/>
+  <text x="200" y="470" font-family="sans-serif" font-size="12" fill="#666" text-anchor="middle">幻象</text>
+  
+  <circle cx="275" cy="450" r="5" fill="#a39a7f"/>
+  <text x="275" y="470" font-family="sans-serif" font-size="12" fill="#666" text-anchor="middle">反讽</text>
+  
+  <!-- 极简总结 -->
+  <text x="200" y="530" font-family="KaiTi, STKaiti" font-size="20" fill="#555" text-anchor="middle">仅存于标语，难见于现实</text>
+</svg>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet</p>
+            <p>灵感来源 <a href="https://github.com/lijigang/prompts" target="_blank">李继刚的提示词工程</a></p>
+        </footer>
+    </div>
+</body>
+</html>
