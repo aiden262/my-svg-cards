@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 95%;
+            width: 800px;
+            text-align: center;
+        }
+        svg {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg width="400" height="600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f5f5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8e8e8;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="pattern-geo" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M0,0 L10,10 L0,20 Z" fill="#ff6b6b" opacity="0.1" />
+      <circle cx="30" cy="20" r="5" fill="#4ecdc4" opacity="0.1" />
+    </pattern>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="url(#bg-gradient)" />
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-geo)" />
+  
+  <g>
+    <!-- 标题 -->
+    <text x="200" y="60" font-family="楷体" font-size="28" text-anchor="middle" fill="#333333">汉语新解</text>
+    
+    <!-- 分隔线 -->
+    <line x1="40" y1="80" x2="360" y2="80" stroke="#888888" stroke-width="1" />
+    
+    <!-- 词汇 -->
+    <text x="200" y="120" font-family="明朝体" font-size="26" text-anchor="middle" fill="#333333">毛泽东 Mao Zedong 毛沢東</text>
+    
+    <!-- 解释 -->
+    <foreignObject x="40" y="150" width="320" height="240">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:'明朝体',serif; font-size:16px; color:#444444; line-height:1.5;">
+        一个被神化的姓氏，后世人既将其供奉于神坛，又在暗处啃食他的遗产。这三个字既是无数人噩梦的开端，也是另一些人怀旧的避风港。他们用这个名字装点门面，同时却在践踏其思想的核心。这是一个矛盾体，人们用它来论证任何观点，却从不真正理解它。像一面镜子，每个人都能从中看到自己想看的东西——革命者看到希望，保守者看到秩序，野心家看到权力，商人看到商机。
+      </div>
+    </foreignObject>
+    
+    <!-- 线条图 -->
+    <g transform="translate(50, 400)">
+      <line x1="0" y1="0" x2="300" y2="0" stroke="#888" stroke-width="1" />
+      <line x1="150" y1="-50" x2="150" y2="50" stroke="#888" stroke-width="1" />
+      <text x="30" y="-30" font-size="14" fill="#d63031">神话</text>
+      <text x="270" y="-30" font-size="14" fill="#0984e3">现实</text>
+      <text x="30" y="40" font-size="14" fill="#00b894">理想</text>
+      <text x="270" y="40" font-size="14" fill="#fdcb6e">商品</text>
+      <circle cx="150" cy="0" r="5" fill="#e17055" />
+    </g>
+    
+    <!-- 极简总结 -->
+    <text x="200" y="500" font-family="sans-serif" font-size="16" text-anchor="middle" fill="#333333" font-style="italic">
+      一个被过度引用却从未被真正理解的符号
+    </text>
+  </g>
+</svg>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet</p>
+            <p>灵感来源 <a href="https://github.com/lijigang/prompts" target="_blank">李继刚的提示词工程</a></p>
+        </footer>
+    </div>
+</body>
+</html>
