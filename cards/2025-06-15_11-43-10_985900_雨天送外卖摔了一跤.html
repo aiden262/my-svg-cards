@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>万物皆可一字 by AI</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 95%;
+            width: 800px;
+            text-align: center;
+        }
+        svg {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg width="480" height="760" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 760">
+  <!-- 背景 -->
+  <rect width="100%" height="100%" fill="#000000"/>
+  
+  <!-- 标题 -->
+  <text x="240" y="80" font-family="KingHwa_OldSong, serif" font-size="32" fill="#ffffff" text-anchor="middle">雨天送外卖摔了一跤</text>
+  
+  <!-- 分隔线 -->
+  <line x1="120" y1="110" x2="360" y2="110" stroke="#00cc00" stroke-width="2"/>
+  
+  <!-- 核心汉字 -->
+  <text x="240" y="280" font-family="FZJiaGuWen, serif" font-size="160" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">险</text>
+  
+  <!-- 禅意图形 -->
+  <g transform="translate(240, 470)" stroke="#00ff00" fill="none">
+    <!-- 雨滴图形 -->
+    <path d="M-100,-40 L100,40" stroke-width="3"/>
+    <path d="M-100,-20 L100,60" stroke-width="2"/>
+    <path d="M-100,0 L100,80" stroke-width="3"/>
+    <path d="M-100,20 L100,100" stroke-width="2"/>
+    
+    <!-- 摔倒象征 -->
+    <circle cx="0" cy="0" r="60" stroke-width="2"/>
+    <path d="M-30,-30 L30,30" stroke-width="4"/>
+    <path d="M30,-30 L-30,30" stroke-width="4"/>
+  </g>
+  
+  <!-- 判语 -->
+  <text x="240" y="650" font-family="KingHwa_OldSong, serif" font-size="20" fill="#00cc00" text-anchor="middle">
+    雨天路滑，外卖求速，
+    <tspan x="240" dy="30">一念疏忽，险在脚下。</tspan>
+  </text>
+</svg>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 万物皆可一字 | 模型: anthropic/claude-3.7-sonnet</p>
+            <p>灵感来源 <a href="https://github.com/lijigang/prompts" target="_blank">李继刚的提示词工程</a></p>
+        </footer>
+    </div>
+</body>
+</html>
