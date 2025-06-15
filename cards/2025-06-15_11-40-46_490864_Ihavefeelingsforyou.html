@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信达雅翻译 by AI</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 95%;
+            width: 800px;
+            text-align: center;
+        }
+        svg {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg width="450" height="800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 800">
+  <!-- 背景 - 纸张褶皱效果 -->
+  <rect width="450" height="800" rx="8" fill="#f5f3e8" />
+  <filter id="paperTexture">
+    <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" seed="5" />
+    <feDisplacementMap in="SourceGraphic" scale="5" />
+  </filter>
+  <rect width="450" height="800" rx="8" filter="url(#paperTexture)" fill="#f5f3e8" opacity="0.7" />
+  
+  <!-- 标题 -->
+  <text x="40" y="70" font-family="楷体" font-size="26" fill="#486b45" font-weight="bold">三关翻译卡</text>
+  
+  <!-- 原文 -->
+  <rect x="40" y="100" width="370" height="80" rx="5" fill="#e8e4d5" />
+  <text x="55" y="130" font-family="Times New Roman" font-size="18" fill="#5a5a5a">原文:</text>
+  <text x="55" y="160" font-family="serif" font-size="20" fill="#333333">I have feelings for you</text>
+  
+  <!-- 信 -->
+  <rect x="40" y="210" width="370" height="130" rx="5" fill="#e8e4d5" />
+  <text x="55" y="240" font-family="楷体" font-size="18" fill="#5a5a5a">信 (直白翻译):</text>
+  <text x="55" y="270" font-family="楷体" font-size="20" fill="#4a6b41">
+    <tspan x="55" dy="0">我对你有感觉</tspan>
+    <tspan x="55" dy="30">(直译了英文字面意思)</tspan>
+  </text>
+  
+  <!-- 达 -->
+  <rect x="40" y="370" width="370" height="130" rx="5" fill="#e8e4d5" />
+  <text x="55" y="400" font-family="楷体" font-size="18" fill="#5a5a5a">达 (语境契合):</text>
+  <text x="55" y="430" font-family="楷体" font-size="20" fill="#4a6b41">
+    <tspan x="55" dy="0">我对你有好感</tspan>
+    <tspan x="55" dy="30">(传达了英文中暗示爱慕的情感)</tspan>
+  </text>
+  
+  <!-- 雅 -->
+  <rect x="40" y="530" width="370" height="190" rx="5" fill="#e8e4d5" opacity="0.9" />
+  <text x="55" y="560" font-family="楷体" font-size="18" fill="#5a5a5a">雅 (诗经风格):</text>
+  <text x="55" y="600" font-family="楷体" font-size="20" fill="#4a6b41">
+    <tspan x="55" dy="0">悠悠我思</tspan>
+    <tspan x="55" dy="36">如云如雾</tspan>
+    <tspan x="55" dy="36">心之所向</tspan>
+    <tspan x="55" dy="36">唯君而已</tspan>
+  </text>
+</svg>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 信达雅翻译 | 模型: anthropic/claude-3.7-sonnet</p>
+            <p>灵感来源 <a href="https://github.com/lijigang/prompts" target="_blank">李继刚的提示词工程</a></p>
+        </footer>
+    </div>
+</body>
+</html>
