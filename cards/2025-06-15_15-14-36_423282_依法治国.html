@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.22);
+            max-width: 100%;
+            width: 800px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .svg-container {
+            margin-bottom: 24px;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+            margin-top: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="svg-container">
+            <svg style="overflow: visible;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 900">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f9f3e9" />
+      <stop offset="100%" stop-color="#f0e9df" />
+    </linearGradient>
+    <pattern id="pattern" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="1" fill="#444444" opacity="0.1"/>
+    </pattern>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect fill="url(#bg-gradient)" />
+  <rect fill="url(#pattern)" opacity="0.3" />
+  
+  <!-- 装饰线条 -->
+  <line x1="40" y1="90" x2="360" y2="90" stroke="#c94e4e" stroke-width="2" />
+  <line x1="80" y1="520" x2="320" y2="520" stroke="#c94e4e" stroke-width="1" />
+  
+  <!-- 标题 -->
+  <text x="200" y="60" font-family="STKaiti, 楷体" font-size="32" fill="#333333" text-anchor="middle" font-weight="bold">汉语新解</text>
+  
+  <!-- 词语 -->
+  <text x="200" y="130" font-family="STKaiti, 楷体" font-size="28" fill="#222222" text-anchor="middle">依法治国</text>
+  <text x="200" y="155" font-family="Times New Roman, serif" font-size="14" fill="#666666" text-anchor="middle" font-style="italic">Rule by law</text>
+  <text x="200" y="175" font-family="MS Mincho, serif" font-size="14" fill="#666666" text-anchor="middle">法による統治</text>
+  
+  <!-- 解释 (原 foreignObject 内容转换为 SVG text/tspan) -->
+  <!-- 原始文本内容在 16px 字体和 1.6 倍行高下需要约 537.6px 的高度。
+       为确保所有文本完整显示且不裁剪，同时避免与下方元素重叠，
+       SVG 的总高度已从 600px 调整为 900px，并相应调整了下方元素的 Y 坐标。
+       文本行高为 16px * 1.6 = 25.6px。段落间距为 25.6px * 1.5 = 38.4px。
+       文本已根据中文排版规则进行手动换行，避免行首出现标点符号。
+  -->
+  <text x="40" y="200" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#333333" text-anchor="start">
+    <tspan x="40" dy="0">一种理想主义的幻象，</tspan>
+    <tspan x="40" dy="25.6">就像婚礼上的誓言——</tspan>
+    <tspan x="40" dy="25.6">动听但并不总有效。</tspan>
+    <tspan x="40" dy="25.6">表面上是"让法律统治</tspan>
+    <tspan x="40" dy="25.6">一切"，实则常常暗含</tspan>
+    <tspan x="40" dy="25.6">"让统治者决定什么是</tspan>
+    <tspan x="40" dy="25.6">法律"。</tspan>
+    <!-- 段落间距 -->
+    <tspan x="40" dy="38.4">当权者的巧妙谓词，</tspan>
+    <tspan x="40" dy="25.6">赋予任意行为以神圣</tspan>
+    <tspan x="40" dy="25.6">光环，犹如给狼穿上</tspan>
+    <tspan x="40" dy="25.6">羊皮。法律不过是可</tspan>
+    <tspan x="40" dy="25.6">塑的粘土，随手拈来，</tspan>
+    <tspan x="40" dy="25.6">重塑成维护秩序抑或</tspan>
+    <tspan x="40" dy="25.6">压制异己的工具。</tspan>
+    <!-- 段落间距 -->
+    <tspan x="40" dy="38.4">在这个纸面规则与</tspan>
+    <tspan x="40" dy="25.6">现实执行之间有着巨</tspan>
+    <tspan x="40" dy="25.6">大鸿沟的语境下，不</tspan>
+    <tspan x="40" dy="25.6">妨思考：谁在制定法</tspan>
+    <tspan x="40" dy="25.6">律？为了谁的利益？</tspan>
+    <tspan x="40" dy="25.6">而当法律与良知冲突，</tspan>
+    <tspan x="40" dy="25.6">我们又该如何抉择？</tspan>
+  </text>
+  
+  <!-- 线条图 (Y 坐标向下平移 297.6px) -->
+  <line x1="120" y1="767.6" x2="280" y2="767.6" stroke="#666666" stroke-width="1" stroke-dasharray="2,2" />
+  <circle cx="120" cy="767.6" r="4" fill="#c94e4e" />
+  <text x="120" y="787.6" font-family="sans-serif" font-size="12" fill="#666666" text-anchor="middle">理想</text>
+  <circle cx="280" cy="767.6" r="4" fill="#c94e4e" />
+  <text x="280" y="787.6" font-family="sans-serif" font-size="12" fill="#666666" text-anchor="middle">现实</text>
+  
+  <!-- 极简总结 (Y 坐标向下平移 297.6px) -->
+  <text x="200" y="837.6" font-family="STKaiti, 楷体" font-size="18" fill="#c94e4e" text-anchor="middle" font-style="italic">"纸上的威严，执行的自由"</text>
+  
+  <!-- 版权信息 (Y 坐标向下平移 297.6px) -->
+  <text x="200" y="867.6" font-family="sans-serif" font-size="10" fill="#999999" text-anchor="middle">© 批判现实的汉语老师</text>
+</svg>
+        </div>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet</p>
+        </footer>
+    </div>
+</body>
+</html>
