@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 95%;
+            width: 800px;
+            text-align: center;
+        }
+        svg {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg width="400" height="600" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="400" height="600" fill="#f4f1ee" />
+  <!-- 装饰图案 -->
+  <rect x="20" y="20" width="360" height="560" fill="none" stroke="#d3ccc7" stroke-width="2" />
+  <rect x="30" y="30" width="340" height="540" fill="none" stroke="#e8605d" stroke-width="1" stroke-dasharray="5,5" />
+  
+  <!-- 标题 -->
+  <text x="200" y="70" font-family="楷体" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="60" y1="90" x2="340" y2="90" stroke="#888" stroke-width="1" />
+  
+  <!-- 词汇 -->
+  <text x="200" y="130" font-family="黑体" font-size="24" fill="#e8605d" text-anchor="middle" font-weight="bold">人民医院</text>
+  <text x="200" y="155" font-family="serif" font-size="14" fill="#888" text-anchor="middle" font-style="italic">People's Hospital</text>
+  <text x="200" y="175" font-family="serif" font-size="14" fill="#888" text-anchor="middle">人民病院 (じんみんびょういん)</text>
+  
+  <!-- 解释 (修复后的文本) -->
+  <!-- 原始 foreignObject 内容已转换为 SVG text 和 tspan，并手动处理换行以适应宽度，
+       同时优化中文排版规则（避免标点符号在行首），并调整字体大小和行间距以确保内容完整显示。 -->
+  <text x="40" y="195" font-family="Noto Serif SC, serif" font-size="16" fill="#333">
+    <tspan x="40" dy="0">一座号称为"人民"服务，却常让人民在走廊排队</tspan>
+    <tspan x="40" dy="24">打地铺的矛盾建筑。门口写着"救死扶伤"，</tspan>
+    <tspan x="40" dy="24">里面却写满了"先缴费后看病"。</tspan>
+    <tspan x="40" dy="24">挂号难如春运抢票，</tspan>
+    <tspan x="40" dy="24">专家号比考清华还稀缺。</tspan>
+    <tspan x="40" dy="24">它是医者仁心与资本逻辑的战场，</tspan>
+    <tspan x="40" dy="24">是白衣天使与灰色收入的辩证统一。</tspan>
+    <tspan x="40" dy="24">在这里，"人民"二字像一张贴在高额</tspan>
+    <tspan x="40" dy="24">医疗账单上的廉价不干胶标签，</tspan>
+    <tspan x="40" dy="24">总在你最绝望时提醒你：这痛苦，</tspan>
+    <tspan x="40" dy="24">至少还是姓"人民"的。</tspan>
+  </text>
+  
+  <!-- 图案 -->
+  <line x1="70" y1="490" x2="330" y2="490" stroke="#888" stroke-width="1" />
+  <circle cx="100" cy="520" r="15" fill="none" stroke="#e8605d" stroke-width="2" />
+  <line x1="120" y1="520" x2="300" y2="520" stroke="#333" stroke-width="2" />
+  <circle cx="300" cy="520" r="15" fill="#e8605d" />
+  
+  <!-- 极简总结 -->
+  <text x="200" y="560" font-family="楷体" font-size="16" fill="#333" text-anchor="middle" font-style="italic">
+    人民的名义，资本的游戏。
+  </text>
+</svg>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet</p>
+            <p>灵感来源 <a href="https://github.com/lijigang/prompts" target="_blank">李继刚的提示词工程</a></p>
+        </footer>
+    </div>
+</body>
+</html>
