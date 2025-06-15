@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>这很合理 by AI</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 95%;
+            width: 800px;
+            text-align: center;
+        }
+        svg {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg width="420" height="600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 600">
+  <rect width="100%" height="100%" fill="black"/>
+  
+  <!-- 标题 -->
+  <text x="210" y="50" font-family="KingHwa_OldSong, sans-serif" font-size="28" fill="white" text-anchor="middle">这很合理</text>
+  
+  <!-- 分隔线 -->
+  <line x1="20" y1="70" x2="400" y2="70" stroke="white" stroke-width="1"/>
+  
+  <!-- 用户输入 -->
+  <text x="30" y="120" font-family="KingHwa_OldSong, sans-serif" font-size="24" fill="#4CAF50">
+    雨天送外卖摔了一跤
+  </text>
+  
+  <!-- 响应 -->
+  <text x="30" y="180" font-family="KingHwa_OldSong, sans-serif" font-size="24" fill="#F44336">
+    大地需要拥抱奔波的人。
+  </text>
+  
+  <!-- 简约线条图 -->
+  <g transform="translate(100, 250)">
+    <line x1="0" y1="100" x2="220" y2="100" stroke="white" stroke-width="1.5"/> <!-- 地面 -->
+    <path d="M100,80 Q130,30 160,80" stroke="white" fill="none" stroke-width="1"/> <!-- 雨滴弧线 -->
+    <path d="M110,90 L140,50 L170,90" stroke="white" fill="none" stroke-width="1.5"/> <!-- 摔倒的人 -->
+    <rect x="180" y="70" width="20" height="30" stroke="white" fill="none" stroke-width="1"/> <!-- 外卖盒 -->
+    <line x1="90" y1="40" x2="180" y2="40" stroke="white" stroke-width="0.8"/> <!-- 雨线 -->
+    <line x1="110" y1="30" x2="160" y2="30" stroke="white" stroke-width="0.8"/> <!-- 雨线 -->
+    <line x1="130" y1="20" x2="170" y2="20" stroke="white" stroke-width="0.8"/> <!-- 雨线 -->
+  </g>
+</svg>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 这很合理 | 模型: anthropic/claude-3.7-sonnet</p>
+            <p>灵感来源 <a href="https://github.com/lijigang/prompts" target="_blank">李继刚的提示词工程</a></p>
+        </footer>
+    </div>
+</body>
+</html>
