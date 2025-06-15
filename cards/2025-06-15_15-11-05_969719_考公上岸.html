@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.22);
+            max-width: 100%;
+            width: 800px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .svg-container {
+            margin-bottom: 24px;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+            margin-top: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="svg-container">
+            <svg style="overflow: visible;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+  <!-- 背景 -->
+  <rect fill="#f5f0e8" rx="10" ry="10"/>
+  <rect x="25" y="25" fill="#ffffff" rx="5" ry="5" stroke="#d9d2c5" stroke-width="1"/>
+  
+  <!-- 标题 -->
+  <text x="200" y="60" font-family="汇文明朝体, 楷体" font-size="28" fill="#333333" text-anchor="middle" font-weight="bold">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="50" y1="80" x2="350" y2="80" stroke="#c9c0b3" stroke-width="1"/>
+  
+  <!-- 词语 -->
+  <text x="200" y="120" font-family="汇文明朝体, sans-serif" font-size="24" fill="#555555" text-anchor="middle" font-weight="bold">考公上岸</text>
+  <text x="200" y="145" font-family="Arial, sans-serif" font-size="14" fill="#777777" text-anchor="middle" font-style="italic">kao gong shang an</text>
+  <text x="200" y="165" font-family="MS Gothic, sans-serif" font-size="14" fill="#777777" text-anchor="middle">公務員試験に合格する</text>
+  
+  <!-- 解释 (原 foreignObject 转换为 text/tspan，并优化文本换行与排版) -->
+  <!-- 原始 foreignObject 区域为 x="50" y="185" -->
+  <!-- 调整字体大小为14px，行高为1.5倍（21px），段落间距调整为10px，以适应原高度 -->
+  <text x="50" y="185" font-family="Arial, sans-serif" font-size="14" fill="#444444">
+    <tspan x="50">一场集体自我麻醉的仪式，</tspan>
+    <tspan x="50" dy="20.5">在这个仪式中，人们心甘情愿地</tspan>
+    <tspan x="50" dy="20.5">将自己的青春和才华投入一场</tspan>
+    <tspan x="50" dy="20.5">名为"稳定"的博彩。"上岸"暗示了</tspan>
+    <tspan x="50" dy="20.5">我们都是溺水的人，而体制是唯一的</tspan>
+    <tspan x="50" dy="20.5">陆地——多么精妙的比喻啊！仿佛我们</tspan>
+    <tspan x="50" dy="20.5">生来就该在各种"考"中挣扎，直到被</tspan>
+    <tspan x="50" dy="20.5">某个机构收编才算获救。</tspan>
+  </text>
+  
+  <text x="50" y="359" font-family="Arial, sans-serif" font-size="14" fill="#444444">
+    <tspan x="50">现代版的"学而优则仕"，只不过古人</tspan>
+    <tspan x="50" dy="20.5">是为了施展抱负，今人多半是为了逃避</tspan>
+    <tspan x="50" dy="20.5">现实的激流。当大家都在岸上，谁来创</tspan>
+    <tspan x="50" dy="20.5">造真正的价值？风平浪静的池塘，从不</tspan>
+    <tspan x="50" dy="20.5">会孕育勇敢的航海家。</tspan>
+  </text>
+  
+  <!-- 图案 -->
+  <circle cx="100" cy="500" r="30" fill="none" stroke="#d9a79c" stroke-width="2"/>
+  <rect x="170" y="470" fill="none" stroke="#8fbc8f" stroke-width="2"/>
+  <polygon points="300,470 330,500 300,530 270,500" fill="none" stroke="#a9a2d8" stroke-width="2"/>
+  
+  <!-- 总结 -->
+  <text x="200" y="560" font-family="汇文明朝体, sans-serif" font-size="16" fill="#555555" text-anchor="middle" font-style="italic">"溺水者对制度化避风港的集体幻觉"</text>
+</svg>
+        </div>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet</p>
+        </footer>
+    </div>
+</body>
+</html>
