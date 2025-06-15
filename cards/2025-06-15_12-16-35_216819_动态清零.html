@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 95%;
+            width: 800px;
+            text-align: center;
+        }
+        svg {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg width="400" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="400" height="600" fill="#f5f3ee" rx="8" ry="8"/>
+  <rect x="30" y="30" width="340" height="540" fill="#f9f7f4" stroke="#e5e2dc" stroke-width="1" rx="5" ry="5"/>
+
+  <!-- 标题 -->
+  <text x="200" y="80" font-family="SimKai, 楷体" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">汉语新解</text>
+
+  <!-- 分隔线 -->
+  <line x1="70" y1="100" x2="330" y2="100" stroke="#d9d3c8" stroke-width="2"/>
+
+  <!-- 词汇 -->
+  <text x="200" y="140" font-family="Source Han Serif, 思源宋体" font-size="24" fill="#38352f" text-anchor="middle" font-weight="bold">动态清零</text>
+  <text x="200" y="165" font-family="Times New Roman, serif" font-size="14" fill="#7a7672" text-anchor="middle" font-style="italic">Dynamic Zero-Covid</text>
+  <text x="200" y="185" font-family="Yu Mincho, 游明朝" font-size="14" fill="#7a7672" text-anchor="middle">動態ゼロコロナ</text>
+
+  <!-- 解释 - 转换为SVG text/tspan，并优化中文换行 -->
+  <!-- 原始 foreignObject x="50" y="210" width="300" height="250" -->
+  <!-- font-size: 16px; line-height: 1.6; color: #38352f; -->
+  <!-- 计算行高: 16px * 1.6 = 25.6px -->
+  <!-- 段落间距: 25.6px + 16px (额外一行字高) = 41.6px -->
+  <!-- 文本起始y坐标: 210 (foreignObject y) + 16 (font-size) = 226 (第一行基线) -->
+  <text x="50" y="226" font-family="Source Han Serif, serif" font-size="16" fill="#38352f">
+    <tspan x="50" dy="0">一种数学上的奇迹，</tspan>
+    <tspan x="50" dy="25.6">政治上的狂欢，</tspan>
+    <tspan x="50" dy="25.6">经济上的悲剧。</tspan>
+    <tspan x="50" dy="25.6">当权者用这三个字</tspan>
+    <tspan x="50" dy="25.6">构建了一座无形监狱，</tspan>
+    <tspan x="50" dy="25.6">将“清零”的责任“动态”地</tspan>
+    <tspan x="50" dy="25.6">推给了每一个人。</tspan>
+    <tspan x="50" dy="41.6">所谓“动态”，不过是失败后的遁词；</tspan>
+    <tspan x="50" dy="25.6">所谓“清零”，是只存在于</tspan>
+    <tspan x="50" dy="25.6">报表上的幻觉。</tspan>
+    <tspan x="50" dy="25.6">一场全民参与的荒诞剧，</tspan>
+    <tspan x="50" dy="25.6">人们“动态”地奔走，</tspan>
+    <tspan x="50" dy="25.6">却永远追不上“清零”的幻影。</tspan>
+    <tspan x="50" dy="41.6">最伟大的把戏莫过于此：</tspan>
+    <tspan x="50" dy="25.6">粉饰成胜利的撤退，</tspan>
+    <tspan x="50" dy="25.6">像科学献祭的仪式，</tspan>
+    <tspan x="50" dy="25.6">令人想起那句话——</tspan>
+    <tspan x="50" dy="25.6">“为了消灭老鼠，</tspan>
+    <tspan x="50" dy="25.6">我们烧掉了房子”。</tspan>
+  </text>
+
+  <!-- 图形 -->
+  <circle cx="120" cy="480" r="30" fill="none" stroke="#9e9a91" stroke-width="2"/>
+  <line x1="120" y1="450" x2="120" y2="510" stroke="#9e9a91" stroke-width="2"/>
+  <text x="280" y="485" font-family="SimHei, 黑体" font-size="18" fill="#38352f" text-anchor="end">没有终点的跑步机</text>
+
+  <!-- 总结 -->
+  <text x="200" y="540" font-family="Source Han Sans, 思源黑体" font-size="16" fill="#38352f" text-anchor="middle" font-style="italic">用数字的幻觉掩盖现实的痛苦</text>
+
+  <!-- 装饰 -->
+  <rect x="40" y="40" width="10" height="10" fill="#d95850"/>
+  <rect x="350" y="550" width="10" height="10" fill="#537ec5"/>
+</svg>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet</p>
+            <p>灵感来源 <a href="https://github.com/lijigang/prompts" target="_blank">李继刚的提示词工程</a></p>
+        </footer>
+    </div>
+</body>
+</html>
