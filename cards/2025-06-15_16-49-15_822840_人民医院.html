@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.22);
+            max-width: 100%;
+            width: 800px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .svg-container {
+            margin-bottom: 24px;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+            margin-top: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="svg-container">
+            ```svg
+<svg style="overflow: visible;" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f9f1e8" />
+      <stop offset="100%" stop-color="#e8e6de" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="url(#bg-gradient)" rx="10" ry="10" />
+  
+  <!-- 几何装饰 -->
+  <rect x="20" y="20" stroke="#d8d2c4" fill="none" stroke-width="1" />
+  <rect x="30" y="30" stroke="#d8d2c4" fill="none" stroke-width="0.5" />
+  
+  <!-- 标题 -->
+  <text x="200" y="80" font-family="'Noto Serif SC', serif" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="100" y1="100" x2="300" y2="100" stroke="#555" stroke-width="1" />
+  
+  <!-- 词汇 -->
+  <text x="200" y="140" font-family="'Noto Serif SC', serif" font-size="24" fill="#444" text-anchor="middle">人民医院</text>
+  <text x="200" y="165" font-family="Times New Roman" font-size="16" fill="#666" text-anchor="middle">People's Hospital</text>
+  <text x="200" y="185" font-family="'Noto Serif SC', serif" font-size="16" fill="#666" text-anchor="middle">人民病院</text>
+  
+  <!-- 解释 -->
+  <foreignObject width="320" height="400" x="40" y="210">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #333; line-height: 1.6; text-align: justify;">
+      所谓"人民医院"，是一个绝妙的悖论：名义上为人民所有，实际上人民排队挂号还得凌晨三点起床；名义上人人平等，实际上VIP通道却畅通无阻。它像个自带滤镜的相机，将"以药养医"拍成了"救死扶伤"，将"三甲评级"拍成了"服务质量"。这是一个医者仁心与行政KPI相互厮杀的战场，是一个白大褂在疲惫与理想间踉跄前行的舞台。在这个词语里，"人民"成了最奢侈的装饰品，挂在门楣上，却难以穿透挂号窗口的玻璃。
+    </div>
+  </foreignObject>
+  
+  <!-- 简化图形 -->
+  <line x1="100" y1="520" x2="300" y2="520" stroke="#555" stroke-dasharray="5,5" />
+  <circle cx="150" cy="550" r="20" fill="none" stroke="#666" />
+  <circle cx="250" cy="550" r="20" fill="none" stroke="#666" />
+  <line x1="150" y1="550" x2="250" y2="550" stroke="#666" />
+  
+  <!-- 总结 -->
+  <text x="200" y="570" font-family="'Noto Serif SC', serif" font-size="16" fill="#444" text-anchor="middle" font-style="italic">
+    人字上头无顶盖，民字旁边少温度
+  </text>
+</svg>
+```
+        </div>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet</p>
+        </footer>
+    </div>
+</body>
+</html>
