@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.22);
+            max-width: 100%;
+            width: 800px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .svg-container {
+            margin-bottom: 24px;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+            margin-top: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="svg-container">
+            <svg style="overflow: visible;" width="400" height="800" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="400" height="800" fill="#f8f4e9" />
+  
+  <!-- 蒙德里安风格装饰 -->
+  <!-- 调整y坐标以适应文本区域的扩展 -->
+  <rect x="20" y="744" width="80" height="30" fill="#d13b40" opacity="0.8" />
+  <rect x="300" y="20" width="80" height="30" fill="#225095" opacity="0.8" />
+  <line x1="20" y1="100" x2="380" y2="100" stroke="#333" stroke-width="3" />
+  
+  <!-- 标题 -->
+  <text x="200" y="70" font-family="楷体, KaiTi" font-size="32" fill="#222" text-anchor="middle" font-weight="bold">汉语新解</text>
+  
+  <!-- 原词 -->
+  <text x="200" y="140" font-family="明朝体, SimSun" font-size="28" fill="#222" text-anchor="middle">为人民服务</text>
+  <text x="200" y="165" font-family="Times New Roman" font-size="14" fill="#555" text-anchor="middle">Serve the People</text>
+  <text x="200" y="185" font-family="MS Gothic" font-size="14" fill="#555" text-anchor="middle">人民に奉仕する</text>
+  
+  <!-- 分隔线 -->
+  <line x1="100" y1="210" x2="300" y2="210" stroke="#555" stroke-width="1" />
+  
+  <!-- 解释 - 将foreignObject转换为SVG text和tspan，并进行手动换行和对齐 -->
+  <!-- 原始foreignObject的x="40", y="230", width="320", height="220" -->
+  <!-- 字体大小18px，行高1.5倍，即18 * 1.5 = 27px 的dy值 -->
+  <!-- 文本起始y坐标为230（foreignObject顶部）+ 18（字体大小，作为第一行的基线）= 248 -->
+  <text x="40" y="248" font-family="'Source Han Serif', serif" font-size="18" fill="#333">
+    <tspan>一句用来包装权力的魔咒。</tspan>
+    <tspan x="40" dy="27">当它从权力者口中说出，</tspan>
+    <tspan x="40" dy="27">往往意味着人民需要准备好</tspan>
+    <tspan x="40" dy="27">被服务到头晕目眩。</tspan>
+    <tspan x="40" dy="27">它像一把漂亮的雨伞，</tspan>
+    <tspan x="40" dy="27">只不过打开时总是往人民</tspan>
+    <tspan x="40" dy="27">头上滴水。</tspan>
+    <tspan x="40" dy="27">最具讽刺性的是，</tspan>
+    <tspan x="40" dy="27">喊得最响的人通常住在最大</tspan>
+    <tspan x="40" dy="27">的院子里，开着最长的车，</tspan>
+    <tspan x="40" dy="27">而他们服务的“人民”却在</tspan>
+    <tspan x="40" dy="27">挤地铁。</tspan>
+    <tspan x="40" dy="27">这句口号就像一面镜子，</tspan>
+    <tspan x="40" dy="27">你越是大声重复，</tspan>
+    <tspan x="40" dy="27">就越是照出相反的现实。</tspan>
+  </text>
+  
+  <!-- 图形表达 - 调整y坐标以适应文本区域的扩展 -->
+  <!-- 文本区域底部约为 248 + (14 * 27) = 626 (基线) -->
+  <!-- 原始图形y坐标为480，需要向下移动 626 - 480 + 50 (额外间距) = 196 -->
+  <!-- 实际计算：原始foreignObject底部为 230 + 220 = 450。新文本区域底部约为 626 + 18 (字体高度) = 644。 -->
+  <!-- 移动距离 = 644 - 450 = 194。 -->
+  <circle cx="200" cy="674" r="50" fill="none" stroke="#222" stroke-width="2" />
+  <circle cx="200" cy="674" r="10" fill="#d13b40" />
+  <line x1="200" y1="624" x2="200" y2="594" stroke="#222" stroke-width="2" />
+  <line x1="200" y1="674" x2="240" y2="714" stroke="#222" stroke-width="2" />
+  <line x1="200" y1="674" x2="160" y2="714" stroke="#222" stroke-width="2" />
+  
+  <!-- 极简总结 - 调整y坐标以适应文本区域的扩展 -->
+  <text x="200" y="744" font-family="楷体, KaiTi" font-size="16" fill="#222" text-anchor="middle" font-style="italic">口号与现实之间，相隔的是权力的厚度</text>
+</svg>
+        </div>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet</p>
+        </footer>
+    </div>
+</body>
+</html>
