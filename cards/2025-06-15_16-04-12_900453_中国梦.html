@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.22);
+            max-width: 100%;
+            width: 800px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .svg-container {
+            margin-bottom: 24px;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+            margin-top: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="svg-container">
+            <svg style="overflow: visible;" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect fill="#e8e0d8" />
+  <!-- 装饰几何图形 -->
+  <rect x="20" y="20" fill="none" stroke="#c03a2b" stroke-width="2" />
+  
+  <!-- 标题 -->
+  <text x="200" y="70" font-family="SimKai, 楷体" font-size="28" fill="#333333" text-anchor="middle" font-weight="bold">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="40" y1="90" x2="360" y2="90" stroke="#666666" stroke-width="1" />
+  
+  <!-- 原词展示 -->
+  <text x="200" y="130" font-family="SimSun, 宋体" font-size="32" fill="#c03a2b" text-anchor="middle" font-weight="bold">中国梦</text>
+  <text x="200" y="155" font-family="Times New Roman" font-size="16" fill="#666666" text-anchor="middle">Chinese Dream</text>
+  <text x="200" y="175" font-family="MS Gothic" font-size="16" fill="#666666" text-anchor="middle">中国の夢</text>
+  
+  <!-- 解释 -->
+  <text x="40" y="200" font-family="'Source Han Serif', serif" font-size="13" fill="#333333">
+    <tspan>一剂精神安慰剂，</tspan>
+    <tspan x="40" dy="20.8">涂在现实苦难上的蜜糖。</tspan>
+    <tspan x="40" dy="20.8">让人在梦和梦之间的空隙里，</tspan>
+    <tspan x="40" dy="20.8">暂时忘记那些不能言说的痛。</tspan>
+    <tspan x="40" dy="20.8"></tspan>
+    <tspan x="40" dy="20.8">当每个人都沉睡在各自的梦里，</tspan>
+    <tspan x="40" dy="20.8">谁还会听见现实世界的呐喊？</tspan>
+    <tspan x="40" dy="20.8">我们集体织梦，</tspan>
+    <tspan x="40" dy="20.8">好让白日的苦难变得可以忍受。</tspan>
+    <tspan x="40" dy="20.8"></tspan>
+    <tspan x="40" dy="20.8">它就像那个永远不会来的周五——</tspan>
+    <tspan x="40" dy="20.8">每个人都引颈期盼，</tspan>
+    <tspan x="40" dy="20.8">却又在真正到来时发现，</tspan>
+    <tspan x="40" dy="20.8">不过是另一个周一的开始。</tspan>
+  </text>
+  
+  <!-- 极简图形表达 -->
+  <circle cx="130" cy="520" r="40" fill="none" stroke="#c03a2b" stroke-width="2" />
+  <text x="130" y="525" font-family="sans-serif" font-size="14" fill="#333333" text-anchor="middle">做梦</text>
+  <circle cx="270" cy="520" r="40" fill="none" stroke="#666666" stroke-width="2" />
+  <text x="270" y="525" font-family="sans-serif" font-size="14" fill="#333333" text-anchor="middle">现实</text>
+  <line x1="170" y1="520" x2="230" y2="520" stroke="#333333" stroke-width="2" stroke-dasharray="5,5" />
+  
+  <!-- 极简总结 -->
+  <text x="200" y="580" font-family="SimHei, 黑体" font-size="16" fill="#333333" text-anchor="middle" font-style="italic">"允许做梦，禁止醒来"</text>
+</svg>
+        </div>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet</p>
+        </footer>
+    </div>
+</body>
+</html>
