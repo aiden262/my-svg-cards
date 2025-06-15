@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.22);
+            max-width: 100%;
+            width: 800px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .svg-container {
+            margin-bottom: 24px;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+            margin-top: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="svg-container">
+            ```xml
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+  <rect width="100%" height="100%" fill="#1E1E1E"/>
+  <rect x="20" y="20" width="360" height="560" rx="10" fill="#1E1E1E" stroke="#333" stroke-width="1"/>
+  
+  <!-- 装饰图案 -->
+  <rect x="20" y="20" width="360" height="60" rx="10" fill="#e74c3c" opacity="0.9"/>
+  <polygon points="380,80 380,200 300,140" fill="#e74c3c" opacity="0.1"/>
+  <polygon points="20,400 100,500 20,580" fill="#e74c3c" opacity="0.1"/>
+  
+  <!-- 标题 -->
+  <text x="200" y="60" font-family="'Noto Serif SC', serif" font-size="28" fill="#fff" text-anchor="middle">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="50" y1="90" x2="350" y2="90" stroke="#333" stroke-width="1" stroke-dasharray="1,3"/>
+  
+  <!-- 词条 -->
+  <text x="200" y="130" font-family="'Noto Serif SC', serif" font-size="22" fill="#fff" text-anchor="middle">中国共产党</text>
+  <text x="200" y="160" font-family="Arial" font-size="16" fill="#999" text-anchor="middle" font-style="italic">Chinese Communist Party</text>
+  <text x="200" y="180" font-family="'Noto Serif SC', serif" font-size="16" fill="#999" text-anchor="middle">中国共産党</text>
+  
+  <!-- 解释 -->
+  <foreignObject x="40" y="210" width="320" height="280">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Noto Serif SC', serif; font-size: 18px; line-height: 1.5; color: #ccc;">
+      一个用"人民"的名义建立的权力结构，宣称代表大多数人，但实际由少数人掌控。如同一个漫长的相亲节目，百年来不断向人民承诺明天会更好，而"明天"似乎总在遥远的未来。擅长把"斗争"包装成"团结"，把"服从"美化为"自由"，如同魔术师让人们相信笼子其实是舞台。在其词典里，"初心"是一种可以不断重新定义的可塑概念，"伟大复兴"则像是一场永远不会完结的马拉松。
+    </div>
+  </foreignObject>
+  
+  <!-- 线条图/批判内核 -->
+  <line x1="70" y1="485" x2="330" y2="485" stroke="#666" stroke-width="1"/>
+  <text x="200" y="515" font-family="'Noto Serif SC', serif" font-size="18" fill="#e74c3c" text-anchor="middle">理想与现实之间的永恒矛盾体</text>
+  
+  <!-- 极简总结 -->
+  <rect x="70" y="535" width="260" height="40" rx="5" fill="#2E2E2E" stroke="#444" stroke-width="1"/>
+  <text x="200" y="560" font-family="'Noto Serif SC', serif" font-size="16" fill="#ccc" text-anchor="middle">一场未完成的革命的承诺</text>
+</svg>
+```
+        </div>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet</p>
+        </footer>
+    </div>
+</body>
+</html>
