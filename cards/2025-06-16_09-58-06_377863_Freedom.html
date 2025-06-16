@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信达雅翻译 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 820">
+  <!-- 纸张背景效果 -->
+  <defs>
+    <pattern id="paper-texture" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="#f8f5e6"></rect>
+      <path d="M0 0 L100 100" stroke="#e8e4d4" stroke-width="0.5" opacity="0.3"></path>
+      <path d="M100 0 L0 100" stroke="#e8e4d4" stroke-width="0.5" opacity="0.3"></path>
+    </pattern>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="450" height="800" fill="url(#paper-texture)"></rect>
+  
+  <!-- 标题 -->
+  <text x="225" y="70" font-family="'Noto Serif SC', serif" font-size="28" fill="#5a8a51" text-anchor="middle" font-weight="bold" style="font-family: &quot;Noto Serif SC&quot;, serif;">「Freedom」三关翻译</text>
+  
+  <!-- 原文 -->
+  <rect x="45" y="100" width="360" height="70" fill="#f7f3e3" rx="10" ry="10" stroke="#e2dbc0" stroke-width="1"></rect>
+  <text x="60" y="130" font-family="'Noto Serif SC', serif" font-size="16" fill="#5a8a51" style="font-family: &quot;Noto Serif SC&quot;, serif;">原文:</text>
+  <text x="225" y="145" font-family="'Noto Serif SC', serif" font-size="22" fill="#5a8a51" font-weight="bold" text-anchor="middle" style="font-family: &quot;Noto Serif SC&quot;, serif;">Freedom</text>
+  
+  <!-- 信 -->
+  <rect x="45" y="190" width="360" height="150" fill="#f7f3e3" rx="10" ry="10" stroke="#e2dbc0" stroke-width="1"></rect>
+  <text x="60" y="220" font-family="'Noto Serif SC', serif" font-size="16" fill="#5a8a51" style="font-family: &quot;Noto Serif SC&quot;, serif;">信 - 直译:</text>
+  <text x="60" y="260" font-family="'Noto Serif SC', serif" font-size="20" fill="#5a8a51" font-weight="bold" style="font-family: &quot;Noto Serif SC&quot;, serif;">自由</text>
+  
+  <!-- 达 -->
+  <rect x="45" y="360" width="360" height="150" fill="#f7f3e3" rx="10" ry="10" stroke="#e2dbc0" stroke-width="1"></rect>
+  <text x="60" y="390" font-family="'Noto Serif SC', serif" font-size="16" fill="#5a8a51" style="font-family: &quot;Noto Serif SC&quot;, serif;">达 - 意译:</text>
+  <text x="60" y="430" font-family="'Noto Serif SC', serif" font-size="20" fill="#5a8a51" font-weight="bold" style="font-family: &quot;Noto Serif SC&quot;, serif;">无拘无束，不受约束之境</text>
+  
+  <!-- 雅 -->
+  <rect x="45" y="530" width="360" height="220" fill="#f7f3e3" rx="10" ry="10" stroke="#e2dbc0" stroke-width="1"></rect>
+  <text x="60" y="560" font-family="'Noto Serif SC', serif" font-size="16" fill="#5a8a51" style="font-family: &quot;Noto Serif SC&quot;, serif;">雅 - 诗经风格:</text>
+  <foreignObject x="60" y="580" width="330" height="115">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 18px; color: rgb(90, 138, 81); line-height: 1.6;" font-family="'Noto Serif SC', serif">
+      <p style="margin: 0;">蕙兰猗猗，如风自由。</p>
+      <p style="margin: 0;">不束不羁，心之所求。</p>
+      <p style="margin: 0;">翱翔九天，无拘无忧。</p>
+      <p style="margin: 0;">逍遥四海，任意悠悠。</p>
+    </div>
+  </foreignObject>
+  
+  <!-- 底部装饰 -->
+  <line x1="45" y1="770" x2="405" y2="770" stroke="#5a8a51" stroke-width="1" opacity="0.7"></line>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 信达雅翻译 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
