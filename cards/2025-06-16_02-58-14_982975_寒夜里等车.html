@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人间苦 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 480 760" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#f3f0e9" height="100%" width="100%"/>
+<text fill="#5d5a55" font-family="'Noto Serif SC', serif" font-size="32" text-anchor="middle" x="240" y="80">人间苦</text>
+<line stroke="#a8a39d" stroke-width="1" x1="120" x2="360" y1="100" y2="100"/>
+<text fill="#5d5a55" font-family="'Noto Serif SC', serif" font-size="20" x="120" y="150">寒夜里等车</text>
+<g fill="none" stroke="#7c7670" stroke-width="1.5">
+<line x1="160.0" x2="320.0" y1="330.0" y2="330.0"/>
+<circle cx="0" cy="-40" r="15"/>
+<line x1="180.0" x2="300.0" y1="370.0" y2="370.0"/>
+</g>
+<text fill="#5d5a55" font-family="'Noto Serif SC', serif" font-size="18" line-height="1.6" x="120" y="450">
+<tspan dy="0" x="120">老王站在路边，风像刀子一样刮在脸上。</tspan>
+<tspan dy="32" x="120">车站的灯像浸了水的纸，黄光晕开，照不到</tspan>
+<tspan dy="32" x="120">他站的角落。手插在衣兜里，他能感到</tspan>
+<tspan dy="32" x="120">硬币的冰凉，三枚一块五，刚好够车费。</tspan>
+<tspan dy="32" x="120">远处似乎有车灯晃动，又消失了。</tspan>
+<tspan dy="32" x="120">他不知道末班车到底什么时候来，</tspan>
+<tspan dy="32" x="120">只知道回去的路，越来越远。</tspan>
+</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 人间苦 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
