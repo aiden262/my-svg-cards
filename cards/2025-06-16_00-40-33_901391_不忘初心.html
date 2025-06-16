@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.22);
+            max-width: 100%;
+            width: 800px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .svg-container {
+            margin-bottom: 24px;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+            margin-top: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+    <style>
+        text {
+            font-family: 'Noto Serif SC', serif;
+            fill: #E0E0E0; /* Light gray for general text */
+        }
+        .title { font-size: 36px; font-weight: bold; }
+        .main-phrase { font-size: 60px; font-weight: bold; fill: #FFEB3B; /* Amber for emphasis */ }
+        .label { font-size: 24px; font-weight: bold; }
+        .explanation { font-size: 20px; line-height: 1.5em; }
+        .summary { font-size: 30px; font-weight: bold; fill: #FFEB3B; /* Amber for emphasis */ }
+        .mondrian-red { fill: #FF0000; }
+        .mondrian-yellow { fill: #FFFF00; }
+        .mondrian-blue { fill: #0000FF; }
+        .mondrian-black-line { stroke: #000000; stroke-width: 5; fill: none; }
+        .nail-color { fill: #616161; } /* Dark gray for nail */
+        .wing-color { fill: #BDBDBD; opacity: 0.8; } /* Light gray for abstract wing */
+    </style>
+
+    <!-- Background Rectangle (Card Container) -->
+    <rect x="0" y="0" width="100%" height="100%" fill="#1E1E1E"/>
+
+    <!-- Mondrian Style Decorative Elements (Background Layer) -->
+    <rect x="40" y="40" width="100" height="100" class="mondrian-red"/>
+    <rect x="660" y="40" width="100" height="100" class="mondrian-yellow"/>
+    <rect x="40" y="460" width="100" height="100" class="mondrian-blue"/>
+
+    <line x1="140" y1="40" x2="140" y2="560" class="mondrian-black-line"/>
+    <line x1="40" y1="140" x2="760" y2="140" class="mondrian-black-line"/>
+    <line x1="40" y1="450" x2="760" y2="450" class="mondrian-black-line"/>
+    <line x1="650" y1="40" x2="650" y2="560" class="mondrian-black-line"/>
+
+    <!-- Abstract Steel Nail and Butterfly Wing Decoration (Foreground Layer) -->
+    <g transform="translate(680, 80)">
+        <!-- Abstract Nail -->
+        <rect x="0" y="0" width="8" height="30" class="nail-color"/>
+        <polygon points="-4,0 12,0 4,-8" class="nail-color"/>
+        <!-- Abstract Wing -->
+        <rect x="-15" y="10" width="40" height="20" class="wing-color" transform="rotate(-15 5 20)"/>
+    </g>
+
+    <!-- Text Content -->
+    <text x="400" y="76" text-anchor="middle" class="title">汉语新解</text>
+
+    <text x="400" y="166" text-anchor="middle" class="main-phrase">不忘初心</text>
+
+    <text x="40" y="230" class="label">解释：</text>
+
+    <!-- Long explanation text using foreignObject for wrapping -->
+    <foreignObject x="40" y="240" width="720" height="160">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Noto Serif SC', serif; font-size: 20px; line-height: 1.5em; color: #E0E0E0; text-align: justify;">
+            “不忘初心”就像博物馆里钉着蝴蝶标本的钢钉，钉得越牢靠，翅膀扑棱的痕迹就越清晰。当代人总爱把理想主义做成标本挂在墙上，仿佛经常擦拭玻璃罩子就能让逝去的时光重新流动。
+        </div>
+    </foreignObject>
+
+    <text x="40" y="454" class="label">总结：</text>
+
+    <text x="400" y="494" text-anchor="middle" class="summary">理想主义标本师</text>
+
+</svg>
+        </div>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 汉语新解 | 模型: Qwen/Qwen3-235B-A22B</p>
+        </footer>
+    </div>
+</body>
+</html>
