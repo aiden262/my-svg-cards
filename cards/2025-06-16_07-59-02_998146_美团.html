@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 400 616.0" xmlns="http://www.w3.org/2000/svg">
+<!-- 背景 -->
+<rect fill="#F8F3E9" height="616.0" rx="10" ry="10" width="400"/>
+<rect fill="#FFFAF0" height="520" rx="8" ry="8" stroke="#E8D9C5" stroke-width="1" width="320" x="40" y="40"/>
+<!-- 标题 -->
+<text fill="#333" font-family="'Noto Serif SC', serif" font-size="32" font-weight="bold" text-anchor="middle" x="200" y="90">汉语新解</text>
+<!-- 分隔线 -->
+<line stroke="#E8D9C5" stroke-linecap="round" stroke-width="2" x1="80" x2="320" y1="115" y2="115"/>
+<!-- 词汇 -->
+<text fill="#555" font-family="'Noto Serif SC', serif" font-size="28" text-anchor="middle" x="200" y="150">美团</text>
+<text fill="#888" font-family="'Noto Serif SC', serif" font-size="16" text-anchor="middle" x="200" y="175">Meituan</text>
+<text fill="#888" font-family="'Noto Serif SC', serif" font-size="14" text-anchor="middle" x="200" y="195">メイトゥアン</text>
+<!-- 解释 -->
+<foreignObject height="216.0" width="280" x="60" y="220">
+<div style="font-family: 'Noto Serif SC', serif; font-size: 18px; line-height: 1.5; color: #333;" xmlns="http://www.w3.org/1999/xhtml">
+      一个靠拉断腿骨拼成的商业模式。几千万骑手的马达声是现代都市的白噪音，而那些马达背后的人，却在静默中被算法绞杀。所谓"美"，美在资本家眼里的增长曲线；所谓"团"，团结的是消费者与资本的狂欢，排除的是那些穿梭在风雨中的影子。
+    </div>
+</foreignObject>
+<!-- 图形元素 -->
+<g transform="translate(80, 430)">
+<path d="M10,0 L220,0 L240,20 L220,40 L10,40 L0,20 Z" fill="none" stroke="#666" stroke-width="1.5"/>
+<text fill="#555" font-family="'Noto Serif SC', serif" font-size="14" text-anchor="middle" x="120" y="25">算法的笑脸下是骑手的泪水</text>
+</g>
+<!-- 极简总结 -->
+<text fill="#444" font-family="'Noto Serif SC', serif" font-size="16" font-style="italic" text-anchor="middle" x="200" y="536.0">"便宜的午餐，昂贵的代价"</text>
+<!-- 装饰图案 -->
+<rect fill="#FFD700" height="15" opacity="0.5" width="15" x="40" y="40"/>
+<rect fill="#5F9EA0" height="15" opacity="0.5" width="15" x="345" y="40"/>
+<rect fill="#5F9EA0" height="15" opacity="0.5" width="15" x="40" y="561.0"/>
+<rect fill="#FFD700" height="15" opacity="0.5" width="15" x="345" y="561.0"/>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
