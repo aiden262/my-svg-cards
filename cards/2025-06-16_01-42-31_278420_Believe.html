@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单词卡片 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.22);
+            max-width: 100%;
+            width: 800px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .svg-container {
+            margin-bottom: 24px;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+            margin-top: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="svg-container">
+            # 单词记忆卡片: Believe
+
+<svg width="700" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="700" height="500" fill="#FFF8E1" rx="15" ry="15"/>
+  
+  <!-- 标题区域 -->
+  <rect x="50" y="40" width="600" height="80" fill="#F9EBC8" rx="10" ry="10" opacity="0.7"/>
+  <text x="350" y="85" font-family="Georgia" font-size="36" text-anchor="middle" fill="#5D4037">Believe</text>
+  <text x="350" y="110" font-family="Georgia" font-size="18" text-anchor="middle" fill="#7D6E83">相信，认为</text>
+  
+  <!-- 词根区域 -->
+  <rect x="50" y="140" width="280" height="150" fill="#F5CDA7" rx="10" ry="10" opacity="0.6"/>
+  <text x="65" y="165" font-family="Georgia" font-size="20" fill="#5D4037">词根拆解:</text>
+  <text x="65" y="195" font-family="Georgia" font-size="16" fill="#7D6E83">be- (构成动词前缀)</text>
+  <text x="65" y="225" font-family="Georgia" font-size="16" fill="#7D6E83">-lieve 源自拉丁语 "lieue"</text>
+  <text x="65" y="255" font-family="Georgia" font-size="16" fill="#7D6E83">意为"喜欢，赞同，信任"</text>
+  
+  <!-- 记忆故事区 -->
+  <rect x="350" y="140" width="300" height="150" fill="#E6B89C" rx="10" ry="10" opacity="0.6"/>
+  <text x="370" y="165" font-family="Georgia" font-size="20" fill="#5D4037">记忆故事:</text>
+  <text x="370" y="195" font-family="Georgia" font-size="16" fill="#7D6E83" width="280">想象一位名叫"Be"的人</text>
+  <text x="370" y="225" font-family="Georgia" font-size="16" fill="#7D6E83" width="280">对一切都心存"lieve"(喜爱)</text>
+  <text x="370" y="255" font-family="Georgia" font-size="16" fill="#7D6E83" width="280">所以他总是相信美好的事物</text>
+  
+  <!-- 视觉记忆 -->
+  <rect x="50" y="310" width="600" height="90" fill="#D8A384" rx="10" ry="10" opacity="0.5"/>
+  <text x="65" y="335" font-family="Georgia" font-size="20" fill="#5D4037">视觉记忆:</text>
+  <text x="65" y="365" font-family="Georgia" font-size="16" fill="#7D6E83">🧠 ➕ ❤️ = believe</text>
+  <text x="350" y="365" font-family="Georgia" font-size="16" fill="#7D6E83">头脑与心灵的结合产生信念</text>
+  
+  <!-- 例句 -->
+  <rect x="50" y="420" width="600" height="60" fill="#C68B59" rx="10" ry="10" opacity="0.4"/>
+  <text x="65" y="445" font-family="Georgia" font-size="20" fill="#5D4037">例句:</text>
+  <text x="65" y="470" font-family="Georgia" font-size="16" fill="#7D6E83" font-style="italic">I believe in you, even when you don't believe in yourself.</text>
+</svg>
+
+## 词源解析
+"Believe" 由前缀 "be-" 和词根 "-lieve" 组成。"be-" 是一个构词前缀，用于加强语气或形成动词，而 "-lieve" 源自拉丁语 "lieue"，意为"赞同，喜欢，信任"。这解释了为什么 "believe" 意味着"接受某事为真实或可信"。
+
+## 记忆小故事
+想象一个名叫"Be"的人，他对周围的一切都充满了"lieve"(喜爱与信任)。因为这种喜爱和信任，他自然而然地"相信"(believe)别人所说的话和世界的美好。当你需要"相信"什么时，就想象这位Be先生全心全意地接受并信任它。
+
+## 实用例句
+1. I believe you have the potential to succeed.（我相信你有成功的潜力。）
+2. They don't believe in ghosts or supernatural phenomena.（他们不相信鬼魂或超自然现象。）
+3. Do you believe that the situation will improve soon?（你相信情况很快会好转吗？）
+
+记住：believe（相信）是头脑(be)与心灵(lieve)的结合，真正的信念需要理性认知和情感认同的双重支持。
+        </div>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 单词卡片 | 模型: anthropic/claude-3.7-sonnet</p>
+        </footer>
+    </div>
+</body>
+</html>
