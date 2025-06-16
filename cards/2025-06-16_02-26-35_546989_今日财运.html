@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卜卦 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.22);
+            max-width: 100%;
+            width: 800px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .svg-container {
+            margin-bottom: 24px;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+            margin-top: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="svg-container">
+            <svg width="480" height="760" xmlns="http://www.w3.org/2000/svg">
+  <rect width="480" height="760" fill="#f9f6f2" />
+  <rect x="30" y="30" width="420" height="700" fill="none" stroke="#333" stroke-width="1.5" />
+  
+  <!-- 标题 -->
+  <text x="240" y="80" font-family="KingHwa_OldSong, serif" font-size="28" fill="#333" text-anchor="middle" dominant-baseline="middle">卜 卦</text>
+  
+  <!-- 分隔线 -->
+  <line x1="60" y1="110" x2="420" y2="110" stroke="#333" stroke-width="1" />
+  
+  <!-- 用户输入 -->
+  <text x="60" y="150" font-family="KingHwa_OldSong, serif" font-size="18" fill="#333">今日财运</text>
+  
+  <!-- 卦象 -->
+  <text x="240" y="200" font-family="KingHwa_OldSong, serif" font-size="56" fill="#333" text-anchor="middle">坤 ䷁</text>
+  
+  <!-- 解读 -->
+  <text x="60" y="280" font-family="KingHwa_OldSong, serif" font-size="18" fill="#333">
+    <tspan x="60" dy="0">坤卦，六爻皆阴，象征大地、柔顺、包容。</tspan>
+    <tspan x="60" dy="30">今日财运呈现守势，宜持盈保泰，不宜冒进。</tspan>
+    <tspan x="60" dy="30">坤卦之象，厚德载物，当以积累为要，不可</tspan>
+    <tspan x="60" dy="30">妄求速成。</tspan>
+    <tspan x="60" dy="30">宜理财不宜投机，有积蓄之象，财源虽不</tspan>
+    <tspan x="60" dy="30">丰而平稳，日积月累，终成大器。</tspan>
+    <tspan x="60" dy="30">《彖辞》曰："至柔，而动也刚，至静，而德方"，</tspan>
+    <tspan x="60" dy="30">需持柔顺之心，静待时机，方能生财有道。</tspan>
+  </text>
+  
+  <!-- 分隔线 -->
+  <line x1="60" y1="680" x2="420" y2="680" stroke="#333" stroke-width="1" />
+  
+  <!-- 署名 -->
+  <text x="240" y="710" font-family="KingHwa_OldSong, serif" font-size="16" fill="#333" text-anchor="middle">李继刚 2024</text>
+</svg>
+        </div>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 卜卦 | 模型: anthropic/claude-3.7-sonnet</p>
+        </footer>
+    </div>
+</body>
+</html>
