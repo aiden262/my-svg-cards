@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 400 657.0" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#f9f3e9" height="657.0" width="400" x="0" y="0"/>
+<rect fill="#fcf8f2" height="560" rx="5" stroke="#e0d9cc" stroke-width="2" width="360" x="20" y="20"/>
+<!-- 几何装饰元素 -->
+<rect fill="#f15a22" height="50" opacity="0.7" width="50" x="30" y="30"/>
+<circle cx="350" cy="50" fill="#1e88e5" opacity="0.3" r="25"/>
+<rect fill="#ffcc00" height="40" opacity="0.5" width="40" x="320" y="577.0"/>
+<!-- 标题 -->
+<text fill="#333333" font-family="'Noto Serif SC', serif" font-size="28" text-anchor="middle" x="200" y="80">汉语新解</text>
+<!-- 分隔线 -->
+<line stroke="#d0c8b9" stroke-width="2" x1="60" x2="340" y1="100" y2="100"/>
+<!-- 词汇 -->
+<text fill="#1f1f1f" font-family="'Noto Serif SC', serif" font-size="24" text-anchor="middle" x="200" y="140">饿了么</text>
+<text fill="#666666" font-family="'Noto Serif SC', serif" font-size="14" text-anchor="middle" x="200" y="165">Eleme</text>
+<text fill="#666666" font-family="'Noto Serif SC', serif" font-size="14" text-anchor="middle" x="200" y="185">おなかがすいた</text>
+<!-- 解释 -->
+<foreignObject height="297.0" width="320" x="40" y="210">
+<div style="font-family: 'Noto Serif SC', serif; color:#444; font-size:18px; line-height:1.5;" xmlns="http://www.w3.org/1999/xhtml">
+      一个貌似在询问你饥饿状态的三个字，实则是资本布下的消费陷阱。"饿了么"不是问句，是命令句——命令你感到饥饿，命令你打开手机，命令你掏出钱包。这是时代的绝妙反讽：当饱食的人们不知如何消磨时间，便需要一个借口来填补精神的空虚。资本将"饿"这种最原始的生理需求，包装成一种随时可供选择的消费体验，而"么"的柔化语气，正如刀尖上涂抹的蜜糖，让你在被宰割时还心甘情愿。
+    </div>
+</foreignObject>
+<!-- 简易线条图 -->
+<line stroke="#888" stroke-width="1" x1="80" x2="320" y1="527.0" y2="527.0"/>
+<text fill="#666" font-family="'Noto Serif SC', serif" font-size="12" x="80" y="517.0">生理需求</text>
+<text fill="#666" font-family="'Noto Serif SC', serif" font-size="12" text-anchor="end" x="320" y="517.0">消费主义</text>
+<circle cx="200" cy="527.0" fill="#f15a22" r="5"/>
+<text fill="#666" font-family="'Noto Serif SC', serif" font-size="12" text-anchor="middle" x="200" y="547.0">"饿了么"的真实位置</text>
+<!-- 极简总结 -->
+<text fill="#333" font-family="'Noto Serif SC', serif" font-size="16" text-anchor="middle" x="200" y="597.0">不是问你饿不饿，而是催你掏钱包</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
