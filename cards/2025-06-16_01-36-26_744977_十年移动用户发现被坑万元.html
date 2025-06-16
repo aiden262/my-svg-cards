@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人间苦 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.22);
+            max-width: 100%;
+            width: 800px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .svg-container {
+            margin-bottom: 24px;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+            margin-top: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="svg-container">
+            <svg width="480" height="760" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f4f0e7" />
+  
+  <!-- 标题 -->
+  <text x="50%" y="60" text-anchor="middle" font-family="KingHwa_OldSong" font-size="28" fill="#595757">人间苦</text>
+  
+  <!-- 分隔线 -->
+  <line x1="100" y1="80" x2="380" y2="80" stroke="#a9a29d" stroke-width="1" />
+  
+  <!-- 用户输入 -->
+  <text x="50" y="120" font-family="KingHwa_OldSong" font-size="16" fill="#595757">十年移动用户，发现被坑万元</text>
+  
+  <!-- 极简线条图 -->
+  <g transform="translate(240, 300)">
+    <path d="M-100,0 L100,0" stroke="#a9a29d" stroke-width="2" />
+    <path d="M-80,-20 L-60,20 L-40,-10 L-20,30 L0,-15 L20,25 L40,-5 L60,15 L80,-25" stroke="#8c7a70" stroke-width="1.5" fill="none" />
+    <circle cx="0" cy="0" r="5" fill="#d0c4b9" />
+    <line x1="-30" y1="50" x2="30" y2="50" stroke="#595757" stroke-width="3" />
+  </g>
+  
+  <!-- 响应文本 -->
+  <text x="50" y="460" font-family="KingHwa_OldSong" font-size="16" fill="#595757">
+    <tspan x="50" dy="0">老王盯着那张纸条看了很久。账单上的数字在阳光下</tspan>
+    <tspan x="50" dy="24">刺眼得像刀子。十年了，每月那点死工资，掰开了</tspan>
+    <tspan x="50" dy="24">算，那不是割肉吗？</tspan>
+    <tspan x="50" dy="24"></tspan>
+    <tspan x="50" dy="24">他想起屋后的老槐树，去年秋天被雷劈了一半，枯</tspan>
+    <tspan x="50" dy="24">死的那半边还在风中摇晃。活着的那半边，春天又</tspan>
+    <tspan x="50" dy="24">抽了新芽。</tspan>
+    <tspan x="50" dy="24"></tspan>
+    <tspan x="50" dy="24">老王慢慢把账单折起来，塞进口袋里。</tspan>
+    <tspan x="50" dy="24"></tspan>
+    <tspan x="50" dy="24">风吹过，院子里的铁锅翻了个身。</tspan>
+  </text>
+</svg>
+        </div>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 人间苦 | 模型: anthropic/claude-3.7-sonnet</p>
+        </footer>
+    </div>
+</body>
+</html>
