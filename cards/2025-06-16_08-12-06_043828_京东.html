@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 400 640.5" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#faf0e6" height="640.5" width="400"/>
+<!-- 蒙德里安风格装饰 -->
+<rect fill="#d13b40" height="100" opacity="0.8" width="60" x="20" y="520.5"/>
+<rect fill="#1a53a0" height="100" opacity="0.8" width="60" x="320" y="520.5"/>
+<rect fill="#ffd700" height="50" opacity="0.4" width="220" x="90" y="570.5"/>
+<!-- 标题 -->
+<text fill="#333" font-family="'Noto Serif SC', serif" font-size="28" font-weight="bold" text-anchor="middle" x="200" y="60">汉语新解</text>
+<!-- 分隔线 -->
+<line stroke="#555" stroke-width="1" x1="50" x2="350" y1="80" y2="80"/>
+<!-- 词汇 -->
+<text fill="#333" font-family="'Noto Serif SC', serif" font-size="24" font-weight="bold" text-anchor="middle" x="200" y="120">京东</text>
+<text fill="#666" font-family="'Noto Serif SC', serif" font-size="16" font-style="italic" text-anchor="middle" x="200" y="145">JD.com</text>
+<text fill="#666" font-family="'Noto Serif SC', serif" font-size="16" text-anchor="middle" x="200" y="170">ジンドン</text>
+<!-- 解释 -->
+<foreignObject height="310.5" width="320" x="40" y="190">
+<div style="font-family: 'Noto Serif SC', serif; color: #444; font-size: 18px; line-height: 1.5; text-align: justify;" xmlns="http://www.w3.org/1999/xhtml">
+      一个神奇的地方，它让你相信今天下单明天就能收到东西，却常常被告知"您的包裹已出库"后就陷入时空扭曲。它是一种现代信仰体系，人们通过"加购物车"来获得短暂的多巴胺，通过"京豆"来获得被爱的错觉，却在"确认收货"后重返空虚。它让人以为省钱，实则是通过"plus会员"和"每满减"这样的数学题让你花更多。它不是简单的电商，是一种能让你被算法驯养的生活方式，告诉你应该买什么，然后精准推送你不需要但又难以抗拒的商品。
+    </div>
+</foreignObject>
+<!-- 简约线条图 -->
+<circle cx="130" cy="535.5" fill="none" r="15" stroke="#333" stroke-width="1.5"/>
+<line stroke="#333" stroke-width="1.5" x1="130" x2="130" y1="550.5" y2="580.5"/>
+<line stroke="#333" stroke-width="1.5" x1="130" x2="110" y1="560.5" y2="575.5"/>
+<line stroke="#333" stroke-width="1.5" x1="130" x2="150" y1="560.5" y2="575.5"/>
+<rect fill="none" height="35" stroke="#333" stroke-width="1.5" width="55" x="170" y="545.5"/>
+<text fill="#333" font-family="'Noto Serif SC', serif" font-size="12" text-anchor="middle" x="198" y="568.5">购物车</text>
+<path d="M240,520 C270,500 290,540 270,555" fill="none" stroke="#333" stroke-width="1.5"/>
+<text fill="#333" font-family="'Noto Serif SC', serif" font-size="12" x="280" y="560.5">空虚</text>
+<!-- 极简总结 -->
+<text fill="#333" font-family="'Noto Serif SC', serif" font-size="16" font-style="italic" text-anchor="middle" x="200" y="620.5">用算法驯养的消费信仰体系</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
