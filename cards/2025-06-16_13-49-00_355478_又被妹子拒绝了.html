@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人间苦 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 780">
+  <rect width="100%" height="100%" fill="#f5f2ee"></rect>
+  <text x="240" y="80" font-family="'Noto Serif SC', serif" font-size="28" fill="#5f5f5f" text-anchor="middle" style="font-family: &quot;Noto Serif SC&quot;, serif;">人间苦</text>
+  <line x1="120" y1="100" x2="360" y2="100" stroke="#8a8178" stroke-width="1"></line>
+  <text x="240" y="140" font-family="'Noto Serif SC', serif" font-size="16" fill="#5f5f5f" text-anchor="middle" style="font-family: &quot;Noto Serif SC&quot;, serif;">又被妹子拒绝了</text>
+  
+  <line x1="240" y1="180" x2="240" y2="250" stroke="#8a8178" stroke-width="0.5"></line>
+  <circle cx="240" cy="170" r="3" fill="none" stroke="#8a8178" stroke-width="0.5"></circle>
+  <line x1="220" y1="240" x2="260" y2="240" stroke="#8a8178" stroke-width="0.5"></line>
+  
+  <foreignObject x="40" y="306.3290710449219" width="400" height="245"><div style="font-family: &quot;Noto Serif SC&quot;, serif; color: rgb(95, 95, 95); line-height: 1.7; overflow-wrap: break-word; text-align: justify; overflow: hidden;">老王盯着手机上那条简短的拒绝信息，屏幕亮度刺痛了眼睛。 外面的雨滴敲打着窗户，像是一下一下砸在心上。摇晃的 路灯投下斑驳的影，照着桌上喝了一半的凉茶和散落的纸 巾。他点了根烟，烟雾缭绕中，镜子里映出的脸陌生而苍 老。墙上的挂钟滴答作响，像是在数着孤独的秒数。他想 起小时候母亲说过，人这一生，总有人来人往。可怎么到 他这儿，只剩下往而不来了。指尖的烟灰落在裤子上，他 也没去拍，任由它在那里留下灰色的印记。</div></foreignObject>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 人间苦 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
