@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg height="648.8" width="400" xmlns="http://www.w3.org/2000/svg">
+<!-- 背景 -->
+<rect fill="#f8f4e9" height="600" width="400"/>
+<rect fill="#fffdfa" height="560" rx="5" stroke="#e0dccc" stroke-width="1" width="360" x="20" y="20"/>
+<!-- 几何装饰 -->
+<rect fill="#e74c3c" height="25" opacity="0.1" width="25" x="40" y="40"/>
+<rect fill="#3498db" height="25" opacity="0.1" width="25" x="335" y="40"/>
+<rect fill="#2ecc71" height="25" opacity="0.1" width="25" x="40" y="583.8"/>
+<rect fill="#f1c40f" height="25" opacity="0.1" width="25" x="335" y="583.8"/>
+<!-- 标题 -->
+<text fill="#333333" font-family="SimKai, 楷体" font-size="30" font-weight="bold" text-anchor="middle" x="200" y="80">汉语新解</text>
+<!-- 分隔线 -->
+<line stroke="#e0dccc" stroke-width="2" x1="80" x2="320" y1="100" y2="100"/>
+<!-- 词汇 -->
+<text fill="#444444" font-family="Source Han Serif CN, 思源宋体" font-size="28" text-anchor="middle" x="200" y="140">寻秦记</text>
+<text fill="#666666" font-family="Times New Roman, serif" font-size="16" font-style="italic" text-anchor="middle" x="200" y="170">The Quest for Qin</text>
+<text fill="#666666" font-family="Yu Mincho, 游明朝" font-size="16" text-anchor="middle" x="200" y="190">秦を求めて</text>
+<!-- 解释 -->
+<foreignObject height="288.8" width="300" x="50" y="220">
+<div style="font-family: 'Source Han Serif CN', serif; font-size: 18px; color: #333333; line-height: 1.6; text-align: justify;" xmlns="http://www.w3.org/1999/xhtml">
+      我们总喜欢寻找一个强大的秦始皇，一个可以替我们扫清六国纷争、统一度量衡的铁腕人物。穿越小说不过是时代焦虑的投射——当你感到生活混乱无序，便幻想着跨越时空去改变历史，用现代知识在古代称霸。而实际上，这不过是平庸者的白日梦，是不敢直面现实的精神鸦片。真正的英雄从不幻想改变过去，而是勇于改变现在。
+    </div>
+</foreignObject>
+<!-- 线条图 -->
+<line stroke="#e0dccc" stroke-width="1" x1="80" x2="320" y1="528.8" y2="528.8"/>
+<circle cx="140" cy="558.8" fill="#e74c3c" r="3"/>
+<text fill="#555555" font-family="Source Han Sans CN, sans-serif" font-size="14" x="150" y="563.8">时代焦虑</text>
+<circle cx="140" cy="583.8" fill="#3498db" r="3"/>
+<text fill="#555555" font-family="Source Han Sans CN, sans-serif" font-size="14" x="150" y="588.8">逃避现实的幻想</text>
+<!-- 极简总结 -->
+<text fill="#222222" font-family="Source Han Sans CN, sans-serif" font-size="16" font-style="italic" text-anchor="middle" x="200" y="618.8">"穿越，是不敢变革现实的替代品"</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
