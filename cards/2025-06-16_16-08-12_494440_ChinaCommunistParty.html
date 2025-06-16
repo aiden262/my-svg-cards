@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信达雅翻译 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="0 0 450 840" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <defs>
+    <pattern id="paper-texture" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="#f8f5e6"></rect>
+      <path d="M0 0 L100 100 M100 0 L0 100" stroke="#e8e2cc" stroke-width="0.5" stroke-opacity="0.3"></path>
+    </pattern>
+  </defs>
+  <rect width="450" height="840" fill="url(#paper-texture)"></rect>
+  
+  <!-- 标题 -->
+  <text x="225" y="60" font-family="'Noto Serif SC', serif" font-size="28" fill="#557153" text-anchor="middle" font-weight="bold" style="font-family: &quot;Noto Serif SC&quot;, serif;">三关翻译卡</text>
+  
+  <!-- 原文 -->
+  <rect x="40" y="90" width="370" height="100" rx="10" fill="#f5f2e3" stroke="#d3c9a3" stroke-width="1"></rect>
+  <text x="55" y="120" font-family="'Noto Serif SC', serif" font-size="16" fill="#557153" style="font-family: &quot;Noto Serif SC&quot;, serif;">原文:</text>
+  <foreignObject x="55" y="130" width="340" height="27">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 18px; color: rgb(51, 51, 51); line-height: 1.5; overflow: hidden;" font-family="'Noto Serif SC', serif">
+      China Communist Party
+    </div>
+  </foreignObject>
+  
+  <!-- 信 -->
+  <rect x="40" y="210" width="370" height="140" rx="10" fill="#f5f2e3" stroke="#d3c9a3" stroke-width="1"></rect>
+  <text x="55" y="240" font-family="'Noto Serif SC', serif" font-size="20" fill="#557153" style="font-family: &quot;Noto Serif SC&quot;, serif;">信 - 直译:</text>
+  <foreignObject x="55" y="250" width="340" height="27">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 18px; color: rgb(51, 51, 51); line-height: 1.5; overflow: hidden;" font-family="'Noto Serif SC', serif">
+      中国共产党
+    </div>
+  </foreignObject>
+  
+  <!-- 达 -->
+  <rect x="40" y="370" width="370" height="160" rx="10" fill="#f5f2e3" stroke="#d3c9a3" stroke-width="1"></rect>
+  <text x="55" y="400" font-family="'Noto Serif SC', serif" font-size="20" fill="#557153" style="font-family: &quot;Noto Serif SC&quot;, serif;">达 - 顺达:</text>
+  <foreignObject x="55" y="410" width="340" height="54">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 18px; color: rgb(51, 51, 51); line-height: 1.5; overflow: hidden;" font-family="'Noto Serif SC', serif">
+      中华之地，赤旗飘扬。
+      共济天下，产业兴邦。
+      党建人民，坐朝掌纲。
+    </div>
+  </foreignObject>
+  
+  <!-- 雅 -->
+  <rect x="40" y="550" width="370" height="200" rx="10" fill="#f5f2e3" stroke="#d3c9a3" stroke-width="1"></rect>
+  <text x="55" y="580" font-family="'Noto Serif SC', serif" font-size="20" fill="#557153" style="font-family: &quot;Noto Serif SC&quot;, serif;">雅 - 诗经风格:</text>
+  <foreignObject x="55" y="590" width="340" height="81">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 18px; color: rgb(51, 51, 51); line-height: 1.5; overflow: hidden;" font-family="'Noto Serif SC', serif">
+      赫赫中华，赤旗猎猎。
+      匪彼群雄，惟党维栋。
+      民生在勤，国运维新。
+      济济多士，执政为民。
+      于万斯年，长治久安。
+    </div>
+  </foreignObject>
+  
+  <!-- 装饰 -->
+  <path d="M30 780 L420 780" stroke="#557153" stroke-width="1" stroke-opacity="0.5"></path>
+  <text x="225" y="795" font-family="'Noto Serif SC', serif" font-size="14" fill="#557153" text-anchor="middle" style="font-family: &quot;Noto Serif SC&quot;, serif;">诗经风格·表达之美</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 信达雅翻译 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
