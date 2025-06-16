@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg width="400" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="400" height="600" fill="#f8f4e9" />
+  <rect x="30" y="30" width="340" height="540" fill="#fffcf5" stroke="#e8e2d5" stroke-width="1" rx="5" />
+  
+  <!-- 标题装饰 -->
+  <line x1="50" y1="100" x2="350" y2="100" stroke="#888" stroke-width="1" stroke-dasharray="1,3" />
+  <line x1="50" y1="400" x2="350" y2="400" stroke="#888" stroke-width="1" stroke-dasharray="1,3" />
+  
+  <!-- 几何图案 -->
+  <rect x="50" y="420" width="40" height="40" fill="none" stroke="#aaa" stroke-width="1" />
+  <circle cx="320" cy="440" r="20" fill="none" stroke="#aaa" stroke-width="1" />
+  <polygon points="200,435 215,455 185,455" fill="none" stroke="#aaa" stroke-width="1" />
+  
+  <!-- 标题 -->
+  <text x="200" y="80" font-family="KaiTi, serif" font-size="28" fill="#333" text-anchor="middle">汉语新解</text>
+  
+  <!-- 词汇 -->
+  <text x="200" y="140" font-family="serif" font-size="24" fill="#555" text-anchor="middle">支付宝 / Alipay / アリペイ</text>
+  
+  <!-- 解释 -->
+  <foreignObject x="60" y="170" width="280" height="297.0">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: serif; font-size: 18px; color: #444; line-height: 1.5;">
+      数字时代的护身符。表面上是让你更方便地支付，实际上是精确记录你每一次经济活动的数据采集器。你以为你在使用它，实际上是它在使用你。当它告诉你"余额宝收益到账"时，你会忘记它同时也知道你昨天买了什么、去了哪里、和谁一起消费。这个"宝"字用得妙，让人以为自己得到了宝贝，殊不知自己才是被收藏的那个。
+    </div>
+  </foreignObject>
+  
+  <!-- 图形象征 -->
+  <line x1="100" y1="430" x2="300" y2="430" stroke="#666" stroke-width="2" />
+  <line x1="100" y1="430" x2="100" y2="450" stroke="#666" stroke-width="2" />
+  <line x1="300" y1="430" x2="300" y2="450" stroke="#666" stroke-width="2" />
+  <text x="200" y="445" font-family="sans-serif" font-size="10" fill="#666" text-anchor="middle">数据 → 控制 → 利润</text>
+  
+  <!-- 总结 -->
+  <text x="200" y="500" font-family="serif" font-size="16" fill="#555" text-anchor="middle" font-style="italic">"便捷是表象，监控是本质。"</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
