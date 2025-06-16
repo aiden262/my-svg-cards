@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人间苦 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 780">
+  <style>
+    .title { font-family: "KingHwa_OldSong", serif; font-size: 28px; fill: #5D5D5D; }
+    .content { font-family: "KingHwa_OldSong", serif; font-size: 18px; fill: #5D5D5D; }
+    .response { font-family: "KingHwa_OldSong", serif; font-size: 16px; fill: #5D5D5D; line-height: 1.6; }
+  </style>
+  <rect width="100%" height="100%" fill="#F5F2EF"></rect>
+  
+  <!-- 标题 -->
+  <text x="240" y="60" class="title" text-anchor="middle">人间苦</text>
+  
+  <!-- 分隔线 -->
+  <line x1="120" y1="80" x2="360" y2="80" stroke="#BEB6B0" stroke-width="1"></line>
+  
+  <!-- 用户输入 -->
+  <text x="80" y="120" class="content">一生积蓄买了恒大烂尾楼</text>
+  
+  <!-- 抽象图形 -->
+  <g transform="translate(240, 250)">
+    <!-- 断裂的楼房线条 -->
+    <polyline points="-100,50 -80,30 -60,50 -40,30 -20,50 0,30 20,50 40,30 60,50" fill="none" stroke="#7D7367" stroke-width="2"></polyline>
+    <!-- 破碎的钱币 -->
+    <circle cx="-40" cy="-20" r="30" fill="none" stroke="#9C8D7F" stroke-width="2" stroke-dasharray="10,5"></circle>
+    <!-- 断裂的梦想/希望 -->
+    <path d="M50,-30 C70,-50 110,-40 80,-10" fill="none" stroke="#B4A99A" stroke-width="2" stroke-dasharray="5,3"></path>
+  </g>
+  
+  <!-- 响应文本 -->
+  <foreignObject x="60" y="340" width="360" height="380">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 16px; color: rgb(93, 93, 93); line-height: 1.8; white-space: pre-wrap;">
+老王立在那栋灰色的水泥框架前，眼神空洞。
+三十年打工的血汗钱，全部埋进了这堆永远不会完工的混凝土。
+
+他伸手摸着露出的钢筋，锈迹斑斑，像他满是褶皱的手掌。工地已经荒废两年，杂草从地基的裂缝中钻出来，顽强得讽刺。
+
+"明年交房"——这句话他已经听了五年。
+
+口袋里是最后一封律师函，皱巴巴的。起诉的路比这烂尾楼还要漫长。
+
+老王蹲下来，指尖刨着地上的沙土。这堆钢筋水泥原本该是他养老的窝，现在成了啃噬他余生的无底洞。
+
+天很蓝，像一张欠条。
+    </div>
+  </foreignObject>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 人间苦 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
