@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 620">
+  <rect width="400" height="620" fill="#f4f1eb" rx="10" ry="10"></rect>
+  <rect x="20" y="50" width="360" height="520" fill="#fdfdfc" rx="5" ry="5" stroke="#e0ddd5" stroke-width="1"></rect>
+  
+  <!-- 标题 -->
+  <text x="200" y="35" font-family="'Noto Serif SC', serif" font-size="28" fill="#333" text-anchor="middle" font-weight="bold" style="font-family: &quot;Noto Serif SC&quot;, serif;">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="40" y1="70" x2="360" y2="70" stroke="#d1cdca" stroke-width="1"></line>
+  
+  <!-- 词汇 -->
+  <text x="200" y="95" font-family="'Noto Serif SC', serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold" style="font-family: &quot;Noto Serif SC&quot;, serif;">中药注射液</text>
+  <text x="200" y="120" font-family="'Noto Serif SC', serif" font-size="14" fill="#666" text-anchor="middle" font-style="italic" style="font-family: &quot;Noto Serif SC&quot;, serif;">Chinese Herbal Injection</text>
+  <text x="200" y="140" font-family="'Noto Serif SC', serif" font-size="14" fill="#666" text-anchor="middle" style="font-family: &quot;Noto Serif SC&quot;, serif;">漢方注射液</text>
+  
+  <!-- 分隔线 -->
+  <line x1="80" y1="160" x2="320" y2="160" stroke="#d1cdca" stroke-width="1"></line>
+  
+  <!-- 解释内容 -->
+  <foreignObject x="40" y="180" width="320" height="256">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 16px; line-height: 1.6; color: rgb(51, 51, 51); text-align: justify; overflow: hidden;" font-family="'Noto Serif SC', serif">
+      一场穿着白大褂的迷信仪式，是古老智慧与现代技术最尴尬的联姻。
+      
+      将经验方剂的模糊成分直接送入血管，跳过了消化系统这个天然的安全阀，把"虽未验证但至少无害"升级为"可能有效但风险未知"。
+      
+      在科学与传统之间搭起的这座吊桥，其材料是经验，其工艺是想象，其检验标准是寄希望。人们在上面行走，脚下是药理学的深渊。
+      
+      这是一种完美的医疗隐喻：我们急于理解却又难以解释，渴望疗效但无法量化，想要科学却依赖信仰。
+    </div>
+  </foreignObject>
+  
+  <!-- 简化图形 -->
+  <circle cx="120" cy="490" r="30" fill="none" stroke="#555" stroke-width="1.5"></circle>
+  <rect x="240" y="460" width="60" height="60" fill="none" stroke="#555" stroke-width="1.5"></rect>
+  <line x1="150" y1="490" x2="240" y2="490" stroke="#555" stroke-width="2" stroke-dasharray="5,3"></line>
+  <text x="200" y="480" font-family="'Noto Serif SC', serif" font-size="12" fill="#666" text-anchor="middle" style="font-family: &quot;Noto Serif SC&quot;, serif;">科学 ←→ 传统</text>
+  
+  <!-- 总结 -->
+  <text x="200" y="550" font-family="'Noto Serif SC', serif" font-size="18" fill="#333" text-anchor="middle" font-style="italic" style="font-family: &quot;Noto Serif SC&quot;, serif;">古法新装的信仰注射器</text>
+  
+  <!-- 装饰 -->
+  <rect x="30" y="30" width="5" height="5" fill="#b6413c"></rect>
+  <rect x="365" y="30" width="5" height="5" fill="#b6413c"></rect>
+  <rect x="30" y="565" width="5" height="5" fill="#b6413c"></rect>
+  <rect x="365" y="565" width="5" height="5" fill="#b6413c"></rect>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
