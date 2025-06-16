@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人间苦 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#e8e6e1;stop-opacity:1"/>
+<stop offset="100%" style="stop-color:#d6d3cc;stop-opacity:1"/>
+</linearGradient>
+</defs>
+<rect fill="url(#bg)" height="100%" width="100%"/>
+<text fill="#4a4a4a" font-family="'Noto Serif SC', serif" font-size="28" text-anchor="middle" x="240" y="60">人间苦</text>
+<line stroke="#8c857b" stroke-width="1" x1="120" x2="360" y1="80" y2="80"/>
+<text fill="#5d5d5d" font-family="'Noto Serif SC', serif" font-size="16" x="60" y="120">送外卖被骂</text>
+<!-- 极简线条图：低头的人影和外卖箱 -->
+<line stroke="#8c857b" stroke-width="2" x1="200" x2="200" y1="180" y2="240"/>
+<line stroke="#8c857b" stroke-width="2" x1="200" x2="220" y1="240" y2="270"/>
+<line stroke="#8c857b" stroke-width="2" x1="200" x2="180" y1="240" y2="270"/>
+<line stroke="#8c857b" stroke-width="2" x1="200" x2="220" y1="200" y2="230"/>
+<line stroke="#8c857b" stroke-width="2" x1="200" x2="180" y1="200" y2="230"/>
+<rect fill="none" height="30" stroke="#8c857b" stroke-width="1" width="40" x="240" y="220"/>
+<line stroke="#8c857b" stroke-width="1" x1="260" x2="260" y1="220" y2="190"/>
+<text fill="#5d5d5d" font-family="'Noto Serif SC', serif" font-size="14" line-height="1.6" x="60" y="320">
+<tspan dy="0" x="60">雨还在下，水点打在头上，连痛感也没有了。顾客</tspan>
+<tspan dy="24" x="60">的声音还在耳边回响："这么慢才送到，饭都凉了，</tspan>
+<tspan dy="24" x="60">你们这些送外卖的就不能认真点吗？"</tspan>
+<tspan dy="24" x="60">老王望着电动车上沾满泥水的鞋子。电话又响了，</tspan>
+<tspan dy="24" x="60">应该是下一单催了。他看了一眼手机上的导航，</tspan>
+<tspan dy="24" x="60">还有四公里。雨水混着汗水流进眼睛，刺得发疼。</tspan>
+<tspan dy="24" x="60">他想起今早儿子问他何时能买新书包的神情。</tspan>
+</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 人间苦 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
