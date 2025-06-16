@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人间苦 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.22);
+            max-width: 100%;
+            width: 800px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .svg-container {
+            margin-bottom: 24px;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+            margin-top: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="svg-container">
+            <svg width="480" height="760" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e6e2dd" />
+      <stop offset="100%" stop-color="#d6d1cb" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="100%" height="100%" fill="url(#bg)" />
+  
+  <!-- 标题 -->
+  <text x="240" y="80" font-family="KingHwa_OldSong, serif" font-size="36" text-anchor="middle" fill="#4a4a4a">人间苦</text>
+  
+  <!-- 分隔线 -->
+  <line x1="120" y1="110" x2="360" y2="110" stroke="#837f77" stroke-width="1"/>
+  
+  <!-- 用户输入 -->
+  <text x="240" y="150" font-family="KingHwa_OldSong, serif" font-size="24" text-anchor="middle" fill="#5d5c58">寒夜里等车</text>
+  
+  <!-- 简约线条画：单人在黑暗中，模糊的路灯，空旷的车站 -->
+  <g transform="translate(150, 300)" stroke="#746c63" stroke-width="1.5" fill="none">
+    <line x1="90" y1="10" x2="90" y2="80" /> <!-- 路灯杆 -->
+    <circle cx="90" cy="10" r="8" opacity="0.5" /> <!-- 模糊路灯光 -->
+    <line x1="40" y1="100" x2="160" y2="100" /> <!-- 站台 -->
+    <path d="M70,85 Q80,70 85,85" /> <!-- 蜷缩的人影 -->
+  </g>
+  
+  <!-- 响应文本 -->
+  <text x="80" y="420" font-family="KingHwa_OldSong, serif" font-size="18" fill="#5d5c58">
+    <tspan x="80" y="440">冰冷刺骨的风从衣缝里钻进来，老王搓了搓</tspan>
+    <tspan x="80" y="470">发麻的手指。站牌上的时刻表已模糊不清，</tspan>
+    <tspan x="80" y="500">末班车本该三十分钟前就到了。</tspan>
+    <tspan x="80" y="530"></tspan>
+    <tspan x="80" y="560">他盯着远处唯一的路灯，暗黄的光在风中</tspan>
+    <tspan x="80" y="590">颤抖，照出零星的雪花。这灯怕是也撑不了</tspan>
+    <tspan x="80" y="620">太久了。身旁的长椅上结了一层薄冰，他不</tspan>
+    <tspan x="80" y="650">敢坐下，怕一坐下就再也起不来。</tspan>
+    <tspan x="80" y="680"></tspan>
+    <tspan x="80" y="710">没车了，今晚也没车了。</tspan>
+  </text>
+</svg>
+        </div>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 人间苦 | 模型: anthropic/claude-3.7-sonnet</p>
+        </footer>
+    </div>
+</body>
+</html>
