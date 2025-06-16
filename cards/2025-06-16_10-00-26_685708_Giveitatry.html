@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信达雅翻译 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 820">
+  <!-- 背景纸张质感 -->
+  <defs>
+    <pattern id="paper-texture" patternUnits="userSpaceOnUse" width="100" height="100">
+      <rect width="100" height="100" fill="#f7f3e9"></rect>
+      <path d="M0 0 L100 100 M100 0 L0 100" stroke="#e8e4d8" stroke-width="0.5" opacity="0.4"></path>
+    </pattern>
+  </defs>
+  
+  <rect width="450" height="800" fill="url(#paper-texture)" rx="8" ry="8"></rect>
+  
+  <!-- 标题 -->
+  <text x="30" y="50" font-family="'Noto Serif SC', serif" font-size="26" fill="#2c7744" font-weight="bold" style="font-family: &quot;Noto Serif SC&quot;, serif;">三关翻译</text>
+  
+  <!-- 原文 -->
+  <rect x="30" y="70" width="390" height="1" fill="#d3cfc2"></rect>
+  <text x="30" y="95" font-family="'Noto Serif SC', serif" font-size="18" fill="#5a5a5a" style="font-family: &quot;Noto Serif SC&quot;, serif;">原文:</text>
+  <text x="85" y="95" font-family="'Noto Serif SC', serif" font-size="18" fill="#333333" style="font-family: &quot;Noto Serif SC&quot;, serif;">Give it a try</text>
+  
+  <!-- 信 -->
+  <rect x="30" y="120" width="390" height="160" rx="5" ry="5" fill="#f0ece2" stroke="#d3cfc2" stroke-width="1"></rect>
+  <text x="50" y="150" font-family="'Noto Serif SC', serif" font-size="20" fill="#2c7744" font-weight="bold" style="font-family: &quot;Noto Serif SC&quot;, serif;">信 - 直译</text>
+  <text x="50" y="180" font-family="'Noto Serif SC', serif" font-size="18" fill="#333333" style="font-family: &quot;Noto Serif SC&quot;, serif;">尝试一下</text>
+  <text x="50" y="210" font-family="'Noto Serif SC', serif" font-size="16" fill="#666666" style="font-family: &quot;Noto Serif SC&quot;, serif;">基本含义: 鼓励某人去尝试做某事</text>
+  <text x="50" y="240" font-family="'Noto Serif SC', serif" font-size="16" fill="#666666" style="font-family: &quot;Noto Serif SC&quot;, serif;">直译: 给它一次尝试</text>
+  
+  <!-- 达 -->
+  <rect x="30" y="300" width="390" height="180" rx="5" ry="5" fill="#f0ece2" stroke="#d3cfc2" stroke-width="1"></rect>
+  <text x="50" y="330" font-family="'Noto Serif SC', serif" font-size="20" fill="#2c7744" font-weight="bold" style="font-family: &quot;Noto Serif SC&quot;, serif;">达 - 意译</text>
+  <text x="50" y="360" font-family="'Noto Serif SC', serif" font-size="18" fill="#333333" style="font-family: &quot;Noto Serif SC&quot;, serif;">试一试看看</text>
+  <text x="50" y="390" font-family="'Noto Serif SC', serif" font-size="16" fill="#666666" style="font-family: &quot;Noto Serif SC&quot;, serif;">语境应用: 鼓励尝试新事物</text>
+  <text x="50" y="420" font-family="'Noto Serif SC', serif" font-size="16" fill="#666666" style="font-family: &quot;Noto Serif SC&quot;, serif;">文化适应: 中文中常用"试一试"表达尝试行为</text>
+  <text x="50" y="450" font-family="'Noto Serif SC', serif" font-size="16" fill="#666666" style="font-family: &quot;Noto Serif SC&quot;, serif;">场景对等: 日常交流中的轻松鼓励</text>
+  
+  <!-- 雅 -->
+  <rect x="30" y="500" width="390" height="250" rx="5" ry="5" fill="#f0ece2" stroke="#d3cfc2" stroke-width="1"></rect>
+  <text x="50" y="530" font-family="'Noto Serif SC', serif" font-size="20" fill="#2c7744" font-weight="bold" style="font-family: &quot;Noto Serif SC&quot;, serif;">雅 - 诗经风格</text>
+  <text x="50" y="560" font-family="'Noto Serif SC', serif" font-size="18" fill="#333333" style="font-family: &quot;Noto Serif SC&quot;, serif;">子曰试之，勿畏难兮</text>
+  <text x="50" y="590" font-family="'Noto Serif SC', serif" font-size="16" fill="#666666" style="font-family: &quot;Noto Serif SC&quot;, serif;">诗经特点: 简短重复、平行句式</text>
+  <text x="50" y="620" font-family="'Noto Serif SC', serif" font-size="16" fill="#666666" style="font-family: &quot;Noto Serif SC&quot;, serif;">语言风格: 古朴典雅，四字句式</text>
+  <text x="50" y="650" font-family="'Noto Serif SC', serif" font-size="16" fill="#666666" style="font-family: &quot;Noto Serif SC&quot;, serif;">哲理含义: 尝试是认知的开始，行动胜于空想</text>
+  <text x="50" y="680" font-family="'Noto Serif SC', serif" font-size="16" fill="#666666" style="font-family: &quot;Noto Serif SC&quot;, serif;">意境提升: 呈现勇于尝试的智慧与气度</text>
+  <text x="50" y="710" font-family="'Noto Serif SC', serif" font-size="16" fill="#666666" style="font-family: &quot;Noto Serif SC&quot;, serif;">解释: 夫子说要试一试，不要害怕困难啊</text>
+  
+  <!-- 署名 -->
+  <text x="350" y="770" font-family="'Noto Serif SC', serif" font-size="14" fill="#888888" style="font-family: &quot;Noto Serif SC&quot;, serif;">翻译三关 by Claude</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 信达雅翻译 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
