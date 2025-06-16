@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>知识卡片 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.22);
+            max-width: 100%;
+            width: 800px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .svg-container {
+            margin-bottom: 24px;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+            margin-top: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="svg-container">
+            # 房地产的本质
+
+房地产是一种特殊商品，本质上是"土地及其上的永久性附着物"的所有权或使用权。
+
+## 通俗解释
+
+想象一块饼干(土地)，上面有巧克力(建筑物)。买房地产就像买一块有特定位置、无法移动、且理论上永久存在的"饼干"。它不仅提供居住空间，还承载着财富保值增值的期望。
+
+## 房地产的四个维度
+
+1. **空间维度**：固定位置，不可移动
+2. **时间维度**：使用寿命长，跨代传承
+3. **经济维度**：既是消费品又是投资品
+4. **社会维度**：与身份、地位、福利相关联
+
+## 生活示例
+
+小李攒了多年积蓄，贷款买下一套70平米的二手房。这个交易中：
+- 他获得了一个固定位置的居住空间
+- 支付了大部分储蓄并背负了贷款
+- 期待未来房价上涨带来资产增值
+- 在这个城市获得了"定居者"的身份
+
+房地产不同于普通商品，它连接了人、土地、金融、政策等多个复杂系统，影响着个人生活选择和国家经济走向。
+        </div>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 知识卡片 | 模型: anthropic/claude-3.7-sonnet</p>
+        </footer>
+    </div>
+</body>
+</html>
