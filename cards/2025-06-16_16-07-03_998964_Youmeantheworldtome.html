@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信达雅翻译 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 640">
+  <!-- 纸张背景 -->
+  <rect width="100%" height="100%" fill="#f5f2e9"></rect>
+  <filter id="paper-texture">
+    <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" seed="3"></feTurbulence>
+    <feDisplacementMap in="SourceGraphic" scale="5"></feDisplacementMap>
+  </filter>
+  <rect width="100%" height="100%" filter="url(#paper-texture)" fill="none"></rect>
+  
+  <!-- 内容区域 -->
+  <g font-family="'Noto Serif SC', serif" style="font-family: &quot;Noto Serif SC&quot;, serif;">
+    <!-- 标题 -->
+    <text x="225" y="60" font-size="24" fill="#4c6a41" text-anchor="middle" font-weight="bold">诗经风格意译</text>
+    <line x1="100" y1="75" x2="350" y2="75" stroke="#8ba77c" stroke-width="1"></line>
+    
+    <!-- 原文 -->
+    <text x="225" y="120" font-size="18" fill="#4c6a41" text-anchor="middle" font-weight="bold">原文</text>
+    <text x="225" y="155" font-size="18" fill="#5d6e51" text-anchor="middle">You mean the world to me.</text>
+    
+    <!-- 信 - 直译 -->
+    <text x="225" y="215" font-size="18" fill="#4c6a41" text-anchor="middle" font-weight="bold">信 - 直译</text>
+    <text x="225" y="250" font-size="18" fill="#5d6e51" text-anchor="middle">你对我而言意味着整个世界。</text>
+    
+    <!-- 达 - 意译 -->
+    <text x="225" y="310" font-size="18" fill="#4c6a41" text-anchor="middle" font-weight="bold">达 - 意译</text>
+    <text x="225" y="345" font-size="18" fill="#5d6e51" text-anchor="middle">你在我心中，重若泰山。</text>
+    
+    <!-- 雅 - 诗经风格译 -->
+    <text x="225" y="405" font-size="18" fill="#4c6a41" text-anchor="middle" font-weight="bold">雅 - 诗经风格译</text>
+    <foreignObject x="90" y="425" width="270" height="86">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 18px; color: rgb(93, 110, 81); text-align: center; line-height: 1.6; overflow: hidden;" font-family="'Noto Serif SC', serif">
+        谁谓尔卑微，尔乃我天地。<br>
+        思君若山阿，情深似江水。<br>
+        日月照君容，君心系我心。
+      </div>
+    </foreignObject>
+    
+    <!-- 底部装饰 -->
+    <line x1="100" y1="540" x2="350" y2="540" stroke="#8ba77c" stroke-width="1"></line>
+  </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 信达雅翻译 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
