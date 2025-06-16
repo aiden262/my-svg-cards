@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卜卦 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 848">
+  <!-- 外边框 -->
+  <rect x="30" y="30" width="420" height="700" fill="white" stroke="#333" stroke-width="2"></rect>
+  
+  <!-- 标题 -->
+  <text x="240" y="80" font-family="'Noto Serif SC', serif" font-size="28" text-anchor="middle" fill="#333" style="font-family: &quot;Noto Serif SC&quot;, serif;">卜 卦</text>
+  
+  <!-- 分隔线 -->
+  <line x1="60" y1="100" x2="420" y2="100" stroke="#333" stroke-width="1"></line>
+  
+  <!-- 用户输入 -->
+  <foreignObject x="60" y="120" width="360" height="205">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 16px; line-height: 1.6; color: rgb(51, 51, 51);" font-family="'Noto Serif SC', serif">
+      我经常去买牛肉，每次买10块钱，会让老板娘片（细切）成小片，两周前老板娘突然消失了，换了他的儿子过来，他的儿子戴着眼镜，大概二十来岁，有点胖。切片的时候很厚，不是很娴熟，我很担心，猜想老板娘是不是生病了，遇到什么事情让他儿子替代，但是又没勇气上去问。今天，我去菜市场又在牛肉档口看到老板娘回来了，心理感到非常欣慰，仿佛生活里有缺陷的拼图再次被补全。
+    </div>
+  </foreignObject>
+  
+  <!-- 卦象 -->
+  <text x="240" y="370" font-family="'Noto Serif SC', serif" font-size="24" text-anchor="middle" fill="#333" style="font-family: &quot;Noto Serif SC&quot;, serif;">恒 卦 ䷟</text>
+  
+  <!-- 卦辞解析 -->
+  <foreignObject x="60" y="390" width="360" height="438">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 16px; line-height: 1.8; color: rgb(51, 51, 51);" font-family="'Noto Serif SC', serif">
+      <p style="text-align: center;">雷风相与，恒；君子以立不易方。</p>
+      <p>恒卦为上震下巽，震为雷，巽为风。雷风相随，恒久不变。</p>
+      <p>你所担忧之事已有圆满结局。老板娘只是暂时离开，如今已然归来。此事体现恒卦之义：暂时变动后终归常态，人生轨迹恒久如一。</p>
+      <p>恒卦六三爻："不恒其德，或承之羞。贞吝。"意为虽有波折变动，但终将回归。恒卦九五爻："恒其德，贞。妇人吉，夫子凶。"中有妇人之象，与老板娘形象相符。</p>
+      <p>此卦启示：生活中的小确幸自有其恒常规律，无须过虑。当面对短暂变动，保持坦然，终将回归安宁。</p>
+    </div>
+  </foreignObject>
+  
+  <!-- 分隔线 -->
+  <line x1="60" y1="700" x2="420" y2="700" stroke="#333" stroke-width="1"></line>
+  
+  <!-- 落款 -->
+  <text x="240" y="725" font-family="'Noto Serif SC', serif" font-size="14" text-anchor="middle" fill="#333" style="font-family: &quot;Noto Serif SC&quot;, serif;">李继刚 2024</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 卜卦 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
