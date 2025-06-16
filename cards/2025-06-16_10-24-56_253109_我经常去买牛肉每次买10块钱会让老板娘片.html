@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情绪解析器 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="0 0 480 1300" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景底色 -->
+  <rect width="480" height="1300" fill="#f8f3e9" rx="10" ry="10"></rect>
+  
+  <!-- 装饰几何图案 -->
+  <g opacity="0.1">
+    <circle cx="40" cy="40" r="15" fill="#9b7e5d"></circle>
+    <circle cx="440" cy="40" r="15" fill="#9b7e5d"></circle>
+    <circle cx="40" cy="960" r="15" fill="#9b7e5d"></circle>
+    <circle cx="440" cy="960" r="15" fill="#9b7e5d"></circle>
+    <rect x="60" y="25" width="360" height="2" fill="#9b7e5d"></rect>
+    <rect x="60" y="973" width="360" height="2" fill="#9b7e5d"></rect>
+  </g>
+  
+  <!-- 标题 -->
+  <text x="240" y="60" font-family="'Noto Serif SC', serif" font-size="28" fill="#654a32" text-anchor="middle" style="font-family: &quot;Noto Serif SC&quot;, serif;">情绪解析器</text>
+  
+  <!-- 分隔线 -->
+  <line x1="120" y1="80" x2="360" y2="80" stroke="#9b7e5d" stroke-width="1.5"></line>
+  
+  <!-- 内容 -->
+  <foreignObject x="40" y="110" width="400" height="1170">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 18px; color: rgb(61, 61, 61); line-height: 1.6;" font-family="'Noto Serif SC', serif">
+      <p><strong>情绪名称：安心/Relief (安心感)</strong></p>
+      
+      <p>这种情绪源自于对日常生活中熟悉事物的依赖和失而复得的体验。当我们习惯的生活秩序被打破后又恢复原状，尤其是关乎那些我们潜意识里依赖的人际连接重新建立时，会产生这种安心感。</p>
+      
+      <p>体验上，这是一种轻松的放下，如同一直绷紧的弦终于松弛。它不同于强烈的喜悦，而是一种平和的满足，犹如拼图缺失的一块被找回，让整体重获完整。</p>
+      
+      <p>在身体上，安心感往往表现为肌肉放松、呼吸变得更加均匀、心跳趋于平稳，甚至会不自觉地微笑或轻叹一口气。</p>
+      
+      <p>心理意象通常是"回归完整"的画面：如被修复的裂缝、重归原位的拼图、回到轨道的行星。对你而言，这是牛肉档口恢复如常，老板娘站在那里细心切片的熟悉场景。</p>
+      
+      <p>这种安心感在婴幼儿依恋形成期尤为重要，也在成年人的生活中持续发挥作用。当我们建立起对特定环境和人际关系的依赖后，这种安心感就成为心理健康的基础支柱。</p>
+      
+      <p>幼年时期母亲的可预测回应、青少年时代稳定的友谊和成年后可依赖的生活节奏，都会决定一个人在多大程度上能感受到安心，以及在安心被打破后的焦虑程度。</p>
+      
+      <p>性格上，容易体验安心感的人往往重视稳定性和可预测性，对突发变化会感到不适，同时也更加珍视生活中的常规和仪式。</p>
+      
+      <p>这种感受通常会在确认担忧是杞人忧天时转变，或在获得解释和确认后消散。当缺失的元素回归原位，不确定性被消除，安心感便会浮现。</p>
+      
+      <p>正如《小王子》中所写："仪式感是使某一天与其它日子不同，使某一时刻与其它时刻不同的东西。"生活中的小确幸与安心感正是来自于这些被遵循的仪式和习惯，当它们回归原位，我们便找回了心灵的栖息之所。</p>
+    </div>
+  </foreignObject>
+  
+  <!-- 极简总结 -->
+  <g transform="translate(240, 920)">
+    <text text-anchor="middle" font-family="'Noto Serif SC', serif" font-size="18" fill="#654a32" style="font-family: &quot;Noto Serif SC&quot;, serif;">安心感：失而复得的生活完整性</text>
+  </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 情绪解析器 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
