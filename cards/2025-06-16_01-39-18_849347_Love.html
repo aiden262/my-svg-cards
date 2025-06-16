@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单词卡片 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.22);
+            max-width: 100%;
+            width: 800px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .svg-container {
+            margin-bottom: 24px;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+            margin-top: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="svg-container">
+            # 单词记忆卡片: love
+
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#FFF9F5" rx="15" ry="15"/>
+  <rect x="20" y="20" width="760" height="560" fill="#FFF9F5" rx="10" ry="10" stroke="#E8C4B0" stroke-width="2"/>
+  
+  <!-- 单词区域 -->
+  <rect x="40" y="40" width="720" height="120" fill="#F8E2D6" rx="8" ry="8"/>
+  <text x="400" y="105" font-family="Georgia" font-size="60" fill="#A85C55" text-anchor="middle" font-weight="bold">love</text>
+  <text x="400" y="140" font-family="Georgia" font-size="18" fill="#7D5A58" text-anchor="middle">/'lʌv/ n. 爱，爱情；v. 爱，喜欢</text>
+  
+  <!-- 词源区域 -->
+  <rect x="40" y="180" width="340" height="160" fill="#F3D7CA" rx="8" ry="8"/>
+  <text x="60" y="210" font-family="Georgia" font-size="18" font-weight="bold" fill="#A85C55">词根词源:</text>
+  <text x="60" y="240" font-family="Georgia" font-size="16" fill="#7D5A58">
+    <tspan x="60" y="240">源自古英语 lufu，</tspan>
+    <tspan x="60" y="265">与德语 Liebe，</tspan>
+    <tspan x="60" y="290">拉丁语 libido (欲望) 相关。</tspan>
+    <tspan x="60" y="315">表达深厚情感与依恋。</tspan>
+  </text>
+  
+  <!-- 记忆故事区域 -->
+  <rect x="400" y="180" width="360" height="160" fill="#F3D7CA" rx="8" ry="8"/>
+  <text x="420" y="210" font-family="Georgia" font-size="18" font-weight="bold" fill="#A85C55">记忆故事:</text>
+  <text x="420" y="240" font-family="Georgia" font-size="16" fill="#7D5A58">
+    <tspan x="420" y="240">想象一颗跳动的心（♥）被捧在</tspan>
+    <tspan x="420" y="265">手掌中，这颗心充满了温暖的光芒，</tspan>
+    <tspan x="420" y="290">代表着 love 是从内心深处涌现的</tspan>
+    <tspan x="420" y="315">情感，像光一样照亮彼此。</tspan>
+  </text>
+  
+  <!-- 视觉呈现 -->
+  <circle cx="400" cy="420" r="80" fill="#FFE4E1" stroke="#E8A798" stroke-width="3"/>
+  <path d="M400,380 Q430,350 460,380 T520,380 Q520,430 400,480 Q280,430 280,380 Q280,350 310,350 T340,380 Z" fill="#E57373" stroke="#C62828" stroke-width="2"/>
+  <line x1="345" y1="420" x2="455" y2="420" stroke="#FFF" stroke-width="3"/>
+  <circle cx="370" cy="400" r="6" fill="#FFF"/>
+  <circle cx="430" cy="400" r="6" fill="#FFF"/>
+  
+  <!-- 例句区域 -->
+  <rect x="40" y="510" width="720" height="60" fill="#F8E2D6" rx="8" ry="8"/>
+  <text x="400" y="545" font-family="Georgia" font-size="16" fill="#7D5A58" text-anchor="middle" font-style="italic">
+    "Love is patient, love is kind. It does not envy, it does not boast."
+  </text>
+  
+  <!-- 装饰元素 -->
+  <path d="M40,170 L760,170" stroke="#E8C4B0" stroke-width="1" stroke-dasharray="5,5"/>
+  <path d="M40,350 L760,350" stroke="#E8C4B0" stroke-width="1" stroke-dasharray="5,5"/>
+  <path d="M40,500 L760,500" stroke="#E8C4B0" stroke-width="1" stroke-dasharray="5,5"/>
+  
+  <circle cx="760" cy="40" r="15" fill="#F8E2D6" opacity="0.5"/>
+  <circle cx="40" cy="560" r="15" fill="#F8E2D6" opacity="0.5"/>
+  <circle cx="760" cy="560" r="15" fill="#F8E2D6" opacity="0.5"/>
+  <circle cx="40" cy="40" r="15" fill="#F8E2D6" opacity="0.5"/>
+</svg>
+
+## 记忆提示
+
+这个单词 "love" 表达的是一种强烈的情感连接，通过视觉上的心形符号（♥）可以直观地记忆。词源上，它源自古英语的 "lufu"，与表示欲望和喜好的拉丁语 "libido" 有关联。
+
+当你看到或听到这个单词时，想象那颗在手掌中跳动的红心，它散发着温暖的光芒，正如爱情能照亮人生一样。这种视觉和情感的联结会帮助你牢固地记住这个单词。
+
+## 拓展用法
+
+1. **作为名词**: a love of music (对音乐的热爱)
+2. **作为动词**: I love watching sunsets (我喜欢看日落)
+3. **常用短语**: fall in love (坠入爱河), love at first sight (一见钟情)
+4. **相关词**: beloved (心爱的), lover (爱人), lovely (可爱的)
+
+请提供下一个你想记忆的单词！
+        </div>
+        <footer>
+            <p>由 AI Bot 生成 | 模式: 单词卡片 | 模型: anthropic/claude-3.7-sonnet</p>
+        </footer>
+    </div>
+</body>
+</html>
