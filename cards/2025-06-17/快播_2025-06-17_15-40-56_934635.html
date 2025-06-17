@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #121212;
+            --surface-color: #1E1E1E;
+            --text-color: #E0E0E0;
+            --text-secondary: #BDBDBD;
+            --max-width: 800px;
+            --radius: 16px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-color);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .card {
+            background-color: var(--surface-color);
+            border-radius: var(--radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--radius) / 2);
+            background: var(--bg-color);
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--text-secondary);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 16px; }
+            .card { padding: 16px; gap: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 440 640">
+  <!-- 背景 -->
+  <rect width="440" height="640" fill="#f0e9dd" x="-20" y="-20"></rect>
+  <rect x="30" y="30" width="340" height="540" fill="#faf6f0" rx="10"></rect>
+  
+  <!-- 标题 -->
+  <text x="200" y="80" font-family="'Noto Serif SC', serif" font-size="32" fill="#333" text-anchor="middle" font-weight="bold" style="font-family: &quot;Noto Serif SC&quot;, serif;">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="100" y1="105" x2="300" y2="105" stroke="#888" stroke-width="2"></line>
+  
+  <!-- 词汇 -->
+  <text x="200" y="150" font-family="'Noto Serif SC', serif" font-size="40" fill="#d32f2f" text-anchor="middle" style="font-family: &quot;Noto Serif SC&quot;, serif;">快播</text>
+  <text x="200" y="180" font-family="'Noto Serif SC', serif" font-size="16" fill="#666" text-anchor="middle" style="font-family: &quot;Noto Serif SC&quot;, serif;">Kuaibo / クアイボー</text>
+  
+  <!-- 解释 -->
+  <foreignObject x="50" y="200" width="300" height="288">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 18px; line-height: 1.6; color: rgb(68, 68, 68); overflow: hidden;" font-family="'Noto Serif SC', serif">
+      快播：一个自证速度与正义可以同时抛弃的互联网悲剧。它以"快"为名，却在监管的迷宫中步履蹒跚；它以"播"为实，却在边界模糊的地带播下了自掘坟墓的种子。它见证了中国网民从青涩走向成熟的必经之痛，也证明了道德高地永远只留给那些能及时全身而退的精明人。快播不死，只是换了千万种面孔，潜伏在每一个声称"技术无罪"的借口中。
+    </div>
+  </foreignObject>
+  
+  <!-- 图案 -->
+  <line x1="80" y1="460" x2="320" y2="460" stroke="#888" stroke-dasharray="5,5" transform="translate(0, 38) "></line>
+  
+  <!-- 简洁总结 -->
+  <text x="200" y="500" font-family="'Noto Serif SC', serif" font-size="20" fill="#333" text-anchor="middle" font-style="italic" transform="translate(0, 38) " style="font-family: &quot;Noto Serif SC&quot;, serif;">"技术无辜的表演，资本狂欢的悲歌"</text>
+  
+  <!-- 装饰 -->
+  <rect x="40" y="40" width="10" height="10" fill="#d32f2f"></rect>
+  <rect x="350" y="40" width="10" height="10" fill="#d32f2f"></rect>
+  <rect x="40" y="550" width="10" height="10" fill="#d32f2f" transform="translate(0, 38) "></rect>
+  <rect x="350" y="550" width="10" height="10" fill="#d32f2f" transform="translate(0, 38) "></rect>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
