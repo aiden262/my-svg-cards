@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #121212;
+            --surface-color: #1E1E1E;
+            --text-color: #E0E0E0;
+            --text-secondary: #BDBDBD;
+            --max-width: 800px;
+            --radius: 16px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-color);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .card {
+            background-color: var(--surface-color);
+            border-radius: var(--radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--radius) / 2);
+            background: var(--bg-color);
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--text-secondary);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 16px; }
+            .card { padding: 16px; gap: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 440 640">
+  <!-- 背景 - 蒙德里安风格 -->
+  <rect width="440" height="640" fill="#f9f7f3" x="-20" y="-20"></rect>
+  <rect x="20" y="380" width="120" height="100" fill="#f5f5f5" opacity="0.7"></rect>
+  <rect x="260" y="120" width="120" height="80" fill="#f0f0f0" opacity="0.5"></rect>
+  
+  <!-- 标题 -->
+  <text x="200" y="60" font-family="'Noto Serif SC', serif" font-size="28" fill="#333" text-anchor="middle" font-weight="bold" style="font-family: &quot;Noto Serif SC&quot;, serif;">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="60" y1="80" x2="340" y2="80" stroke="#999" stroke-width="1"></line>
+  
+  <!-- 词汇 -->
+  <text x="200" y="120" font-family="'Noto Serif SC', serif" font-size="26" fill="#444" text-anchor="middle" font-weight="bold" style="font-family: &quot;Noto Serif SC&quot;, serif;">30岁</text>
+  <text x="200" y="145" font-family="'Noto Serif SC', serif" font-size="16" fill="#777" text-anchor="middle" style="font-family: &quot;Noto Serif SC&quot;, serif;">Thirty Years Old</text>
+  <text x="200" y="167" font-family="'Noto Serif SC', serif" font-size="16" fill="#777" text-anchor="middle" style="font-family: &quot;Noto Serif SC&quot;, serif;">三十歳</text>
+  
+  <!-- 解释 -->
+  <text x="40" y="210" font-family="'Noto Serif SC', serif" font-size="16" fill="#444" width="320" style="font-family: &quot;Noto Serif SC&quot;, serif;">
+    <tspan x="40" y="210">人类为逃避真相发明的心理防线。</tspan>
+    <tspan x="40" y="240">算术上只比29岁多了365天，心理上却</tspan>
+    <tspan x="40" y="270">仿佛跨越了千山万水。是青春与成熟</tspan>
+    <tspan x="40" y="300">之间那道被过分夸大的鸿沟，是贷款</tspan>
+    <tspan x="40" y="330">广告里的"最后期限"，是父母碎碎</tspan>
+    <tspan x="40" y="360">念和朋友圈集体焦虑的源头。</tspan>
+  </text>
+  
+  <!-- 简易图形 -->
+  <line x1="100" y1="400" x2="300" y2="400" stroke="#666" stroke-width="2"></line>
+  <text x="90" y="420" font-family="'Noto Serif SC', serif" font-size="12" fill="#666" style="font-family: &quot;Noto Serif SC&quot;, serif;">20岁</text>
+  <text x="295" y="420" font-family="'Noto Serif SC', serif" font-size="12" fill="#666" style="font-family: &quot;Noto Serif SC&quot;, serif;">40岁</text>
+  <circle cx="200" cy="400" r="8" fill="#cc6666"></circle>
+  <text x="192" y="430" font-family="'Noto Serif SC', serif" font-size="12" fill="#cc6666" style="font-family: &quot;Noto Serif SC&quot;, serif;">30岁</text>
+  <path d="M200,400 L200,380 L230,350" stroke="#777" stroke-width="1" fill="none"></path>
+  <text x="235" y="350" font-family="'Noto Serif SC', serif" font-size="12" fill="#777" style="font-family: &quot;Noto Serif SC&quot;, serif;">社会期待的临界点</text>
+  
+  <!-- 总结 -->
+  <text x="200" y="480" font-family="'Noto Serif SC', serif" font-size="18" fill="#555" text-anchor="middle" font-style="italic" style="font-family: &quot;Noto Serif SC&quot;, serif;">
+    不过是一个被赋予过多意义的数字，
+  </text>
+  <text x="200" y="510" font-family="'Noto Serif SC', serif" font-size="18" fill="#555" text-anchor="middle" font-style="italic" style="font-family: &quot;Noto Serif SC&quot;, serif;">
+    却成了我们自设的心理围墙。
+  </text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
