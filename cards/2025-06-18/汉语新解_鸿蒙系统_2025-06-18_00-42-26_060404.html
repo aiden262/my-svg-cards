@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 440 640">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f5f5"></stop>
+      <stop offset="100%" style="stop-color:#e6e6e6"></stop>
+    </linearGradient>
+    <pattern id="pattern" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M0,15 L30,15" stroke="#ddd" stroke-width="1"></path>
+      <path d="M15,0 L15,30" stroke="#ddd" stroke-width="1"></path>
+    </pattern>
+  </defs>
+  
+  <!-- 卡片背景 -->
+  <rect width="440" height="640" fill="url(#bg)" rx="10" ry="10" x="-20" y="-20"></rect>
+  <rect x="20" y="20" width="360" height="560" fill="white" rx="8" ry="8" stroke="#ccc" stroke-width="1"></rect>
+  
+  <!-- 装饰图案 -->
+  <rect x="20" y="20" width="360" height="560" fill="url(#pattern)" fill-opacity="0.05" rx="8" ry="8"></rect>
+  
+  <!-- 标题 -->
+  <text x="200" y="60" font-family="'Noto Serif SC', serif" font-size="28" text-anchor="middle" fill="#333" style="font-family: &quot;Noto Serif SC&quot;, serif;">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="50" y1="80" x2="350" y2="80" stroke="#999" stroke-width="1"></line>
+  
+  <!-- 词汇展示 -->
+  <text x="200" y="120" font-family="'Noto Serif SC', serif" font-size="24" text-anchor="middle" fill="#333" style="font-family: &quot;Noto Serif SC&quot;, serif;">鸿蒙系统</text>
+  <text x="200" y="145" font-family="'Noto Serif SC', serif" font-size="16" text-anchor="middle" fill="#666" style="font-family: &quot;Noto Serif SC&quot;, serif;">HarmonyOS</text>
+  <text x="200" y="165" font-family="'Noto Serif SC', serif" font-size="16" text-anchor="middle" fill="#666" style="font-family: &quot;Noto Serif SC&quot;, serif;">ホンモン システム</text>
+  
+  <!-- 解释内容 -->
+  <foreignObject x="40" y="190" width="320" height="300">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 18px; color: rgb(68, 68, 68); line-height: 1.5; overflow: hidden;" font-family="'Noto Serif SC', serif">
+      鸿蒙系统：一个号称"从零开始"的操作系统，实则是安卓的"换装舞会"。就像那个打了瘦脸针、换了发型后宣称"我变了"的前任。它以"自主创新"的名义，为文化自信打了一剂强心针，同时也为"去依赖"的政治焦虑缝制了一件合身的外衣。鸿蒙之名取自道家"混沌未开"，讽刺的是，它降生的那一刻起就背负着"开天辟地"的民族期待，仿佛不成为iOS和安卓的掘墓人就辜负了这个时代。
+    </div>
+  </foreignObject>
+  
+  <!-- 简化图形 -->
+  <circle cx="120" cy="520" r="25" fill="none" stroke="#888" stroke-width="1.5"></circle>
+  <circle cx="280" cy="520" r="25" fill="none" stroke="#888" stroke-width="1.5"></circle>
+  <path d="M145,520 L255,520" stroke="#888" stroke-width="1.5" stroke-dasharray="5,3"></path>
+  <text x="120" y="525" font-family="'Noto Serif SC', serif" font-size="12" text-anchor="middle" fill="#555" style="font-family: &quot;Noto Serif SC&quot;, serif;">表象</text>
+  <text x="280" y="525" font-family="'Noto Serif SC', serif" font-size="12" text-anchor="middle" fill="#555" style="font-family: &quot;Noto Serif SC&quot;, serif;">实质</text>
+  
+  <!-- 极简总结 -->
+  <text x="200" y="570" font-family="'Noto Serif SC', serif" font-size="16" text-anchor="middle" fill="#333" style="font-family: &quot;Noto Serif SC&quot;, serif;">民族自尊与技术现实之间的尴尬舞蹈</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
