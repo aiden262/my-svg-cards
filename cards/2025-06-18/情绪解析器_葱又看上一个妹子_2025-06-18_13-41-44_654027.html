@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情绪解析器 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            # 情绪解析器
+
+情绪名称：暧昧、爱慕、喜欢（Affection, Crush, Infatuation）
+
+源起：这种感受通常源于遇到一个具有吸引力的人，可能是外表、性格特质、才华或共同爱好引发的好感。"葱又看上一个妹子"表明这是一种反复出现的情感模式，可能是在寻找爱和连接的过程中。
+
+体验：这种感受通常伴随着兴奋、紧张和期待，心跳加速、注意力集中在对方身上，思绪常常围绕对方打转。这是一种既甜蜜又带有不确定性的复杂情绪状态，往往充满希望但也伴随着忐忑。
+
+具身表现：面对喜欢的人时可能会出现脸红、心跳加速、手心出汗、说话结巴等生理反应。大脑会释放多巴胺和血清素等神经递质，产生愉悦感和兴奋感。
+
+心理意象：常见的心理意象包括：蝴蝶在胃里翩翩起舞；电流通过全身；阳光突然变得更明亮；世界仿佛只剩下对方一个人；星星点点的光芒在心中闪烁。
+
+发展阶段：青春期是这种情感最为强烈的时期，也是人格形成和探索亲密关系的关键阶段。不过这种情感在成年后的任何阶段都可能出现。
+
+影响事件：早期与父母的依恋关系、青少年时期的同伴接纳程度、过往恋爱经历的成功或挫败、文化背景中对爱情的定义等，都会影响一个人表达和体验这种感受的方式。
+
+性格影响：反复经历这种感受可能形成特定的行为模式：容易对他人产生好感；在关系中可能表现出理想化他人的倾向；可能经历较多短期的情感投入；也可能发展出乐观、浪漫但有时不够深入的人际关系风格。
+
+转变因素：这种感受可能因进一步了解对方而深化为更稳定的爱情，也可能因失望或不匹配而消退。时间、距离、新的认识或对方的回应都可能改变这种情绪。
+
+文学呈现：
+"最初见她时，便觉她有一种特别的风韵，不可名状。待到看清她的脸，便又觉得很是普通。然而只要多看她一会，又觉得实在不能用普通一词形容。再往下便是着迷，神魂颠倒，坐卧不宁了。"
+——张爱玲《倾城之恋》
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 情绪解析器 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
