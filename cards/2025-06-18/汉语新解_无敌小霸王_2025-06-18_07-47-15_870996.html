@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉语新解 by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 440 713">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f9f3e9"></stop>
+      <stop offset="100%" stop-color="#f5ebe0"></stop>
+    </linearGradient>
+    <pattern id="geo-pattern" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M0,15 L30,15" stroke="#d9cfc1" stroke-width="0.5"></path>
+      <path d="M15,0 L15,30" stroke="#d9cfc1" stroke-width="0.5"></path>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="440" height="713" fill="url(#bg-gradient)" x="-20" y="-20"></rect>
+  <rect x="20" y="20" width="360" height="560" fill="url(#geo-pattern)" fill-opacity="0.2" rx="5"></rect>
+  
+  <!-- Title -->
+  <text x="200" y="60" font-family="'Noto Serif SC', serif" font-size="28" text-anchor="middle" fill="#333" style="font-family: &quot;Noto Serif SC&quot;, serif;">汉语新解</text>
+  
+  <!-- Divider -->
+  <line x1="50" y1="80" x2="350" y2="80" stroke="#8a7e6d" stroke-width="1"></line>
+  
+  <!-- Term -->
+  <text x="200" y="120" font-family="'Noto Serif SC', serif" font-size="24" text-anchor="middle" fill="#444" style="font-family: &quot;Noto Serif SC&quot;, serif;">无敌小霸王</text>
+  <text x="200" y="145" font-family="'Noto Serif SC', serif" font-size="16" text-anchor="middle" fill="#666" style="font-family: &quot;Noto Serif SC&quot;, serif;">wú dí xiǎo bà wáng</text>
+  
+  <!-- Explanation -->
+  <foreignObject x="40" y="170" width="320" height="403">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 18px; color: rgb(85, 85, 85); line-height: 1.6; overflow: hidden;" font-family="'Noto Serif SC', serif">
+      "无敌小霸王"是成年人为孩童编织的虚幻王冠。戴上它，孩子以为自己获得了力量，而父母则收获了片刻宁静。这是一场双方心照不宣的表演：一方假装无所不能，另一方假装臣服。
+      <br><br>
+      它实则是世界第一课：学会在赞美声中穿行，却不被掌声淹没；理解傲慢与自信的边界在哪里；明白真正的强大从不需要宣告。
+      <br><br>
+      当你走出家门，才发现世上根本没有"无敌"，只有无数与你一样戴着"小霸王"帽子的人，都在学着如何优雅地摘下它。
+    </div>
+  </foreignObject>
+  
+  <!-- Abstract Illustration -->
+  <circle cx="100" cy="480" r="30" fill="none" stroke="#8a7e6d" stroke-width="1" transform="translate(0, 123) "></circle>
+  <circle cx="300" cy="480" r="10" fill="none" stroke="#8a7e6d" stroke-width="1" transform="translate(0, 123) "></circle>
+  <line x1="130" y1="480" x2="290" y2="480" stroke="#8a7e6d" stroke-width="1" transform="translate(0, 123) "></line>
+  
+  <!-- Summary -->
+  <text x="200" y="530" font-family="'Noto Serif SC', serif" font-size="16" text-anchor="middle" fill="#555" transform="translate(0, 123) " style="font-family: &quot;Noto Serif SC&quot;, serif;">虚假的加冕，真实的成长</text>
+  
+  <!-- Footer -->
+  <line x1="50" y1="550" x2="350" y2="550" stroke="#8a7e6d" stroke-width="1" stroke-dasharray="2,2" transform="translate(0, 123) "></line>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
