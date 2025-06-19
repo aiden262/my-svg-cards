@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【云南白药】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 440 640">
+    <!-- 背景 -->
+    <rect width="440" height="640" fill="#f2eee8" rx="5" ry="5" x="-20" y="-20"></rect>
+    <rect x="20" y="20" width="360" height="560" fill="#f7f5f0" rx="3" ry="3" stroke="#e0dbd1" stroke-width="1"></rect>
+    
+    <!-- 几何装饰 -->
+    <rect x="35" y="40" width="40" height="40" fill="#e94b35" opacity="0.1"></rect>
+    <circle cx="350" cy="50" r="20" fill="#233d7b" opacity="0.1"></circle>
+    <rect x="300" y="530" width="60" height="20" fill="#f0c53f" opacity="0.1" transform="translate(0, 5) "></rect>
+    
+    <!-- 标题 -->
+    <text x="200" y="70" font-family="'Noto Serif SC', serif" font-size="28" fill="#333333" text-anchor="middle" style="font-family: &quot;Noto Serif SC&quot;, serif;">汉语新解</text>
+    
+    <!-- 分隔线 -->
+    <line x1="80" y1="90" x2="320" y2="90" stroke="#d3cdc4" stroke-width="1"></line>
+    
+    <!-- 词汇 -->
+    <text x="200" y="130" font-family="'Noto Serif SC', serif" font-size="24" fill="#555555" text-anchor="middle" style="font-family: &quot;Noto Serif SC&quot;, serif;">云南白药</text>
+    <text x="200" y="155" font-family="'Noto Serif SC', serif" font-size="16" fill="#888888" text-anchor="middle" style="font-family: &quot;Noto Serif SC&quot;, serif;">Yunnan Baiyao</text>
+    <text x="200" y="175" font-family="'Noto Serif SC', serif" font-size="16" fill="#888888" text-anchor="middle" style="font-family: &quot;Noto Serif SC&quot;, serif;">雲南白薬</text>
+    
+    <!-- 解释 -->
+    <foreignObject x="40" y="200" width="320" height="255">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 17px; color: rgb(68, 68, 68); line-height: 1.5; text-align: justify; overflow: hidden;" font-family="'Noto Serif SC', serif">
+            用神秘成分和民族情结包装的万金油——明明就是一种止血药，却被赋予了无边神力。它是中国式焦虑的解药，也是对科学精神的妥协：当你急需证据时，它递给你的是"祖传秘方"；当你追问成分时，它递给你的是"国家机密"。它是现代中国人的符咒，在跌打损伤与民族自信心之间搭建了一座桥梁，让我们相信只要贴上一片，一切都会好起来——无论是膝盖上的淤青，还是内心深处的不安全感。
+        </div>
+    </foreignObject>
+    
+    <!-- 简图 -->
+    <line x1="120" y1="470" x2="280" y2="470" stroke="#666" stroke-width="1.5" transform="translate(0, 5) "></line>
+    <circle cx="200" cy="470" r="40" fill="none" stroke="#e94b35" stroke-width="1.5" transform="translate(0, 5) "></circle>
+    <text x="200" y="475" font-family="'Noto Serif SC', serif" font-size="12" fill="#444" text-anchor="middle" transform="translate(0, 5) " style="font-family: &quot;Noto Serif SC&quot;, serif;">信仰</text>
+    <text x="120" y="455" font-family="'Noto Serif SC', serif" font-size="12" fill="#444" text-anchor="middle" transform="translate(0, 5) " style="font-family: &quot;Noto Serif SC&quot;, serif;">科学</text>
+    <text x="280" y="455" font-family="'Noto Serif SC', serif" font-size="12" fill="#444" text-anchor="middle" transform="translate(0, 5) " style="font-family: &quot;Noto Serif SC&quot;, serif;">商业</text>
+    
+    <!-- 总结 -->
+    <text x="200" y="550" font-family="'Noto Serif SC', serif" font-size="18" fill="#555" text-anchor="middle" transform="translate(0, 5) " style="font-family: &quot;Noto Serif SC&quot;, serif;">止血效果确切，其余全靠想象力</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
