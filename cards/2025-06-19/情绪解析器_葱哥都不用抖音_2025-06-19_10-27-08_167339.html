@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【葱哥都不用抖音】 - 情绪解析器</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            # 情绪解析器
+
+### 名称：排斥感/抵触感 (Aversion/Repulsion)
+
+**源起**：排斥感往往源于对不符合个人价值观、审美或生活习惯的事物的本能反应。当某事物被视为与自身认同不协调时，会产生这种情绪。具体到对社交媒体平台的排斥，可能源于对其价值观、内容质量或时间消耗的担忧。
+
+**体验**：排斥感表现为一种明确的距离感和界限感，伴随着"这不适合我"的判断。这是一种保护性情绪，帮助个体维持自我边界和价值观完整性。体验上常伴有清晰的自我定位和对选择的确定感。
+
+**具身表现**：身体可能会出现微妙的后撤动作，面部表情略显紧绷，有时会不自觉地摇头。呼吸可能会短暂停滞后变得更深，像是在强调自己的立场。
+
+**心理意象**：
+- 一堵透明但坚固的墙，将自己与排斥对象分隔
+- 一条清晰的界限线，自己站在线的一侧，观察着另一侧
+- 航行中的船只主动避开某片海域，选择自己的航线
+
+**发展阶段**：青少年后期至成年初期是形成明确价值观和个人选择的关键时期，此时排斥感开始变得更加自主和有意识。这与自我认同的形成密切相关。
+
+**影响事件**：家庭教育中对媒体使用的态度、教育背景、个人隐私被侵犯的经历、目睹他人沉迷于特定内容的负面影响等，都会影响一个人对特定平台的态度。
+
+**性格影响**：经常表达排斥感的人往往具有较强的自主性和选择意识，不易受潮流影响。他们通常更注重质量而非数量，在信息消费上更有选择性，倾向于深度而非广度。
+
+**转变因素**：当排斥对象展现出新的、有价值的一面，或当社会认同压力增强，或当实用需求出现时，排斥感可能会减弱。同样，亲近的人的使用习惯也可能影响这种感受的转变。
+
+**文学呈现**：
+"每一个时代都有它自己的愚蠢，它不同于前一时代的愚蠢，却要比前一时代的愚蠢更难以避免。" 
+—— 叔本华《人生的智慧》
+
+排斥感是自我意识和个人选择的重要体现，它不仅是对外部世界的回应，更是对自我边界的维护与确认。
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 情绪解析器 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
