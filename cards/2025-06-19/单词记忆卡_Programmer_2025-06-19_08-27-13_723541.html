@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【Programmer】 - 单词记忆卡</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            ```lisp
+;; 记忆卡片生成: Programmer
+
+;; 词根分析
+(词根分解 "Programmer"
+  '("pro-" (前缀 表示 "向前" "赞成" "支持")
+    "gram" (词根 来源于希腊语 "gramma" 表示 "写" "记录")
+    "-er" (后缀 表示 "做...的人")))
+
+;; 生动故事
+(记忆故事
+  "想象一个专业的(pro-)作家(gram)正在用代码'书写'未来，这个人(-er)就是程序员。
+  就像古代文人在竹简上刻字，程序员在键盘上敲代码，都是'书写'的不同形式。")
+
+;; 视觉呈现
+(SVG设计
+  (布局 '横向三分法)
+  (元素
+    (左侧 (词根树 '("pro-" "→" "gram" "→" "-er")))
+    (中部 (插图 "程序员在发光键盘上写代码"))
+    (右侧 (例句 "The programmer wrote an elegant algorithm to solve the problem.")))
+  (配色 '("深蓝" "代码绿" "显示器蓝光")))
+
+;; 记忆技巧
+(联想记忆
+  "Pro(专业)+gram(写作文案)+er(人)=专业写代码的人
+  联想：程序(program)+人(er)=程序员")
+
+;; 扩展学习
+(相关词汇
+  '("program" "编程程序"
+    "grammar" "语法" 
+    "programming" "编程"
+    "telegram" "电报"))
+
+;; 卡片输出
+(最终卡片
+  (标题 "Programmer [ˈproʊɡræmər] 程序员")
+  (内容
+   "定义：设计和编写计算机程序的人
+    词源：pro-(向前)+gram(书写)+-er(人)
+    记忆：专业书写代码的人
+    例句：She trained to become a programmer at a tech company."))
+```
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 单词记忆卡 | 模型: deepseek-ai/DeepSeek-V3-0324
+        </footer>
+    </main>
+</body>
+</html>
