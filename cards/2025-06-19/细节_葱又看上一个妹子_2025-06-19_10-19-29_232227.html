@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【葱又看上一个妹子】 - 细节</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 680 440" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text { font-family: 'KingHwa_OldSong', serif; }
+    .title { font-size: 24px; font-weight: bold; }
+    .input { font-size: 16px; fill: #444; }
+    .response { font-size: 17px; fill: #222; line-height: 1.5; }
+    .footer { font-size: 12px; fill: #888; text-anchor: end; }
+    .line { stroke: #ddd; stroke-width: 1; }
+  </style>
+  <rect width="680" height="440" fill="#fcfcfc" rx="5" x="-20" y="-20"></rect>
+  <rect width="580" height="340" x="30" y="30" fill="none" stroke="#eee" stroke-width="1" rx="3"></rect>
+  
+  <text x="50" y="70" class="title">细节</text>
+  <line x1="50" y1="85" x2="590" y2="85" class="line"></line>
+  
+  <text x="50" y="115" class="input">葱又看上一个妹子</text>
+  
+  <foreignObject x="50" y="130" width="540" height="218">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 17px; color: rgb(34, 34, 34); line-height: 1.6; overflow: hidden;" font-family="'Noto Serif SC', serif">
+      葱那双眼睛又开始不安分了，跟鱼钩似的，一沾水就咕噜噜转。他坐在那张磨得发亮的木凳上，茶碗里的水面一圈圈荡开，倒映着他额头上沁出的细密汗珠。那妹子坐在对街阳伞下，穿着碎花布短裙，脚踝细得像两根葱白，随着风摇晃。她的笑声清脆，像是雨后屋檐的水滴落在瓦片上，叮咚作响。葱的嘴角慢慢翘起，鼻孔微微张大，脖颈像只公鸡似的伸长了，耳朵通红，指甲无意识地在桌面上刮出细小的沟痕。每当妹子侧过脸来，他就慌忙低头，眼角余光却死死黏在她身上，像蜗牛留下的银亮痕迹，怎么也擦不掉。
+    </div>
+  </foreignObject>
+  
+  <line x1="50" y1="340" x2="590" y2="340" class="line" transform="translate(0, 18) "></line>
+  <text x="590" y="365" class="footer" transform="translate(0, 18) ">Anthropic Claude</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 细节 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
