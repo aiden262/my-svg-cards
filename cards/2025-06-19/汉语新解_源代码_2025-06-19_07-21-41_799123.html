@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【源代码】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 455 640">
+  <!-- 背景 -->
+  <rect width="455" height="640" fill="#f9f3e9" rx="10" ry="10" x="-20" y="-20"></rect>
+  
+  <!-- 装饰元素 -->
+  <rect x="20" y="20" width="360" height="40" fill="#e74c3c" opacity="0.1" rx="5" ry="5"></rect>
+  <rect x="40" y="560" width="320" height="5" fill="#34495e" opacity="0.2"></rect>
+  <polygon points="350,100 370,140 330,140" fill="#3498db" opacity="0.2"></polygon>
+  
+  <!-- 标题 -->
+  <text x="200" y="50" font-family="'Noto Serif SC', serif" font-size="28" fill="#34495e" text-anchor="middle" font-weight="bold" style="font-family: &quot;Noto Serif SC&quot;, serif;">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="50" y1="70" x2="350" y2="70" stroke="#34495e" stroke-width="2" stroke-dasharray="1,3"></line>
+  
+  <!-- 输入词汇 -->
+  <text x="200" y="110" font-family="'Noto Serif SC', serif" font-size="32" fill="#2c3e50" text-anchor="middle" font-weight="bold" style="font-family: &quot;Noto Serif SC&quot;, serif;">源代码</text>
+  <text x="200" y="135" font-family="'Noto Serif SC', serif" font-size="16" fill="#7f8c8d" text-anchor="middle" style="font-family: &quot;Noto Serif SC&quot;, serif;">Source Code / ソースコード</text>
+  
+  <!-- 解释 -->
+  <text x="50" y="180" font-family="'Noto Serif SC', serif" font-size="18" fill="#2c3e50" width="300" line-height="1.5" style="font-family: &quot;Noto Serif SC&quot;, serif;">
+    <tspan x="50" dy="0">源代码：那些程序员同时炫耀和隐藏的咒语。</tspan>
+    <tspan x="50" dy="28">它是一面魔镜，照出写它的人最真实的思维</tspan>
+    <tspan x="50" dy="28">混乱。展示源代码如同赤身裸体地在同事</tspan>
+    <tspan x="50" dy="28">面前游街，人们看到了你所有的偷懒、</tspan>
+    <tspan x="50" dy="28">妥协和那些命名为"临时解决方案"却</tspan>
+    <tspan x="50" dy="28">永久存在的代码块。</tspan>
+    <tspan x="50" dy="28"></tspan>
+    <tspan x="50" dy="28">科技公司视之为财富，却不让你看；</tspan>
+    <tspan x="50" dy="28">开源社区将之奉为自由，但绝大多数</tspan>
+    <tspan x="50" dy="28">人只会复制粘贴。</tspan>
+  </text>
+  
+  <!-- 简图 -->
+  <line x1="70" y1="450" x2="330" y2="450" stroke="#7f8c8d" stroke-width="2"></line>
+  <rect x="100" y="430" width="60" height="40" fill="none" stroke="#e74c3c" stroke-width="2" rx="5" ry="5"></rect>
+  <rect x="170" y="430" width="60" height="40" fill="none" stroke="#3498db" stroke-width="2" rx="5" ry="5"></rect>
+  <rect x="240" y="430" width="60" height="40" fill="none" stroke="#2ecc71" stroke-width="2" rx="5" ry="5"></rect>
+  <path d="M130,450 C150,400 180,500 200,450" stroke="#34495e" stroke-width="1" fill="none"></path>
+  <path d="M200,450 C220,420 240,480 270,450" stroke="#34495e" stroke-width="1" fill="none"></path>
+  
+  <!-- 总结 -->
+  <text x="200" y="530" font-family="'Noto Serif SC', serif" font-size="16" fill="#34495e" text-anchor="middle" font-style="italic" style="font-family: &quot;Noto Serif SC&quot;, serif;">
+    "未经审美处理的智慧结晶，与混乱的迷宫无异"
+  </text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
