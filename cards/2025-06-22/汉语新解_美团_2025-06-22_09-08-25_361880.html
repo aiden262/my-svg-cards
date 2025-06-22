@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【美团】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" style="background-color: #f0f0f0; border: 1px solid #ccc; font-family: sans-serif;">
+
+    <!-- Background inspired by Mondrian, with Meituan Yellow -->
+    <rect x="-20" y="-20" width="440" height="640" fill="#FFFFFF"></rect>
+    <rect x="20" y="20" width="360" height="560" fill="#FFFFFF" stroke="#000000" stroke-width="2"></rect>
+    <rect x="20" y="450" width="150" height="130" fill="#FFD100"></rect> <!-- Meituan Yellow -->
+    <rect x="250" y="20" height="130" width="130" fill="#231F20"></rect> <!-- Black -->
+    <rect x="20" y="100" width="80" height="80" fill="#DE1A22"></rect> <!-- Red -->
+
+    <!-- Header -->
+    <text x="200" y="65" font-family="'Noto Serif SC', serif" font-size="36" text-anchor="middle" fill="#231F20" style="font-family: &quot;Noto Serif SC&quot;, serif;">汉语新解</text>
+    <line x1="40" y1="85" x2="360" y2="85" stroke="#231F20" stroke-width="1"></line>
+
+    <!-- Word -->
+    <text x="200" y="130" font-family="'Noto Serif SC', serif" font-size="48" text-anchor="middle" fill="#3D3D3D" style="font-family: &quot;Noto Serif SC&quot;, serif;">美团</text>
+    <text x="200" y="160" font-family="'Noto Serif SC', serif" font-size="16" text-anchor="middle" fill="#555555" style="font-family: &quot;Noto Serif SC&quot;, serif;">Meituan / メイトゥアン</text>
+
+    <!-- Explanation -->
+    <foreignObject x="45" y="190" width="310" height="150">
+        <p xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 20px; color: rgb(61, 61, 61); line-height: 1.8; text-align: justify; overflow-wrap: break-word;" font-family="'Noto Serif SC', serif">
+            一座建立在无数电动车轮上的数字罗马。你只需动动手指，就有角斗士为你取回面包和马戏。唯一的代价？是角斗士们没有回头路，只有下一单。
+        </p>
+    </foreignObject>
+
+    <!-- Line Art -->
+    <g transform="translate(50, 360)">
+        <!-- The Algorithm/Platform (The Emperor's Box) -->
+        <rect x="130" y="0" width="40" height="20" fill="none" stroke="#231F20" stroke-width="1.5"></rect>
+        <text x="148" y="15" font-family="'Noto Serif SC', serif" font-size="12" text-anchor="middle" style="font-family: &quot;Noto Serif SC&quot;, serif;">AI</text>
+        
+        <!-- The Arena (The City Grid) -->
+        <circle cx="150" cy="100" r="70" fill="none" stroke="#231F20" stroke-width="1" stroke-dasharray="4 4"></circle>
+        
+        <!-- The Rider (The Gladiator) -->
+        <g transform="translate(150, 30) rotate(15)">
+            <circle cx="0" cy="0" r="4" fill="#231F20"></circle> <!-- Head -->
+            <line x1="0" y1="4" x2="0" y2="12" stroke="#231F20" stroke-width="1.5"></line> <!-- Body -->
+            <path d="M -5 12 L 0 12 L 5 18" fill="none" stroke="#231F20" stroke-width="1.5"></path> <!-- Legs on scooter -->
+            <circle cx="-6" cy="18" r="3" fill="none" stroke="#231F20" stroke-width="1"></circle> <!-- Wheel 1 -->
+            <circle cx="6" cy="18" r="3" fill="none" stroke="#231F20" stroke-width="1"></circle> <!-- Wheel 2 -->
+        </g>
+        
+        <!-- The Consumer (The Spectator) -->
+        <g transform="translate(20, 140)">
+             <circle cx="0" cy="0" r="5" fill="#231F20"></circle> <!-- Head -->
+             <line x1="0" y1="5" x2="0" y2="20" stroke="#231F20" stroke-width="1.5"></line> <!-- Body -->
+             <rect x="-10" y="-15" width="8" height="12" fill="none" stroke="#231F20" stroke-width="1.5"></rect> <!-- Phone -->
+        </g>
+    </g>
+
+    <!-- Summary -->
+    <foreignObject x="45" y="500" width="310" height="80">
+        <p xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 16px; color: rgb(35, 31, 32); line-height: 1.6; text-align: center;" font-family="'Noto Serif SC', serif">
+            <tspan style="font-weight:bold;">极简总结:</tspan><br>
+            算法是看不见的斗兽场老板，骑手是现代角斗士，你的外卖是他们赢下的奖品。
+        </p>
+    </foreignObject>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
