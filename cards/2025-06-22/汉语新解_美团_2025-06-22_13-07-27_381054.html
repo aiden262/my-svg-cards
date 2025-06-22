@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【美团】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" style="background-color: #f5f5f5; border: 1px solid #ccc; font-family: sans-serif;"><rect x="-20" y="-20" width="440" height="640" fill="#f5f5f5"></rect>
+
+    <!-- Mondrian-style Background -->
+    
+    <rect x="280" y="450" width="120" height="150" fill="#FFD700" transform="translate(0, -285)"></rect> <!-- Yellow -->
+    <rect x="0" y="0" width="100" height="150" fill="#DE3163" transform="translate(0, 20)"></rect> <!-- Red -->
+    <rect x="0" y="500" width="80" height="100" fill="#4169E1" transform="translate(0, 115)"></rect> <!-- Blue -->
+    <line x1="0" y1="150" x2="400" y2="150" stroke="#000" stroke-width="5" transform="translate(0, 427)"></line>
+    <line x1="100" y1="0" x2="100" y2="150" stroke="#000" stroke-width="5" transform="translate(0, 165)"></line>
+    <line x1="280" y1="0" x2="280" y2="600" stroke="#000" stroke-width="5" transform="translate(0, 165)"></line>
+
+    <!-- Main Content Area -->
+    <g transform="translate(0, 593)">
+
+        <!-- Title -->
+        <text x="180" y="50" font-family="'Noto Serif SC', serif" font-size="32" text-anchor="middle" fill="#333" style="font-family: &quot;Noto Serif SC&quot;, serif;">汉语新解</text>
+        
+        <!-- Separator -->
+        <line x1="40" y1="75" x2="320" y2="75" stroke="#333" stroke-width="1"></line>
+
+        <!-- User Input -->
+        <text x="180" y="115" font-family="'Noto Serif SC', serif" font-size="24" text-anchor="middle" fill="#5F5F5F" style="font-family: &quot;Noto Serif SC&quot;, serif;">
+            美团 | Meituan | メイトゥアン
+        </text>
+
+        <!-- Explanation -->
+        <foreignObject x="40" y="160" width="280" height="180">
+            <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 18px; color: rgb(95, 95, 95); line-height: 1.8; text-align: justify;" font-family="'Noto Serif SC', serif">
+                一个数字化的罗马斗兽场。食客是高坐观众席的凯撒，动动手指，决定一位骑手的狂奔或喘息。骑手是身披黄色铠甲的角斗士，在名为“街道”的沙场上，与时间和红灯搏斗。而真正的庄家——平台，在看不见的包厢里，一边向凯撒兜售更佳的观赏位置(会员)，一边从角斗士的血汗中抽取佣金，同时还向场边的商贩(餐厅)收取着高昂的摊位费。你以为你只是点了个外卖，其实是为一场由算法导演的饥饿游戏，投了赞成票。
+            </div>
+        </foreignObject>
+
+        <!-- Line Drawing -->
+        <g transform="translate(180, 420) scale(0.9)">
+            <!-- Algorithm as Puppet Master -->
+            <path d="M -50 -60 Q 0 -90 50 -60 T 50 0 Q 0 30 -50 0 T -50 -60 Z" fill="none" stroke="#333" stroke-width="2"></path>
+            <text x="0" y="-35" text-anchor="middle" font-size="12">算法</text>
+            
+            <!-- Puppet Strings -->
+            <line x1="0" y1="-25" x2="-60" y2="30" stroke="#333" stroke-width="1" stroke-dasharray="2,2"></line>
+            <line x1="0" y1="-25" x2="0" y2="30" stroke="#333" stroke-width="1" stroke-dasharray="2,2"></line>
+            <line x1="0" y1="-25" x2="60" y2="30" stroke="#333" stroke-width="1" stroke-dasharray="2,2"></line>
+
+            <!-- Puppets -->
+            <!-- Rider -->
+            <circle cx="-60" cy="45" r="10" fill="none" stroke="#333" stroke-width="1.5"></circle>
+            <path d="M -60 55 l -10 10 l 20 0 Z" fill="none" stroke="#333" stroke-width="1.5"></path>
+            <text x="-60" y="80" text-anchor="middle" font-size="10">骑手</text>
+
+            <!-- Consumer -->
+            <circle cx="0" cy="45" r="10" fill="none" stroke="#333" stroke-width="1.5"></circle>
+            <rect x="-5" y="55" width="10" height="15" fill="none" stroke="#333" stroke-width="1.5"></rect>
+            <text x="0" y="80" text-anchor="middle" font-size="10">用户</text>
+
+            <!-- Merchant -->
+            <rect x="50" y="35" width="20" height="20" fill="none" stroke="#333" stroke-width="1.5"></rect>
+            <path d="M 48 35 l 12 -10 l 12 10" fill="none" stroke="#333" stroke-width="1.5"></path>
+            <text x="60" y="80" text-anchor="middle" font-size="10">商家</text>
+        </g>
+        
+        <!-- Minimalist Summary -->
+        <text x="180" y="540" text-anchor="middle" font-family="'Noto Serif SC', serif" font-size="16px" fill="#5F5F5F" style="font-style: italic; font-family: &quot;Noto Serif SC&quot;, serif;">
+            <tspan x="180" dy="0">一个用算法控制的提线木偶剧场，</tspan>
+            <tspan x="180" dy="20">演员、观众和舞台都在支付演出费。</tspan>
+        </text>
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
