@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【人民医院】 - 嘴替</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="8 -4 462 676" xmlns="http://www.w3.org/2000/svg" style="background-color:#1a1a1a; font-family: 'KingHwa_OldSong', 'KaiTi', '楷体', serif;">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&amp;display=swap');
+      .title { font-size: 72px; fill: #ff4136; font-weight: bold; }
+      .user-input { font-size: 24px; fill: #ffffff; }
+      .response { font-size: 36px; fill: #ff4136; font-weight: bold; }
+      .secondary-text { fill: #aaaaaa; }
+    </style>
+  </defs>
+
+  <text x="40" y="80" class="title">嘴替</text>
+  <line x1="30" y1="110" x2="450" y2="110" stroke="#ff4136" stroke-width="4"></line>
+
+  <text x="30" y="160" class="user-input">
+    <tspan>"人民医院"</tspan>
+  </text>
+
+  <!-- 立体主义 (精髓意象 响应) -->
+  <g transform="translate(120, 220) scale(0.8)">
+    <!-- Fragmented person silhouette -->
+    <path d="M 80 50 L 100 30 L 120 50 L 120 150 L 150 180 L 130 220 L 70 220 L 50 180 L 80 150 Z" fill="none" stroke="#ffffff" stroke-width="2"></path>
+    <path d="M 100 70 L 110 90 L 90 90 Z" fill="#aaaaaa"></path>
+    <rect x="75" y="155" width="50" height="60" fill="none" stroke="#aaaaaa" stroke-width="1.5" transform="rotate(-10, 100, 185)"></rect>
+    
+    <!-- Jagged ECG line (the 'illness') -->
+    <path d="M 20 180 L 60 180 L 70 160 L 85 200 L 100 150 L 110 180 L 190 180" fill="none" stroke="#ff4136" stroke-width="3"></path>
+
+    <!-- Empty/Broken money symbol (the 'poverty') -->
+    <g transform="translate(200, 150)">
+      <rect x="0" y="0" width="80" height="50" rx="5" ry="5" fill="none" stroke="#ffffff" stroke-width="2"></rect>
+      <line x1="0" y1="15" x2="80" y2="15" stroke="#ffffff" stroke-width="2"></line>
+      <path d="M 70 25 L 75 40" stroke="#aaaaaa" stroke-width="1.5"></path>
+      <!-- Crack representing 'broken'/'poor' -->
+      <path d="M 20 -10 L 40 60 L 45 55 L 25 -5 Z" fill="#1a1a1a" stroke="#ff4136" stroke-width="1"></path>
+      <text x="35" y="40" font-size="30" fill="#ff4136" style="font-weight:bold;">¥</text>
+    </g>
+  </g>
+
+  <g class="response" transform="translate(30, 500)">
+    <text y="0">
+      <tspan x="0" dy="1.2em">我可不敢去，</tspan>
+      <tspan x="0" dy="1.4em">怕一通检查下来，</tspan>
+      <tspan x="0" dy="1.4em">发现唯一的病就是穷。</tspan>
+    </text>
+  </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 嘴替 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
