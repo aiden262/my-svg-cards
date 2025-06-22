@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【外卖】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f3f0e9"></stop>
+      <stop offset="100%" stop-color="#e8e4d9"></stop>
+    </linearGradient>
+    <pattern id="pattern1" patternUnits="userSpaceOnUse" width="30" height="30" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="30" stroke="#d9d3c7" stroke-width="1"></line>
+    </pattern>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect x="-20" y="-20" width="440" height="640" fill="url(#bgGradient)"></rect>
+  <rect x="20" y="20" width="360" height="560" fill="#f9f6f0" stroke="#e0dbd1" stroke-width="1"></rect>
+  <rect x="30" y="30" width="340" height="540" fill="transparent" stroke="url(#pattern1)" stroke-width="10" opacity="0.1"></rect>
+  
+  <!-- 标题 -->
+  <text x="200" y="70" font-family="楷体, KaiTi" font-size="28" font-weight="bold" text-anchor="middle" fill="#333">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="50" y1="90" x2="350" y2="90" stroke="#ddd" stroke-width="1"></line>
+  
+  <!-- 词汇 -->
+  <text x="200" y="130" font-family="微软雅黑, Microsoft YaHei" font-size="24" text-anchor="middle" fill="#555">外卖</text>
+  <text x="200" y="155" font-family="Arial" font-size="14" text-anchor="middle" fill="#777">Take-out / Delivery</text>
+  <text x="200" y="175" font-family="MS Gothic, MS Mincho" font-size="14" text-anchor="middle" fill="#777">デリバリー</text>
+  
+  <!-- 解释 -->
+  <foreignObject x="40" y="200" width="320" height="288">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Source Han Serif', serif; font-size: 16px; line-height: 1.6; color: #444; text-align: justify;">
+      <p>外卖：商家以方便为名，向消费者征收的时间税。</p>
+      <p>我们花钱买来了不必亲自走动的权利，却失去了饭菜的温度、餐厅的氛围和健康的运动。那些送餐骑手踩着油门追赶电子时钟，而我们却误以为自己节约了时间。</p>
+      <p>平台抽成，商家加价，包装污染，匆忙进食——这一切都被包裹在小小的"便利"外衣下。这是一场精心设计的魔术：让我们心甘情愿为懒惰买单，同时错以为占了便宜。</p>
+    </div>
+  </foreignObject>
+  
+  <!-- 线条图 -->
+  <line x1="70" y1="450" x2="330" y2="450" stroke="#aaa" stroke-width="1" transform="translate(0, 48) "></line>
+  <circle cx="140" cy="450" r="3" fill="#e06666" transform="translate(0, 48) "></circle>
+  <text x="140" y="470" font-size="12" text-anchor="middle" fill="#666" transform="translate(0, 48) ">消费者</text>
+  <circle cx="260" cy="450" r="3" fill="#6fa8dc" transform="translate(0, 48) "></circle>
+  <text x="260" y="470" font-size="12" text-anchor="middle" fill="#666" transform="translate(0, 48) ">平台资本</text>
+  <path d="M140,450 C170,420 230,420 260,450" stroke="#999" stroke-width="1" fill="none" transform="translate(0, 48) "></path>
+  <text x="200" y="425" font-size="10" text-anchor="middle" fill="#777" transform="translate(0, 48) rotate(-10 200,425)">便利幻象</text>
+  <path d="M260,450 C230,480 170,480 140,450" stroke="#999" stroke-width="1" fill="none" transform="translate(0, 48) "></path>
+  <text x="200" y="485" font-size="10" text-anchor="middle" fill="#777" transform="translate(0, 48) rotate(10 200,485)">隐形成本</text>
+  
+  <!-- 总结 -->
+  <text x="200" y="530" font-family="黑体, SimHei" font-size="16" text-anchor="middle" fill="#333" font-style="italic" transform="translate(0, 48) ">懒惰的投资，焦虑的回报</text>
+  
+  <!-- 装饰元素 -->
+  <rect x="40" y="550" width="320" height="2" fill="#ddd" transform="translate(0, 48) "></rect>
+  <circle cx="50" cy="50" r="10" fill="none" stroke="#ddd" stroke-width="1"></circle>
+  <circle cx="350" cy="50" r="10" fill="none" stroke="#ddd" stroke-width="1"></circle>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
