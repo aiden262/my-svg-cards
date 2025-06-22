@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【外卖】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <!-- 设计: 李继刚 | 模型: Claude Sonnet | 版本: 0.3 -->
+  <style>
+    .title { font-family: 'Kaiti', 'STKaiti', '楷体', cursive; font-size: 32px; fill: #333; text-anchor: middle; }
+    .word { font-family: 'Songti SC', 'Noto Serif SC', serif; font-size: 36px; fill: #4a4a4a; text-anchor: middle; }
+    .translations { font-family: 'Helvetica Neue', 'Arial', sans-serif; font-size: 14px; fill: #777; text-anchor: middle; }
+    .explanation { font-family: 'Songti SC', 'Noto Serif SC', serif; font-size: 17px; line-height: 1.8; fill: #555251; text-anchor: middle; }
+    .summary { font-family: 'Kaiti', 'STKaiti', '楷体', cursive; font-size: 22px; fill: #333; text-anchor: middle; }
+    .drawing-line { stroke: #6a6a6a; stroke-width: 1.5; fill: none; }
+  </style>
+
+  <!-- 蒙德里安风格背景 -->
+  <rect width="440" height="640" fill="#f4f3ef" x="-20" y="-20"></rect>
+  <rect x="0" y="520" width="90" height="80" fill="#e02926"></rect>
+  <rect x="340" y="0" width="60" height="70" fill="#f7d00f"></rect>
+  <rect x="0" y="0" width="70" height="80" fill="#33669a"></rect>
+  <line x1="0" y1="80" x2="400" y2="80" stroke="#111" stroke-width="6"></line>
+  <line x1="90" y1="80" x2="90" y2="600" stroke="#111" stroke-width="5"></line>
+  <line x1="0" y1="520" x2="400" y2="520" stroke="#111" stroke-width="4"></line>
+
+  <!-- 主要内容区 -->
+  <text x="200" y="55" class="title">汉语新解</text>
+
+  <g class="word-group" transform="translate(0, 100)">
+    <text x="200" y="30" class="word">外 卖</text>
+    <text x="200" y="60" class="translations">Takeout / Food Delivery</text>
+    <text x="200" y="80" class="translations">出前 (Demae)</text>
+  </g>
+
+  <g class="explanation" transform="translate(200, 220)">
+    <text y="0">当代都市生活的麻醉剂。</text>
+    <text y="30">它用一份加了配送费的多巴胺，</text>
+    <text y="60">暂时抚平了你被工作掏空的胃和灵魂，</text>
+    <text y="90">让你心安理得地忘记厨房的存在，</text>
+    <text y="120">以及如何为自己做饭这项古老技能。</text>
+    <text y="150">它不是解药，只是让你感觉不到痛的吗啡，</text>
+    <text y="180">针头是你的手机，</text>
+    <text y="210">药效是那半小时的饱足感。</text>
+  </g>
+
+  <!-- 线条图: 便利的枷锁 -->
+  <g class="drawing" transform="translate(0, 40)">
+    <path class="drawing-line" d="M 170 410 C 160 400, 150 400, 140 410" stroke-width="2"></path> <!-- 人头 -->
+    <line class="drawing-line" x1="155" y1="420" x2="155" y2="450" stroke-width="2"></line> <!-- 身体 -->
+    <line class="drawing-line" x1="155" y1="450" x2="140" y2="470"></line> <!-- 腿1 -->
+    <line class="drawing-line" x1="155" y1="450" x2="170" y2="470"></line> <!-- 腿2 -->
+    <rect class="drawing-line" x="170" y="425" width="10" height="15" rx="2" fill="#f4f3ef"></rect> <!-- 手机 -->
+    <path class="drawing-line" d="M 180 432 C 220 450, 260 410, 300 450" stroke-dasharray="4 2" stroke="#e02926" stroke-width="2"></path> <!-- 数字脐带/枷锁 -->
+    <rect class="drawing-line" x="290" y="440" width="25" height="25" fill="#f4f3ef"></rect> <!-- 外卖盒 -->
+    <line class="drawing-line" x1="130" y1="475" x2="180" y2="475"></line> <!-- 地面 -->
+  </g>
+
+  <text x="200" y="565" class="summary">便 利 的 枷 锁</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
