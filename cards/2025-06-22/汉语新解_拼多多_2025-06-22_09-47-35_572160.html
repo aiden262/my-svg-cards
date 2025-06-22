@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【拼多多】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="484" height="739" viewBox="-42 -10 484 739" style="background-color: #f2f2f2; font-family: sans-serif;">
+    <!-- Background using Mondrian-style rectangles -->
+    <rect x="0" y="0" width="400" height="600" fill="#f2f2f2"/>
+    <rect x="20" y="100" width="150" height="200" fill="#e02020"/>
+    <rect x="200" y="400" width="180" height="150" fill="#1040a0"/>
+    <rect x="20" y="500" width="100" height="80" fill="#f8d000"/>
+    <rect x="0" y="0" width="400" height="600" fill="rgba(255, 255, 255, 0.8)"/>
+
+    <!-- Card Content -->
+    <text x="200" y="60" text-anchor="middle" font-family="'毛笔楷体', 'Maobi Kaishu', cursive" font-size="32" fill="#333">
+        汉 语 新 解
+    </text>
+
+    <line x1="40" y1="80" x2="360" y2="80" stroke="#555" stroke-width="1"/>
+
+    <text x="200" y="125" text-anchor="middle" font-family="'汇文明朝体', 'Huiwen Mingchao', serif" font-size="48" fill="#4a4a4a" font-weight="bold">
+        拼多多
+    </text>
+    <text x="200" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666">
+        Pinduoduo
+    </text>
+    <text x="200" y="180" text-anchor="middle" font-family="'Hiragino Sans', 'ヒラギノ角ゴ Pro W3', sans-serif" font-size="16" fill="#666">
+        ピンドゥオドゥオ
+    </text>
+
+    <foreignObject x="40" y="210" width="320" height="509">
+        <p xmlns="http://www.w3.org/1999/xhtml" style="font-family: '汇文明朝体', 'Huiwen Mingchao', serif; font-size: 20px; color: #3d3d3d; line-height: 1.8; text-align: justify; white-space: pre-wrap;">
+一个大型社会实验，旨在证明人类愿意用多长时间和多少个朋友，去换一个九块九包邮的手机壳。
+
+结论是：时间和朋友，皆可无限。
+
+它不是购物平台，而是一座用你的社交关系和时间砌成的赌场。你以为你在“砍价”，其实是在用人情做筹码，赌一个未必用得上的“便宜”。赢家永远是庄家，而你，只是他免费的广告牌和拉新员工。
+        </p>
+    </foreignObject>
+
+    <g id="line-drawing">
+        <!-- Simplified representation of the drawing -->
+        <path d="M 80 450 C 120 400, 160 400, 200 450" stroke="#333" fill="none" stroke-width="2" stroke-dasharray="4 2"/>
+        <text x="200" y="480" text-anchor="middle" font-size="12px" fill="#555">↑ 人际关系成本 ↑</text>
+        <circle cx="200" cy="420" r="15" stroke="#e02020" fill="none" stroke-width="2"/>
+        <text x="200" y="425" text-anchor="middle" font-size="14px" fill="#e02020">你</text>
+        <path d="M 185 420 L 80 380" stroke="#333" fill="none" stroke-width="1"/>
+        <path d="M 215 420 L 320 380" stroke="#333" fill="none" stroke-width="1"/>
+        <text x="75" y="375" text-anchor="end" font-size="12px" fill="#555">朋友A</text>
+        <text x="325" y="375" text-anchor="start" font-size="12px" fill="#555">亲戚B</text>
+        <rect x="175" y="500" width="50" height="20" fill="#f8d000"/>
+        <text x="200" y="515" text-anchor="middle" font-size="10px" fill="#333">廉价商品</text>
+    </g>
+
+    <text x="200" y="560" text-anchor="middle" font-family="'汇文明朝体', 'Huiwen Mingchao', serif" font-size="16px" fill="#3d3d3d" font-style="italic">
+        极简总结：以社交关系为燃料，驱动一台名为“便宜”的永动机。
+    </text>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
