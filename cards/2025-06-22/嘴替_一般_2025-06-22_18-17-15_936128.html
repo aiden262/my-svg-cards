@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【一般】 - 嘴替</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 520 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="760" fill="#1a1a1a" x="-20" y="-20"></rect>
+  <text x="40" y="80" font-family="KingHwa_OldSong" font-size="72" fill="#ff4136" dominant-baseline="hanging">嘴替</text>
+  <line x1="40" y1="100" x2="440" y2="100" stroke="#ff4136" stroke-width="4"></line>
+
+  <g transform="translate(30 130)">
+    <foreignObject x="0" y="0" width="420" height="100">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: KingHwa_OldSong; font-size: 24px; color: #ffffff; word-wrap: break-word;">
+        一般
+      </div>
+    </foreignObject>
+  </g>
+
+  <!-- 精髓意象: 一个被压平的曲线，但底部仍有不屈的小火花或向上箭头 -->
+  <g transform="translate(140 300)">
+    <!-- Flat line representing "一般" -->
+    <line x1="0" y1="50" x2="200" y2="50" stroke="#aaaaaa" stroke-width="5" stroke-linecap="round"></line>
+    <!-- A small, defiant spark trying to rise -->
+    <path d="M90 60 L100 30 L110 60 L100 50 Z" fill="#ff4136"></path>
+    <circle cx="100" cy="50" r="5" fill="#ff4136"></circle>
+  </g>
+
+  <g transform="translate(30 450)">
+    <foreignObject x="0" y="0" width="420" height="245">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: KingHwa_OldSong; font-size: 36px; color: #ff4136; font-weight: bold; word-wrap: break-word;">
+        您这‘一般’，可把我这‘嘴替’的兴致，一下就给‘一般’掉了。看来我这热情啊，还得再加点‘不一般’的料。
+      </div>
+    </foreignObject>
+  </g>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 嘴替 | 模型: gemini-2.5-flash
+        </footer>
+    </main>
+</body>
+</html>
