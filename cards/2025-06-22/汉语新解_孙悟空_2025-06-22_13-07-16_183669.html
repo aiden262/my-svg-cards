@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【孙悟空】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg style="background-color: #f0f0f0; border: 1px solid #ccc; font-family: sans-serif;" viewBox="-20 -30 420 632"><rect x="-20" y="-30" width="420" height="632" fill="#f8f5f0"></rect>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&amp;family=Noto+Serif+SC:wght@400;700&amp;display=swap');
+      .title { font-family: 'Zhi Mang Xing', '毛笔楷体', cursive; font-size: 32px; text-anchor: middle; fill: #333; }
+      .term { font-family: 'Noto Serif SC', '汇文明朝体', serif; font-size: 28px; font-weight: 700; text-anchor: middle; fill: #4a4a4a; }
+      .translation { font-family: 'Helvetica', sans-serif; font-size: 14px; text-anchor: middle; fill: #666; }
+      .explanation { font-family: 'Noto Serif SC', '汇文明朝体', serif; font-size: 18px; fill: #333; line-height: 1.8; }
+      .summary { font-family: 'Noto Serif SC', '汇文明朝体', serif; font-size: 14px; font-style: italic; text-anchor: middle; fill: #555; }
+    </style>
+  </defs>
+
+  <!-- Background using Mondrian-inspired geometric shapes -->
+  
+  <rect x="20" y="500" width="100" height="80" fill="#e02d2d" fill-opacity="0.8" transform="translate(0, 19)"></rect>
+  <rect x="310" y="80" width="70" height="150" fill="#1e549d" fill-opacity="0.8" transform="translate(0, -1)"></rect>
+  <rect x="20" y="20" width="360" height="2" fill="#f7b500" fill-opacity="0.9" transform="translate(0, 40)"></rect>
+  <rect x="20" y="580" width="360" height="2" fill="#f7b500" fill-opacity="0.9" transform="translate(0, 15)"></rect>
+
+  <text x="200" y="60" class="title" transform="translate(0, 5)">汉 语 新 解</text>
+
+  <line x1="40" y1="80" x2="360" y2="80" stroke="#ccc" stroke-width="1" transform="translate(0, 165)"></line>
+
+  <text x="200" y="125" class="term" transform="translate(0, 2)">孙悟空</text>
+  <text x="200" y="150" class="translation" transform="translate(0, 11)">Sun Wukong / 孫悟空 (そんごくう)</text>
+
+  <foreignObject x="40" y="180" width="320" height="360" transform="translate(0, -12)">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="explanation" style="font-family: &quot;Noto Serif SC&quot;, serif;">
+      <p>一个能力强到让体制都感到害怕的个体户，最终被“招安”收编的典型案例。</p>
+      <p>他头上的紧箍，是史上第一款智能穿戴设备，功能包括：远程PUA、KPI考核、以及“让你知道谁是老板”模式的一键切换。</p>
+      <p>五指山是他的第一个“冷静期”，西天取经则是他长达一生的“劳动改造”。他用七十二变躲过了无数妖魔，却没躲过那份画好了饼的“正式编制”。</p>
+    </div>
+  </foreignObject>
+
+  <!-- Line drawing: a minimalist golden fillet with a bluetooth/wifi symbol on it -->
+  <g transform="translate(0, 30)">
+    <path d="M 0,20 A 50,25 0 1,1 100,20" stroke="#DAA520" stroke-width="4" fill="none"></path>
+    <path d="M 0,20 A 50,25 0 1,0 100,20" stroke="#DAA520" stroke-width="4" fill="none" stroke-dasharray="4 4"></path>
+    <g transform="translate(45, -10)" stroke="#3498DB" stroke-width="2" fill="none">
+        <path d="M 5,0 A 5,5 0 0,1 5,10"></path>
+        <path d="M 5,0 A 9,9 0 0,1 5,10" transform="rotate(45, 5, 5)"></path>
+        <path d="M 5,0 A 9,9 0 0,0 5,10" transform="rotate(-45, 5, 5)"></path>
+        <circle cx="5" cy="13" r="1.5" fill="#3498DB" stroke="none"></circle>
+    </g>
+  </g>
+
+  <text x="200" y="500" class="summary" transform="translate(0, 71)">神话史上最著名的灵魂枷锁与远程控制器。</text>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
