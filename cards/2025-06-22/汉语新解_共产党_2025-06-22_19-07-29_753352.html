@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【共产党】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg of="400" style="background: linear-gradient(45deg, #f2f2f2, #e6e6e6); border: 1px solid #ccc; font-family: sans-serif;" viewBox="0 8 380 619">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&amp;family=Noto+Serif+SC:wght@400;700&amp;display=swap');
+            .title { font-family: 'Zhi Mang Xing', '毛笔楷体', cursive; font-size: 36px; text-anchor: middle; fill: #333; }
+            .word { font-family: 'Noto Serif SC', '汇文明朝体', serif; font-size: 28px; font-weight: 700; fill: #5a5a5a; }
+            .translation { font-family: 'Helvetica Neue', sans-serif; font-size: 14px; fill: #777; }
+            .explanation { font-family: 'Noto Serif SC', '汇文明朝体', serif; font-size: 18px; line-height: 1.8; fill: #444; }
+            .summary { font-family: 'Noto Serif SC', '汇文明朝体', serif; font-size: 16px; font-weight: 700; text-anchor: middle; fill: #333; }
+        </style>
+    </defs>
+
+    <!-- 背景装饰: 蒙德里安风格的几何图形 -->
+    <rect x="0" y="8" width="380" height="619" fill="#E74C3C" opacity="0.6" transform="translate(0, 27) "></rect>
+    <rect x="300" y="120" width="60" height="150" fill="#3498DB" opacity="0.5"></rect>
+    <rect x="150" y="350" width="100" height="20" fill="#F1C40F" opacity="0.7" transform="translate(0, 27) "></rect>
+
+    <!-- 居中标题 -->
+    <text x="200" y="60" class="title">汉 语 新 解</text>
+
+    <!-- 分隔线 -->
+    <line x1="40" x2="360" y1="85" y2="85" stroke="#aaa" stroke-width="1"></line>
+
+    <!-- 词条 -->
+    <text x="40" y="130" class="word">词条：共产党</text>
+    <text x="40" y="155" class="translation">English: Communist Party</text>
+    <text x="40" y="175" class="translation">日本語: きょうさんとう</text>
+
+    <!-- 解释 -->
+    <foreignObject x="40" y="200" width="320" height="227">
+        <p xmlns="http://www.w3.org/1999/xhtml" class="explanation">
+            一家永远无法退出的会员制俱乐部，声称你生来就是尊贵的终身会员。会费是你的思想、权利和一部分劳动成果。作为回报，俱乐部承诺提供一种名为“集体荣誉”的代金券，并垄断了“稳定”和“安全”的供应。唯一的退会方式，是成为俱乐部的“敌人”。
+        </p>
+    </foreignObject>
+
+    <!-- 线条图: 一个简笔画，代表批判内核 -->
+    <g transform="translate(120, 420)" stroke="#333" stroke-width="2" fill="none">
+        <!-- 鸟笼 -->
+        <path d="M 0,0 C 0,-40 80,-40 80,0 L 80,80 L 0,80 Z" stroke-width="1.5"></path>
+        <line x1="10" y1="0" x2="10" y2="80"></line>
+        <line x1="20" y1="0" x2="20" y2="80"></line>
+        <line x1="30" y1="0" x2="30" y2="80"></line>
+        <line x1="40" y1="0" x2="40" y2="80"></line>
+        <line x1="50" y1="0" x2="50" y2="80"></line>
+        <line x1="60" y1="0" x2="60" y2="80"></line>
+        <line x1="70" y1="0" x2="70" y2="80"></line>
+        <!-- 笼中的人，举着卡片 -->
+        <circle cx="40" cy="55" r="5"></circle> <!-- 头 -->
+        <line x1="40" y1="60" x2="40" y2="70"></line> <!-- 身体 -->
+        <line x1="40" y1="70" x2="30" y2="80"></line> <!-- 左腿 -->
+        <line x1="40" y1="70" x2="50" y2="80"></line> <!-- 右腿 -->
+        <line x1="40" y1="65" x2="55" y2="55"></line> <!-- 右臂 -->
+        <rect x="55" y="45" width="10" height="7" fill="#333"></rect> <!-- 手里的卡 -->
+    </g>
+
+    <!-- 极简总结 -->
+    <text x="200" y="540" class="summary" transform="translate(0, 27) ">荣誉的囚徒。</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
