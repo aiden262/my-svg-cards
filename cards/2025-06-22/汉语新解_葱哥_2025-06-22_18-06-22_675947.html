@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【葱哥】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 660" style="background-color: #f0f0f0; border: 1px solid #ccc;">
+
+    <!-- Mondrian-style background -->
+    <rect x="-20" y="-20" width="440" height="660" fill="#FDFBF8"></rect>
+    <rect x="250" y="0" width="150" height="200" fill="#EAD9A3"></rect>
+    <rect x="0" y="450" width="120" height="150" fill="#3A5683"></rect>
+    <rect x="120" y="520" width="280" height="80" fill="#D94A2B"></rect>
+    <line x1="0" y1="450" x2="400" y2="450" stroke="#1A1A1A" stroke-width="5"></line>
+    <line x1="120" y1="450" x2="120" y2="600" stroke="#1A1A1A" stroke-width="5"></line>
+    <line x1="250" y1="0" x2="250" y2="200" stroke="#1A1A1A" stroke-width="5"></line>
+
+    <!-- Main Content Area -->
+    <g style="font-family: '汇文明朝体', '毛笔楷体', serif; fill: #4a4a4a;">
+
+        <!-- Title -->
+        <text x="200" y="60" font-size="32" text-anchor="middle" font-family="毛笔楷体, cursive" style="fill: #1A1A1A;">汉语新解</text>
+
+        <!-- Separator -->
+        <line x1="40" y1="85" x2="360" y2="85" stroke="#4a4a4a" stroke-width="1"></line>
+
+        <!-- Word -->
+        <text x="200" y="130" font-size="48" text-anchor="middle" style="fill: #1A1A1A;">葱哥</text>
+        <text x="200" y="160" font-size="16" text-anchor="middle" style="fill: #666;">Scallion Bro / The People's Billionaire</text>
+        <text x="200" y="180" font-size="16" text-anchor="middle" style="fill: #666;">ネギ兄 (ねぎあに)</text>
+
+        <!-- Explanation -->
+        <foreignObject x="40" y="210" width="320" height="410">
+            <p xmlns="http://www.w3.org/1999/xhtml" style="font-family: '汇文明朝体', serif; font-size: 19px; line-height: 1.8; color: #333; margin: 0; text-align: justify;">
+                一种点缀在资本盛宴上的顶级调味品。
+                <br><br>
+                它存在的意义，就是用看似亲民的辛辣口感，让你暂时忘记这道主菜的价格、以及你永远吃不起的事实。它偶尔会批判一下盘子不够圆，听起来像个革命家，但它永远不会问：为什么我们不能一起上桌吃饭？
+                <br><br>
+                毕竟，离开这张餐桌，它什么也不是，只是一根随时会被踩烂的葱。
+            </p>
+        </foreignObject>
+
+        <!-- Line Art -->
+        <g transform="translate(150, 400) scale(0.8)">
+            <!-- Mountain of coins -->
+            <path d="M 20 100 C 30 80, 70 80, 80 100" stroke="#333" fill="none" stroke-width="2"></path>
+            <path d="M 10 105 C 20 85, 80 85, 90 105" stroke="#333" fill="none" stroke-width="2"></path>
+            <path d="M 0 110 C 10 90, 90 90, 100 110" stroke="#333" fill="#EAD9A3" stroke-width="2"></path>
+             <!-- Scallion -->
+            <path d="M 50 80 Q 48 40, 55 10" stroke="#3A5683" fill="none" stroke-width="3" stroke-linecap="round"></path>
+            <path d="M 52 80 Q 50 45, 58 15" stroke="#3A5683" fill="none" stroke-width="2" stroke-linecap="round"></path>
+        </g>
+        
+        <!-- Summary -->
+        <text x="200" y="505" font-size="16" text-anchor="middle" style="fill: #FDFBF8; font-family: '汇文明朝体', serif;">
+            用金钱浇灌出的“叛逆”，看似锋利，实则只是盆景。
+        </text>
+
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
