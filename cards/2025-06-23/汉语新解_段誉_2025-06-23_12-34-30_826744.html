@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【段誉】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" style="background-color: #f0f0f0;" xmlns="http://www.w3.org/2000/svg">
+    <!-- Mondrian-style background -->
+    <rect x="-20" y="-20" width="440" height="640" fill="#f2f2f2"></rect>
+    <rect x="20" y="300" width="150" height="280" fill="#e02020"></rect>
+    <rect x="20" y="20" width="360" height="100" fill="#2040e0"></rect>
+    <rect x="250" y="180" width="130" height="220" fill="#f0e040"></rect>
+    <line x1="20" y1="150" x2="380" y2="150" stroke="#0d0d0d" stroke-width="5"></line>
+    <line x1="200" y1="150" x2="200" y2="580" stroke="#0d0d0d" stroke-width="5"></line>
+
+    <!-- Main content container with a semi-transparent overlay to ensure readability -->
+    <rect x="10" y="10" width="380" height="580" fill="rgba(255, 255, 255, 0.85)" rx="15"></rect>
+
+    <text x="200" y="55" text-anchor="middle" font-family="'Noto Serif SC', 'Maobi Kai', cursive" font-size="36" fill="#0d0d0d">汉语新解</text>
+    <line x1="40" y1="75" x2="360" y2="75" stroke="#333" stroke-width="1"></line>
+
+    <text x="200" y="120" text-anchor="middle" font-family="'Noto Serif SC', 'Huiwen Mingchao', serif" font-size="48" fill="#3a3a3a">段誉</text>
+    <text x="200" y="150" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555">Duan Yu</text>
+    <text x="200" y="170" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555">だん よ</text>
+
+    <foreignObject x="40" y="190" width="320" height="200">
+        <p xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, &quot;Huiwen Mingchao&quot;, serif; font-size: 9px; color: rgb(58, 58, 58); line-height: 1.6; margin: 0px; text-align: justify;">
+            武侠世界里的终极凡尔赛大师，一种“我什么都没干，但什么都得到了”的人生幻觉。
+            <br><br>
+            他用磕头代替苦练，用逃跑练成绝世身法，靠着对一个雕像的迷恋追到了天下第一美人。他的人生是一场精心编写的爽文，充满了系统赠送的顶级外挂和作者强开的绿灯。
+            <br><br>
+            他的痴情，本质上是对一个完美“人设”的偏执，与真人无关。他的武功，是被动触发的技能，像极了那些靠父母遗产却宣称自己白手起家的富二代。
+            <br><br>
+            段誉，就是那个在你拼命卷生卷死时，开着跑车从你身边呼啸而过，还探出头来问你“兄弟，这么努力干嘛？”的人。
+        </p>
+    </foreignObject>
+
+    <g id="line-drawing" transform="translate(40, 450)">
+        <path d="M 0,80 C 50,80 80,20 120,20 C 160,20 190,80 240,80" stroke="#333" stroke-width="2" fill="none" stroke-dasharray="4 4"></path>
+        <text x="120" y="15" text-anchor="middle" font-size="14" fill="#333">👑</text>
+        <text x="10" y="95" text-anchor="start" font-size="12" fill="#555">他的路</text>
+
+        <path d="M 0,110 L 30,110 L 35,100 L 45,120 L 55,105 L 80,115 L 120,90 L 150,110 L 240,100" stroke="#333" stroke-width="2" fill="none"></path>
+        <text x="10" y="125" text-anchor="start" font-size="12" fill="#555">你的路</text>
+        <text x="15" y="105" font-size="10">🧗</text>
+        <text x="65" y="110" font-size="10">🧗</text>
+        <text x="135" y="100" font-size="10">🧗</text>
+    </g>
+
+    <text x="200" y="580" text-anchor="middle" font-family="'Noto Serif SC', 'Huiwen Mingchao', serif" font-size="20" fill="#e02020" font-weight="bold">
+        极简总结：你的终点，不如他的起点。
+    </text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
