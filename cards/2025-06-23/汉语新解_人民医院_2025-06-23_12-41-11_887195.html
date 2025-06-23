@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【人民医院】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" viewBox="-20 -20 440 640">
+    <!-- 设计感背景 -->
+    <defs>
+        <pattern id="mondrian" patternUnits="userSpaceOnUse" width="100" height="100">
+            <rect x="-20" y="-20" width="440" height="640" fill="#f2f2f2"></rect>
+            <rect x="0" y="0" width="45" height="45" fill="#de2c2c"></rect>
+            <rect x="55" y="55" width="45" height="45" fill="#f7d000"></rect>
+            <rect x="55" y="0" width="45" height="45" fill="#2d5a9d"></rect>
+            <path d="M 50 0 V 100 M 0 50 H 100" stroke="#333" stroke-width="6"></path>
+        </pattern>
+    </defs>
+    <rect width="400" height="600" fill="url(#mondrian)" fill-opacity="0.1"></rect>
+    <rect width="400" height="600" fill="rgba(245, 245, 245, 0.8)"></rect>
+
+    <!-- 主要内容区域 -->
+    <g transform="translate(20, 20)">
+        <text x="180" y="40" font-family="毛笔楷体, serif" font-size="32" text-anchor="middle" fill="#333">汉语新解</text>
+        <line x1="40" y1="65" x2="320" y2="65" stroke="#888" stroke-width="1"></line>
+
+        <text x="180" y="110" font-family="毛笔楷体, serif" font-size="48" text-anchor="middle" fill="#333">人民医院</text>
+        <text x="180" y="140" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#777">Rénmín Yīyuàn</text>
+        <text x="180" y="160" font-family="Meiryo, sans-serif" font-size="16" text-anchor="middle" fill="#777">じんみんびょういん</text>
+
+        <!-- 解释文本 -->
+        <foreignObject x="40" y="190" width="280" height="200">
+            
+                <p style="font-family: &quot;Noto Serif SC&quot;, &quot;Noto Serif SC&quot;, serif; font-size: 13px; color: rgb(74, 74, 74); line-height: 1.8; text-align: justify;">
+                    一个以“人民”冠名的会员制俱乐部。你的社保卡和银行卡是入场券，余额决定了你是排队看风景，还是直接进包厢。
+                    <br><br>
+                    在这里，“人民”是个神圣而抽象的整体，而你，只是个具体而卑微的号码。它承诺为你驱除病魔，但那张长长的缴费单，才是你收到的第一封病危通知书。
+                </p>
+            
+        </foreignObject>
+
+        <!-- 线条图 -->
+        <g transform="translate(180, 440)" stroke="#333" stroke-width="2" fill="none">
+            <!-- 一个人拿着钱包 -->
+            <circle cx="-60" cy="0" r="10"></circle>
+            <line x1="-60" y1="10" x2="-60" y2="30"></line>
+            <line x1="-60" y1="20" x2="-75" y2="10"></line>
+            <line x1="-60" y1="20" x2="-45" y2="10"></line>
+            <line x1="-60" y1="30" x2="-70" y2="50"></line>
+            <line x1="-60" y1="30" x2="-50" y2="50"></line>
+            <rect x="-85" y="-10" width="20" height="15" fill="#333"></rect>
+            
+            <!-- 指向巨大十字的箭头 -->
+            <line x1="-30" y1="0" x2="10" y2="0"></line>
+            <line x1="0" y1="-5" x2="10" y2="0"></line>
+            <line x1="0" y1="5" x2="10" y2="0"></line>
+
+            <!-- 医院的十字标志变成了一个巨大的货币符号 -->
+            <g transform="translate(60, 0)">
+                <path d="M -15 -30 L 15 -30 L 15 -10 L 30 -10 L 30 10 L 15 10 L 15 30 L -15 30 L -15 10 L -30 10 L -30 -10 L -15 -10 Z" stroke-dasharray="4" stroke="#e60000" stroke-width="2.5"></path>
+                <text font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#333" text-anchor="middle" dominant-baseline="central">¥</text>
+            </g>
+        </g>
+
+        <!-- 极简总结 -->
+        <text x="180" y="540" font-family="汇文明朝体, serif" font-size="18" text-anchor="middle" fill="#333" font-weight="bold">
+            名为“人民”，实为“人命”的交易所。
+        </text>
+
+        <line x1="40" y1="565" x2="320" y2="565" stroke="#888" stroke-width="1"></line>
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
