@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【深圳】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 440 640">
+  <rect width="440" height="640" fill="#f8f4e9" rx="8" ry="8" x="-20" y="-20"></rect>
+  <rect x="20" y="20" width="360" height="560" fill="#fffcf5" rx="4" ry="4" stroke="#e0ddd5" stroke-width="1"></rect>
+  
+  <!-- 标题 -->
+  <text x="200" y="60" font-family="STKaiti, 楷体" font-size="28" fill="#333" text-anchor="middle">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="60" y1="80" x2="340" y2="80" stroke="#ccc" stroke-width="1"></line>
+  
+  <!-- 词汇 -->
+  <text x="200" y="120" font-family="STKaiti, 楷体" font-size="24" fill="#444" text-anchor="middle">深圳 | SHENZHEN | シンセン</text>
+  
+  <!-- 解释 -->
+  <foreignObject x="40" y="150" width="320" height="300">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif CJK SC&quot;, serif; font-size: 17.5px; line-height: 1.5; color: rgb(85, 85, 85);">
+      一个被赋予神话色彩的实验场，围墙内的"富人游乐园"与围墙外的"农民工收容所"共存的矛盾地带。"深"意味着不见底的房价和欲望；"圳"原指人工开凿的水沟，象征着那些被精心规划却又自然生长的命运。这里的人们相信只要努力就能上岸，却不知岸边早已人满为患。当"来了就是深圳人"的口号响彻云霄，背后是"三和大神"们的叹息与辣眼睛的"学区房"价格。
+    </div>
+  </foreignObject>
+  
+  <!-- 简约图形 -->
+  <line x1="100" y1="450" x2="300" y2="450" stroke="#666" stroke-width="2"></line>
+  <rect x="120" y="430" width="40" height="40" fill="none" stroke="#666" stroke-width="1"></rect>
+  <rect x="170" y="410" width="60" height="80" fill="none" stroke="#666" stroke-width="1"></rect>
+  <rect x="240" y="420" width="50" height="60" fill="none" stroke="#666" stroke-width="1"></rect>
+  
+  <!-- 极简总结 -->
+  <text x="200" y="520" font-family="STKaiti, 楷体" font-size="18" fill="#666" text-anchor="middle">繁华背后的裂痕</text>
+  <text x="200" y="550" font-family="STKaiti, 楷体" font-size="18" fill="#666" text-anchor="middle">既天堂也地狱的梦想工厂</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
