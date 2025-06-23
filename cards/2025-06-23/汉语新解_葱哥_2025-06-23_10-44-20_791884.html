@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【葱哥】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-19 -19 440 640" style="background-color: #f0f0f0; border: 1px solid #ccc;">
+    <!-- Mondrian Style Background -->
+    <rect x="-19" y="-19" width="440" height="640" fill="#f2f2f2"></rect>
+    <rect x="20" y="80" width="150" height="200" fill="#e02020"></rect>
+    <rect x="250" y="450" width="130" height="130" fill="#1040a0"></rect>
+    <rect x="20" y="520" width="180" height="60" fill="#f8d000"></rect>
+    <line x1="20" y1="300" x2="380" y2="300" stroke="#000" stroke-width="5"></line>
+    <line x1="220" y1="20" x2="220" y2="380" stroke="#000" stroke-width="5"></line>
+
+    <text x="200" y="50" font-family="毛笔楷体, cursive" font-size="32" text-anchor="middle" fill="#333">汉语新解</text>
+    
+    <line x1="40" y1="65" x2="360" y2="65" stroke="#555" stroke-width="1.5"></line>
+
+    <text x="200" y="110" font-family="汇文明朝体, serif" font-size="48" text-anchor="middle" fill="#4a4a4a">葱哥</text>
+    <text x="200" y="140" font-family="Helvetica, sans-serif" font-size="16" text-anchor="middle" fill="#666">The Scallionaire</text>
+    <text x="200" y="160" font-family="Yu Mincho, serif" font-size="16" text-anchor="middle" fill="#666">ネギ兄さん (隠れ富裕層)</text>
+
+    <foreignObject x="40" y="180" width="320" height="200">
+        <p xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 9.5px; color: rgb(74, 74, 74); line-height: 1.8; text-align: justify; white-space: normal;">
+            一种都市伪装术，财富的保护色。<br><br>
+            他们脱下定制西装，换上背心拖鞋，骑着共享单车，伪装成你我身边最不起眼的普通人。但车钥匙一亮，房产证一堆，就完成了从“群众演员”到“剧本投资人”的惊天逆转。<br><br>
+            “葱哥”的存在，不是为了证明高手在民间，而是为了上演一出“富贵险中求”的魔幻现实主义戏剧。他们用一把葱的价格，购买了整个菜市场的安全感，顺便麻痹了那些真正需要为一捆葱计较的人。<br><br>
+            他不是真的来买葱的，他是来视察自己的人间剧场。
+        </p>
+    </foreignObject>
+
+    <!-- Line Art -->
+    <g transform="translate(100 420) scale(0.8)">
+        <!-- Figure -->
+        <path d="M 100 50 C 90 40, 110 40, 100 50 Z" fill="none" stroke="#333" stroke-width="2"></path> <!-- Head -->
+        <path d="M 100 50 L 100 100" stroke="#333" stroke-width="2"></path> <!-- Body -->
+        <path d="M 100 70 L 80 90" stroke="#333" stroke-width="2"></path> <!-- Left arm -->
+        <path d="M 100 70 L 120 90" stroke="#333" stroke-width="2"></path> <!-- Right arm -->
+        <path d="M 100 100 L 90 130" stroke="#333" stroke-width="2"></path> <!-- Left leg -->
+        <path d="M 100 100 L 110 130" stroke="#333" stroke-width="2"></path> <!-- Right leg -->
+        
+        <!-- Scallion in one hand -->
+        <path d="M 70 95 L 80 90 L 75 80 Z" fill="#2E8B57" stroke="#333" stroke-width="1"></path>
+        
+        <!-- Luxury car key in other hand -->
+        <circle cx="125" cy="85" r="5" fill="none" stroke="#333" stroke-width="1.5"></circle>
+        <path d="M 125 90 L 125 95 L 130 100" stroke="#333" stroke-width="1.5"></path>
+        <path d="M 125 95 L 120 100" stroke="#333" stroke-width="1.5"></path>
+        
+        <!-- Shadow as a King -->
+        <path d="M 150 140 C 130 160, 230 160, 210 140 L 200 100 L 160 100 Z" fill="#000" opacity="0.2"></path>
+        <path d="M 165 95 L 180 80 L 195 95 L 200 80 L 215 95" fill="none" stroke="#000" stroke-width="3" opacity="0.2"></path>
+    </g>
+
+    <text x="200" y="575" font-family="Helvetica, sans-serif" font-size="14" text-anchor="middle" fill="#333" font-style="italic">
+        财富的最佳伪装，就是看起来毫不费力。
+    </text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
