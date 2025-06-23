@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【抖音】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-19 -19 440 640" style="background-color: #f0f0f0; border: 1px solid #ccc; font-family: sans-serif;">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&amp;family=ZCOOL+KuaiLe&amp;family=Noto+Serif+SC:wght@400;700&amp;display=swap');
+            .title { font-family: 'Ma Shan Zheng', cursive; font-size: 36px; text-anchor: middle; fill: #333; }
+            .word { font-family: 'Noto Serif SC', serif; font-size: 48px; font-weight: 700; text-anchor: middle; fill: #2c3e50; }
+            .translations { font-family: 'Helvetica', sans-serif; font-size: 14px; text-anchor: middle; fill: #7f8c8d; }
+            .explanation { font-family: 'Noto Serif SC', serif; font-size: 18px; fill: #34495e; line-height: 1.8; }
+            .summary-title { font-family: 'ZCOOL KuaiLe', cursive; font-size: 16px; text-anchor: middle; fill: #c0392b; letter-spacing: 2px;}
+            .summary-text { font-family: 'Noto Serif SC', serif; font-size: 14px; fill: #34495e; font-style: italic; text-anchor: middle;}
+        </style>
+        <rect id="mondrian-bg-1" x="-19" y="-19" width="440" height="640" fill="#f2f2f2"></rect>
+        <rect id="mondrian-bg-2" x="0" y="520" width="400" height="80" fill="#e74c3c"></rect>
+        <rect id="mondrian-bg-3" x="350" y="0" width="50" height="150" fill="#f1c40f"></rect>
+        <rect id="mondrian-bg-4" x="0" y="0" width="80" height="80" fill="#3498db"></rect>
+        <line id="line-h" x1="40" x2="360" y1="80" y2="80" stroke="#333" stroke-width="2"></line>
+    </defs>
+
+    <use href="#mondrian-bg-1"></use>
+    <use href="#mondrian-bg-2"></use>
+    <use href="#mondrian-bg-3"></use>
+    <use href="#mondrian-bg-4"></use>
+
+    <text x="200" y="55" class="title">汉 语 新 解</text>
+    <use href="#line-h"></use>
+
+    <text x="200" y="140" class="word">抖 音</text>
+    <text x="200" y="165" class="translations">/ TikTok / ティックトック</text>
+
+    <foreignObject x="40" y="190" width="320" height="150">
+        <p class="explanation" xmlns="http://www.w3.org/1999/xhtml">
+            一个按秒计费的精神食堂，菜品是精心调配的多巴胺。食客们争相用自己最宝贵的时间买单，却很少有人意识到，自己也是菜单上的一道菜。
+        </p>
+    </foreignObject>
+
+    <!-- 线条图 (批判内核 解释) -->
+    <g transform="translate(100, 360)">
+        <circle cx="100" cy="50" r="45" stroke="#34495e" stroke-width="2" fill="none" stroke-dasharray="5,5"></circle>
+        <path d="M 100 5 A 45 45 0 1 1 55 50" stroke="#c0392b" stroke-width="2.5" fill="none"></path>
+        <text x="100" y="55" font-size="24" text-anchor="middle" fill="#34495e">你</text>
+        <text x="45" y="20" font-size="12" fill="#3498db" transform="rotate(-45, 45, 20)">时间</text>
+        <text x="155" y="20" font-size="12" fill="#2ecc71" transform="rotate(45, 155, 20)">数据</text>
+        <path d="M 100,95 L 100,125" stroke="#34495e" stroke-width="2" marker-end="url(#arrow)"></path>
+        <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#34495e"></path>
+            </marker>
+        </defs>
+        <text x="100" y="145" text-anchor="middle" font-family="'Ma Shan Zheng', cursive" font-size="20">算法</text>
+    </g>
+
+    <rect x="0" y="520" width="400" height="80" fill="#e74c3c" fill-opacity="0.8"></rect>
+    <text x="200" y="545" class="summary-title">[ 极 简 总 结 ]</text>
+    <text x="200" y="575" class="summary-text">
+        以多巴胺为鱼饵，垂钓你的时间，<tspan x="200" dy="1.2em">最后把你打包成数据，卖给下一个渔夫。</tspan>
+    </text>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
