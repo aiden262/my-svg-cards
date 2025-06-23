@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【大清】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 1162" xmlns="http://www.w3.org/2000/svg" style="font-family: sans-serif; background-color: #f0f0f0;">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&amp;family=Noto+Sans+JP:wght@300&amp;family=Noto+Sans+SC:wght@300&amp;display=swap');
+            .title-font { font-family: 'ZCOOL XiaoWei', serif; font-size: 32px; fill: #333; text-anchor: middle; }
+            .main-font { font-family: 'Noto Sans SC', sans-serif; font-size: 20px; fill: #4a4a4a; }
+            .translation-font { font-family: 'Noto Sans SC', sans-serif; font-size: 16px; fill: #555; }
+            .summary-font { font-family: 'Noto Sans SC', sans-serif; font-size: 14px; fill: #666; text-anchor: middle; }
+            .explanation-text { white-space: pre-wrap; }
+        </style>
+    </defs>
+
+    <!-- Mondrian Inspired Background -->
+    <rect x="-20" y="-20" width="440" height="1162" fill="#fdfdfd"></rect>
+    <rect x="20" y="500" width="100" height="80" fill="#e02d2d" transform="translate(0, 542) "></rect>
+    <rect x="350" y="20" width="30" height="300" fill="#f7d842"></rect>
+    <rect x="20" y="20" width="80" height="30" fill="#2d64e0"></rect>
+    <line x1="20" y1="150" x2="380" y2="150" stroke="#333" stroke-width="1"></line>
+    <line x1="200" y1="480" x2="200" y2="580" stroke="#333" stroke-width="1" transform="translate(0, 542) "></line>
+
+    <!-- Card Content -->
+    <text x="200" y="60" class="title-font">汉语新解</text>
+    <line x1="40" y1="80" x2="360" y2="80" stroke="#888" stroke-width="1.5"></line>
+
+    <g transform="translate(40, 110)">
+        <text class="main-font" style="font-family: 'ZCOOL XiaoWei', serif; font-size: 28px; font-weight: bold;">大清</text>
+        <text y="25" class="translation-font">Dà Qīng / The Great Qing</text>
+        <text y="45" class="translation-font" style="font-family: 'Noto Sans JP', sans-serif;">たいしん / じだいさくご</text>
+    </g>
+
+    <foreignObject x="40" y="170" width="320" height="742">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="main-font explanation-text" style="line-height: 1.8;">
+            <p>一种精神上的辫子，很多人剪掉了头发，却总感觉它还在脑后晃荡，时不时想伸手摸一下以确认自己的身份。</p>
+            <p>它是时间概念里的钉子户，坚信只要自己不点头，历史的车轮就得绕着它走。</p>
+            <p>也是一种集体梦游，大家穿着龙袍戏服，在主题公园的废墟上，煞有介事地讨论着明天的早朝该吃什么点心。</p>
+        </div>
+    </foreignObject>
+
+    <!-- Line Art & Summary -->
+    <g transform="translate(0, 380)">
+        <path d="M 120,80 Q 150,40 200,30 T 280,80" stroke="#4a4a4a" stroke-width="2" fill="none" stroke-linecap="round"></path>
+        <path d="M 140,80 C 130,120 140,150 150,180" stroke="#4a4a4a" stroke-width="2" fill="none"></path>
+        <path d="M 260,80 C 270,120 260,150 250,180" stroke="#4a4a4a" stroke-width="2" fill="none"></path>
+        <rect x="150" y="80" width="100" height="100" stroke="#4a4a4a" stroke-width="2" fill="none"></rect>
+        <path d="M 200,180 L 200,200" stroke="#4a4a4a" stroke-width="2" fill="none"></path>
+        <path d="M 200,180 Q 180,185 170,195" stroke="#4a4a4a" stroke-width="2" fill="none"></path>
+        <path d="M 200,180 Q 220,185 230,195" stroke="#4a4a4a" stroke-width="2" fill="none"></path>
+        
+        <!-- The Shadow of the Queue -->
+        <path d="M 200,30 Q 200,10 190,0 L 185,-30 L 180,-20 L 175,-40 L 170,-30 L 165,-50" stroke="#4a4a4a" stroke-width="1.5" fill="none" stroke-dasharray="3,3"></path>
+
+        <text x="200" y="220" class="summary-font">一个穿着西装的背影，</text>
+        <text x="200" y="240" class="summary-font">脑后却拖着一条辫子的影子。</text>
+    </g>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
