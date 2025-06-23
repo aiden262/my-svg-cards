@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【黄继光】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-19 -19 440 705" style="background-color: #f5f5f5; border: 1px solid #ccc;" xmlns="http://www.w3.org/2000/svg">
+    <!-- Mondrian Style Background -->
+    <rect x="-19" y="-19" width="440" height="705" fill="#f5f5f5"></rect>
+    <rect x="20" y="20" width="100" height="150" fill="#e02128"></rect>
+    <rect x="280" y="450" width="100" height="130" fill="#005b9f" transform="translate(0, 85) "></rect>
+    <rect x="20" y="520" width="150" height="60" fill="#fddc00" transform="translate(0, 85) "></rect>
+    <line x1="0" y1="200" x2="400" y2="200" stroke="#111" stroke-width="5"></line>
+    <line x1="250" y1="0" x2="250" y2="600" stroke="#111" stroke-width="5"></line>
+
+    <!-- Main Content Area -->
+    <rect x="15" y="15" width="370" height="570" fill="#f5f5f5" fill-opacity="0.9"></rect>
+
+    <text x="200" y="60" font-family="毛笔楷体, KaiTi, serif" font-size="36" text-anchor="middle" fill="#333">汉语新解</text>
+    <line x1="40" y1="80" x2="360" y2="80" stroke="#666" stroke-width="1"></line>
+
+    <text x="200" y="125" font-family="汇文明朝体, 'Source Han Serif CN', serif" font-size="32" text-anchor="middle" fill="#4a4a4a">黄继光</text>
+    <text x="200" y="155" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#666">Huáng Jìguāng</text>
+    <text x="200" y="175" font-family="'MS Mincho', 'Hiragino Mincho ProN', serif" font-size="16" text-anchor="middle" fill="#666">こう けいこう</text>
+
+    <foreignObject x="40" y="210" width="320" height="205">
+        <p xmlns="http://www.w3.org/1999/xhtml" style="font-family: 汇文明朝体, 'Source Han Serif CN', serif; font-size: 20px; color: #4a4a4a; line-height: 1.6; text-align: justify; margin: 0;">
+            一台宏大叙事机器里，最滚烫、最坚固、也最不计成本的那颗“螺丝钉”。它的主要功能不是连接，而是堵住机器漏风的枪口，用自身的熔毁来确保整台机器的轰鸣可以被后人听见，并信奉为真理。
+        </p>
+    </foreignObject>
+
+    <!-- Line Drawing -->
+    <g transform="translate(100, 360) scale(0.8)">
+        <!-- Human figure simplified -->
+        <path d="M 120 40 Q 120 20 100 20 Q 80 20 80 40 L 80 80 L 60 140 L 80 140 L 85 100 L 115 100 L 120 140 L 140 140 L 120 80 Z" fill="none" stroke="#333" stroke-width="2"></path>
+        <!-- Machine Gears -->
+        <circle cx="100" cy="110" r="30" fill="none" stroke="#333" stroke-width="2"></circle>
+        <path d="M 100 80 L 100 70 M 100 140 L 100 150 M 70 110 L 60 110 M 130 110 L 140 110" stroke="#333" stroke-width="3"></path>
+        <!-- Light Beams / Gunfire -->
+        <path d="M 20 110 L 60 110 M -10 100 L 30 105 M -10 120 L 30 115" stroke="#e02128" stroke-width="2"></path>
+        <text x="100" y="180" text-anchor="middle" font-family="汇文明朝体, 'Source Han Serif CN', serif" font-size="16" fill="#666">（血肉之躯，堵枪眼）</text>
+    </g>
+
+    <text x="200" y="550" font-family="汇文明朝体, 'Source Han Serif CN', serif" font-size="18" text-anchor="middle" fill="#333" transform="translate(0, 85) ">
+        <tspan x="200" dy="0">极简总结：</tspan>
+        <tspan x="200" dy="1.2em" style="font-weight:bold;">用个体悲剧，浇筑集体丰碑。</tspan>
+    </text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
