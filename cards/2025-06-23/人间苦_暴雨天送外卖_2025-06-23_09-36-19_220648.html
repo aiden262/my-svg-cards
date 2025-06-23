@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【暴雨天，送外卖】 - 人间苦</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 520 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="520" height="800" fill="#F4F1EA" x="-20" y="-20"></rect>
+<text font-family="Noto Serif SC" font-size="24" font-weight="bold" fill="#333333" x="240" y="60" text-anchor="middle">人间苦</text>
+<line x1="100" y1="90" x2="380" y2="90" stroke="#AAAAAA" stroke-width="1"></line>
+<text font-family="Noto Serif SC" font-size="18" fill="#4A4A4A" x="240" y="140" text-anchor="middle">暴雨天，送外卖</text>
+<g id="artwork" transform="translate(0, 180)">
+    <rect x="0" y="0" width="480" height="300" fill="#E0E2E5"></rect>
+    <path d="M 80 0 V 300 M 120 0 V 300 M 160 0 V 300 M 200 0 V 300 M 240 0 V 300 M 280 0 V 300 M 320 0 V 300 M 360 0 V 300 M 400 0 V 300" stroke="#B0B8BF" stroke-width="0.5" stroke-opacity="0.7"></path>
+    <rect x="230" y="140" width="20" height="35" fill="#F2C94C"></rect>
+    <rect x="255" y="155" width="15" height="15" fill="#C95139"></rect>
+</g>
+<foreignObject x="60" y="520" width="360" height="200">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;; font-size: 15.5px; color: rgb(51, 51, 51); line-height: 2; overflow-wrap: break-word; text-align: justify;">
+        雨水把天地搅成一锅浑汤。那个黄色的影子在汤里滚，像一粒米。老王看着，觉得他手里提着的不是饭，是一块烧红的炭，一松手，就灭了。
+    </div>
+</foreignObject>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 人间苦 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
