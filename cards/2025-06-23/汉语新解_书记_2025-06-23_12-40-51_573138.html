@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【书记】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-19 -19 440 640" style="background-color: #f0f0f0; border: 1px solid #ccc; font-family: sans-serif;">
+    <!-- Mondrian Style Background -->
+    <rect x="-19" y="-19" width="440" height="640" fill="#f2f2f2"></rect>
+    <rect x="20" y="20" width="100" height="150" fill="#e02d2d"></rect>
+    <rect x="250" y="450" width="130" height="130" fill="#2d5ee0"></rect>
+    <rect x="20" y="500" width="180" height="80" fill="#f7dd4a"></rect>
+    <line x1="0" y1="200" x2="400" y2="200" style="stroke:#000; stroke-width:5"></line>
+    <line x1="220" y1="0" x2="220" y2="600" style="stroke:#000; stroke-width:5"></line>
+
+    <!-- Main Content Area -->
+    <g style="font-family: 'HuiWenMingChao', 'Noto Serif SC', serif; fill: #3a3a3a;">
+
+        <!-- Title -->
+        <text x="200" y="65" font-size="32" text-anchor="middle" style="font-family: 'MaobiKaishu', 'Noto Serif SC', cursive;">汉语新解</text>
+
+        <!-- Separator -->
+        <line x1="60" y1="85" x2="340" y2="85" style="stroke: #3a3a3a; stroke-width: 1.5"></line>
+
+        <!-- Word -->
+        <text x="200" y="140" font-size="48" text-anchor="middle">书记</text>
+        <text x="200" y="170" font-size="16" text-anchor="middle" fill="#666">shū jì / 書記 (しょき)</text>
+
+        <!-- Explanation -->
+        <foreignObject x="40" y="220" width="320" height="150">
+            
+                <p style="font-family: HuiWenMingChao, serif; font-size: 16px; line-height: 1.8; color: rgb(58, 58, 58); margin: 0px; text-align: justify;">
+                    一个负责解释“经文”的人，尽管经文每年都在变，但他总能确保自己是唯一拥有最终解释权的大祭司。他的工作，就是把所有参拜者脑中的问号，统一替换成一个巨大的叹号。
+                </p>
+            
+        </foreignObject>
+
+        <!-- Line Art -->
+        <g id="line-art" transform="translate(130, 380) scale(0.7)">
+            <path d="M 60,10 A 20,20 0 1,1 20,30 L 40,50" stroke="#3a3a3a" stroke-width="4" fill="none" stroke-linecap="round"></path>
+            <circle cx="40" cy="70" r="5" fill="#3a3a3a"></circle>
+            <path d="M 120,10 L 120,70" stroke="#e02d2d" stroke-width="8" fill="none" stroke-linecap="round"></path>
+            <circle cx="120" cy="90" r="7" fill="#e02d2d"></circle>
+            <path d="M 75,50 L 100,50" stroke="#3a3a3a" stroke-width="3" fill="none" marker-end="url(#arrowhead)"></path>
+            <defs>
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                    <polygon points="0 0, 10 3.5, 0 7" fill="#3a3a3a"></polygon>
+                </marker>
+            </defs>
+        </g>
+        
+        <!-- Summary -->
+        <text x="200" y="520" font-size="18" text-anchor="middle">用权力抹杀怀疑，用指令代替思考。</text>
+
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
