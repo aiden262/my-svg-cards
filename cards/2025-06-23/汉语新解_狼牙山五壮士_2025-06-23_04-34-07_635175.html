@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【狼牙山五壮士】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-19 -19 440 640" style="background-color: #f0f0f0; border: 1px solid #ccc; font-family: sans-serif;">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&amp;family=ZCOOL+XiaoWei&amp;family=Noto+Sans+SC:wght@300&amp;display=swap');
+            .title-font { font-family: 'ZCOOL QingKe HuangYou', cursive; font-size: 32px; fill: #333; text-anchor: middle; }
+            .term-font { font-family: 'ZCOOL XiaoWei', serif; font-size: 28px; fill: #4a4a4a; text-anchor: middle; }
+            .translation-font { font-family: 'Noto Sans SC', sans-serif; font-size: 14px; fill: #6c6c6c; text-anchor: middle; }
+            .explanation-font { font-family: 'ZCOOL XiaoWei', serif; font-size: 20px; fill: #333; }
+            .summary-font { font-family: 'Noto Sans SC', sans-serif; font-weight: 300; font-size: 16px; fill: #4a4a4a; text-anchor: middle; }
+        </style>
+    </defs>
+
+    <!-- Mondrian Background -->
+    <rect x="-19" y="-19" width="440" height="640" fill="#fdfdfd"></rect>
+    <rect x="20" y="520" width="100" height="60" fill="#e02c2c" fill-opacity="0.8" transform="translate(0, 13) "></rect>
+    <rect x="330" y="40" width="50" height="150" fill="#2c7be0" fill-opacity="0.8"></rect>
+    <rect x="250" y="550" width="130" height="30" fill="#f5d742" fill-opacity="0.8" transform="translate(0, 13) "></rect>
+    <path d="M 20 20 H 380 M 20 580 H 380 M 20 20 V 580 M 380 20 V 580" stroke="#333" stroke-width="3" fill="none"></path>
+    <path d="M 20 120 H 380 M 150 20 V 580" stroke="#333" stroke-width="2" fill="none"></path>
+
+
+    <!-- Card Content -->
+    <text x="200" y="70" class="title-font">汉 语 新 解</text>
+    <line x1="80" y1="95" x2="320" y2="95" stroke="#6c6c6c" stroke-width="1"></line>
+
+    <text x="200" y="150" class="term-font">狼牙山五壮士</text>
+    <text x="200" y="175" class="translation-font">The Five Heroes of Langya Mountain</text>
+    <text x="200" y="195" class="translation-font">狼牙山五壮士 (ろうがさんごそうし)</text>
+
+    <foreignObject x="40" y="230" width="320" height="213">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'ZCOOL XiaoWei', serif; font-size: 20px; color: #333; line-height: 1.8;">
+            <p>一座建立在悬崖边上的精神纪念碑。它的主要功能不是为了纪念逝者，而是为了告诫生者：</p>
+            <p>有些时候，跳下去，是上面唯一允许你选择的、通往“不朽”的道路。</p>
+        </div>
+    </foreignObject>
+
+    <!-- Line Art -->
+    <g transform="translate(100, 400)">
+        <!-- Stairs leading up -->
+        <path d="M 0,100 L 20,100 L 20,80 L 40,80 L 40,60 L 60,60 L 60,40 L 80,40" stroke="#333" stroke-width="2" fill="none"></path>
+        <!-- Cliff edge -->
+        <path d="M 80,40 L 80,120" stroke="#333" stroke-width="2" fill="none"></path>
+        <!-- Halo/Immortality Symbol -->
+        <circle cx="150" cy="20" r="10" stroke="#f5d742" stroke-width="2.5" fill="none"></circle>
+        <path d="M 150,5 L 150,-5 M 165,20 L 175,20 M 135,20 L 125,20 M 160,10 L 167,3 M 140,10 L 133,3 M 160,30 L 167,37 M 140,30 L 133,37" stroke="#f5d742" stroke-width="1.5" fill="none"></path>
+    </g>
+
+
+    <text x="200" y="540" class="summary-font" transform="translate(0, 13) ">通往不朽的唯一台阶，是悬崖。</text>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
