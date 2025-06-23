@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【暴雨，送外卖，被骂】 - 人间苦</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 520 800" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&amp;display=swap');
+      .title-font { font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 36px; fill: #333; }
+      .user-input-font { font-family: 'Noto Serif SC', serif; font-weight: 400; font-size: 20px; color: #555; line-height: 1.6; }
+      .response-font { font-family: 'Noto Serif SC', serif; font-weight: 400; font-size: 22px; color: #333; line-height: 1.8; }
+      .bg-color { fill: #EAE8E1; }
+      .line-color { stroke: #A9A9A9; }
+      .drawing-color-main { fill: #5E6977; }
+      .drawing-color-rain { stroke: #AAB2BB; }
+    </style>
+  </defs>
+
+  <rect width="520" height="800" class="bg-color" x="-20" y="-20"></rect>
+
+  <text x="240" y="80" text-anchor="middle" class="title-font">人间苦</text>
+  <line x1="80" y1="120" x2="400" y2="120" class="line-color" stroke-width="1"></line>
+
+  <foreignObject x="60" y="150" width="360" height="100">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="user-input-font" style="font-size: 19.5px;">
+      暴雨，送外卖，被骂
+    </div>
+  </foreignObject>
+
+  <g id="illustration" transform="translate(0, 50)">
+    <path d="M 240 450 L 240 300 C 240 280, 220 280, 220 300 L 220 330 L 210 330 C 190 330, 190 350, 210 350 L 210 450 Z" class="drawing-color-main" transform="matrix(1, 0, 0, 1, -10, 0)"></path>
+    <path d="M 220 300 C 220 285, 230 275, 240 275 C 250 275, 260 285, 260 300" fill="none" stroke="#5E6977" stroke-width="8" stroke-linecap="round"></path>
+    <rect x="280" y="250" width="80" height="200" fill="#788697"></rect>
+    <line x1="280" y1="250" x2="280" y2="450" stroke="#333" stroke-width="1.5"></line>
+    <g class="drawing-color-rain" stroke-width="1">
+      <line x1="100" y1="230" x2="80" y2="280"></line>
+      <line x1="150" y1="240" x2="130" y2="290"></line>
+      <line x1="200" y1="220" x2="180" y2="270"></line>
+      <line x1="250" y1="250" x2="230" y2="300"></line>
+      <line x1="300" y1="230" x2="280" y2="280"></line>
+      <line x1="350" y1="240" x2="330" y2="290"></line>
+      <line x1="400" y1="220" x2="380" y2="270"></line>
+      <line x1="120" y1="330" x2="100" y2="380"></line>
+      <line x1="170" y1="340" x2="150" y2="390"></line>
+      <line x1="220" y1="320" x2="200" y2="370"></line>
+      <line x1="370" y1="330" x2="350" y2="380"></line>
+      <line x1="420" y1="340" x2="400" y2="390"></line>
+      <line x1="140" y1="430" x2="120" y2="480"></line>
+      <line x1="260" y1="420" x2="240" y2="470"></line>
+      <line x1="390" y1="430" x2="370" y2="480"></line>
+    </g>
+    <line x1="60" y1="450" x2="420" y2="450" class="line-color" stroke-width="2"></line>
+  </g>
+
+  <foreignObject x="60" y="540" width="360" height="200">
+    <p xmlns="http://www.w3.org/1999/xhtml" class="response-font" style="font-size: 21.5px;">
+      门“砰”地关上了。雨水把那句骂声冲得模模糊糊。老王转过身，雨水从破了个洞的雨衣里灌进去，冰凉。他想起很多年前，树皮也是这样，又冷又硬，划拉着嗓子眼。
+    </p>
+  </foreignObject>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 人间苦 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
