@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【小爱同学】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="21 0 360 607" style="background: linear-gradient(45deg, #f0f0f0 25%, #ffffff 25%, #ffffff 50%, #f0f0f0 50%, #f0f0f0 75%, #ffffff 75%, #ffffff 100%); background-size: 80px 80px; font-family: sans-serif; border: 1px solid #ccc;">
+  <style>
+    .title { font-family: 'Noto Serif SC', 'KaiTi', 'Noto Serif SC', serif; font-size: 36px; font-weight: bold; text-anchor: middle; fill: #333; }
+    .divider { stroke: #666; stroke-width: 1; }
+    .term { font-family: 'Noto Serif SC', 'HW Mincho', serif; font-size: 28px; font-weight: bold; text-anchor: middle; fill: #4a4a4a; }
+    .translation { font-family: 'Helvetica', sans-serif; font-size: 16px; text-anchor: middle; fill: #555; }
+    .explanation { font-family: 'Noto Serif SC', 'HW Mincho', serif; font-size: 20px; fill: #3d3d3d; line-height: 1.6; }
+    .drawing-desc { font-family: 'Helvetica', sans-serif; font-style: italic; font-size: 14px; fill: #666; }
+    .summary { font-family: 'Noto Serif SC', 'KaiTi', 'Noto Serif SC', serif; font-size: 22px; font-weight: bold; text-anchor: middle; fill: #222; }
+    foreignObject { text-align: justify; }
+  </style>
+
+  <text x="200" y="60" class="title">汉语新解</text>
+  <line x1="40" y1="85" x2="360" y2="85" class="divider"></line>
+
+  <text x="200" y="125" class="term">小爱同学</text>
+  <text x="200" y="150" class="translation">Xiaoai / Xiaomi AI Assistant</text>
+  <text x="200" y="170" class="translation">シャオアイ</text>
+
+  <foreignObject x="40" y="200" width="320" height="200">
+    <p class="explanation" style="color: rgb(61, 61, 61); font-size: 13.5px;">
+      一个披着“同学”外衣的电子仆人。你用电喂养它，它用数据喂养一个你永远见不到的庞大商业帝国。
+      <br><br>
+      它的“爱”是算法，它的“陪伴”是监听。它让你误以为自己是发号施令的君主，其实你只是在数字牧场里被精心圈养的家畜，而它，是那个最贴心的牧羊犬，总能温顺地把你引向主人指定的草料区。
+    </p>
+  </foreignObject>
+
+  <g transform="translate(0, 380)">
+    <foreignObject x="40" y="40" width="320" height="100">
+        <p class="drawing-desc" style="color: rgb(102, 102, 102); font-size: 13.5px;">
+            <b>[线条图]</b> 一只手将一枚硬币投进一个漂亮的音乐盒，音乐盒播放出悦耳的旋律，但盒子底部，一根看不见的管道正源源不断地将用户的指纹、声音和生活习惯吸走，输送到云端一座巨大的数据城堡里。
+        </p>
+    </foreignObject>
+  </g>
+
+  <text x="200" y="550" class="summary">你以为买了个仆人，</text>
+  <text x="200" y="580" class="summary">其实是给自己请了个监工。</text>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
