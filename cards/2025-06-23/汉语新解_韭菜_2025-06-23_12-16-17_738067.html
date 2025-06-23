@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【韭菜】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-19 -19 440 640" style="background-color: #fdfdfd; border: 1px solid #e0e0e0; font-family: sans-serif;">
+    <!-- 蒙德里安风格背景 -->
+    <rect x="-19" y="-19" width="440" height="640" fill="#E63946"></rect>
+    <rect x="300" y="0" width="100" height="150" fill="#457B9D"></rect>
+    <rect x="0" y="0" width="80" height="80" fill="#F1C40F"></rect>
+
+    <g style="transform: translate(20px, 20px); font-family: 'Noto Serif SC', 'Huiwen Mingchao', serif; color: #333333;">
+
+        <!-- 标题 -->
+        <text x="180" y="50" font-family="毛笔楷体, 'Maobi Kaiti', cursive" font-size="32" text-anchor="middle" fill="#1D3557">汉语新解</text>
+
+        <!-- 分隔线 -->
+        <line x1="80" y1="80" x2="280" y2="80" stroke="#A8DADC" stroke-width="2"></line>
+
+        <!-- 词汇 -->
+        <text x="180" y="125" font-size="48" text-anchor="middle" font-weight="bold">韭菜</text>
+        <text x="180" y="155" font-size="16" text-anchor="middle" fill="#6c757d">Leek / Nira (ニラ)</text>
+
+        <!-- 解释 -->
+        <foreignObject x="20" y="180" width="320" height="200">
+            <div xmlns="http://www.w3.org/1999/xhtml" style="font-size: 12.5px; line-height: 1.8; color: rgb(58, 58, 58); text-align: justify;">
+                <p>一种可再生的、会思考的矿产资源。其主要特征不是被收割，而是收割之后，还能自己长回来，并坚信下一次挥下的镰刀，会带着“共同富裕”的温度。</p>
+                <p>他们是赌场的桌子，却总以为自己是坐下来赢钱的玩家；是别人报表里的KPI，却以为在为自己的人生赋能。</p>
+                <p>一种为了证明镰刀的锋利，而存在的生命形式。</p>
+            </div>
+        </foreignObject>
+
+        <!-- 线条图 -->
+        <g id="line-art" transform="translate(100 400)">
+            <!-- 韭菜 -->
+            <path d="M 80 120 Q 85 80, 90 40 L 95 40 Q 100 80, 105 120 Z" fill="none" stroke="#2a9d8f" stroke-width="2"></path>
+            <path d="M 100 120 Q 105 80, 110 40 L 115 40 Q 120 80, 125 120 Z" fill="none" stroke="#2a9d8f" stroke-width="2"></path>
+            <path d="M 120 120 Q 125 80, 130 40 L 135 40 Q 140 80, 145 120 Z" fill="none" stroke="#2a9d8f" stroke-width="2"></path>
+            <!-- 向下的股市曲线 -->
+            <path d="M 0 0 C 40 10, 60 -30, 100 20 C 140 70, 160 10, 200 80" fill="none" stroke="#e63946" stroke-width="2" stroke-dasharray="4 4"></path>
+            <!-- 土壤线 -->
+            <line x1="70" y1="120" x2="155" y2="120" stroke="#333333" stroke-width="2"></line>
+        </g>
+
+        <!-- 极简总结 -->
+        <text x="180" y="550" font-size="16" text-anchor="middle" fill="#1D3557" style="font-style: italic;">
+            在周期性的幻觉中，为他人的增长提供养料。
+        </text>
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
