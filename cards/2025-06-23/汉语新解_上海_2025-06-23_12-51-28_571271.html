@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【上海】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg style="background-color:#f3efe0" viewBox="0 0 400 600">
+  <!-- 卡片背景 -->
+  <rect x="0" y="0" width="400" height="600" rx="10" fill="#f3efe0" stroke="#333" stroke-width="1"></rect>
+  
+  <!-- 装饰几何图形 -->
+  <rect x="35" y="35" width="80" height="80" fill="#d63031" opacity="0.1"></rect>
+  <circle cx="340" cy="520" r="40" fill="#0984e3" opacity="0.1"></circle>
+  <polygon points="320,100 350,150 290,150" fill="#00b894" opacity="0.1"></polygon>
+  
+  <!-- 标题 -->
+  <text x="200" y="70" font-family="楷体, KaiTi" font-size="28" font-weight="bold" text-anchor="middle" fill="#333">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="50" y1="90" x2="350" y2="90" stroke="#333" stroke-width="1" stroke-dasharray="1,3"></line>
+  
+  <!-- 词汇展示 -->
+  <text x="200" y="130" font-family="黑体, SimHei" font-size="32" font-weight="bold" text-anchor="middle" fill="#d63031">上海</text>
+  <text x="200" y="155" font-family="Arial" font-size="16" font-style="italic" text-anchor="middle" fill="#666">Shanghai</text>
+  <text x="200" y="175" font-family="MS Gothic" font-size="14" text-anchor="middle" fill="#666">シャンハイ</text>
+  
+  <!-- 分隔线 -->
+  <line x1="70" y1="195" x2="330" y2="195" stroke="#333" stroke-width="1"></line>
+  
+  <!-- 解释文本 -->
+  <foreignObject x="40" y="210" width="320" height="250">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 宋体, SimSun; font-size: 14.5px; line-height: 1.5; color: rgb(51, 51, 51); text-align: justify;">
+      上海：一个被神话的城市幻象，脚下是泥沼，头顶是霓虹。
+      
+      它是每个北漂青年梦中的"更高一级的北京"，是金融人士嘴里永远的"国际大都市"，是中产阶级想象中的"高级感"代名词。
+      
+      上海如同一位精心化妆的贵妇，用外滩的灯光掩盖着城中老屋的霉变，用高楼的反光遮蔽着平凡人的生活褶皱。那些仰望摩天大楼的人们，很少低头看看自己踩在什么地方。
+      
+      在这座城市，焦虑和优越感以同样的速度蔓延，人们总在谈论它的过去或未来，却很少关心它的现在。
+    </div>
+  </foreignObject>
+  
+  <!-- 线条图 -->
+  <line x1="70" y1="470" x2="330" y2="470" stroke="#333" stroke-width="1" stroke-dasharray="5,5"></line>
+  <text x="70" y="490" font-family="微软雅黑, Microsoft YaHei" font-size="14" fill="#666">幻象</text>
+  <line x1="70" y1="495" x2="120" y2="495" stroke="#d63031" stroke-width="2"></line>
+  <text x="190" y="490" font-family="微软雅黑, Microsoft YaHei" font-size="14" fill="#666">现实</text>
+  <line x1="190" y1="495" x2="240" y2="495" stroke="#0984e3" stroke-width="2"></line>
+  <text x="290" y="490" font-family="微软雅黑, Microsoft YaHei" font-size="14" fill="#666">焦虑</text>
+  <line x1="290" y1="495" x2="340" y2="495" stroke="#00b894" stroke-width="2"></line>
+  
+  <!-- 极简总结 -->
+  <text x="200" y="530" font-family="楷体, KaiTi" font-size="20" text-anchor="middle" fill="#333">"表面繁华的集体幻觉"</text>
+  
+  <!-- 装饰底部图案 -->
+  <line x1="50" y1="550" x2="350" y2="550" stroke="#333" stroke-width="1" stroke-dasharray="1,3"></line>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
