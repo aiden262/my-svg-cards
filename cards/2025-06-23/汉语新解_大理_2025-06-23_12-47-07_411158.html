@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【大理】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-25 -20 451 640" style="background-color: #f0f0f0;">
+    <!-- Mondrian-style Background -->
+    <rect x="-25" y="-20" width="451" height="640" fill="#fdfdfd"></rect>
+    <rect x="20" y="20" width="360" height="560" fill="none" stroke="#333" stroke-width="2"></rect>
+    <rect x="250" y="450" width="130" height="130" fill="#e63946"></rect>
+    <rect x="20" y="20" width="100" height="100" fill="#f1faee"></rect>
+    <rect x="20" y="120" width="100" height="200" fill="#a8dadc"></rect>
+    <rect x="120" y="20" width="260" height="100" fill="#457b9d"></rect>
+
+    <g style="font-family: 'Noto Serif SC', 'Noto Serif SC', sans-serif; text-anchor: middle; fill: #3a3a3a;">
+
+        <!-- 标题 -->
+        <text x="200" y="75" font-size="36" style="font-family: 'Noto Serif SC', serif; fill: #f1faee;">汉语新解</text>
+
+        <!-- 分隔线 -->
+        <line x1="50" y1="100" x2="350" y2="100" stroke="#f1faee" stroke-width="1"></line>
+
+        <!-- 词汇 -->
+        <text x="200" y="150" font-size="48" style="fill: #3a3a3a;">大理</text>
+        <text x="200" y="180" font-size="16" style="fill: #3a3a3a; font-family: 'Times New Roman', serif;">Dàlǐ</text>
+        <text x="200" y="200" font-size="16" style="fill: #3a3a3a; font-family: 'Meiryo', sans-serif;">ダーリ</text>
+
+        <!-- 解释 -->
+        <foreignObject x="40" y="230" width="320" height="180">
+            <p xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 12.5px; color: rgb(58, 58, 58); line-height: 1.8; text-align: justify; white-space: pre-wrap;">
+中产阶级的精神自留地，一片被精心修剪过的、可以安全躺平的荒野。
+
+在这里，诗和远方都有明确的价码，文艺是通行的货币，而“自我”是最终极的、可以打包带走的土特产。
+            </p>
+        </foreignObject>
+
+        <!-- 线条图描述 -->
+        <text x="200" y="440" font-size="14" style="font-style: italic;">
+            [线条图：远山（苍山）的轮廓，被异化成一个巨大的商品条形码。]
+        </text>
+
+        <!-- 极简总结 -->
+        <text x="200" y="525" font-size="28" style="fill: #f1faee; font-family: 'Noto Serif SC', serif;">
+            远方，可售。
+        </text>
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
