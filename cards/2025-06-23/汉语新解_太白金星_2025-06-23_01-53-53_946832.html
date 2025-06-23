@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【太白金星】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg style="background-color: #f0f0f0; border: 1px solid #ccc; font-family: sans-serif;" viewBox="16 13 395 689">
+  <g style="transform: translate(20px, 20px);">
+
+    <!-- 标题 -->
+    <text x="180" y="40" font-family="毛笔楷体, cursive" font-size="32" text-anchor="middle" fill="#333">
+      汉语新解
+    </text>
+
+    <!-- 分隔线 -->
+    <line x1="40" y1="70" x2="320" y2="70" stroke="#555" stroke-width="1"></line>
+
+    <!-- 词汇 -->
+    <text x="180" y="110" font-family="汇文明朝体, serif" font-size="28" text-anchor="middle" fill="#4a4a4a">
+      太白金星
+    </text>
+    <text x="180" y="135" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#666">
+      Taibai Jinxing (The Great White Golden Star / Venus)
+    </text>
+    <text x="180" y="155" font-family="Meiryo, sans-serif" font-size="14" text-anchor="middle" fill="#666">
+      たいはくきんせい
+    </text>
+
+    <!-- 解释 -->
+    <foreignObject x="40" y="180" width="280" height="481">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: '汇文明朝体', serif; font-size: 18px; color: #4a4a4a; line-height: 1.8;">
+        <p>天庭的首席人力资源官，玉帝的御用传声筒。主要工作是在系统出现BUG（比如一个叫孙悟空的野生程序员）时，第一时间赶到现场，用一份口头Offer和永不兑现的期权，试图将系统漏洞转化为内测员工。</p>
+        <p>他是结构性问题的“和稀泥”方案，是权力对个性的“温柔一刀”。他象征着一切用“编制”和“名分”来收编你野心与才华的甜蜜陷阱。当你看见一位慈眉善目的长者向你走来，许你一个未来时，最好先问问，弼马温的办公室在哪。</p>
+      </div>
+    </foreignObject>
+
+    <!-- 线条图 (文字描述) -->
+    <g style="transform: translate(0, 380px);">
+      <rect x="16" y="13" width="395" height="689" fill="none" stroke="#888" stroke-dasharray="4 2"></rect>
+      <text x="180" y="20" font-family="monospace" text-anchor="middle" font-size="12" fill="#555">[线条图]</text>
+      <text x="180" y="55" text-anchor="middle" font-size="14" fill="#333">
+        一根棱角分明的硬骨头，被一只看不见的手，
+      </text>
+       <text x="180" y="75" text-anchor="middle" font-size="14" fill="#333">
+        温柔地塞进一个光滑的、圆形的齿轮中。
+      </text>
+      <text x="290" y="90" text-anchor="end" font-size="10" fill="#666">
+        *旁边小字: 磨合，是为了更好地运转*
+      </text>
+    </g>
+
+    <!-- 极简总结 -->
+    <text x="180" y="530" text-anchor="middle" font-family="汇文明朝体, serif" font-size="16" fill="#333">
+      成为体系的螺丝钉，第一步是磨平你的棱角。
+    </text>
+
+    <!-- 装饰几何图案 (示意) -->
+    <rect x="350" y="40" width="20" height="80" fill="#E63946"></rect>
+    <rect x="30" y="500" width="50" height="20" fill="#457B9D"></rect>
+    <circle cx="50" cy="80" r="10" fill="#F1C40F"></circle>
+
+  </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
