@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【移动电源】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-95 -20 589 640" style="background-color: #ECEFF1; font-family: sans-serif;">
+  <rect x="0" y="0" width="400" height="600" fill="#ECEFF1"></rect>
+
+  <!-- Title -->
+  <text x="200" y="60" text-anchor="middle" font-family="毛笔楷体, cursive" font-size="32" fill="#37474F">汉语新解</text>
+
+  <!-- Separator Line -->
+  <line x1="50" y1="90" x2="350" y2="90" stroke="#90A4AE" stroke-width="1"></line>
+
+  <!-- User Input -->
+  <text x="200" y="130" text-anchor="middle" font-family="汇文明朝体, 'Microsoft YaHei', sans-serif" font-size="24" fill="#607D8B">
+    移动电源 | Portable Charger | モバイルバッテリー
+  </text>
+
+  <!-- Explanation -->
+  <foreignObject x="40" y="170" width="320" height="250">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: '汇文明朝体', 'Microsoft YaHei', sans-serif; font-size: 18px; line-height: 1.6; color: #455A64; text-align: center;">
+      移动电源：现代人的‘电子续命丸’。它不是为你的生命续航，而是为那块让你时刻在线、生怕错过任何一次‘震动’的屏幕续命。它让你在肉体上可以脱离墙壁，精神上却被更牢固地绑在赛博世界的虚拟囚笼里。你看，多讽刺，这自由，是不是有点沉重？
+    </div>
+  </foreignObject>
+
+  <!-- Line Drawing (批判内核) - Phone with a chained battery icon -->
+  <g transform="translate(150, 430)">
+    <!-- Phone outline -->
+    <rect x="0" y="0" width="100" height="160" rx="10" ry="10" stroke="#455A64" stroke-width="2" fill="none"></rect>
+    <!-- Screen -->
+    <rect x="10" y="15" width="80" height="110" fill="#CFD8DC" rx="5" ry="5"></rect>
+    <!-- Battery icon on screen -->
+    <rect x="30" y="135" width="40" height="15" rx="3" ry="3" stroke="#455A64" stroke-width="1" fill="none"></rect>
+    <rect x="70" y="138" width="5" height="9" rx="1" ry="1" stroke="#455A64" stroke-width="1" fill="none"></rect>
+    <!-- Chain/Lock inside battery icon -->
+    <path d="M 47.5 142.5 L 47.5 137.5 M 45 137.5 A 2.5 2.5 0 0 1 50 137.5 M 45 137.5 L 45 140 M 50 137.5 L 50 140" stroke="#D32F2F" stroke-width="1.5" fill="none"></path>
+    <circle cx="47.5" cy="144.5" r="2" fill="#D32F2F"></circle>
+    <path d="M 35 144.5 L 40 144.5 L 40 147.5 L 35 147.5 Z M 55 144.5 L 60 144.5 L 60 147.5 L 55 147.5 Z" fill="#D32F2F"></path>
+  </g>
+
+  <!-- Minimal Summary -->
+  <text x="200" y="550" text-anchor="middle" font-family="汇文明朝体, 'Microsoft YaHei', sans-serif" font-size="20" fill="#546E7A">自缚的自由</text>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-flash
+        </footer>
+    </main>
+</body>
+</html>
