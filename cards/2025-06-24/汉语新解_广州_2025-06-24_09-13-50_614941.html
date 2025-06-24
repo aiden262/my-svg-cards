@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【广州】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-17 1 436 600" style="background: linear-gradient(45deg, #FDF4E3 25%, transparent 25%), linear-gradient(-45deg, #FDF4E3 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #FDF4E3 75%), linear-gradient(-45deg, transparent 75%, #FDF4E3 75%); background-color: #FFFFFF; background-size: 40px 40px; border: 1px solid #E0E0E0; font-family: 'sans-serif';">
+  <rect x="-17" y="1" width="436" height="600" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="1"></rect>
+  
+  <text x="200" y="70" font-family="'Noto Serif SC', 'Noto Serif SC', 'KaiTi', serif" font-size="36" text-anchor="middle" fill="#333333">
+    汉 语 新 解
+  </text>
+  
+  <line x1="50" y1="95" x2="350" y2="95" stroke="#A9A9A9" stroke-width="1.5"></line>
+  
+  <text x="200" y="145" font-family="'Noto Serif SC', 'Source Han Serif CN', serif" font-size="48" text-anchor="middle" fill="#5A5A5A">
+    广州
+  </text>
+  
+  <text x="200" y="180" font-family="'Georgia', serif" font-size="16" text-anchor="middle" fill="#707070">
+    Guangzhou / Canton
+  </text>
+  
+  <text x="200" y="205" font-family="'Yu Gothic', 'MS Mincho', serif" font-size="16" text-anchor="middle" fill="#707070">
+    広州 (こうしゅう)
+  </text>
+  
+  <foreignObject x="50" y="230" width="300" height="150">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="color: rgb(74, 74, 74); font-family: &quot;Noto Serif SC&quot;, &quot;Source Han Serif CN&quot;, serif; font-size: 12.5px; line-height: 1.8; text-align: justify; hyphens: auto; margin: 0px;">
+      <p style="margin: 0px;">
+        一个巨大的、冒着湿热蒸汽的老虎机。无数年轻人带着他们唯一的筹码——也就是青春，投了进去。机器轰鸣，吐出一些零钱、几张账单，偶尔，也可能掉出一张通往财务自由的头等舱船票，但更多时候，它吞掉你的代币，然后用霓虹灯闪烁着一行字：“务实啲，听日再嚟过啦。”（务实点，明天再来吧。）
+      </p>
+    </div>
+  </foreignObject>
+  
+  <g id="线条图" transform="translate(50, 400)">
+    <rect x="0" y="0" width="300" height="120" fill="none" stroke="#B0B0B0" stroke-width="1" stroke-dasharray="4 2"></rect>
+    <text x="150" y="25" font-family="'Noto Serif SC', 'KaiTi', serif" font-size="14" text-anchor="middle" fill="#666666">[ 线条图 ]</text>
+    <text x="150" y="65" font-family="'Noto Serif SC', 'KaiTi', serif" font-size="16" text-anchor="middle" fill="#333333" dominant-baseline="middle">
+      一幅简笔画：画面中央是一个巨大的老虎机，
+      <tspan x="150" dy="1.2em">投币口被画成一张贪婪的大嘴，拉杆上</tspan>
+      <tspan x="150" dy="1.2em">挂着一个快要累瘫的年轻人。出币口零星掉落</tspan>
+      <tspan x="150" dy="1.2em">几枚硬币，旁边堆着山一样高的“房租”账单。</tspan>
+    </text>
+  </g>
+
+  <g id="极简总结" transform="translate(50, 540)">
+    <text x="150" y="15" font-family="'Noto Serif SC', 'KaiTi', serif" font-size="18" text-anchor="middle" fill="#4A4A4A">
+      一台用青春做赌注，用糖水当安慰剂的城市机器。
+    </text>
+  </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
