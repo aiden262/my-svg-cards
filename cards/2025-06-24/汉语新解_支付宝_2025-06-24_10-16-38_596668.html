@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【支付宝】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 477 640">
+  <!-- 背景色：蒙德里安风格，设计感 -->
+  <rect width="477" height="640" fill="#F5F5F5" x="-20" y="-20"></rect>
+  <rect x="20" y="20" width="360" height="560" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="2"></rect>
+  <rect x="50" y="50" width="50" height="50" fill="#FF6B6B"></rect>
+  <rect x="300" y="50" width="50" height="50" fill="#4ECDC4"></rect>
+  <rect x="50" y="500" width="50" height="50" fill="#45B7D1"></rect>
+
+  <!-- 标题：汉语新解，'Noto Serif SC'，居中 -->
+  <text x="200" y="80" font-family="Kaiti" font-size="28" fill="#333333" text-anchor="middle">汉语新解</text>
+
+  <!-- 分隔线 -->
+  <line x1="50" y1="100" x2="350" y2="100" stroke="#E0E0E0" stroke-width="1"></line>
+
+  <!-- 词汇：支付宝，'Noto Serif SC'，居中 -->
+  <text x="200" y="130" font-family="SimSun" font-size="24" fill="#666666" text-anchor="middle">支付宝</text>
+  <text x="200" y="160" font-family="SimSun" font-size="16" fill="#888888" text-anchor="middle">Zhifubao</text>
+  <text x="200" y="190" font-family="SimSun" font-size="16" fill="#888888" text-anchor="middle">アリペイ</text>
+
+  <!-- 解释文字：'Noto Serif SC'，粉笔灰，排版有呼吸感 -->
+  <text x="50" y="230" font-family="SimSun" font-size="16" fill="#666666" text-anchor="start">
+    <tspan x="50" dy="0">支付宝，表面上是“支付的宝物”，实则是一把双刃剑，</tspan>
+    <tspan x="50" dy="20">锋芒藏在便利背后。它是现代人的数字钱包，</tspan>
+    <tspan x="50" dy="20">却也是无形锁链，将你的每一分消费欲望</tspan>
+    <tspan x="50" dy="20">焊接成数据，供大厂窥探与操控。</tspan>
+    <tspan x="50" dy="20">你以为它为你省时省力，实则它在温柔地</tspan>
+    <tspan x="50" dy="20">掏空你的口袋，用算法喂养你的“买买买”冲动，</tspan>
+    <tspan x="50" dy="20">宛如一只温顺却狡黠的狐狸，笑着递给你一根糖，</tspan>
+    <tspan x="50" dy="20">却在你不注意时偷走你的森林。</tspan>
+  </text>
+
+  <!-- 线条图：批判内核，极简风格 -->
+  <g transform="translate(150, 450)">
+    <!-- 狐狸简笔画，象征狡黠 -->
+    <path d="M0,0 L20,20 L-20,20 Z" fill="none" stroke="#FF6B6B" stroke-width="2"></path>
+    <circle cx="0" cy="30" r="10" fill="none" stroke="#FF6B6B" stroke-width="2"></circle>
+    <path d="M-10,40 L0,50 L10,40" fill="none" stroke="#FF6B6B" stroke-width="2"></path>
+  </g>
+
+  <!-- 极简总结：线条图含义 -->
+  <text x="200" y="550" font-family="SimSun" font-size="14" fill="#888888" text-anchor="middle">狐狸偷走森林：便利背后的操控</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: grok-3
+        </footer>
+    </main>
+</body>
+</html>
