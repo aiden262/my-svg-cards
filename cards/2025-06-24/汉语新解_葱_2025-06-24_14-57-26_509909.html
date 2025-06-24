@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【葱】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="10 40 350 554" style="background: #faf8f0;">
+  <!-- 装饰几何图案 -->
+  <rect x="10" y="40" width="350" height="554" fill="#a3c5a8" rx="4"></rect>
+  <circle cx="320" cy="80" r="14" fill="#d2e3f3"></circle>
+  <rect x="70" y="130" width="260" height="2" fill="#e8e1d9"></rect>
+  <rect x="60" y="500" width="120" height="6" fill="#fcd9b8" rx="3"></rect>
+  <!-- 卡片标题 -->
+  <text x="200" y="100" text-anchor="middle" font-family="Noto Serif SC" ,="" serif"="" font-size="34" fill="#2c3e50" font-weight="bold">汉语新解</text>
+  <!-- 分隔线 -->
+  <rect x="80" y="120" width="240" height="1.5" fill="#b5b5b5"></rect>
+  <!-- 词条本体 -->
+  <text x="200" y="170" text-anchor="middle" font-family="Source Han Serif, serif" font-size="32" fill="#666">葱</text>
+  <text x="200" y="200" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#888">Scallion</text>
+  <text x="200" y="225" text-anchor="middle" font-family="Yu Mincho, serif" font-size="18" fill="#888">ねぎ</text>
+  <!-- 新解正文 -->
+  <foreignObject x="60" y="250" width="280" height="120">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: FZQingKeBenYueSongS-R-GB, &quot;Source Han Serif&quot;, serif; color: rgb(73, 73, 73); font-size: 10.5px; line-height: 1.6; margin: 0px;">
+    <b>新解：</b>
+    <br>
+    <i>“葱”——一种外表青翠、内心空虚的蔬菜。它总是被切碎、撒在别人的辉煌之上，自己却从未独当一面。宛如生活中那些热衷装饰场面的配角，油亮亮地站在主菜旁边，装作自己是点睛之笔，却无论如何也成不了主角。<br>——最有存在感的陪衬。</i>
+    </div>
+  </foreignObject>
+  <!-- 极简线条图（隐喻） -->
+  <g>
+    <!-- 葱的线条 -->
+    <line x1="200" y1="400" x2="200" y2="520" stroke="#70a97b" stroke-width="7" stroke-linecap="round"></line>
+    <ellipse cx="200" cy="395" rx="15" ry="7" fill="#e8e1d9"></ellipse>
+    <!-- 空心 -->
+    <ellipse cx="200" cy="425" rx="8" ry="16" fill="none" stroke="#e8e1d9" stroke-width="2"></ellipse>
+    <!-- 主菜 -->
+    <rect x="170" y="530" width="60" height="20" fill="#e67e22" rx="6" opacity="0.5"></rect>
+    <!-- “撒”上去的葱花 -->
+    <rect x="195" y="535" width="10" height="4" fill="#70a97b" rx="2"></rect>
+  </g>
+  <!-- 极简总结 -->
+  <text x="200" y="570" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="18" fill="#888">
+    —— 油亮的配角，空心的自信
+  </text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gpt-4o
+        </footer>
+    </main>
+</body>
+</html>
