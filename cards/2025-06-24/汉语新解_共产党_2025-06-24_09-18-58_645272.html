@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【共产党】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="20 -1 380 621" style="background: #f7f7f1;">
+  <g>
+    <!-- 标题 -->
+    <text x="200" y="60" text-anchor="middle" style="font-family: 'Noto Serif SC', serif; font-size: 36px; fill: #343434;">汉语新解</text>
+    <!-- 分隔线 -->
+    <line x1="60" y1="85" x2="340" y2="85" stroke="#bbbbbb" stroke-width="1.5"></line>
+    <!-- 词条多语种 -->
+    <text x="80" y="120" style="font-family: 'Noto Serif SC', serif; font-size: 20px; fill: #7c7c7c;">
+      共产党
+    </text>
+    <text x="80" y="148" style="font-family: 'Arial', sans-serif; font-size: 16px; fill: #b0b0b0;">
+      Communist Party
+    </text>
+    <text x="80" y="170" style="font-family: 'Noto Sans JP', sans-serif; font-size: 16px; fill: #b0b0b0;">
+      共産党
+    </text>
+
+    <!-- 新解文本 -->
+    <foreignObject x="40" y="195" width="320" height="220">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 14px; color: rgb(52, 52, 52); line-height: 1.65; word-break: break-all; margin: 0px;">
+        <b>新解：</b><br>
+        <i>
+        一种“为人民服务”的剧团，票价免费，但观众需自带掌声；<br>
+        舞台上演着分配正义，后台却忙着分蛋糕。<br>
+        口号像口香糖，嚼久了只剩下味精；<br>
+        组织结构类似大锅饭——人人有份，主厨最胖。<br>
+        <br>
+        它把理想当做燃料，现实当做排气管，<br>
+        往往驶向乌托邦的路，却在收费站设了卡。
+        </i>
+      </div>
+    </foreignObject>
+
+    <!-- 简约装饰几何图案 -->
+    <rect x="60" y="430" width="50" height="50" rx="12" fill="#ffdc6b" opacity="0.28"></rect>
+    <circle cx="330" cy="455" r="28" fill="#b0d0f6" opacity="0.18"></circle>
+    <polygon points="150,520 170,560 130,560" fill="#e16b6b" opacity="0.18"></polygon>
+    <line x1="220" y1="470" x2="380" y2="600" stroke="#bcbcbc" stroke-width="1" opacity="0.16"></line>
+    
+    <!-- 批判内核线条图（极简主义的“锅”与“蛋糕”）-->
+    <ellipse cx="200" cy="500" rx="58" ry="24" fill="none" stroke="#6a6a6a" stroke-width="2"></ellipse>
+    <rect x="170" y="480" width="60" height="25" rx="8" fill="#fff7e0" stroke="#e0b36b" stroke-width="1"></rect>
+    <ellipse cx="200" cy="495" rx="18" ry="7" fill="#e4c781" opacity="0.7"></ellipse>
+    <!-- 总结语 -->
+    <text x="200" y="580" text-anchor="middle" style="font-family: 'Noto Serif SC', serif; font-size: 17px; fill: #7a7a7a;">
+      “人人平等的锅，盛满主厨的盛宴。”
+    </text>
+  </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gpt-4o
+        </footer>
+    </main>
+</body>
+</html>
