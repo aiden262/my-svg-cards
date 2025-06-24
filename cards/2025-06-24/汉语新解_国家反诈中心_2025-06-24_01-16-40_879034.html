@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【国家反诈中心】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-90 -20 579 640" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background-color: #f0f0f0; font-family: sans-serif;">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&amp;family=Ma+Shan+Zheng&amp;family=Long+Cang&amp;family=Noto+Serif+SC:wght@400;700&amp;display=swap');
+        </style>
+    </defs>
+
+    <!-- Mondrian Style Background -->
+    <rect x="0" y="0" width="400" height="600" fill="#f4f4f4"></rect>
+    <rect x="20" y="20" width="120" height="150" fill="#e0e0e0"></rect>
+    <rect x="250" y="450" width="130" height="130" fill="#d0d0d0"></rect>
+    <line x1="0" y1="200" x2="400" y2="200" stroke="#333" stroke-width="5"></line>
+    <line x1="180" y1="0" x2="180" y2="200" stroke="#333" stroke-width="5"></line>
+    <line x1="20" y1="400" x2="380" y2="400" stroke="#333" stroke-width="3"></line>
+
+
+    <!-- Main Content -->
+    <g style="font-family: 'Ma Shan Zheng', cursive; text-anchor: middle; fill: #4a4a4a;">
+        <text x="200" y="65" font-size="36">汉语新解</text>
+    </g>
+
+    <line x1="40" y1="85" x2="360" y2="85" stroke="#4a4a4a" stroke-width="1.5"></line>
+
+    <g style="text-anchor: middle;">
+        <text x="200" y="130" style="font-family: 'ZCOOL QingKe HuangYou', cursive; font-size: 42px; fill: #3d3d3d; letter-spacing: 2px;">国家反诈中心</text>
+        <text x="200" y="155" style="font-family: 'Arial', sans-serif; font-size: 14px; fill: #666;">National Anti-Fraud Center</text>
+        <text x="200" y="175" style="font-family: 'Noto Serif SC', serif; font-size: 14px; fill: #666;">国家詐欺対策センター</text>
+    </g>
+
+    <foreignObject x="40" y="220" width="320" height="180">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; color: rgb(56, 56, 56); font-size: 10.5px; line-height: 2; text-align: justify;">
+            一座建在数字废土上的烽火台。
+            <br><br>
+            它的作用不是为了抵御外敌，而是在自家后院此起彼伏的捕鼠夹旁，竖起一块“小心有夹”的牌子。
+            <br><br>
+            它存在的本身，就是对人性贪婪与天真最大声的嘲讽。它试图教会我们最古老的常识，在一个我们只信仰最新奇迹的时代。
+        </div>
+    </foreignObject>
+
+    <!-- Line Art -->
+    <g id="line-art" transform="translate(60, 420)" stroke="#333" stroke-width="1.5" fill="none">
+        <!-- Human Head/Brain -->
+        <path d="M 50,0 C 20,0 0,25 0,50 C 0,85 30,110 60,110 C 100,110 110,80 100,50 C 90,20 70,0 50,0 Z" stroke-dasharray="3 3" transform="translate(90, 10)"></path>
+        <path d="M 115,60 C 110,70 115,85 125,90 C 140,97 155,85 155,70 C 155,50 130,45 115,60 Z" transform="translate(25, 0)"></path>
+        <text x="120" y="75" style="font-family: 'Noto Serif SC', serif; font-size:12px; fill: #333; stroke:none;">理智</text>
+        
+        <!-- Fishing Hook with "Miracle" bait -->
+        <path d="M 0,0 C 20,-20 60,-10 60,20 Q 60,40 40,40 L 40,110" transform="translate(20, -10)"></path>
+        <path d="M 40,110 L 35,105 M 40,110 L 45,105"></path>
+        <text x="50" y="30" style="font-family: 'Ma Shan Zheng', cursive; font-size: 24px; fill: #c0392b; stroke:none;">奇迹</text>
+        
+        <!-- Arrow from hook to brain -->
+        <path d="M 70,35 Q 110,40 140,55" stroke-dasharray="4 2"></path>
+        <path d="M 140,55 L 135,50 M 140,55 L 130,57"></path>
+    </g>
+
+    <g style="text-anchor: middle;">
+        <text x="200" y="570" style="font-family: 'Long Cang', cursive; font-size: 22px; fill: #4a4a4a;">
+            用国家级的音量，在你耳边单曲循环“天上不会掉馅饼”。
+        </text>
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
