@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【自信】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-23 -20 446 640" style="display: block;">
+  <!-- 卡片背景 - 蒙德里安风格 -->
+  <rect width="446" height="640" fill="#f9f7f4" x="-23" y="-20"></rect>
+  <rect x="20" y="140" width="360" height="5" fill="#d13c36"></rect>
+  <rect x="320" y="20" width="60" height="60" fill="#225b9c"></rect>
+  <rect x="20" y="500" width="80" height="80" fill="#f2ca30"></rect>
+  
+  <!-- 标题 -->
+  <text x="200" y="80" font-family="楷体, KaiTi" font-size="32" fill="#333" text-anchor="middle" font-weight="bold">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="40" y1="110" x2="360" y2="110" stroke="#888" stroke-width="1"></line>
+  
+  <!-- 词汇 -->
+  <text x="200" y="170" font-family="明朝体, SimSun" font-size="28" fill="#333" text-anchor="middle">自信 / self-confidence / 自信</text>
+  
+  <!-- 解释 -->
+  <foreignObject x="40" y="200" width="320" height="240">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 明朝体, SimSun; font-size: 17px; color: rgb(68, 68, 68); line-height: 1.8; margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word;">
+      别人眼中的勇气，实则是你尚未认清现实的证明。当他们说"你要自信点"，常常意味着"请继续沉浸在你的幻想中，这样我们好继续利用你的不自知"。自信是社会给你的迷魂汤，它让平庸者误以为自己只差一个姿态，而非才华与努力。真正的智者往往充满怀疑，唯有无知者才敢笃定不移。
+    </div>
+  </foreignObject>
+  
+  <!-- 图案 -->
+  <path d="M100,450 C150,420 250,480 300,450" stroke="#666" stroke-width="2" fill="none"></path>
+  <circle cx="100" cy="450" r="5" fill="#666"></circle>
+  <circle cx="300" cy="450" r="5" fill="#666"></circle>
+  
+  <!-- 总结 -->
+  <text x="200" y="520" font-family="楷体, KaiTi" font-size="20" fill="#333" text-anchor="middle" font-style="italic">"无知的勇气，比知识更受鼓励"</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
