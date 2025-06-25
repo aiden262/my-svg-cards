@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【high葱】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg style="background: rgb(250, 249, 246); border-radius: 18px; box-shadow: rgb(224, 223, 223) 0px 6px 24px; display: block;" viewBox="20 -1 360 535">
+  <style>
+    .title { font-family: 'Noto Serif SC', cursive; font-size: 36px; text-anchor: middle; fill: #222; color: #222; letter-spacing:2px;}
+    .subtitle { font-family: "等线", "Arial", sans-serif; font-size: 18px; text-anchor: middle; fill: #999; color: #999;}
+    .word { font-family: 'Noto Serif SC', "Georgia", serif; font-size: 32px; text-anchor: middle; fill: #676767; color: #676767;}
+    .latin { font-size: 18px; fill: #b2b2b2; color: #b2b2b2;}
+    .jp { font-size: 16px; fill: #c1a45b; color: #c1a45b;}
+    .divider {stroke:#e0e0e0;stroke-width:2;}
+    .explain { font-family: "等线", "Georgia", serif; font-size: 20px; fill: #343434; color: #343434; line-height:1.5;}
+    .sketch {stroke:#eab308; stroke-width:3; fill: none; color: none;}
+    .summary { font-family: "等线", "Arial", sans-serif; font-size: 18px; fill: #b36f19; color: #b36f19; text-anchor: middle;}
+  </style>
+  <!-- 标题 -->
+  <text x="200" y="60" class="title">汉语新解</text>
+  <!-- 分隔线 -->
+  <line x1="80" y1="80" x2="320" y2="80" class="divider"></line>
+  <!-- 词汇 -->
+  <text x="200" y="130" class="word">high葱</text>
+  <text x="200" y="160" class="latin">High-cong</text>
+  <text x="200" y="185" class="jp">ハイネギ</text>
+  <!-- 解释 -->
+  <foreignObject x="40" y="210" width="320" height="180">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 等线, Georgia, serif; font-size: 12.5px; color: rgb(52, 52, 52); line-height: 1.8; margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word;">
+      <b style="margin: 0px; padding: 0px; box-sizing: border-box;">high葱</b>，是年轻人朋友圈里的“气味型炫耀”。表面上，是把“high”和“葱”嫁接在一起，仿佛夜店里举着韭菜的DJ。但其实，它是都市精英们的新型自我包装——把普通的“小葱拌豆腐”吹成了“高端有机香葱佐极简生活”。一根葱，顶级滤镜，配上英文，瞬间升级为“生活品味ICON”。你以为是蔬菜，实际上是社交货币。<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+      <i style="margin: 0px; padding: 0px; box-sizing: border-box;">“high葱”——看似随意的一句，背后是对平庸生活的精致伪装。</i>
+    </div>
+  </foreignObject>
+  <!-- 线条图/隐喻 -->
+  <polyline class="sketch" points="100,420 200,350 300,420"></polyline>
+  <ellipse cx="200" cy="350" rx="18" ry="28" style="stroke:#9bbf30; fill: none; color: none; color: none; stroke-width:4;"></ellipse>
+  <rect x="190" y="335" width="20" height="18" style="stroke:#47661b; fill: none; color: none; stroke-width:3;"></rect>
+  <!-- 极简总结 -->
+  <text x="200" y="510" class="summary">“把一根葱，包装成夜店VIP。”</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gpt-4o
+        </footer>
+    </main>
+</body>
+</html>
