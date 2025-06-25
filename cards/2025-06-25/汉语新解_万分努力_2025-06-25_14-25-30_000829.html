@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【万分-努力】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 440 640" style="display: block;">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f9f7f0;stop-opacity:1"></stop>
+      <stop offset="100%" style="stop-color:#f3f0e8;stop-opacity:1"></stop>
+    </linearGradient>
+    <pattern id="pattern" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M0,15 L30,15 M15,0 L15,30" stroke="#e6e2d7" stroke-width="1"></path>
+    </pattern>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="440" height="640" fill="url(#bg-gradient)" x="-20" y="-20"></rect>
+  <rect width="400" height="600" fill="url(#pattern)" fill-opacity="0.3"></rect>
+  
+  <!-- 标题 -->
+  <text x="200" y="60" font-family="楷体, KaiTi" font-size="28" fill="#333" text-anchor="middle">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="50" y1="80" x2="350" y2="80" stroke="#888" stroke-width="1"></line>
+  
+  <!-- 词汇 -->
+  <text x="200" y="120" font-family="Georgia, serif" font-size="24" fill="#555" text-anchor="middle">万分-努力</text>
+  <text x="200" y="145" font-family="Georgia, serif" font-size="16" fill="#777" text-anchor="middle">wàn fēn - nǔ lì</text>
+  
+  <!-- 解释 -->
+  <foreignObject x="40" y="170" width="320" height="280">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 15px; color: rgb(68, 68, 68); line-height: 1.8; margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word;">
+      <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">一种用数学精确度来包装心虚的修辞术，是职场求生的必备咒语。</p>
+      <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">当老板问你"为什么没完成"时，"万分努力"便是你递出的缓刑申请书。它暗示了你投入了一个不可能被量化的努力，却巧妙地避开了结果的实质。</p>
+      <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">这四个字是现代人的避难所—当你无法提供成果，至少可以提供姿态。它是效率社会里的安慰剂，让我们相信只要足够卖力地踩踏跑步机，就能抵达某处，哪怕实际上我们原地不动。</p>
+    </div>
+  </foreignObject>
+  
+  <!-- 图形象征 -->
+  <circle cx="100" cy="480" r="30" fill="none" stroke="#666" stroke-width="2"></circle>
+  <line x1="100" y1="450" x2="100" y2="510" stroke="#666" stroke-width="2"></line>
+  <line x1="70" y1="480" x2="130" y2="480" stroke="#666" stroke-width="2"></line>
+  <text x="150" y="485" font-family="sans-serif" font-size="16" fill="#666">数值幻觉：无限投入，零产出</text>
+  
+  <!-- 底部总结 -->
+  <text x="200" y="550" font-family="sans-serif" font-size="18" fill="#555" text-anchor="middle" font-style="italic">"态度的繁荣，成果的贫困"</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
