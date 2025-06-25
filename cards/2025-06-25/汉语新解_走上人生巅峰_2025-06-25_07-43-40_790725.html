@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【走上人生巅峰】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 440 640" style="background-color: rgb(242, 242, 242); display: block;">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&amp;family=Noto+Serif+SC:wght@400&amp;display=swap');
+            .title-font { font-family: 'Ma Shan Zheng', cursive; font-size: 36px; text-anchor: middle; fill: #333; color: #333; }
+            .main-font { font-family: 'Noto Serif SC', serif; font-size: 18px; fill: #5a5a5a; color: #5a5a5a; }
+            .translation-font { font-family: sans-serif; font-size: 14px; fill: #777; color: #777; }
+            .summary-font { font-family: 'Noto Serif SC', serif; font-size: 16px; text-anchor: middle; fill: #444; color: #444; }
+        </style>
+    </defs>
+
+    <!-- Mondrian-inspired Background -->
+    <rect x="-20" y="-20" width="440" height="640" fill="#f2f2f2"></rect>
+    <rect x="20" y="500" width="100" height="80" fill="#e02d2d"></rect>
+    <rect x="300" y="20" width="80" height="150" fill="#2d5be0"></rect>
+    <rect x="20" y="200" width="50" height="50" fill="#f7e52b"></rect>
+    <line x1="20" y1="480" x2="380" y2="480" stroke="#111" stroke-width="3"></line>
+    <line x1="150" y1="20" x2="150" y2="250" stroke="#111" stroke-width="3"></line>
+
+    <!-- Card Content -->
+    <text x="200" y="70" class="title-font">汉语新解</text>
+    <line x1="40" y1="95" x2="360" y2="95" stroke="#333" stroke-width="1.5"></line>
+
+    <text x="40" y="130" class="main-font" style="font-size: 24px; font-weight: bold;">走上人生巅峰</text>
+    <text x="40" y="155" class="translation-font">Reach the pinnacle of life</text>
+    <text x="40" y="175" class="translation-font">人生の頂点に立つ</text>
+
+    <foreignObject x="40" y="200" width="320" height="180">
+        <p xmlns="http://www.w3.org/1999/xhtml" class="main-font" style="line-height: 1.8; overflow-wrap: break-word; margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; font-size: 14px;">
+            一个精心包装的消费主义神话，让你误以为山顶的风光无限好，却没人告诉你那里高处不胜寒，氧气稀薄，而且唯一的路就是下坡路。它更像是一个精神上的庞氏骗局，用他人的仰望和未来的许诺作为抵押，让你透支了当下的健康、情感和自由。当你终于爬上去，看到的不是风景，而是另一座更高的山，和身后一串催你还贷的脚印。
+        </p>
+    </foreignObject>
+
+    <!-- Line Drawing & Critical Core -->
+    <g transform="translate(0, 20)">
+        <path d="M 120 500 L 200 380 L 280 500 Z" fill="none" stroke="#333" stroke-width="2"></path>
+        <circle cx="200" cy="378" r="4" fill="#333"></circle>
+        <text x="200" y="365" text-anchor="middle" class="main-font" style="font-size:12px; fill: #e02d2d; color: #e02d2d; color: #e02d2d;">用虚构的高度，来贩卖坠落的焦虑。</text>
+        <path d="M 200 378 Q 250 420 280 500" fill="none" stroke="#333" stroke-width="1" stroke-dasharray="3,3"></path>
+        <text x="255" y="440" class="main-font" style="font-size:10px;">下坡路</text>
+    </g>
+
+    <!-- Minimalist Summary -->
+    <text x="200" y="550" class="summary-font">极简总结：山顶，是下山的起点。</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
