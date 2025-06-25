@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【英伟达】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-19 -19 440 640" style="background-color: rgb(253, 253, 252); border: 1px solid rgb(204, 204, 204); display: block;">
+    <!-- Mondrian Background -->
+    <rect x="-19" y="-19" width="440" height="640" fill="#EAD57A"></rect>
+    <rect x="330" y="0" width="70" height="150" fill="#3E5F8A"></rect>
+    <rect x="0" y="0" width="400" height="600" fill="none" stroke="#2c2c2c" stroke-width="6"></rect>
+    <line x1="0" y1="150" x2="400" y2="150" stroke="#2c2c2c" stroke-width="5"></line>
+    <line x1="120" y1="520" x2="120" y2="600" stroke="#2c2c2c" stroke-width="5"></line>
+
+    <!-- Card Content -->
+    <text x="200" y="55" text-anchor="middle" font-family="KaiTi, 'Noto Serif SC', serif" font-size="36" fill="#333">汉语新解</text>
+    <line x1="40" y1="80" x2="360" y2="80" stroke="#666" stroke-width="1"></line>
+
+    <text x="200" y="125" text-anchor="middle" font-family="'Huiwen Mingchao', 'Noto Serif SC', serif" font-size="32" font-weight="bold" fill="#333">英伟达</text>
+    <text x="200" y="145" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555">NVIDIA / エヌビディア</text>
+
+    <foreignObject x="40" y="180" width="320" height="150">
+        <p xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Huiwen Mingchao&quot;, &quot;Noto Serif SC&quot;, serif; font-size: 22px; color: rgb(74, 74, 74); line-height: 1.8; margin: 0px; text-align: justify; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word;">
+            数字时代的上帝粒子贩卖机，投进去的是真金白银，吐出来的是一个让你对未来上瘾的许可。
+        </p>
+    </foreignObject>
+
+    <!-- Line Drawing -->
+    <g transform="translate(100 350)">
+        <!-- Vending Machine -->
+        <rect x="20" y="10" width="160" height="180" rx="5" stroke="#333" stroke-width="2" fill="none"></rect>
+        <!-- Coin Slot -->
+        <path d="M 100 30 h 20 v -5 h -20 z" fill="#333"></path>
+        <text x="130" y="28" font-size="12" fill="#333">💰</text>
+        <!-- Dispenser -->
+        <rect x="40" y="150" width="120" height="30" stroke="#333" stroke-width="1.5" fill="#f0f0f0"></rect>
+        <!-- The "Future" (glowing key) -->
+        <g transform="translate(90 130)">
+            <path d="M 0 0 C -10 0, -15 -5, -15 -15 S -10 -30, 0 -30 S 10 -30, 15 -15 S 10 0, 0 0 M 0 -15 L 0 -25 M -5 -20 L 5 -20" stroke="#EAD57A" stroke-width="3" fill="none">
+                 <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"></animate>
+            </path>
+            <text x="-8" y="-35" font-size="10" fill="#3E5F8A">AI</text>
+        </g>
+    </g>
+
+    <text x="200" y="565" text-anchor="middle" font-family="'Huiwen Mingchao', 'Noto Serif SC', serif" font-size="18" fill="#333">
+        极简总结: 未来入场券的唯一兜售者。
+    </text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
