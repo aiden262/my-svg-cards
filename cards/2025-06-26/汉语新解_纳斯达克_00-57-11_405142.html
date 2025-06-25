@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【纳斯达克】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-19 -19 440 640" style="background-color: rgb(240, 240, 240); border: 1px solid rgb(204, 204, 204); display: block;">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&amp;family=ZCOOL+KuaiLe&amp;family=Noto+Serif+SC:wght@400;700&amp;display=swap');
+            .title { font-family: 'Ma Shan Zheng', 'Noto Serif SC', cursive; font-size: 36px; text-anchor: middle; fill: #333; color: #333; }
+            .term { font-family: 'Noto Serif SC', 'Noto Serif SC', serif; font-size: 28px; font-weight: 700; text-anchor: middle; fill: #4a4a4a; color: #4a4a4a; }
+            .translation { font-family: 'Helvetica Neue', sans-serif; font-size: 16px; text-anchor: middle; fill: #6c6c6c; color: #6c6c6c; }
+            .explanation { font-family: 'Noto Serif SC', 'Noto Serif SC', serif; font-size: 20px; fill: #3d3d3d; color: #3d3d3d; white-space: pre-wrap; }
+            .summary { font-family: 'Noto Serif SC', 'Noto Serif SC', serif; font-size: 18px; text-anchor: middle; font-weight: bold; fill: #2c2c2c; color: #2c2c2c; }
+            .line-art { stroke: #333; stroke-width: 1.5; fill: none; color: none; }
+        </style>
+    </defs>
+
+    <!-- Mondrian-style background elements -->
+    <rect x="-19" y="-19" width="440" height="640" fill="#E63946"></rect>
+    <rect x="300" y="0" width="100" height="150" fill="#457B9D"></rect>
+    <rect x="0" y="0" width="400" height="8" fill="#1D3557"></rect>
+    <rect x="0" y="592" width="400" height="8" fill="#1D3557"></rect>
+    <rect x="150" y="250" width="250" height="8" fill="#1D3557"></rect>
+    <rect x="0" y="450" width="8" height="150" fill="#1D3557"></rect>
+
+
+    <!-- Main Content -->
+    <text x="200" y="60" class="title">汉语新解</text>
+    <line x1="40" y1="80" x2="360" y2="80" stroke="#6c6c6c" stroke-width="1"></line>
+
+    <text x="200" y="125" class="term">纳斯达克</text>
+    <text x="200" y="150" class="translation">NASDAQ / ナスダック</text>
+
+    <foreignObject x="40" y="180" width="320" height="180">
+        
+            <p class="explanation" style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8; font-size: 10px;">
+                一座用代码和PPT搭建的罗马斗兽场。
+                <br style="margin: 0px; padding: 0px; box-sizing: border-box;"><br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+                参赛的角斗士是怀揣梦想的创业者，看台上的贵宾是热血的投资人，而喂养猛兽的饲料，是那些被称为“用户”和“韭菜”的普通人。
+                <br style="margin: 0px; padding: 0px; box-sizing: border-box;"><br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+                敲钟不是为了庆祝上市，而是提醒狮子，开饭了。
+            </p>
+        
+    </foreignObject>
+
+    <!-- Line Art: A bell turning into a stock market crash graph -->
+    <g class="line-art" transform="translate(140, 420) scale(0.8)">
+        <!-- Bell shape -->
+        <path d="M 20,50 Q 60,0 100,50"></path>
+        <path d="M 20,50 C 20,80 100,80 100,50"></path>
+        <circle cx="60" cy="70" r="5" fill="#333"></circle>
+        <!-- Graph line extending from the bell -->
+        <polyline points="100,50 120,40 140,60 160,30 180,80 200,90"></polyline>
+        <!-- A simple scythe at the end of the graph -->
+        <path d="M 200,90 L 210,80"></path>
+        <path d="M 210,80 Q 200,60 190,80"></path>
+    </g>
+
+
+    <text x="200" y="550" class="summary">资本的绞肉机，梦想的火葬场。</text>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
