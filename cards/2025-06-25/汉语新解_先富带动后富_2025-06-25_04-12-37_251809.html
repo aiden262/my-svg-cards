@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【先富带动后富】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg style="background: rgb(247, 246, 242); margin: 0px auto; display: block; border-radius: 18px; box-shadow: rgb(222, 222, 222) 0px 2px 12px;" viewBox="20 3 360 612">
+  <!-- 标题 -->
+  <text x="50%" y="60" text-anchor="middle" font-family="Noto Serif SC" ,="" serif"="" font-size="32" font-weight="bold" fill="#222">汉语新解</text>
+  <!-- 分隔线 -->
+  <rect x="20" y="3" width="360" height="612" fill="#bababa"></rect>
+  
+  <!-- 词汇多语种 -->
+  <text x="50%" y="115" text-anchor="middle" font-family="等线, sans-serif" font-size="22" fill="#555">先富带动后富</text>
+  <text x="50%" y="145" text-anchor="middle" font-family="Times New Roman, serif" font-size="16" fill="#7d7d7d">Trickle-down prosperity</text>
+  <text x="50%" y="170" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="15" fill="#b3b3b3">先に裕福になった者が後の者を裕福に導く</text>
+  
+  <!-- 解释正文 -->
+  <foreignObject x="40" y="200" width="320" height="250">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, 宋体, serif; color: rgb(72, 72, 72); font-size: 14.5px; line-height: 1.8; margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word;">
+      <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">
+        <span style="font-size: 22px; font-family: &quot;Noto Serif SC&quot;; color: rgb(203, 44, 44); margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">新解：</span>
+        <br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+        一场“有钱人先上电梯，等楼上风景看腻了再下来递你一杯自来水”的盛大表演。<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+        先富带动后富，听起来像是财主带领乡亲奔小康，实际上更像“等我吃饱了再考虑喂你一口”——只不过饭桌越来越大，剩饭越来越少。<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+        在现实中，这往往变成了“先富的永远在带，后富的永远在等”，每个人都在望着那根看不见的接力棒，期待它真的有一天会递过来。
+      </p>
+    </div>
+  </foreignObject>
+  
+  <!-- 线条图/隐喻图案 -->
+  <g>
+    <!-- 隐喻：电梯与楼梯 -->
+    <rect x="80" y="480" width="60" height="70" rx="10" fill="#fac858" stroke="#6e6e6e" stroke-width="2"></rect>
+    <rect x="180" y="500" width="30" height="50" rx="6" fill="#e0e0e0" stroke="#c6c6c6" stroke-width="1"></rect>
+    <path d="M220 550 Q240 535 260 545" stroke="#bdbdbd" stroke-width="4" fill="none"></path>
+    <!-- 人物：一个胖胖的笑脸在电梯里挥手，三个小人站在楼梯下仰望 -->
+    <circle cx="110" cy="495" r="16" fill="#fffbe7" stroke="#666" stroke-width="2"></circle>
+    <ellipse cx="110" cy="495" rx="10" ry="6" fill="#fac858" opacity="0.7"></ellipse>
+    <ellipse cx="90" cy="550" rx="7" ry="12" fill="#cfcfcf" opacity="0.9"></ellipse>
+    <ellipse cx="130" cy="550" rx="7" ry="12" fill="#cfcfcf" opacity="0.7"></ellipse>
+    <ellipse cx="160" cy="560" rx="7" ry="11" fill="#cfcfcf" opacity="0.5"></ellipse>
+  </g>
+  
+  <!-- 极简总结 -->
+  <text x="50%" y="590" text-anchor="middle" font-family="Noto Serif SC" ,="" serif"="" font-size="18" fill="#7a7a7a">电梯先到顶，楼梯永远在等人。</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gpt-4o
+        </footer>
+    </main>
+</body>
+</html>
