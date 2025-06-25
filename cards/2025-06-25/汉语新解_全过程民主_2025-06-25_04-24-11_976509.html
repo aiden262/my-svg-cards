@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【全过程民主】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 440 640" style="display: block;">
+  <rect width="440" height="640" fill="#f8f3e9" rx="10" ry="10" x="-20" y="-20"></rect>
+  <rect x="30" y="70" width="340" height="460" fill="#fefefe" rx="5" ry="5" stroke="#e0e0e0" stroke-width="1"></rect>
+  
+  <!-- 标题 -->
+  <text x="200" y="45" font-family="楷体, KaiTi" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="60" y1="65" x2="340" y2="65" stroke="#888" stroke-width="1" stroke-dasharray="1,3"></line>
+  
+  <!-- 词语 -->
+  <text x="200" y="110" font-family="黑体, SimHei" font-size="26" fill="#222" text-anchor="middle" font-weight="bold">全过程民主</text>
+  <text x="200" y="135" font-family="Times New Roman" font-size="14" fill="#666" text-anchor="middle" font-style="italic">Whole-process Democracy</text>
+  <text x="200" y="155" font-family="MS Mincho" font-size="14" fill="#666" text-anchor="middle">全過程民主</text>
+  
+  <!-- 解释 -->
+  <foreignObject x="50" y="180" width="300" height="220">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 宋体, SimSun; font-size: 15px; color: rgb(51, 51, 51); line-height: 1.8; text-align: justify; margin: 0px; padding: 0px; box-sizing: border-box; width: 300px; overflow-wrap: break-word;">
+      一场精心设计的单向表演，观众被告知他们是主角，却只配扮演鼓掌的群众演员。就像一个精心制作的游乐场过山车：轨道早已固定，你只是被允许在固定路径上体验被安排好的"刺激"。全程可见，全程可听，却未必全程可言，更遑论全程可决。这是一种将"过程参与"包装成"结果决定"的话术魔术，用"看得见的手"制造"看不见的决定"。
+    </div>
+  </foreignObject>
+  
+  <!-- 线条图 -->
+  <line x1="80" y1="420" x2="320" y2="420" stroke="#888" stroke-width="1"></line>
+  <circle cx="110" cy="420" r="5" fill="#d33" stroke="none"></circle>
+  <text x="110" y="440" font-family="微软雅黑, Microsoft YaHei" font-size="12" fill="#555" text-anchor="middle">形式</text>
+  <circle cx="200" cy="420" r="5" fill="#d33" stroke="none"></circle>
+  <text x="200" y="440" font-family="微软雅黑, Microsoft YaHei" font-size="12" fill="#555" text-anchor="middle">过程</text>
+  <circle cx="290" cy="420" r="5" fill="#d33" stroke="none"></circle>
+  <text x="290" y="440" font-family="微软雅黑, Microsoft YaHei" font-size="12" fill="#555" text-anchor="middle">结果</text>
+  <path d="M110,420 Q155,380 200,420 Q245,380 290,420" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="3,2"></path>
+  
+  <!-- 极简总结 -->
+  <rect x="70" y="470" width="260" height="50" fill="#f5f5f5" rx="5" ry="5"></rect>
+  <text x="200" y="500" font-family="黑体, SimHei" font-size="16" fill="#333" text-anchor="middle">参与不等于决定，旁观亦非主导</text>
+  
+  <!-- 装饰图案 -->
+  <rect x="350" y="30" width="8" height="30" fill="#d33" rx="2" ry="2"></rect>
+  <rect x="42" y="550" width="30" height="8" fill="#d33" rx="2" ry="2"></rect>
+  <circle cx="355" cy="550" r="15" fill="none" stroke="#888" stroke-width="1"></circle>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
