@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【大A】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-19 -19 440 640" style="background-color: rgb(240, 240, 240); border: 1px solid rgb(204, 204, 204); display: block;">
+    <!-- 蒙德里安风格背景 -->
+    <rect x="-19" y="-19" width="440" height="640" fill="#fdfdfd"></rect>
+    <rect x="20" y="20" width="100" height="150" fill="#e02020"></rect>
+    <rect x="280" y="450" width="100" height="130" fill="#2040e0"></rect>
+    <rect x="20" y="500" width="180" height="80" fill="#f0e040"></rect>
+    <line x1="0" y1="200" x2="400" y2="200" stroke="#111" stroke-width="5"></line>
+    <line x1="250" y1="0" x2="250" y2="600" stroke="#111" stroke-width="5"></line>
+
+    <!-- 卡片内容容器 -->
+    <g style="font-family: 'Noto Serif SC', serif; text-anchor: middle;">
+        <text x="200" y="60" font-size="32" fill="#333">汉 语 新 解</text>
+    </g>
+
+    <line x1="40" y1="85" x2="360" y2="85" stroke="#888" stroke-width="1"></line>
+
+    <g style="font-family: 'Noto Serif SC', '粉笔灰', sans-serif; text-anchor: middle;">
+        <text x="200" y="130" font-size="48" fill="#3a3a3a" font-weight="bold">大 A</text>
+        <text x="200" y="160" font-size="16" fill="#555">A-share Market / A株市場</text>
+    </g>
+
+    <foreignObject x="40" y="200" width="320" height="200">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, 粉笔灰, sans-serif; font-size: 18.5px; color: rgb(58, 58, 58); line-height: 1.8; text-align: justify; margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word;">
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">一座宏伟的绞肉机，入口处贴着“共同富裕”的标语，出口处却只吐出骨头和一地鸡毛。</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">那个“大”字，指的是它的胃口；</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">那个“A”，是参与者进去时发出的第一声，通常也是最后一声惨叫。</p>
+        </div>
+    </foreignObject>
+
+    <!-- 线条图 -->
+    <g id="line-drawing" transform="translate(50, 420)">
+        <!-- 漏斗 (绞肉机) -->
+        <path d="M 0,0 L 300,0 L 200,80 L 100,80 Z" stroke="#333" stroke-width="2" fill="none"></path>
+        <text x="150" y="-10" text-anchor="middle" font-size="16" font-family="sans-serif" fill="#333">梦想 &amp; 积蓄</text>
+        <!-- 小人跳入 -->
+        <circle cx="80" cy="-15" r="5" fill="#333"></circle>
+        <path d="M 80,-10 L 80,5 L 75,15" stroke="#333" stroke-width="1.5" fill="none"></path>
+        <path d="M 80,5 L 85,15" stroke="#333" stroke-width="1.5" fill="none"></path>
+        <!-- 出口掉落物 -->
+        <path d="M 140,110 Q 145,115 150,110" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round"></path>
+        <path d="M 160,105 Q 165,110 170,105" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round"></path>
+        <text x="150" y="100" text-anchor="middle" font-size="20" fill="#333" transform="rotate(15, 150, 100)">骨</text>
+        <text x="170" y="120" text-anchor="middle" font-size="20" fill="#333" transform="rotate(-10, 170, 120)">毛</text>
+    </g>
+
+    <!-- 极简总结 -->
+    <g style="font-family: 'Noto Serif SC', '粉笔灰', sans-serif; text-anchor: middle;">
+        <text x="200" y="560" font-size="18" fill="#3a3a3a">进去的是韭菜，出来的是肥料。</text>
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
