@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【奇葩/遍地】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 440 640" style="display: block;">
+  <!-- 背景 -->
+  <rect width="440" height="640" fill="#f7f3ee" rx="10" ry="10" x="-20" y="-20"></rect>
+  <rect x="30" y="30" width="340" height="540" fill="#fcfaf7" rx="8" ry="8" stroke="#e5e0d5" stroke-width="1"></rect>
+  
+  <!-- 几何装饰 -->
+  <rect x="40" y="40" width="60" height="60" fill="#f3d3cf" opacity="0.6"></rect>
+  <circle cx="350" cy="540" r="30" fill="#e8eaed" opacity="0.5"></circle>
+  <polygon points="320,70 340,50 360,70" fill="#d3e0e8" opacity="0.7"></polygon>
+  
+  <!-- 标题 -->
+  <text x="200" y="80" font-family="Noto Serif SC" ,="" 'noto="" serif="" sc'="" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="70" y1="100" x2="330" y2="100" stroke="#d1ccc0" stroke-width="1"></line>
+  
+  <!-- 词语 -->
+  <text x="200" y="140" font-family="STSong, SimSun" font-size="24" fill="#444" text-anchor="middle">奇葩/遍地</text>
+  <text x="200" y="165" font-family="Georgia" font-size="12" fill="#888" text-anchor="middle">qí pā / biàn dì</text>
+  
+  <!-- 解释 -->
+  <foreignObject x="50" y="190" width="300" height="280">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif CJK SC&quot;, serif; font-size: 15px; line-height: 1.8; color: rgb(85, 85, 85); margin: 0px; padding: 0px; box-sizing: border-box; width: 300px; overflow-wrap: break-word;">
+      "奇葩"本是赞美独特花朵的词，"遍地"曾是形容丰富多彩的自然景观。
+      
+      如今，它们却成了社会虚伪的遮羞布。那些难以相处的人不再是"难以相处"，而是"奇葩"；那些普遍存在的社会问题不再需要解决，因为它们只是"遍地奇葩"，仿佛加上"奇葩"二字，一切就变成了笑谈。
+      
+      当我们用"奇葩遍地"来调侃现实，我们正在将尖锐的社会矛盾变成无害的段子，让真正的问题隐匿在集体嘲笑中。这是一种心照不宣的集体逃避。
+    </div>
+  </foreignObject>
+  
+  <!-- 线条图 -->
+  <line x1="70" y1="480" x2="330" y2="480" stroke="#d1ccc0" stroke-width="1" stroke-dasharray="5,3"></line>
+  <polyline points="80,530 120,510 190,525 240,500 300,520" stroke="#a57c65" stroke-width="2" fill="none"></polyline>
+  <circle cx="120" cy="510" r="4" fill="#a57c65"></circle>
+  <circle cx="240" cy="500" r="4" fill="#a57c65"></circle>
+  
+  <!-- 总结 -->
+  <text x="200" y="560" font-family="Noto Serif SC" ,="" 'noto="" serif="" sc'="" font-size="16" fill="#766c62" text-anchor="middle" font-style="italic">"用语言的艳丽包装掩盖思考的贫瘠"</text>
+  
+  <!-- 签名 -->
+  <text x="320" y="580" font-family="Palatino" font-size="12" fill="#a9a195" text-anchor="end">汉语批判者</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
