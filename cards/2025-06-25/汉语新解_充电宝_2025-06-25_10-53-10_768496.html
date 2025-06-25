@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【充电宝】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" style="background-color: rgb(240, 240, 240); display: block;">
+    <!-- Mondrian-inspired background -->
+    <rect x="-20" y="-20" width="440" height="640" fill="#fdfdfd"></rect>
+    <rect x="20" y="500" width="150" height="80" fill="#E84855"></rect>
+    <rect x="250" y="20" width="130" height="150" fill="#F9DC5C"></rect>
+    <rect x="20" y="200" width="80" height="200" fill="#3185FC"></rect>
+    <rect x="0" y="0" width="400" height="10" fill="#333"></rect>
+    <rect x="0" y="590" width="400" height="10" fill="#333"></rect>
+    <rect x="0" y="0" width="10" height="600" fill="#333"></rect>
+    <rect x="390" y="0" width="10" height="600" fill="#333"></rect>
+
+    <g style="font-family: 'Noto Serif SC', 'Maobi Kaishu', cursive; text-anchor: middle; dominant-baseline: middle;">
+        <text x="200" y="60" font-size="32" fill="#333">汉语新解</text>
+    </g>
+
+    <line x1="40" y1="90" x2="360" y2="90" stroke="#333" stroke-width="1.5"></line>
+
+    <g style="font-family: 'Noto Serif SC', 'Huiwen Mingchao', serif; fill: #4a4a4a; color: #4a4a4a; color: #4a4a4a; text-anchor: middle;">
+        <text x="200" y="135" font-size="48">充电宝</text>
+        <text x="200" y="170" font-size="16">Power Bank</text>
+        <text x="200" y="195" font-size="16">モバイルバッテリー</text>
+    </g>
+
+    <foreignObject x="40" y="220" width="320" height="120">
+        <p xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, &quot;Huiwen Mingchao&quot;, serif; color: rgb(74, 74, 74); font-size: 16.5px; line-height: 1.8; text-align: justify; margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word;">
+            一种便携式焦虑缓解剂。它并不能为你充电，它只是为你那“离线就会死”的错觉续命。它让你把注意力从寻找插座，转移到寻找它，本质是一种枷锁的升级。
+        </p>
+    </foreignObject>
+
+    <!-- Line Art -->
+    <g stroke="#333" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Person -->
+        <circle cx="200" cy="390" r="15"></circle> <!-- Head -->
+        <path d="M 200 405 V 440"></path> <!-- Body -->
+        <path d="M 200 415 L 175 435"></path> <!-- Left Arm holding phone -->
+        <path d="M 200 415 L 225 435"></path> <!-- Right Arm -->
+        <path d="M 200 440 L 185 470"></path> <!-- Left Leg -->
+        <path d="M 200 440 L 215 470"></path> <!-- Right Leg -->
+        
+        <!-- Phone -->
+        <rect x="160" y="430" width="15" height="25" rx="2" fill="#fdfdfd"></rect>
+        
+        <!-- Cable as IV Drip -->
+        <path d="M 168 455 C 160 480, 140 490, 120 490"></path>
+        
+        <!-- Power Bank -->
+        <rect x="80" y="480" width="40" height="20" rx="3" fill="#fdfdfd"></rect>
+        
+        <!-- Chain from Power Bank -->
+        <path d="M 80 490 C 70 500, 75 515, 90 520 S 115 520, 120 510 S 135 505, 140 515"></path>
+    </g>
+
+    <g style="font-family: 'Noto Serif SC', 'Huiwen Mingchao', serif; fill: #4a4a4a; color: #4a4a4a; color: #4a4a4a; text-anchor: middle;">
+        <text x="200" y="555" font-size="24">赛博栓绳</text>
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
