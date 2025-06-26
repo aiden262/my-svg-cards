@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【牛逼】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-19 -19 440 640" style="background-color: rgb(245, 245, 245); font-family: sans-serif; border: 1px solid rgb(204, 204, 204); display: block;">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&amp;display=swap');
+            /* Fallback fonts */
+            .title-font { font-family: 'Noto Serif SC', 'KaiTi', '楷体', serif; font-weight: bold; }
+            .main-font { font-family: 'Noto Serif SC', serif; }
+            .label-font { font-family: 'Helvetica Neue', 'Arial', sans-serif; }
+        </style>
+    </defs>
+
+    <!-- Mondrian Style Background -->
+    <rect x="-19" y="-19" width="440" height="640" fill="#E63946"></rect>
+    <rect x="300" y="0" width="100" height="150" fill="#F1FAEE"></rect>
+    <rect x="0" y="0" width="400" height="600" stroke="#1D3557" stroke-width="15" fill="none"></rect>
+    <line x1="120" y1="500" x2="120" y2="600" stroke="#1D3557" stroke-width="8"></line>
+    <line x1="300" y1="0" x2="300" y2="150" stroke="#1D3557" stroke-width="8"></line>
+    <line x1="0" y1="150" x2="400" y2="150" stroke="#1D3557" stroke-width="5"></line>
+
+
+    <!-- Title -->
+    <text x="200" y="60" font-size="32" text-anchor="middle" class="title-font" fill="#1D3557">汉语新解</text>
+    <line x1="150" y1="80" x2="250" y2="80" stroke="#457B9D" stroke-width="2"></line>
+
+    <!-- Word -->
+    <g text-anchor="middle" fill="#2f2f2f">
+        <text x="200" y="130" font-size="52" class="main-font" font-weight="700">牛逼</text>
+        <text x="200" y="180" font-size="14" class="label-font" fill="#6c757d">Awesome / Badass</text>
+        <text x="200" y="200" font-size="14" class="label-font" fill="#6c757d">すげえ / ヤバい</text>
+    </g>
+
+    <!-- Explanation -->
+    <g class="main-font" fill="#333" font-size="18" text-anchor="middle">
+        <text x="200" y="250">思想的快捷键，语言的万能胶。</text>
+        <text x="200" y="280">当你的大脑决定罢工，</text>
+        <text x="200" y="310">而嘴巴还想表达点敬佩时，</text>
+        <text x="200" y="340">它就登场了。</text>
+    </g>
+    
+    <!-- Line Art -->
+    <g id="line-art" stroke="#1D3557" stroke-width="2" fill="none" transform="translate(140, 380) scale(0.8)">
+        <!-- Brain -->
+        <path d="M 50,70 C 20,70 20,30 50,30 C 80,30 80,10 100,10 C 120,10 120,30 150,30 C 180,30 180,70 150,70 C 140,70 140,80 125,90 C 110,100 90,100 75,90 C 60,80 60,70 50,70 Z" stroke-dasharray="3,3"></path>
+        <path d="M 100,10 C 100,40 75,50 75,70"></path>
+        <path d="M 100,10 C 100,40 125,50 125,70"></path>
+        <path d="M 75,90 C 85,80 115,80 125,90"></path>
+        
+        <!-- Rubber Stamp -->
+        <g transform="translate(90, -30) rotate(25)">
+            <rect x="0" y="0" width="40" height="15" fill="#f5f5f5"></rect>
+            <rect x="15" y="15" width="10" height="20" fill="#f5f5f5"></rect>
+            <text font-size="30" x="5" y="60" stroke="none" fill="#E63946" transform="scale(1, -1) translate(0, -70)" class="title-font">牛</text>
+            <rect x="-10" y="45" width="60" height="30" fill="#f5f5f5"></rect>
+        </g>
+        <path d="M 140,45 Q 150,30 160,20" stroke-dasharray="2 2" stroke-width="1"></path>
+        <path d="M 145,50 Q 155,35 165,25" stroke-dasharray="2 2" stroke-width="1"></path>
+    </g>
+
+    <!-- Summary -->
+    <g text-anchor="middle" class="main-font" fill="#457B9D">
+        <text x="200" y="515" font-size="16">【极简总结】</text>
+        <text x="200" y="545" font-size="18" font-weight="bold">用一个标签，代替一千句分析。</text>
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
