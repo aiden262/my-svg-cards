@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【人民政府】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 440 640" style="display: block;">
+  <!-- 背景 -->
+  <rect width="440" height="640" fill="#f5f2e9" x="-20" y="-20"></rect>
+  
+  <!-- 装饰元素 -->
+  <rect x="20" y="20" width="360" height="560" fill="none" stroke="#d13c37" stroke-width="2" opacity="0.7"></rect>
+  <line x1="50" y1="80" x2="350" y2="80" stroke="#333" stroke-width="1" stroke-dasharray="1,3"></line>
+  <line x1="50" y1="520" x2="350" y2="520" stroke="#333" stroke-width="1" stroke-dasharray="1,3"></line>
+  
+  <!-- 标题 -->
+  <text x="200" y="60" font-family="SimKai, 楷体" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">汉语新解</text>
+  
+  <!-- 词汇 -->
+  <text x="200" y="120" font-family="SimSun, 宋体" font-size="24" fill="#d13c37" text-anchor="middle" font-weight="bold">人民政府</text>
+  <text x="200" y="145" font-family="Times New Roman" font-size="14" fill="#666" text-anchor="middle" font-style="italic">People's Government</text>
+  <text x="200" y="165" font-family="MS Gothic" font-size="14" fill="#666" text-anchor="middle">人民政府</text>
+  
+  <!-- 解释 -->
+  <foreignObject x="40" y="190" width="320" height="300">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Source Han Serif&quot;, serif; color: rgb(51, 51, 51); font-size: 16.5px; line-height: 1.8; text-align: justify; margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word;">
+      一座标有"人民"招牌的大厦，人们排队入内却发现门卫比主人更凶。这是一种语言上的巧妙易容术，用"人民的"来装饰那些与人民相距最远的事物。"人民的政府"常常意味着统治阶级和官僚集团用"人民"这块遮羞布，掩盖其实际上并非为多数人服务的本质。一个真正属于人民的政府应该不需要不断地强调它属于人民，就像一个真正的朋友不会每天宣称他是你的朋友一样。
+    </div>
+  </foreignObject>
+  
+  <!-- 线条图 -->
+  <line x1="100" y1="490" x2="300" y2="490" stroke="#666" stroke-width="1"></line>
+  <circle cx="130" cy="490" r="5" fill="#d13c37"></circle>
+  <text x="130" y="510" font-family="SimSun, 宋体" font-size="12" fill="#666" text-anchor="middle">宣称</text>
+  <circle cx="200" cy="490" r="5" fill="#d13c37"></circle>
+  <text x="200" y="510" font-family="SimSun, 宋体" font-size="12" fill="#666" text-anchor="middle">实际</text>
+  <circle cx="270" cy="490" r="5" fill="#d13c37"></circle>
+  <text x="270" y="510" font-family="SimSun, 宋体" font-size="12" fill="#666" text-anchor="middle">距离</text>
+  
+  <!-- 极简总结 -->
+  <text x="200" y="550" font-family="SimHei, 黑体" font-size="16" fill="#333" text-anchor="middle" font-style="italic">
+    "最爱喊人民的，往往最怕人民。"
+  </text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
