@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【张三丰】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" xmlns="http://www.w3.org/2000/svg" style="background-color: rgb(240, 240, 240); font-family: sans-serif; display: block;">
+    <!-- 蒙德里安风格背景 -->
+    <rect x="-20" y="-20" width="440" height="640" fill="#fdfdfd"></rect>
+    <rect x="280" y="0" width="120" height="150" fill="#e63946"></rect>
+    <rect x="0" y="450" width="150" height="150" fill="#457b9d"></rect>
+    <rect x="250" y="500" width="150" height="100" fill="#f1faee"></rect>
+    <rect x="0" y="100" width="80" height="200" fill="#fca311"></rect>
+    <line x1="0" y1="450" x2="400" y2="450" stroke="#1d3557" stroke-width="3"></line>
+    <line x1="280" y1="0" x2="280" y2="600" stroke="#1d3557" stroke-width="3"></line>
+
+    <g transform="translate(20, 20)">
+        <!-- 卡片内容区域 -->
+        <rect x="-10" y="-10" width="380" height="580" fill="rgba(253, 253, 253, 0.8)"></rect>
+
+        <!-- 标题 -->
+        <text x="180" y="50" font-family="'Noto Serif SC', 'Noto Serif SC', 'Noto Serif SC', serif" font-size="36" text-anchor="middle" fill="#1d3557">汉语新解</text>
+
+        <!-- 分隔线 -->
+        <line x1="40" y1="80" x2="320" y2="80" stroke="#1d3557" stroke-width="1.5"></line>
+
+        <!-- 词汇 -->
+        <text x="180" y="130" font-family="'Noto Serif SC', 'HYWenMingZhu', serif" font-size="48" text-anchor="middle" fill="#4a4a4a">张三丰</text>
+        <text x="180" y="160" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#6c757d">Zhang Sanfeng</text>
+        <text x="180" y="180" font-family="'Hiragino Sans', 'MS Gothic', sans-serif" font-size="16" text-anchor="middle" fill="#6c757d">張三丰 (ちょう さんぽう)</text>
+
+        <!-- 解释 -->
+        <foreignObject x="40" y="210" width="280" height="150">
+            
+                <p style="font-family: &quot;Noto Serif SC&quot;, HYWenMingZhu, serif; font-size: 16.5px; color: rgb(52, 58, 64); line-height: 1.8; text-align: justify; letter-spacing: 1px; margin: 0px; padding: 0px; box-sizing: border-box; width: 280px; overflow-wrap: break-word;">
+                    现代人精神内耗的终极‘关机键’。当现实的CPU过热，人们就幻想自己能像他一样，拔掉电源，仅靠一套缓慢的广播体操就能无限续航，顺便把系统也给优化了。
+                </p>
+            
+        </foreignObject>
+
+        <!-- 线条图 -->
+        <g id="line-drawing" transform="translate(0, 350)">
+            <title>批判内核: 一个西装革履的疲惫上班族，头顶的进度条已满并显示‘过热’。他面前悬浮着一个巨大的、散发柔光的‘关机重启’按钮，按钮上写着‘张三丰’三个字。</title>
+            <!-- 上班族 -->
+            <rect x="160" y="60" width="40" height="60" fill="none" stroke="#1d3557" stroke-width="2"></rect>
+            <circle cx="180" cy="40" r="20" fill="none" stroke="#1d3557" stroke-width="2"></circle>
+            <path d="M 170 35 Q 180 45, 190 35" stroke="#1d3557" stroke-width="2" fill="none"></path> <!-- 疲惫的眼 -->
+            <path d="M 175 50 Q 180 45, 185 50" stroke="#1d3557" stroke-width="2" fill="none"></path> <!-- 愁眉 -->
+            <!-- 过热警告 -->
+            <text x="180" y="10" font-size="12" text-anchor="middle" fill="#e63946">OVERHEATED</text>
+            <path d="M 150 15 L 210 15" stroke="#e63946" stroke-width="4"></path>
+
+            <!-- 关机按钮 -->
+            <circle cx="180" cy="150" r="30" fill="#a8dadc" stroke="#1d3557" stroke-width="2"></circle>
+            <text x="180" y="155" font-family="'Noto Serif SC', serif" font-size="14" text-anchor="middle" fill="#1d3557">张三丰</text>
+            <!-- 柔光 -->
+            <circle cx="180" cy="150" r="35" fill="#a8dadc" opacity="0.3"></circle>
+            <circle cx="180" cy="150" r="40" fill="#a8dadc" opacity="0.2"></circle>
+        </g>
+        
+        <!-- 极简总结 -->
+        <text x="180" y="560" font-family="'Noto Serif SC', serif" font-size="18" text-anchor="middle" fill="#1d3557">一种形而上的懒人包，专治时代焦虑。</text>
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
