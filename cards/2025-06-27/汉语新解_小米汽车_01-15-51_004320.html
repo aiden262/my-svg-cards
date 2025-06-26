@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【小米汽车】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" style="background-color: rgb(253, 253, 253); display: block;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&amp;display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&amp;display=swap');
+            .title-font { font-family: 'ZCOOL QingKe HuangYou', sans-serif; fill: #333; color: #333; font-size: 32px; text-anchor: middle; }
+            .term-font { font-family: 'Noto Serif SC', serif; fill: #111; color: #111; font-size: 28px; font-weight: 700; text-anchor: middle; }
+            .translation-font { font-family: 'Noto Serif SC', serif; fill: #555; color: #555; font-size: 14px; text-anchor: middle; }
+            .explanation-font { font-family: 'Noto Serif SC', serif; fill: #4A4A4A; color: #4A4A4A; font-size: 18px; line-height: 1.8; }
+            .summary-font { font-family: 'Noto Serif SC', serif; font-style: italic; fill: #333; color: #333; font-size: 15px; text-anchor: middle; }
+        </style>
+        
+        <!-- Mondrian-inspired background pattern -->
+        <pattern id="mondrian" patternUnits="userSpaceOnUse" width="400" height="600">
+            <rect x="-20" y="-20" width="440" height="640" fill="#f0f0f0"></rect>
+            <rect x="0" y="450" width="120" height="150" fill="#DE3C3A"></rect> 
+            <rect x="300" y="0" width="100" height="100" fill="#2E5A87"></rect>
+            <rect x="0" y="0" width="80" height="80" fill="#F7D842"></rect>
+            <line x1="0" y1="120" x2="400" y2="120" stroke="#000" stroke-width="5"></line>
+            <line x1="150" y1="0" x2="150" y2="600" stroke="#000" stroke-width="7"></line>
+            <line x1="0" y1="420" x2="400" y2="420" stroke="#000" stroke-width="4"></line>
+        </pattern>
+        <rect id="bg-rect" width="100%" height="100%" fill="url(#mondrian)" opacity="0.1"></rect>
+    </defs>
+    
+    <use xlink:href="#bg-rect"></use>
+    <rect width="400" height="600" fill="transparent"></rect>
+
+    <!-- Main Content Box for Readability -->
+    <rect x="15" y="15" width="370" height="570" fill="#FEFEFE" rx="5" style="filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));"></rect>
+
+    <g transform="translate(200, 60)">
+        <text class="title-font">汉 语 新 解</text>
+    </g>
+
+    <line x1="40" y1="90" x2="360" y2="90" stroke="#E0E0E0" stroke-width="1"></line>
+
+    <g transform="translate(200, 140)">
+        <text class="term-font">小米汽车</text>
+    </g>
+    <g transform="translate(200, 170)">
+        <text class="translation-font">Xiaomi Auto / シャオミカー</text>
+    </g>
+    
+    <foreignObject x="45" y="200" width="310" height="150">
+        <p xmlns="http://www.w3.org/1999/xhtml" class="explanation-font" style="margin: 0px; padding: 0px; box-sizing: border-box; width: 310px; overflow-wrap: break-word; line-height: 1.8; font-size: 16.5px;">
+            成年人的第一台大型“手办”。
+            <br style="margin: 0px; padding: 0px; box-sizing: border-box;"><br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+            你买的不是交通工具，而是一张通往“人车家全生态”未来发布会的、价格不菲的门票。
+        </p>
+    </foreignObject>
+
+    <!-- Line Art: Car as a Ticket to an Ecosystem -->
+    <g id="line-art" transform="translate(80, 360)">
+        <!-- Car Silhouette -->
+        <path d="M 10 70 C 5 60, 20 40, 50 40 L 190 40 C 220 40, 235 60, 230 70 L 240 90 L 0 90 Z" fill="none" stroke="#333" stroke-width="2"></path>
+        <circle cx="50" cy="90" r="12" fill="none" stroke="#333" stroke-width="2"></circle>
+        <circle cx="190" cy="90" r="12" fill="none" stroke="#333" stroke-width="2"></circle>
+        
+        <!-- Ticket Stub inside the car -->
+        <g transform="translate(100, 50)">
+            <path d="M 0 0 L 40 0 L 40 30 L 0 30 Z" fill="#fff" stroke="#333" stroke-width="1.5"></path>
+            <text x="20" y="20" font-size="14" text-anchor="middle" font-family="monospace" fill="#333">￥</text>
+        </g>
+        
+        <!-- Arrows to ecosystem icons -->
+        <g stroke="#888" stroke-width="1.5" stroke-dasharray="3,3" fill="none">
+             <path d="M 120 45 Q 180 10, 240 10"></path> <!-- Arrow to Phone -->
+             <path d="M 120 95 Q 180 130, 240 140"></path> <!-- Arrow to Home -->
+        </g>
+        <!-- Ecosystem Icons -->
+        <g transform="translate(240, 0)"> <!-- Phone -->
+            <rect x="0" y="0" width="20" height="30" rx="3" fill="none" stroke="#555" stroke-width="1.5"></rect>
+            <line x1="5" y1="5" x2="15" y2="5" stroke="#555" stroke-width="1.5"></line>
+        </g>
+         <g transform="translate(240, 130)"> <!-- Home -->
+            <path d="M -10 15 L 10 0 L 30 15 L 25 15 L 25 25 L -5 25 L -5 15 Z" fill="none" stroke="#555" stroke-width="1.5"></path>
+        </g>
+    </g>
+
+    <line x1="40" y1="530" x2="360" y2="530" stroke="#E0E0E0" stroke-width="1"></line>
+    
+    <g transform="translate(200, 560)">
+        <text class="summary-font">终点不是目的地，是下一场发布会。</text>
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
