@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【北海公园】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" style="background-color: rgb(240, 240, 240); display: block;" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .title-font { font-family: 'Maobi Kaishu', 'Noto Serif SC', cursive; font-size: 32px; text-anchor: middle; fill: #333; color: #333; }
+            .main-font { font-family: 'Huiwen Mingchao', 'Noto Serif SC', serif; font-size: 18px; fill: #4a4a4a; color: #4a4a4a; }
+            .label-font { font-family: 'Huiwen Mingchao', 'Noto Serif SC', serif; font-size: 16px; fill: #6c6c6c; color: #6c6c6c; text-anchor: middle; }
+            .summary-font { font-family: 'Huiwen Mingchao', 'Noto Serif SC', serif; font-size: 17px; fill: #333; color: #333; text-anchor: middle; font-weight: bold;}
+        </style>
+    </defs>
+
+    <!-- Mondrian Style Background -->
+    <rect x="-20" y="-20" width="440" height="640" fill="#fdfdfd"></rect>
+    <rect x="20" y="20" width="360" height="560" fill="none" stroke="#2c3e50" stroke-width="4"></rect>
+    <line x1="20" y1="200" x2="400" y2="200" stroke="#2c3e50" stroke-width="3"></line>
+    <line x1="20" y1="400" x2="400" y2="400" stroke="#e74c3c" stroke-width="5"></line>
+    <rect x="20" y="20" width="100" height="100" fill="#f1c40f"></rect>
+    <rect x="280" y="500" width="100" height="80" fill="#3498db"></rect>
+
+    <!-- Card Content -->
+    <text x="200" y="65" class="title-font">汉语新解</text>
+    <line x1="60" y1="85" x2="340" y2="85" stroke="#4a4a4a" stroke-width="1"></line>
+
+    <text x="200" y="120" text-anchor="middle" font-family="Huiwen Mingchao, serif" font-size="28" fill="#333">北海公园</text>
+    <text x="200" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#555">Beihai Park</text>
+    <text x="200" y="175" text-anchor="middle" font-family="MS Mincho, serif" font-size="16" fill="#555">北海公園 (ほっかいこうえん)</text>
+    
+    <foreignObject x="40" y="220" width="320" height="180">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Huiwen Mingchao&quot;, &quot;Noto Serif SC&quot;, serif; font-size: 12.5px; color: rgb(74, 74, 74); line-height: 1.8; text-align: justify; margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word;">
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">一座昔日帝王的后花园，如今成了人民的售票处。</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">它用一张小小的门票，巧妙地完成了权力的交接——你付钱，暂时获得在这片曾经的禁地里散步、拍照、喂鸭子的权利。</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">这是一种时租的“主人翁”体验，让你在几个小时内，产生一种“天下竟是我家”的幻觉。太阳下山，广播响起，幻觉结束，请按时退场，回到你真正需要月供的“家”里去。</p>
+        </div>
+    </foreignObject>
+
+    <!-- Line Drawing -->
+    <g transform="translate(40, 410)" stroke="#333" stroke-width="1.5" fill="none">
+        <!-- Hand with ticket -->
+        <path d="M 30 50 C 35 40, 45 40, 50 50 L 55 90 L 25 90 Z"></path>
+        <rect x="10" y="45" width="20" height="12" fill="#fdfdfd" stroke-width="1"></rect>
+        <text x="14" y="55" font-size="8" fill="#333" font-family="sans-serif">票</text>
+        
+        <!-- Gate -->
+        <rect x="80" y="20" width="10" height="80"></rect>
+        <rect x="100" y="20" width="10" height="80"></rect>
+        <rect x="120" y="20" width="10" height="80"></rect>
+        <path d="M 70 20 Q 105 5, 140 20" stroke-width="2"></path>
+        
+        <!-- Illusion Crown -->
+        <g stroke-dasharray="2 2" stroke="#e74c3c">
+            <path d="M 160 50 L 170 30 L 185 45 L 200 30 L 210 50" stroke-width="2"></path>
+            <path d="M 160 50 C 185 65, 185 65, 210 50" stroke-width="2"></path>
+        </g>
+
+        <!-- Arrow back -->
+        <path d="M 25 100 Q 150 130, 260 100" stroke-dasharray="3 3"></path>
+        <path d="M 260 100 L 255 105 L 255 95 Z" fill="#333"></path>
+        
+        <!-- Small House -->
+        <path d="M 270 80 L 290 65 L 310 80 L 310 100 L 270 100 Z"></path>
+        <rect x="282" y="85" width="16" height="15" fill="#fdfdfd" stroke-width="1"></rect>
+        <text x="275" y="115" class="label-font" font-size="12" fill="#333">月供</text>
+    </g>
+
+    <text x="200" y="565" class="summary-font">付费体验卡：限时君主，到点下班。</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
