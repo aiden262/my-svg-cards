@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【爱情】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-19 -19 440 640" style="background-color: rgb(253, 253, 253); border: 1px solid rgb(204, 204, 204); display: block;">
+    <!-- Mondrian Background -->
+    <rect x="-19" y="-19" width="440" height="640" fill="#EAD6A0"></rect>
+    <rect x="320" y="0" width="80" height="80" fill="#D34836"></rect>
+    <rect x="0" y="500" width="120" height="100" fill="#4A7B9D"></rect>
+    <rect x="350" y="450" width="50" height="150" fill="#F0F0F0" stroke="#000" stroke-width="4"></rect>
+    <line x1="0" y1="200" x2="400" y2="200" stroke="#000" stroke-width="5"></line>
+    <line x1="150" y1="0" x2="150" y2="200" stroke="#000" stroke-width="5"></line>
+
+    <!-- Card Content -->
+    <g style="font-family: sans-serif; text-anchor: middle;">
+        
+        <!-- Title -->
+        <text x="200" y="60" style="font-family: 'Noto Serif SC', 'Brush KaiTi', cursive; font-size: 32px; fill: #1a1a1a; color: #1a1a1a;">
+            汉 语 新 解
+        </text>
+
+        <!-- Separator -->
+        <line x1="40" y1="85" x2="360" y2="85" stroke="#333" stroke-width="1.5"></line>
+
+        <!-- Word -->
+        <text x="200" y="145" style="font-family: 'Noto Serif SC', 'Huiwen Mingchao', serif; font-size: 56px; fill: #333; color: #333; color: #333;">
+            爱情
+        </text>
+        <text x="200" y="175" style="font-family: 'Helvetica Neue', sans-serif; font-size: 16px; fill: #555; color: #555; letter-spacing: 1px;">
+            Love / 愛情 (aijō)
+        </text>
+
+        <!-- Explanation -->
+        <foreignObject x="40" y="220" width="320" height="180">
+            <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, &quot;Huiwen Mingchao&quot;, serif; color: rgb(74, 74, 74); font-size: 20px; line-height: 1.8; text-align: justify; hyphens: auto; margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word;">
+                <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">
+                    最高级的精神鸦片。
+                </p>
+                <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">
+                    症状是把另一个人想象成能治愈自己所有残缺的灵丹妙药，副作用是发现对方只是个和你一样需要解药的病人。
+                </p>
+            </div>
+        </foreignObject>
+
+        <!-- Line Drawing -->
+        <g transform="translate(100, 420) scale(0.8)">
+            <!-- Person 1 (incomplete circle) -->
+            <path d="M 50, 100 A 50,50 0 1 1 140, 60" stroke="#333" stroke-width="3" fill="none" stroke-linecap="round"></path>
+            <!-- Person 2 (incomplete circle) -->
+            <path d="M 200, 100 A 50,50 0 1 0 110, 60" stroke="#333" stroke-width="3" fill="none" stroke-linecap="round"></path>
+            <!-- Arrow 1 -->
+            <line x1="100" y1="70" x2="150" y2="70" stroke="#333" stroke-width="1.5"></line>
+            <polygon points="150,70 145,67 145,73" fill="#333"></polygon>
+            <!-- Arrow 2 -->
+            <line x1="150" y1="90" x2="100" y2="90" stroke="#333" stroke-width="1.5"></line>
+            <polygon points="100,90 105,87 105,93" fill="#333"></polygon>
+            <!-- Illusion (Perfect circle) -->
+            <circle cx="125" cy="80" r="8" fill="#D34836" opacity="0.7"></circle>
+            <text x="125" y="140" fill="#555" font-size="14" style="font-family: 'Helvetica Neue', sans-serif;">
+                幻象
+            </text>
+        </g>
+
+        <!-- Minimalist Summary -->
+        <text x="200" y="550" style="font-family: 'Noto Serif SC', 'Huiwen Mingchao', serif; font-size: 18px; fill: #4a4a4a; color: #4a4a4a; color: #4a4a4a;">
+            以我之残缺，幻想你之完美。
+        </text>
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
