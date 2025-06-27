@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【薄荷】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 440 640" style="display: block;">
+  <!-- 背景 - 蒙德里安风格装饰 -->
+  <rect width="440" height="640" fill="#f7f5f0" x="-20" y="-20"></rect>
+  <rect x="20" y="500" width="360" height="5" fill="#d14836" opacity="0.7"></rect>
+  <rect x="50" y="120" width="3" height="350" fill="#2c5aa0" opacity="0.5"></rect>
+  <rect x="350" y="150" width="3" height="300" fill="#2c5aa0" opacity="0.5"></rect>
+  
+  <!-- 标题区域 -->
+  <text x="200" y="60" font-family="'Noto Serif SC', '楷体'" font-size="32" fill="#333" text-anchor="middle">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="50" x2="350" y1="80" y2="80" stroke="#888" stroke-width="1"></line>
+  
+  <!-- 词汇展示 -->
+  <text x="200" y="115" font-family="'Source Han Serif', serif" font-size="28" fill="#444" text-anchor="middle">薄荷</text>
+  <text x="200" y="140" font-family="'Crimson Text', serif" font-size="16" fill="#666" text-anchor="middle">Mint / ハッカ</text>
+  
+  <!-- 解释内容 -->
+  <foreignObject x="40" y="170" width="320" height="240">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Source Han Serif&quot;, serif; font-size: 16.5px; line-height: 1.8; color: rgb(51, 51, 51); margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word;">
+      薄荷，这种冷漠的植物，看似纯净清新，却热衷于麻痹你的感官。商家最爱的"清凉感"，不过是在消费者神经上跳的一支单调舞蹈。它用冰冷的刺激掩盖了商品真实的平庸，让你以为花高价买的牙膏或饮料有什么特别。薄荷的存在，就像当代职场里的"团建"——表面让人愉悦，实则掩盖了深层问题。
+    </div>
+  </foreignObject>
+  
+  <!-- 线条图/批判内核 -->
+  <g transform="translate(60, 420)">
+    <path d="M0,0 C30,-10 60,20 90,-5 C120,15 150,-10 180,0 C210,10 240,-15 270,5" fill="none" stroke="#d14836" stroke-width="2"></path>
+    <text x="140" y="40" font-family="sans-serif" font-size="14" fill="#555" text-anchor="middle">
+      刺激性错觉价值曲线
+    </text>
+  </g>
+  
+  <!-- 极简总结 -->
+  <text x="200" y="530" font-family="'Source Han Serif', serif" font-size="16" fill="#333" text-anchor="middle" font-style="italic">
+    "感官的骗子，消费主义的忠实伙伴"
+  </text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: anthropic/claude-3.7-sonnet
+        </footer>
+    </main>
+</body>
+</html>
