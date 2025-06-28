@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【上海】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-19 -19 440 640" style="background-color: rgb(245, 245, 245); border: 1px solid rgb(204, 204, 204); display: block;" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&amp;family=Ma+Shan+Zheng&amp;family=Noto+Serif+SC:wght@400;700&amp;display=swap');
+            .title-font { font-family: 'Ma Shan Zheng', cursive; font-size: 36px; fill: #333; color: #333; text-anchor: middle; }
+            .main-font { font-family: 'Noto Serif SC', serif; font-size: 18px; fill: #4a4a4a; color: #4a4a4a; }
+            .label-font { font-family: 'Noto Serif SC', serif; font-size: 16px; fill: #666; color: #666; }
+            .summary-font { font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 17px; fill: #333; color: #333; text-anchor: middle; }
+        </style>
+    </defs>
+
+    <!-- Mondrian Background Elements -->
+    <rect x="-19" y="-19" width="440" height="640" fill="#E63946"></rect>
+    <rect x="350" y="0" width="50" height="150" fill="#457B9D"></rect>
+    <rect x="0" y="0" width="400" height="600" fill="none" stroke="#1D3557" stroke-width="10"></rect>
+    <rect x="10" y="10" width="380" height="580" fill="#fdfdfd" stroke="#1D3557" stroke-width="2"></rect>
+
+
+    <!-- Header -->
+    <text x="200" y="60" class="title-font">汉语新解</text>
+    <line x1="40" y1="85" x2="360" y2="85" stroke="#333" stroke-width="1.5"></line>
+
+    <!-- Word -->
+    <text x="40" y="125" class="main-font" style="font-size: 28px; font-weight: bold;">上海</text>
+    <text x="40" y="155" class="label-font">Shanghai</text>
+    <text x="140" y="155" class="label-font">上海 (シャンハイ)</text>
+
+    <!-- Explanation -->
+    <g class="main-font">
+        <text x="40" y="200">
+            <tspan x="40" dy="1.5em">一座精心设计的巨型离心机，用梦想、</tspan>
+            <tspan x="40" dy="1.5em">欲望和不甘心作为燃料，高速旋转，将</tspan>
+            <tspan x="40" dy="1.5em">人精准地分层。</tspan>
+            <tspan x="40" dy="2em">头晕目眩的，以为自己看见了星空，</tspan>
+            <tspan x="40" dy="1.5em">其实只是被甩出去前最后的幻觉。</tspan>
+        </text>
+    </g>
+
+    <!-- Line Art -->
+    <g transform="translate(200, 410) scale(0.8)">
+        <path d="M 0 0 C 50 0, 50 50, 0 50 C -50 50, -50 0, 0 0" fill="none" stroke="#333" stroke-width="2" stroke-dasharray="4 4">
+            <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite"></animateTransform>
+        </path>
+        <circle cx="0" cy="-25" r="3" fill="#E63946">
+             <animateMotion dur="5s" repeatCount="indefinite" path="M 0 -25 C 25 -25, 25 25, 0 25 C -25 25, -25 -25, 0 -25 Z"></animateMotion>
+        </circle>
+        <circle cx="60" cy="60" r="2" fill="#666" opacity="0.8"></circle>
+        <circle cx="-50" cy="70" r="2" fill="#666" opacity="0.6"></circle>
+        <circle cx="80" cy="-40" r="2" fill="#666" opacity="0.7"></circle>
+    </g>
+    <text x="200" y="490" class="label-font" text-anchor="middle">批判内核: 高速筛选与幸存者偏差</text>
+
+
+    <!-- Summary -->
+    <line x1="100" y1="535" x2="300" y2="535" stroke="#333" stroke-width="1"></line>
+    <text x="200" y="565" class="summary-font">机会的漩涡，幸存者的牌桌。</text>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
