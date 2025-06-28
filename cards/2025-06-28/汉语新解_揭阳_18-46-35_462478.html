@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【揭阳】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-19 -19 440 640" style="background-color: rgb(240, 240, 240); border: 1px solid rgb(204, 204, 204); font-family: sans-serif; display: block;">
+    <!-- 蒙德里安风格背景 -->
+    <rect x="-19" y="-19" width="440" height="640" fill="#fdfdfd"></rect>
+    <rect x="20" y="450" width="150" height="130" fill="#e02d2d"></rect>
+    <rect x="280" y="20" width="100" height="200" fill="#1e55a0"></rect>
+    <rect x="20" y="20" width="80" height="80" fill="#f7d51d"></rect>
+    <line x1="0" y1="250" x2="400" y2="250" stroke="#333" stroke-width="4"></line>
+    <line x1="220" y1="0" x2="220" y2="600" stroke="#333" stroke-width="4"></line>
+
+    <!-- 卡片内容 -->
+    <text x="200" y="60" text-anchor="middle" font-family="'Noto Serif SC', 'KaiTi', serif" font-size="32" fill="#333">汉语新解</text>
+    
+    <line x1="40" y1="80" x2="360" y2="80" stroke="#333" stroke-width="1.5"></line>
+
+    <text x="200" y="130" text-anchor="middle" font-family="'Noto Serif SC', 'Huiwen Mingchao', serif" font-size="48" fill="#3a3a3a" font-weight="bold">揭阳</text>
+    <text x="200" y="160" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#555">Jieyang / 掲陽 (けいよう)</text>
+
+    <foreignObject x="40" y="190" width="320" height="150">
+        <p xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, &quot;Huiwen Mingchao&quot;, serif; font-size: 16px; color: rgb(58, 58, 58); line-height: 1.8; text-align: justify; white-space: normal; margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word;">
+            把所有温情脉脉的理想都拿到现实的烈日下暴晒，看看是先被烤成干尸，还是能炼出几两真金的残酷试炼场。它不负责为你遮风挡雨，只负责把太阳揭开，然后递给你一把算盘，告诉你：“哭完了，就算算怎么活下去。”
+        </p>
+    </foreignObject>
+    
+    <line x1="40" y1="380" x2="360" y2="380" stroke="#333" stroke-width="1" stroke-dasharray="4 4"></line>
+
+    <!-- 线条图概念描述 -->
+    <g transform="translate(40, 420)">
+        <path d="M 0 0 C 40 -40, 80 -40, 120 0" stroke="#333" fill="none" stroke-width="2"></path>
+        <text x="60" y="-25" text-anchor="middle" font-size="14" fill="#333">烈日</text>
+        <path d="M 160 0 L 160 60 L 100 60 L 220 60 L 160 60" stroke="#333" fill="none" stroke-width="2"></path>
+        <circle cx="100" cy="70" r="10" stroke="#333" fill="none" stroke-width="2"></circle>
+        <circle cx="220" cy="70" r="10" stroke="#333" fill="#f7d51d" stroke-width="2"></circle>
+        <text x="100" y="100" text-anchor="middle" font-size="14" fill="#555">诗与远方</text>
+        <text x="220" y="100" text-anchor="middle" font-size="14" fill="#333">真金白银</text>
+        <text x="160" y="50" text-anchor="middle" font-size="16" fill="#333">秤</text>
+    </g>
+
+    <text x="200" y="560" text-anchor="middle" font-family="'Noto Serif SC', 'Huiwen Mingchao', serif" font-size="18" fill="#3a3a3a">
+        总结：一种只认斤两，不信眼泪的务实。
+    </text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
