@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【Google】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" font-family="sans-serif" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+  <!-- 设计: 李继刚, v0.3, Claude Sonnet -->
+  <!-- 风格: 干净, 简洁, 典雅 -->
+  <!-- 配色: 蒙德里安风格, 粉笔灰文字 -->
+
+  <!-- 背景 & 蒙德里安风格装饰 -->
+  <rect width="440" height="640" fill="#f5f5f5" x="-20" y="-20"></rect>
+  <rect x="0" y="520" width="120" height="80" fill="#e74c3c"></rect>
+  <rect x="125" y="520" width="275" height="80" fill="#f1c40f"></rect>
+  <rect x="340" y="0" width="60" height="150" fill="#3498db"></rect>
+  <line x1="0" y1="515" x2="400" y2="515" stroke="#2c3e50" stroke-width="5"></line>
+  <line x1="122.5" y1="515" x2="122.5" y2="600" stroke="#2c3e50" stroke-width="5"></line>
+  <line x1="335" y1="0" x2="335" y2="155" stroke="#2c3e50" stroke-width="5"></line>
+  <line x1="335" y1="152.5" x2="400" y2="152.5" stroke="#2c3e50" stroke-width="5"></line>
+
+  <!-- 标题 -->
+  <text x="200" y="65" font-family="'Ma Shan Zheng', 'Noto Serif SC', cursive" font-size="36" text-anchor="middle" fill="#34495e">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="40" y1="90" x2="360" y2="90" stroke="#bdc3c7" stroke-width="2"></line>
+
+  <!-- 词汇 -->
+  <g text-anchor="middle" fill="#34495e" font-family="'ZCOOL QingKe HuangYou', 'Noto Serif SC', sans-serif">
+    <text x="200" y="140" font-size="40">Google</text>
+    <text x="200" y="170" font-size="16" fill="#7f8c8d">/ˈɡuːɡl/  |  グーグル</text>
+  </g>
+  
+  <!-- 解释 -->
+  <foreignObject x="40" y="190" width="320" height="180">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="color: rgb(52, 73, 94); font-family: &quot;Noto Serif SC&quot;, &quot;Noto Serif SC&quot;, serif; font-size: 18px; line-height: 1.8; text-align: justify; height: 100%; display: flex; align-items: center; justify-content: center; margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word;">
+      <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">一座赛博教堂，你在搜索框前低语，它就赐你神谕。唯一的区别是，你的每一次祷告，都会被神明转手卖给出价最高的广告商，变成精准投喂给你的下一份祭品。</p>
+    </div>
+  </foreignObject>
+
+  <!-- 线条图: 批判内核 -->
+  <g transform="translate(50, 380)" stroke="#34495e" stroke-width="1.5" fill="none">
+    <!-- 用户 -->
+    <circle cx="30" cy="50" r="10"></circle>
+    <path d="M30,60 L30,80 Q40,100 50,80"></path>
+    <path d="M30,65 L10,75"></path>
+    <path d="M30,65 L50,75"></path>
+    <!-- 祷告/提问 -->
+    <path d="M45,50 C60,40 80,40 95,50" stroke-dasharray="3,3"></path>
+    <text x="65" y="35" font-size="14" fill="#34495e" stroke="none">?</text>
+    
+    <!-- 神坛/服务器 -->
+    <rect x="100" y="40" width="100" height="40" rx="5" stroke-width="2"></rect>
+    <text x="150" y="65" text-anchor="middle" font-size="20" fill="#e74c3c" stroke="none">$</text>
+    
+    <!-- 祭品/广告 -->
+    <path d="M205,60 C220,70 240,70 255,60" stroke-dasharray="3,3"></path>
+    <path d="M260,50 L280,50 L280,70 L260,70 L260,50 M265,70 L265,80 M275,70 L275,80"></path>
+    <circle cx="267.5" cy="85" r="2"></circle>
+    <circle cx="272.5" cy="85" r="2"></circle>
+
+    <path d="M285,60 L300,60 L292.5,52 M292.5,68 L300,60" stroke-width="2"></path>
+  </g>
+
+  <!-- 极简总结 -->
+  <text x="200" y="495" font-family="'ZCOOL QingKe HuangYou', 'Noto Serif SC', sans-serif" font-size="18" text-anchor="middle" fill="#2c3e50">
+    你的提问，它的商品。
+  </text>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
