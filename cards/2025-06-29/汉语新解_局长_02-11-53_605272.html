@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【局长】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" style="background-color: rgb(240, 240, 240); display: block;" xmlns="http://www.w3.org/2000/svg">
+    <!-- Mondrian-style background -->
+    <rect x="-20" y="-20" width="440" height="640" fill="#fdfcf7"></rect>
+    <rect x="0" y="380" width="120" height="220" fill="#EAD7A3"></rect>
+    <rect x="300" y="0" width="100" height="150" fill="#3A568C"></rect>
+    <rect x="0" y="0" width="90" height="90" fill="#D44933"></rect>
+    <line x1="0" y1="90" x2="400" y2="90" stroke="#111" stroke-width="5"></line>
+    <line x1="90" y1="0" x2="90" y2="600" stroke="#111" stroke-width="5"></line>
+    <line x1="0" y1="380" x2="400" y2="380" stroke="#111" stroke-width="5"></line>
+    <line x1="300" y1="0" x2="300" y2="380" stroke="#111" stroke-width="5"></line>
+
+    <!-- Content -->
+    <text x="200" y="55" text-anchor="middle" font-family="'Maobi Kai', 'Noto Serif SC', serif" font-size="36" fill="#333">汉语新解</text>
+    
+    <g transform="translate(40, 120)">
+        <text x="0" y="0" font-family="'Hywen Mingchao', 'Noto Serif SC', serif" font-size="48" fill="#4a4a4a">局长</text>
+        <text x="0" y="35" font-family="'Hywen Mingchao', 'Noto Serif SC', serif" font-size="16" fill="#555">Director / Bureau Chief</text>
+        <text x="0" y="55" font-family="'Hywen Mingchao', 'Noto Serif SC', serif" font-size="16" fill="#555">局長 (きょくちょう)</text>
+    </g>
+
+    <foreignObject x="40" y="190" width="320" height="150">
+        <p xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Hywen Mingchao&quot;, &quot;Noto Serif SC&quot;, serif; font-size: 16.5px; color: rgb(61, 61, 61); line-height: 1.8; margin: 0px; white-space: pre-wrap; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word;">棋局的掌控者，也是棋局的头号囚徒。
+
+他用规则束缚别人，也被自己的位置所定义，在方寸之间腾挪一生，最终为棋盘陪葬。</p>
+    </foreignObject>
+
+    <!-- Line drawing -->
+    <g transform="translate(150, 410)">
+        <!-- Chessboard base -->
+        <path d="M 0 100 L 40 120 L 140 120 L 180 100 L 0 100 Z" fill="none" stroke="#333" stroke-width="2"></path>
+        <path d="M 40 120 L 40 40 L 140 40 L 140 120" fill="none" stroke="#333" stroke-width="2" stroke-dasharray="4 4"></path>
+        
+        <!-- Chess piece (General/King) as a person -->
+        <!-- Body -->
+        <rect x="75" y="50" width="30" height="50" fill="none" stroke="#333" stroke-width="2"></rect>
+        <!-- Head -->
+        <circle cx="90" cy="35" r="15" fill="none" stroke="#333" stroke-width="2"></circle>
+        <!-- Official's hat -->
+        <path d="M 70 25 L 110 25 L 105 20 L 75 20 Z" fill="#333"></path>
+        <!-- Bars of the cage (from the board) -->
+        <line x1="40" y1="120" x2="60" y2="0" stroke="#333" stroke-width="1.5"></line>
+        <line x1="90" y1="120" x2="90" y2="0" stroke="#333" stroke-width="1.5"></line>
+        <line x1="140" y1="120" x2="120" y2="0" stroke="#333" stroke-width="1.5"></line>
+    </g>
+
+    <text x="200" y="565" text-anchor="middle" font-family="'Hywen Mingchao', 'Noto Serif SC', serif" font-size="16" fill="#333">一个被固定在棋盘上的王，以为自己在下棋。</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
