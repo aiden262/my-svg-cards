@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【还珠格格】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 650" style="background: linear-gradient(45deg, rgb(253, 244, 227) 25%, transparent 25%) 0% 0% / 40px 40px, linear-gradient(-45deg, rgb(253, 244, 227) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgb(253, 244, 227) 75%), linear-gradient(-45deg, transparent 75%, rgb(253, 244, 227) 75%) rgb(255, 255, 255); font-family: sans-serif; display: block;">
+    <rect x="-20" y="-20" width="440" height="650" fill="url(#mondrian)"></rect>
+    <defs>
+        <pattern id="mondrian" patternUnits="userSpaceOnUse" width="400" height="600">
+            <rect x="0" y="0" width="400" height="600" fill="#F0EAD6"></rect>
+            <rect x="0" y="200" width="400" height="10" fill="#2c3e50"></rect>
+            <rect x="150" y="0" width="10" height="600" fill="#2c3e50"></rect>
+            <rect x="160" y="210" width="240" height="390" fill="#e74c3c"></rect>
+            <rect x="0" y="0" width="150" height="200" fill="#f1c40f"></rect>
+        </pattern>
+    </defs>
+
+    <g style="transform: translate(20px, 20px);">
+        <text x="180" y="60" font-family="'Noto Serif SC', 'Maobi Kaishu', cursive" font-size="32" text-anchor="middle" fill="#34495e">汉语新解</text>
+
+        <line x1="40" y1="90" x2="320" y2="90" stroke="#34495e" stroke-width="1.5"></line>
+
+        <text x="180" y="130" font-family="'Noto Serif SC', 'Huiwen Mingchao', serif" font-size="28" text-anchor="middle" fill="#5A5A5A" font-weight="bold">还珠格格</text>
+        <text x="180" y="160" font-family="Georgia, serif" font-size="16" text-anchor="middle" fill="#6E6E6E">My Fair Princess</text>
+        <text x="180" y="185" font-family="'Hiragino Mincho ProN', serif" font-size="16" text-anchor="middle" fill="#6E6E6E">還珠姫</text>
+
+        <foreignObject x="40" y="220" width="280" height="150">
+            
+                <p style="font-family: &quot;Noto Serif SC&quot;, &quot;Huiwen Mingchao&quot;, serif; font-size: 18px; color: rgb(74, 74, 74); line-height: 1.8; text-align: justify; margin: 0px; padding: 0px; box-sizing: border-box; width: 280px; overflow-wrap: break-word;">
+                    一代人的精神麻醉剂。
+                    <br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+                    它让你误以为，天真和莽撞是通行四方的护照，而现实中，它们往往只是为你量身定做的墓志铭。
+                </p>
+            
+        </foreignObject>
+
+        <g id="line-art" transform="translate(180, 420) scale(0.8)">
+            <path d="M -80 60 Q -40 -60 0 0 Q 40 60 80 0" stroke="#34495e" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"></path>
+            <path d="M -70 50 L -75 45 M -70 50 L -65 45" stroke="#34495e" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M -30 -30 L -35 -35 M -30 -30 L -25 -35" stroke="#34495e" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M 10 20 L 5 15 M 10 20 L 15 15" stroke="#34495e" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M 70 -10 L 65 -15 M 70 -10 L 75 -15" stroke="#34495e" stroke-width="2" stroke-linecap="round"></path>
+            
+            <circle cx="-100" cy="-50" r="10" fill="#34495e"></circle>
+            <path d="M -100 -40 C -90 -20, -70 -20, -60 -40" stroke="#34495e" fill="none" stroke-width="2"></path>
+            <text x="-100" y="-47" font-size="12" fill="white" text-anchor="middle">鸟</text>
+
+            <rect x="50" y="-70" width="80" height="100" stroke="#34495e" stroke-width="2" fill="none"></rect>
+            <line x1="60" y1="-70" x2="60" y2="30" stroke="#34495e" stroke-width="2"></line>
+            <line x1="70" y1="-70" x2="70" y2="30" stroke="#34495e" stroke-width="2"></line>
+            <line x1="80" y1="-70" x2="80" y2="30" stroke="#34495e" stroke-width="2"></line>
+            <line x1="90" y1="-70" x2="90" y2="30" stroke="#34495e" stroke-width="2"></line>
+            <line x1="100" y1="-70" x2="100" y2="30" stroke="#34495e" stroke-width="2"></line>
+            <line x1="110" y1="-70" x2="110" y2="30" stroke="#34495e" stroke-width="2"></line>
+            <line x1="120" y1="-70" x2="120" y2="30" stroke="#34495e" stroke-width="2"></line>
+            <path d="M 50 -20 Q 30 -20, 30 0 L 50 0 Z" stroke="#34495e" stroke-width="2" fill="#F0EAD6"></path>
+            <text x="90" y="-20" font-size="12" fill="#34495e" text-anchor="middle">笼</text>
+            <text x="10" y="80" font-size="14" fill="#34495e" text-anchor="middle">一只咋咋呼呼的小鸟，兴高采烈地飞向一个华丽的鸟笼。</text>
+            <text x="10" y="100" font-size="14" fill="#34495e" text-anchor="middle">笼子外面，是其他鸟儿散落一地的羽毛。</text>
+        </g>
+
+        <foreignObject x="40" y="540" width="280" height="50">
+            
+                <p style="font-family: &quot;Noto Serif SC&quot;, &quot;Huiwen Mingchao&quot;, serif; font-size: 16px; color: rgb(52, 73, 94); text-align: center; margin: 0px; padding: 0px; border-top: 1px solid rgb(52, 73, 94); box-sizing: border-box; width: 280px; overflow-wrap: break-word; line-height: 1.8;">
+                    把鸟笼当成天空的，通常都摔死了。
+                </p>
+            
+        </foreignObject>
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
