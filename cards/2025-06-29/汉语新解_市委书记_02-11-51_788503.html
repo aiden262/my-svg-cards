@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【市委书记】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" xmlns="http://www.w3.org/2000/svg" style="background-color: rgb(245, 245, 245); font-family: sans-serif; display: block;">
+    <!-- Mondrian-style background -->
+    <rect x="-20" y="-20" width="440" height="640" fill="#E63946"></rect>
+    <rect x="350" y="0" width="50" height="150" fill="#F1C40F"></rect>
+    <rect x="0" y="0" width="400" height="10" fill="#2c3e50"></rect>
+    <rect x="0" y="590" width="400" height="10" fill="#2c3e50"></rect>
+    <rect x="0" y="10" width="10" height="580" fill="#2c3e50"></rect>
+    <rect x="390" y="10" width="10" height="580" fill="#2c3e50"></rect>
+
+    <style>
+        .title { font-family: 'Maobi Kaishu', 'Noto Serif SC', 'KaiTi', sans-serif; font-size: 36px; fill: #333; color: #333; text-anchor: middle; }
+        .term { font-family: 'Huiwen Mingchao', 'Source Han Serif CN', serif; font-size: 28px; fill: #4a4a4a; color: #4a4a4a; }
+        .translation { font-family: 'Helvetica Neue', sans-serif; font-size: 14px; fill: #6c757d; color: #6c757d; }
+        .explanation { font-family: 'Huiwen Mingchao', 'Source Han Serif CN', serif; font-size: 18px; fill: #3d3d3d; color: #3d3d3d; line-height: 1.8; }
+        .summary { font-family: 'Huiwen Mingchao', 'Source Han Serif CN', serif; font-size: 16px; fill: #333; color: #333; text-anchor: middle; }
+    </style>
+
+    <text x="200" y="60" class="title">汉语新解</text>
+    
+    <line x1="40" y1="85" x2="360" y2="85" stroke="#bdc3c7" stroke-width="1"></line>
+
+    <text x="40" y="125" class="term">市委书记</text>
+    <text x="40" y="150" class="translation">Municipal Party Secretary</text>
+    <text x="40" y="170" class="translation">市党委員会書記 (しとういいんかいしょき)</text>
+
+    <foreignObject x="40" y="200" width="320" height="180">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Huiwen Mingchao&quot;, &quot;Source Han Serif CN&quot;, serif; font-size: 12.5px; color: rgb(61, 61, 61); line-height: 1.8; margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word;">
+            一座城市的首席玩家。
+            <br style="margin: 0px; padding: 0px; box-sizing: border-box;"><br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+            他负责运营一款名为《我的城市》的超大型单机游戏。市民是游戏里的NPC，负责提供数据和景观。
+            <br style="margin: 0px; padding: 0px; box-sizing: border-box;"><br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+            他的唯一目标，是在不删档、不重来的前提下，打出最漂亮的政绩，以便解锁下一张更大的地图——省里，或者中央。
+        </div>
+    </foreignObject>
+
+    <!-- Line drawing: Hand with a game controller controlling a city -->
+    <g stroke="#333" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Controller -->
+        <path d="M 130 420 C 100 420, 100 460, 130 460 L 270 460 C 300 460, 300 420, 270 420 Z"></path>
+        <circle cx="155" cy="440" r="10"></circle>
+        <path d="M 180 432 L 180 448 M 172 440 L 188 440"></path>
+        <!-- City skyline -->
+        <path d="M 120 500 L 140 500 L 140 480 L 150 480 L 150 500 L 170 500 L 170 470 L 185 470 L 185 500 L 215 500 L 215 475 L 225 475 L 225 500 L 240 500 L 240 485 L 250 485 L 250 500 L 280 500"></path>
+        <!-- Control lines -->
+        <path d="M 200 460 Q 200 480, 200 500"></path>
+        <path d="M 160 460 Q 170 475, 180 500"></path>
+        <path d="M 240 460 Q 230 475, 220 500"></path>
+    </g>
+
+    <text x="200" y="540" class="summary">城市是游戏，权力是手柄</text>
+    <text x="200" y="565" class="summary">晋升是唯一的通关密码</text>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
