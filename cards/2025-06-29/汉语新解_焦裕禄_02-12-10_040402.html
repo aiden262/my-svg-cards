@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【焦裕禄】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" xmlns="http://www.w3.org/2000/svg" style="font-family: sans-serif; background-color: rgb(240, 240, 240); display: block;">
+  <defs>
+    <style>
+      .title { font-family: 'Noto Serif SC', 'KaiTi', '楷体', serif; font-size: 36px; text-anchor: middle; fill: #333; color: #333; }
+      .word { font-family: 'Noto Serif SC', 'Source Han Serif CN', serif; font-size: 48px; text-anchor: middle; fill: #5b5b5b; color: #5b5b5b; font-weight: bold; }
+      .translation { font-family: 'Helvetica Neue', 'Arial', sans-serif; font-size: 16px; text-anchor: middle; fill: #777; color: #777; }
+      .explanation { font-family: 'Noto Serif SC', 'Source Han Serif CN', serif; font-size: 20px; fill: #5b5b5b; color: #5b5b5b; white-space: pre-wrap; }
+      .summary { font-family: 'Noto Serif SC', 'KaiTi', '楷体', serif; font-size: 22px; text-anchor: middle; fill: #444; color: #444; }
+      .line-art-desc { font-family: 'Noto Serif SC', 'Source Han Serif CN', serif; font-size: 14px; fill: #666; color: #666; font-style: italic; }
+    </style>
+  </defs>
+
+  <!-- Mondrian Style Background -->
+  <rect x="-20" y="-20" width="440" height="640" fill="#f4f4f4"></rect>
+  <rect x="0" y="520" width="120" height="80" fill="#EAD57C"></rect>
+  <rect x="330" y="0" width="70" height="150" fill="#D9534F"></rect>
+  <rect x="0" y="0" width="400" height="10" fill="#333"></rect>
+  <rect x="0" y="590" width="400" height="10" fill="#333"></rect>
+  <rect x="0" y="10" width="10" height="580" fill="#333"></rect>
+  <rect x="390" y="10" width="10" height="580" fill="#333"></rect>
+  <rect x="10" y="130" width="380" height="5" fill="#333"></rect>
+  <rect x="10" y="450" width="380" height="2" fill="#333"></rect>
+
+
+  <text x="200" y="60" class="title">汉语新解</text>
+  <line x1="40" y1="80" x2="360" y2="80" stroke="#aaa" stroke-width="1"></line>
+
+  <text x="200" y="125" class="word">焦裕禄</text>
+  <text x="200" y="155" class="translation">Jiao Yulu / しょう ゆうろく</text>
+
+  <foreignObject x="40" y="180" width="320" height="150">
+    
+      <p class="explanation" style="line-height: 1.8; margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; font-size: 10px;">
+        一个被制成精神标本的古代圣人。
+        <br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+        每当现实的腐臭味过于刺鼻时，
+        <br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+        就会被拿出来，
+        <br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+        用他身上那股遥远而纯粹的樟脑丸气味，
+        <br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+        暂时掩盖一下当下的不堪。
+      </p>
+    
+  </foreignObject>
+
+  <!-- Line Art & Description -->
+  <g transform="translate(0, 360)">
+    <!-- Wardrobe -->
+    <rect x="120" y="20" width="160" height="80" fill="none" stroke="#5b5b5b" stroke-width="2"></rect>
+    <line x1="200" y1="20" x2="200" y2="100" stroke="#5b5b5b" stroke-width="2"></line>
+    <!-- Rotting bottom -->
+    <path d="M 120 100 Q 160 110, 200 100 Q 240 90, 280 100" fill="none" stroke="#8B4513" stroke-width="1.5" stroke-dasharray="3 3"></path>
+    <text x="130" y="65" font-size="20" fill="#5b5b5b">🍷🏆</text>
+    <text x="210" y="65" font-size="20" fill="#5b5b5b">💎👔</text>
+    
+    <!-- Mothball with label -->
+    <circle cx="90" cy="85" r="15" fill="#fff" stroke="#5b5b5b" stroke-width="1.5"></circle>
+    <text x="90" y="89" font-size="10" text-anchor="middle" fill="#333">焦</text>
+    <!-- Emanating halo -->
+    <g stroke="#EAD57C" stroke-width="1.5" fill="none">
+        <circle cx="90" cy="85" r="20" stroke-opacity="0.8"></circle>
+        <circle cx="90" cy="85" r="25" stroke-opacity="0.5"></circle>
+        <circle cx="90" cy="85" r="30" stroke-opacity="0.3"></circle>
+    </g>
+
+    <foreignObject x="40" y="115" width="320" height="40">
+        <p xmlns="http://www.w3.org/1999/xhtml" class="line-art-desc" style="text-align: center; margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8; font-size: 11px;">
+            [线条图] 一个贴着“焦”字标签的樟脑丸，散发着微光，被用来熏一个底部正在腐烂的华丽衣柜。
+        </p>
+    </foreignObject>
+  </g>
+  
+  <line x1="40" y1="520" x2="360" y2="520" stroke="#aaa" stroke-width="1"></line>
+  <text x="200" y="555" class="summary">道德樟脑丸，精神防腐剂。</text>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
