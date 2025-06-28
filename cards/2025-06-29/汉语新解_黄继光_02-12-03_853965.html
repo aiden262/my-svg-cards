@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【黄继光】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" xmlns="http://www.w3.org/2000/svg" style="background-color: rgb(240, 240, 240); display: block;">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&amp;family=ZCOOL+QingKe+HuangYou&amp;family=Noto+Sans+SC:wght@300;400&amp;display=swap');
+            .title-font { font-family: 'Ma Shan Zheng', cursive; font-size: 36px; text-anchor: middle; fill: #333; color: #333; }
+            .main-font { font-family: 'Noto Sans SC', sans-serif; font-size: 20px; fill: #4a4a4a; color: #4a4a4a; }
+            .label-font { font-family: 'Noto Sans SC', sans-serif; font-size: 14px; fill: #666; color: #666; }
+            .summary-font { font-family: 'ZCOOL QingKe HuangYou', cursive; font-size: 16px; text-anchor: middle; fill: #333; color: #333; }
+            .mondrian-bg-1 { fill: #dd0000; color: #dd0000; }
+            .mondrian-bg-2 { fill: #0000cc; color: #0000cc; }
+            .mondrian-bg-3 { fill: #f9dd00; color: #f9dd00; }
+            .mondrian-line { stroke: #000; stroke-width: 8; }
+        </style>
+    </defs>
+
+    <!-- Mondrian Style Background -->
+    <rect x="-20" y="-20" width="440" height="640" fill="#f5f5f5"></rect>
+    <rect x="0" y="450" width="120" height="150" class="mondrian-bg-1"></rect>
+    <rect x="300" y="0" width="100" height="100" class="mondrian-bg-2"></rect>
+    <rect x="0" y="0" width="80" height="120" class="mondrian-bg-3"></rect>
+    <line x1="0" y1="450" x2="400" y2="450" class="mondrian-line"></line>
+    <line x1="120" y1="450" x2="120" y2="600" class="mondrian-line"></line>
+    <line x1="300" y1="0" x2="300" y2="150" class="mondrian-line"></line>
+
+    <!-- Card Content -->
+    <text x="200" y="60" class="title-font">汉语新解</text>
+    <line x1="40" y1="80" x2="360" y2="80" stroke="#333" stroke-width="1.5"></line>
+
+    <text x="200" y="120" text-anchor="middle" class="main-font" style="font-size: 28px; font-weight: bold;">黄继光</text>
+    <text x="200" y="145" text-anchor="middle" class="label-font">Huáng Jìguāng / 黄継光 (こう けいこう)</text>
+
+    <foreignObject x="40" y="170" width="320" height="150">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Sans SC&quot;, sans-serif; font-size: 17px; color: rgb(74, 74, 74); line-height: 1.8; margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word;">
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">
+                当机器的齿轮被卡住时，献给机器的最后一块血肉润滑剂。
+            </p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">
+                它的价值不在于生前的运转，而在于粉身碎骨那一刻，为机器换来的短暂畅通。
+            </p>
+        </div>
+    </foreignObject>
+
+    <!-- Line Art -->
+    <g transform="translate(100, 340) scale(0.8)">
+        <!-- Gears -->
+        <circle cx="60" cy="60" r="40" fill="none" stroke="#333" stroke-width="3" stroke-dasharray="10,5"></circle>
+        <circle cx="140" cy="60" r="40" fill="none" stroke="#333" stroke-width="3" stroke-dasharray="10,5"></circle>
+        <path d="M 20 60 L 100 60" fill="none" stroke="#333" stroke-width="2" stroke-dashoffset="5" style="animation: dash 1s linear infinite;"></path>
+        
+        <!-- Human Figure -->
+        <path d="M 10,60 C 20,40 30,40 40,60" fill="#333"></path> <!-- Simplified body -->
+        <circle cx="25" cy="35" r="5" fill="#333"></circle> <!-- Head -->
+
+        <!-- Arrow showing movement -->
+        <path d="M 45 60 L 75 60" stroke="#dd0000" stroke-width="2" marker-end="url(#arrowhead)"></path>
+        <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#dd0000"></polygon>
+            </marker>
+        </defs>
+        
+        <!-- Output: Medal -->
+        <path d="M 180 50 L 190 60 L 180 70 L 170 60 Z" fill="#f9dd00" stroke="#333" stroke-width="1.5"></path>
+        <path d="M 180 70 L 180 80" stroke="#333" stroke-width="1.5"></path>
+    </g>
+
+    <line x1="40" y1="500" x2="360" y2="500" stroke="#333" stroke-width="1" stroke-dasharray="4,4"></line>
+
+    <text x="200" y="540" class="summary-font">
+        用个体生命的熄灭，换取集体叙事的火焰。
+    </text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
