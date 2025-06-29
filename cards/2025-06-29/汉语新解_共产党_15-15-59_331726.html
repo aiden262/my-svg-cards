@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【共产党】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 1280 1900" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+  <!-- 背景 -->
+  <rect width="1280" height="1900" fill="#f8f6f0" x="-20" y="-20"></rect>
+  
+  <!-- 装饰性几何图案 -->
+  <rect x="50" y="50" width="80" height="3" fill="#d4af37" opacity="0.6"></rect>
+  <rect x="270" y="50" width="80" height="3" fill="#d4af37" opacity="0.6"></rect>
+  <circle cx="200" cy="70" r="2" fill="#d4af37" opacity="0.8"></circle>
+  
+  <!-- 标题 -->
+  <text x="200" y="120" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold" fill="#2c2c2c">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="100" y1="140" x2="300" y2="140" stroke="#d4af37" stroke-width="1" opacity="0.7"></line>
+  
+  <!-- 词汇展示 -->
+  <text x="200" y="180" text-anchor="middle" font-family="serif" font-size="32" font-weight="bold" fill="#8b4513">共产党</text>
+  <text x="200" y="210" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#666">Communist Party</text>
+  <text x="200" y="230" text-anchor="middle" font-family="serif" font-size="14" fill="#666">共産党</text>
+  
+  <!-- 主要解释 -->
+  <foreignObject x="40" y="260" width="320" height="200">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: serif; font-size: 18px; line-height: 1.8; color: rgb(68, 68, 68); text-align: justify; padding: 0px; margin: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word;">
+      一群声称要共同拥有财产的人，最终发现只有权力是真正被共享的——在少数人之间。
+      <br style="margin: 0px; padding: 0px; box-sizing: border-box;"><br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+      如同餐厅里那些高喊"AA制"的食客，结账时却发现账单总是落在别人桌上。
+    </div>
+  </foreignObject>
+  
+  <!-- 装饰性线条图案 -->
+  <g transform="translate(200, 480)">
+    <circle r="40" fill="none" stroke="#d4af37" stroke-width="2" opacity="0.4"></circle>
+    <path d="M-20,-20 L20,20 M20,-20 L-20,20" stroke="#8b4513" stroke-width="1.5" opacity="0.6"></path>
+  </g>
+  
+  <!-- 极简总结 -->
+  <text x="200" y="550" text-anchor="middle" font-family="serif" font-size="16" fill="#8b4513" font-style="italic">理想主义的包装纸，现实主义的内核</text>
+  
+  <!-- 底部装饰 -->
+  <rect x="150" y="570" width="100" height="2" fill="#d4af37" opacity="0.5"></rect>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: claude-sonnet-4-20250514
+        </footer>
+    </main>
+</body>
+</html>
