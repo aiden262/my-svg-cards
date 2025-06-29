@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【社会主义核心价值观】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" style="background-color: rgb(240, 240, 240); font-family: sans-serif; border-radius: 10px; display: block;" viewBox="-20 -20 440 640">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&amp;family=Noto+Serif+SC:wght@400;700&amp;display=swap');
+            .title { font-family: 'ZCOOL QingKe HuangYou', cursive; font-size: 36px; text-anchor: middle; fill: #333; color: #333; }
+            .term { font-family: 'Noto Serif SC', serif; font-size: 28px; font-weight: 700; text-anchor: middle; fill: #1a1a1a; color: #1a1a1a; }
+            .translation { font-family: 'Noto Sans', sans-serif; font-size: 14px; text-anchor: middle; fill: #555; color: #555; }
+            .explanation { font-family: 'Noto Serif SC', serif; font-size: 18px; fill: #2c2c2c; color: #2c2c2c; line-height: 1.8; }
+            .summary { font-family: 'Noto Serif SC', serif; font-size: 16px; font-weight: bold; text-anchor: middle; fill: #333; color: #333; }
+        </style>
+    </defs>
+
+    <!-- Mondrian-inspired background -->
+    <rect x="-20" y="-20" width="440" height="640" fill="#f5f5dc"></rect>
+    <rect x="0" y="200" width="100" height="400" fill="#e02128" opacity="0.6"></rect>
+    <rect x="320" y="0" width="80" height="150" fill="#004a99" opacity="0.6"></rect>
+    <rect x="0" y="550" width="400" height="50" fill="#f7d002" opacity="0.6"></rect>
+    <line x1="20" y1="180" x2="380" y2="180" stroke="#333" stroke-width="2"></line>
+    <line x1="20" y1="480" x2="380" y2="480" stroke="#333" stroke-width="1.5" stroke-dasharray="4"></line>
+    
+    <text x="200" y="60" class="title">汉语新解</text>
+    
+    <line x1="100" y1="80" x2="300" y2="80" stroke="#333" stroke-width="1"></line>
+
+    <text x="200" y="120" class="term">社会主义核心价值观</text>
+    <text x="200" y="145" class="translation">Socialist Core Values</text>
+    <text x="200" y="165" class="translation">社会主義の核心的価値観</text>
+
+    <foreignObject x="40" y="200" width="320" height="270">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="explanation" style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8; font-size: 16px;">
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">一张贴在老大哥客厅墙上的菜单。</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">菜名起得惊天动地，山珍海味一应俱全，比如“自由”、“民主”这些硬菜，光看名字就让人流口水。</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">但你最好别真开口点，否则服务员会客气地告诉你：“先生，这些是我们的‘展示菜品’，仅供观瞻，拍照发朋友圈请用本店专用滤镜。”</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">真正的每日特价，是菜单背面用小字写的：“听话，以及感恩。”</p>
+        </div>
+    </foreignObject>
+
+    <!-- Line drawing: A menu with "For Display Only" stamped on it -->
+    <g transform="translate(130, 500) scale(0.6)">
+        <rect x="0" y="0" width="200" height="100" fill="none" stroke="#333" stroke-width="3" rx="5"></rect>
+        <text x="100" y="20" text-anchor="middle" font-family="Noto Serif SC" font-size="16">菜单 (Menu)</text>
+        <line x1="10" y1="25" x2="190" y2="25" stroke="#333" stroke-width="1"></line>
+        <text x="20" y="45" font-family="Noto Serif SC" font-size="14">· 自由</text>
+        <text x="20" y="65" font-family="Noto Serif SC" font-size="14">· 民主</text>
+        <text x="20" y="85" font-family="Noto Serif SC" font-size="14">· 公正</text>
+        <g transform="rotate(-15 100 50)">
+            <rect x="30" y="30" width="140" height="40" fill="none" stroke="red" stroke-width="4"></rect>
+            <text x="100" y="58" text-anchor="middle" font-family="Noto Serif SC" font-size="20" fill="red" font-weight="bold">仅供观瞻</text>
+        </g>
+    </g>
+    
+    <text x="200" y="580" class="summary">墙上的菜单，嘴里的口号，心里的问号。</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
