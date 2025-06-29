@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【为人民服务】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-19 -19 440 640" style="background-color: rgb(240, 240, 240); border: 1px solid rgb(204, 204, 204); display: block;" xmlns="http://www.w3.org/2000/svg">
+    <!-- Mondrian-inspired background -->
+    <rect x="-19" y="-19" width="440" height="640" fill="#FDFBF8"></rect>
+    <rect x="250" y="0" width="150" height="180" fill="#E60026"></rect>
+    <rect x="0" y="450" width="120" height="150" fill="#F9D72C"></rect>
+    <rect x="320" y="500" width="80" height="100" fill="#0052A5"></rect>
+    <line x1="0" y1="180" x2="400" y2="180" stroke="#1A1A1A" stroke-width="5"></line>
+    <line x1="250" y1="0" x2="250" y2="180" stroke="#1A1A1A" stroke-width="5"></line>
+    <line x1="120" y1="450" x2="120" y2="600" stroke="#1A1A1A" stroke-width="5"></line>
+    <line x1="0" y1="450" x2="400" y2="450" stroke="#1A1A1A" stroke-width="5"></line>
+    <line x1="320" y1="450" x2="320" y2="600" stroke="#1A1A1A" stroke-width="5"></line>
+
+    <!-- Content -->
+    <text x="200" y="50" font-family="'Ma Shan Zheng', 'Noto Serif SC', cursive" font-size="36" text-anchor="middle" fill="#333333">汉语新解</text>
+    <line x1="40" y1="70" x2="360" y2="70" stroke="#333333" stroke-width="1"></line>
+
+    <text x="200" y="115" font-family="'Long Cang', 'Noto Serif SC', serif" font-size="40" text-anchor="middle" fill="#4a4a4a">为人民服务</text>
+    <text x="200" y="145" font-family="'Long Cang', 'Noto Serif SC', serif" font-size="16" text-anchor="middle" fill="#666666">Serve the People</text>
+    <text x="200" y="165" font-family="'Long Cang', 'Noto Serif SC', serif" font-size="16" text-anchor="middle" fill="#666666">人民に奉仕する</text>
+
+    <foreignObject x="40" y="190" width="320" height="180">
+        <p xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Long Cang&quot;, &quot;Noto Serif SC&quot;, serif; font-size: 11px; color: rgb(74, 74, 74); line-height: 1.8; margin: 0px; text-align: justify; white-space: pre-wrap; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word;">
+一块被盘了包浆的古玉，远看温润，凑近了闻，全是手汗味儿。
+
+它更像一个大型沉浸式戏剧的剧名：演员们在台上为“人民”服务得热泪盈眶，主要是为了感动自己；观众们在台下看着“服务”也热泪盈眶，主要是因为票价太贵，而且禁止退场。
+        </p>
+    </foreignObject>
+
+    <!-- Line Art -->
+    <g transform="translate(40, 380)">
+        <!-- Stage -->
+        <path d="M 0 60 L 320 60 L 280 100 L 40 100 Z" fill="none" stroke="#333333" stroke-width="2"></path>
+        <!-- Actor on stage -->
+        <circle cx="160" cy="30" r="10" fill="none" stroke="#333333" stroke-width="2"></circle>
+        <path d="M 160 40 V 60" stroke="#333333" stroke-width="2"></path>
+        <path d="M 150 50 L 170 50" stroke="#333333" stroke-width="2"></path>
+        <!-- Audience chained to seats -->
+        <path d="M 60 85 L 60 95" stroke="#333333" stroke-width="1"></path>
+        <path d="M 80 85 L 80 95" stroke="#333333" stroke-width="1"></path>
+        <path d="M 100 85 L 100 95" stroke="#333333" stroke-width="1"></path>
+        <path d="M 220 85 L 220 95" stroke="#333333" stroke-width="1"></path>
+        <path d="M 240 85 L 240 95" stroke="#333333" stroke-width="1"></path>
+        <path d="M 260 85 L 260 95" stroke="#333333" stroke-width="1"></path>
+        <path d="M 50 95 L 270 95" stroke="#333333" stroke-width="1" stroke-dasharray="2 2"></path>
+        <text x="160" y="93" font-family="sans-serif" font-size="12" text-anchor="middle" fill="#666">...</text>
+    </g>
+
+    <foreignObject x="40" y="500" width="270" height="80">
+        <p xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Long Cang&quot;, &quot;Noto Serif SC&quot;, serif; font-size: 18px; color: rgb(74, 74, 74); line-height: 1.8; margin: 0px; text-align: center; padding: 0px; box-sizing: border-box; width: 270px; overflow-wrap: break-word;">
+            台上演给自己的独角戏，
+            <br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+            台下无法离席的观众。
+        </p>
+    </foreignObject>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
