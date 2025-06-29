@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【抖音】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" style="background-color: rgb(240, 240, 240); display: block;" xmlns="http://www.w3.org/2000/svg">
+    <!-- 引入外部字体 -->
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&amp;family=ZCOOL+KuaiLe&amp;family=Noto+Serif+SC:wght@400;700&amp;display=swap');
+            .title-font { font-family: 'Ma Shan Zheng', cursive; font-size: 36px; fill: #333; color: #333; text-anchor: middle; }
+            .term-font { font-family: 'ZCOOL KuaiLe', cursive; font-size: 48px; fill: #111; color: #111; text-anchor: middle; }
+            .translation-font { font-family: 'Noto Serif SC', serif; font-size: 14px; fill: #555; color: #555; text-anchor: middle; }
+            .explanation-font { font-family: 'Noto Serif SC', serif; font-size: 20px; fill: #2c2c2c; color: #2c2c2c; }
+            .summary-font { font-family: 'Noto Serif SC', serif; font-size: 16px; fill: #444; color: #444; text-anchor: middle; }
+        </style>
+    </defs>
+
+    <!-- 蒙德里安风格背景 -->
+    <rect x="-20" y="-20" width="440" height="640" fill="#f8f8f8"></rect>
+    <rect x="20" y="500" width="100" height="80" fill="#E63946"></rect>
+    <rect x="350" y="20" width="30" height="150" fill="#457B9D"></rect>
+    <rect x="20" y="20" width="50" height="50" fill="#F1C40F"></rect>
+    <rect x="0" y="250" width="400" height="5" fill="#1D3557"></rect>
+    <rect x="0" y="480" width="400" height="2" fill="#1D3557"></rect>
+
+
+    <!-- 居中标题 -->
+    <text x="200" y="60" class="title-font">汉语新解</text>
+    
+    <!-- 分隔线 -->
+    <line x1="100" y1="80" x2="300" y2="80" stroke="#333" stroke-width="1"></line>
+
+    <!-- 用户输入 -->
+    <text x="200" y="140" class="term-font">抖音</text>
+    <text x="200" y="165" class="translation-font">Dǒuyīn / TikTok / ティックトック</text>
+
+    <!-- 解释 -->
+    <foreignObject x="40" y="190" width="320" height="150">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 20px; color: rgb(44, 44, 44); line-height: 1.8; text-align: justify; overflow-wrap: break-word; margin: 0px; padding: 0px; box-sizing: border-box; width: 320px;">
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">当代人的精神奶嘴。</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">它不提供任何营养，但能有效阻止你发出任何有意义的哭声。</p>
+        </div>
+    </foreignObject>
+
+    <!-- 线条图: 批判内核的可视化 -->
+    <g transform="translate(130, 320)" stroke="#1D3557" stroke-width="2" fill="none">
+        <!-- 头部轮廓 -->
+        <path d="M 50,0 A 50,60 0 1,1 50,120 A 50,60 0 1,1 50,0 Z"></path>
+        <!-- 眼睛 (螺旋状，表示眩晕) -->
+        <path d="M 35,40 Q 40,35 45,40 Q 40,45 35,40 M 40,37.5 A 2.5,2.5 0 1,1 40,42.5 A 2.5,2.5 0 1,1 40,37.5" stroke-width="1.5"></path>
+        <path d="M 65,40 Q 70,35 75,40 Q 70,45 65,40 M 70,37.5 A 2.5,2.5 0 1,1 70,42.5 A 2.5,2.5 0 1,1 70,37.5" stroke-width="1.5"></path>
+        <!-- 嘴巴被手机形状的奶嘴堵住 -->
+        <rect x="40" y="80" width="20" height="30" rx="3" ry="3" fill="#A8DADC"></rect>
+        <path d="M 60,95 H 70 Q 80,95 80,85 V 75 Q 80,65 70,65 H 30 Q 20,65 20,75 V 85 Q 20,95 30,95 H 40" stroke-width="2"></path>
+    </g>
+    
+    <!-- 极简总结 -->
+    <text x="200" y="550" class="summary-font">算法投喂，精神饱足。</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
