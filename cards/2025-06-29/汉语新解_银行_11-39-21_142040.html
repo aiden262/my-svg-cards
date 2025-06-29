@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【银行】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" xmlns="http://www.w3.org/2000/svg" style="background-color: rgb(245, 245, 245); font-family: &quot;Helvetica Neue&quot;, Arial, sans-serif; display: block;">
+    <!-- Mondrian Style Background -->
+    <rect x="-20" y="-20" width="440" height="640" fill="#fdfdfd"></rect>
+    <rect x="20" y="500" width="100" height="80" fill="#EAD563"></rect>
+    <rect x="320" y="20" width="60" height="150" fill="#4A729A"></rect>
+    <rect x="20" y="20" width="80" height="80" fill="#D35F5F"></rect>
+    <line x1="20" y1="120" x2="380" y2="120" stroke="#333" stroke-width="4"></line>
+    <line x1="120" y1="20" x2="120" y2="600" stroke="#333" stroke-width="4"></line>
+    <line x1="20" y1="480" x2="380" y2="480" stroke="#333" stroke-width="3"></line>
+
+    <!-- Main Content Area -->
+    <g style="font-family: 'Noto Sans SC', sans-serif; fill: #3a3a3a; color: #3a3a3a; color: #3a3a3a;">
+        <!-- Title -->
+        <text x="200" y="65" font-family="'Ma Shan Zheng', 'Brush Script MT', cursive" font-size="36" text-anchor="middle" fill="#2c2c2c">汉语新解</text>
+
+        <!-- Separator -->
+        <line x1="40" y1="85" x2="360" y2="85" stroke="#cccccc" stroke-width="1"></line>
+
+        <!-- Word -->
+        <text x="200" y="115" font-size="28" text-anchor="middle" font-weight="bold">银行</text>
+        <text x="200" y="140" font-size="14" text-anchor="middle" fill="#666">Bank / 銀行 (ぎんこう)</text>
+        
+        <!-- Explanation -->
+        <foreignObject x="40" y="160" width="320" height="150">
+            <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Huiwen Mingchao&quot;, &quot;Noto Serif SC&quot;, serif; font-size: 19px; line-height: 1.8; color: rgb(58, 58, 58); text-align: justify; margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word;">
+                一个在晴天卖给你昂贵的雨伞，并在下雨时按揭收回的地方。它善于将你的“未来”打包成金融产品，再利滚利地卖回给你自己。
+            </div>
+        </foreignObject>
+
+        <!-- Line Art -->
+        <g id="line-art" transform="translate(60, 320) scale(0.8)">
+            <style>
+                #line-art path, #line-art circle, #line-art line {
+                    stroke: #3a3a3a;
+                    stroke-width: 2;
+                    fill: none; color: none;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                }
+            </style>
+            <!-- Person -->
+            <circle cx="170" cy="110" r="10"></circle>
+            <line x1="170" y1="120" x2="170" y2="150"></line>
+            <line x1="170" y1="130" x2="150" y2="120"></line>
+            <line x1="170" y1="150" x2="160" y2="170"></line>
+            <line x1="170" y1="150" x2="180" y2="170"></line>
+            <!-- Umbrella -->
+            <path d="M 120,90 Q 170,50 220,90"></path>
+            <line x1="170" y1="90" x2="170" y2="120"></line>
+            <!-- Chain from hand to umbrella -->
+            <path d="M 150,120 C 130,110 110,125 90,120"></path>
+            <!-- Bank Hand -->
+            <path d="M 90,120 C 70,115 50,130 50,140 L 50,150 L 80,150 L 80,130 C 80,125 85,122 90,120Z" fill="#fdfdfd"></path>
+            <text x="30" y="100" font-family="monospace" font-size="24">$</text>
+             <text x="225" y="80" font-family="monospace" font-size="12">未来</text>
+        </g>
+
+        <!-- Summary -->
+        <text x="200" y="520" font-size="16" text-anchor="middle" font-family="'Huiwen Mingchao', 'Noto Serif SC', serif;">极简总结: 名为“庇护”的温柔陷阱。</text>
+
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
