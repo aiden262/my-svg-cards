@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【泳池妹子】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-19 -19 440 640" style="background-color: rgb(245, 245, 245); border: 1px solid rgb(204, 204, 204); display: block;">
+    <!-- Mondrian Style Background -->
+    <rect x="-19" y="-19" width="440" height="640" fill="#E63946"></rect>
+    <rect x="350" y="0" width="50" height="150" fill="#457B9D"></rect>
+    <rect x="0" y="0" width="400" height="2" fill="#1D3557"></rect>
+    <rect x="300" y="250" width="100" height="100" fill="#F4A261"></rect>
+    <rect x="0" y="200" width="2" height="200" fill="#1D3557"></rect>
+    <rect x="0" y="400" width="400" height="2" fill="#1D3557"></rect>
+
+
+    <!-- Main Content -->
+    <g style="font-family: 'Huiwen Mingchao', 'Noto Serif SC', serif; fill: #333333; color: #333333;">
+        <!-- Title -->
+        <text x="200" y="55" text-anchor="middle" font-size="32" font-family="'Maobi Kaishu', 'Noto Serif SC', cursive" fill="#1D3557">汉语新解</text>
+        
+        <!-- Separator -->
+        <line x1="40" y1="80" x2="360" y2="80" stroke="#1D3557" stroke-width="1.5"></line>
+
+        <!-- Word -->
+        <text x="200" y="120" text-anchor="middle" font-size="36" font-weight="bold" fill="#1D3557">泳池妹子</text>
+        <text x="200" y="150" text-anchor="middle" font-size="16" letter-spacing="1" fill="#457B9D">Pool Girl</text>
+        <text x="200" y="175" text-anchor="middle" font-size="16" fill="#457B9D">プールの女の子</text>
+
+        <!-- Explanation -->
+        <foreignObject x="40" y="200" width="320" height="180">
+            <p xmlns="http://www.w3.org/1999/xhtml" style="font-size: 19px; line-height: 1.8; color: rgb(58, 58, 58); text-align: justify; margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word;">
+                一种季节限定的人形景观植物，种植在名为“社交网络”的数字花盆里。其主要光合作用，是将他人的羡慕转化为自身的流量数据，并最终结出名为“松弛感”的焦虑果实。
+            </p>
+        </foreignObject>
+
+        <!-- Line Art -->
+        <g id="line-art" transform="translate(100, 410) scale(0.8)">
+            <!-- Smartphone as flower pot -->
+            <rect x="60" y="40" width="130" height="100" rx="15" ry="15" stroke="#1D3557" stroke-width="2" fill="none"></rect>
+            <line x1="80" y1="40" x2="170" y2="40" stroke="#1D3557" stroke-width="2"></line>
+            <circle cx="125" cy="130" r="3" fill="#1D3557"></circle>
+            
+            <!-- Figure (plant) -->
+            <path d="M 125 100 Q 125 70 100 50" stroke="#1D3557" stroke-width="2" fill="none" stroke-linecap="round"></path>
+            <circle cx="100" cy="45" r="10" stroke="#1D3557" stroke-width="2" fill="#f5f5f5"></circle>
+            
+            <!-- Wi-Fi/Data rising -->
+            <path d="M 100 30 Q 110 20 120 30" stroke="#1D3557" stroke-width="1.5" fill="none"></path>
+            <path d="M 95 22 Q 110 10 125 22" stroke="#1D3557" stroke-width="1.5" fill="none"></path>
+            
+            <!-- Sun (Envy) -->
+            <circle cx="200" cy="20" r="8" fill="#F4A261"></circle>
+            <line x1="200" y1="30" x2="200" y2="40" stroke="#F4A261" stroke-width="2"></line>
+            <line x1="190" y1="20" x2="180" y2="20" stroke="#F4A261" stroke-width="2"></line>
+            <line x1="186" y1="34" x2="178" y2="42" stroke="#F4A261" stroke-width="2"></line>
+            <text x="210" y="25" font-size="12" fill="#F4A261">羡慕</text>
+            
+            <!-- Anxious Fruit -->
+            <circle cx="150" cy="70" r="12" stroke="#E63946" stroke-width="2" fill="#f5f5f5"></circle>
+            <path d="M 145 73 Q 150 67 155 73" stroke="#E63946" stroke-width="1.5" fill="none"></path>
+            <circle cx="147" cy="68" r="1" fill="#E63946"></circle>
+            <circle cx="153" cy="68" r="1" fill="#E63946"></circle>
+            <text x="165" y="75" font-size="12" fill="#E63946">焦虑</text>
+        </g>
+        
+        <!-- Minimalist Summary -->
+        <text x="200" y="560" text-anchor="middle" font-size="16" fill="#1D3557">
+            以手机为盆，以羡慕为养料，精心栽培的数字观赏品。
+        </text>
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
