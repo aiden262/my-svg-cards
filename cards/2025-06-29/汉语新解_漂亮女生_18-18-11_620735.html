@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【漂亮女生】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" xmlns="http://www.w3.org/2000/svg" style="background-color: rgb(240, 240, 240); display: block;">
+    <!-- Mondrian Inspired Background -->
+    <defs>
+        <style>
+            .title { font-family: 'Maobi Kai', 'Noto Serif SC', 'KaiTi', sans-serif; font-size: 32px; text-anchor: middle; fill: #333; color: #333; }
+            .term { font-family: 'Huiwen Mingchao', 'Source Han Serif CN', serif; font-size: 24px; text-anchor: middle; fill: #4a4a4a; color: #4a4a4a; }
+            .lang { font-family: 'Huiwen Mingchao', 'Source Han Serif CN', serif; font-size: 16px; text-anchor: middle; fill: #6c6c6c; color: #6c6c6c; }
+            .explanation { font-family: 'Huiwen Mingchao', 'Source Han Serif CN', serif; font-size: 18px; fill: #4a4a4a; color: #4a4a4a; }
+            .summary { font-family: 'Huiwen Mingchao', 'Source Han Serif CN', serif; font-size: 14px; text-anchor: middle; fill: #333; color: #333; }
+            .line-art { stroke: #333; stroke-width: 1.5; fill: none; color: none; stroke-linecap: round; stroke-linejoin: round; }
+        </style>
+    </defs>
+
+    <!-- Background Design -->
+    <rect x="-20" y="-20" width="440" height="640" fill="#fdfdfd"></rect>
+    <rect x="20" y="500" width="100" height="80" fill="#e02d2d"></rect>
+    <rect x="320" y="20" width="60" height="150" fill="#f7d000"></rect>
+    <rect x="20" y="20" width="80" height="80" fill="#005b9f"></rect>
+    <line x1="0" y1="480" x2="400" y2="480" stroke="#111" stroke-width="5"></line>
+    <line x1="100" y1="0" x2="100" y2="600" stroke="#111" stroke-width="5"></line>
+
+    <!-- Main Content Area -->
+    <g transform="translate(20, 20)">
+        <rect x="-20" y="-20" width="400" height="600" fill="none"></rect>
+
+        <!-- Title -->
+        <text x="180" y="60" class="title">汉语新解</text>
+
+        <!-- Separator -->
+        <line x1="80" y1="85" x2="280" y2="85" stroke="#6c6c6c" stroke-width="1"></line>
+
+        <!-- Term -->
+        <text x="180" y="125" class="term">漂亮女生</text>
+        <text x="180" y="155" class="lang">Pretty Girl / 綺麗な女性</text>
+
+        <!-- Explanation -->
+        <foreignObject x="40" y="180" width="280" height="150">
+            
+                <p class="explanation" style="line-height: 1.8; text-align: justify; margin: 0px; padding: 0px; box-sizing: border-box; width: 280px; overflow-wrap: break-word; font-size: 10px;">
+                    一个限量版的社交盲盒。
+                    <br style="margin: 0px; padding: 0px; box-sizing: border-box;"><br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+                    其包装（脸蛋与身材）决定了市场热度，引来无数人渴望拥有。但绝大多数人只在乎盒子是否好看，并不关心里面装的是锦绣灵魂还是干燥空气，甚至懒得拆开。
+                    <br style="margin: 0px; padding: 0px; box-sizing: border-box;"><br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+                    它最大的价值，是在被下一个新款取代之前，作为谈资在货架上闪闪发光。
+                </p>
+            
+        </foreignObject>
+
+        <!-- Line Art -->
+        <g transform="translate(130, 390) scale(0.8)">
+            <!-- Box representing a person -->
+            <path class="line-art" d="M 50,10 L 10,30 L 10,90 L 50,110 L 90,90 L 90,30 Z"></path>
+            <path class="line-art" d="M 50,10 L 50,110"></path>
+            <path class="line-art" d="M 10,30 L 90,90"></path>
+            <path class="line-art" d="M 90,30 L 10,90"></path>
+            <!-- Price tag / Label -->
+            <circle class="line-art" cx="80" cy="40" r="15"></circle>
+            <text x="76" y="45" style="font-size:12px; fill: #333; color: #333; color: #333; font-family: sans-serif;">賞</text>
+            <!-- Eyes watching -->
+            <path class="line-art" d="M -20,60 Q -10,50 0,60"></path>
+            <path class="line-art" d="M -20,60 Q -10,70 0,60"></path>
+            <path class="line-art" d="M 100,60 Q 110,50 120,60"></path>
+            <path class="line-art" d="M 100,60 Q 110,70 120,60"></path>
+        </g>
+        
+        <!-- Summary -->
+        <text x="180" y="530" class="summary">被围观的商品，而非被理解的个体。</text>
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
