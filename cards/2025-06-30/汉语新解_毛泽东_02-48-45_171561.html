@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【毛泽东】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg style="background-color: rgb(240, 240, 240); border: 1px solid rgb(204, 204, 204); font-family: sans-serif; display: block;" viewBox="1 1 400 609">
+  <rect x="1" y="1" width="400" height="609" fill="#E74C3C"></rect>
+  <rect x="140" y="20" width="240" height="100" fill="#FFFFFF"></rect>
+  <rect x="20" y="140" width="100" height="440" fill="#FFFFFF"></rect>
+  <rect x="140" y="140" width="240" height="300" fill="#3498DB"></rect>
+  <rect x="140" y="460" width="240" height="120" fill="#F1C40F"></rect>
+
+  <text x="200" y="70" text-anchor="middle" font-family="'Noto Serif SC', 'KaiTi', serif" font-size="36" fill="#333">汉语新解</text>
+  <line x1="40" y1="100" x2="360" y2="100" stroke="#333" stroke-width="1"></line>
+
+  <text x="200" y="150" text-anchor="middle" font-family="'Noto Serif SC', 'HW Mincho', serif" font-size="48" fill="#5A5A5A">毛泽东</text>
+  <text x="200" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666">Mao Zedong</text>
+  <text x="200" y="205" text-anchor="middle" font-family="'MS Mincho', serif" font-size="16" fill="#666">毛沢東 (もう たくとう)</text>
+
+  <foreignObject x="40" y="240" width="320" height="150">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, &quot;HW Mincho&quot;, serif; font-size: 16.5px; color: rgb(74, 74, 74); line-height: 1.8; text-align: justify; overflow-wrap: break-word; margin: 0px; padding: 0px; box-sizing: border-box; width: 320px;">
+      <p style="margin: 0px; padding: 0px; text-indent: 2em; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">
+        一个想当太阳的凡人。他成功地让所有星星都失去了光芒，让大地围绕他一人旋转。
+      </p>
+      <p style="margin: 0px; padding: 0px; text-indent: 2em; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">
+        代价是，他燃烧的不是自己，而是整整一代人的血肉与理想。
+      </p>
+    </div>
+  </foreignObject>
+
+  <g id="line-art" transform="translate(40, 420)">
+    <circle cx="160" cy="50" r="40" fill="none" stroke="#333" stroke-width="2"></circle>
+    <circle cx="160" cy="50" r="5" fill="#333"></circle>
+    <path d="M 160 90 Q 120 110 80 120" fill="none" stroke="#333" stroke-width="1.5" stroke-dasharray="3,3"></path>
+    <path d="M 160 90 Q 200 110 240 120" fill="none" stroke="#333" stroke-width="1.5" stroke-dasharray="3,3"></path>
+    <path d="M 40 10 L 120 40" fill="none" stroke="#333" stroke-width="1.5" stroke-dasharray="3,3"></path>
+    <path d="M 280 10 L 200 40" fill="none" stroke="#333" stroke-width="1.5" stroke-dasharray="3,3"></path>
+    <text x="160" y="150" text-anchor="middle" font-family="'Noto Serif SC', 'HW Mincho', serif" font-size="14" fill="#4A4A4A">[线条图：画面中央是一个巨大的空心太阳，</text>
+    <text x="160" y="165" text-anchor="middle" font-family="'Noto Serif SC', 'HW Mincho', serif" font-size="14" fill="#4A4A4A">它不发光，反而有无数虚线从大地和星辰被吸入其核心。]</text>
+  </g>
+
+  <text x="200" y="560" text-anchor="middle" font-family="'Noto Serif SC', 'KaiTi', serif" font-size="24" fill="#333">伪日当空，万物成薪。</text>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
