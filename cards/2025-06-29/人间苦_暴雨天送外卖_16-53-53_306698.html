@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【暴雨天送外卖】 - 人间苦</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 520 800" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+  <rect x="-20" y="-20" width="520" height="800" fill="#E0E0E0"></rect>
+  <text x="240" y="80" font-family="KingHwa_OldSong" font-size="36" fill="#5F5F5F" text-anchor="middle">人间苦</text>
+  <line x1="60" y1="110" x2="420" y2="110" stroke="#A0A0A0" stroke-width="2"></line>
+  <foreignObject x="60" y="130" width="360" height="80">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: KingHwa_OldSong; font-size: 24px; color: rgb(95, 95, 95); text-align: center; line-height: 1.8; margin: 0px; padding: 0px; box-sizing: border-box; width: 360px; overflow-wrap: break-word;">暴雨天送外卖</div>
+  </foreignObject>
+  
+  <!-- Abstract/Minimalist Line Drawing based on the imagery -->
+  <g stroke="#808080" stroke-width="3" fill="none">
+    <!-- Rain lines -->
+    <line x1="100" y1="280" x2="110" y2="300"></line>
+    <line x1="130" y1="260" x2="140" y2="280"></line>
+    <line x1="160" y1="290" x2="170" y2="310"></line>
+    <line x1="190" y1="270" x2="200" y2="290"></line>
+    <line x1="220" y1="300" x2="230" y2="320"></line>
+    <line x1="250" y1="280" x2="260" y2="300"></line>
+    <line x1="280" y1="310" x2="290" y2="330"></line>
+    <line x1="310" y1="290" x2="320" y2="310"></line>
+    <line x1="340" y1="320" x2="350" y2="340"></line>
+    <line x1="370" y1="300" x2="380" y2="320"></line>
+
+    <!-- Figure/Bike outline -->
+    <path d="M240,380 L240,420 L220,440 L260,440 L240,420 Z" stroke-linejoin="round"></path> <!-- Torso/Head -->
+    <line x1="240" y1="420" x2="200" y2="460"></line> <!-- Arm 1 -->
+    <line x1="240" y1="420" x2="280" y2="460"></line> <!-- Arm 2 -->
+    <line x1="240" y1="440" x2="220" y2="480"></line> <!-- Leg 1 -->
+    <line x1="240" y1="440" x2="260" y2="480"></line> <!-- Leg 2 -->
+    <circle cx="210" cy="480" r="15"></circle> <!-- Wheel 1 -->
+    <circle cx="270" cy="480" r="15"></circle> <!-- Wheel 2 -->
+    <line x1="210" y1="480" x2="270" y2="480"></line> <!-- Bike frame -->
+    <line x1="240" y1="380" x2="240" y2="360"></line> <!-- Head/Helmet -->
+    <path d="M220,360 A20 20 0 0 1 260,360" stroke-linecap="round"></path> <!-- Helmet top -->
+
+    <!-- Puddle -->
+    <ellipse cx="240" cy="520" rx="60" ry="15" stroke-dasharray="5 5"></ellipse>
+  </g>
+
+  <foreignObject x="60" y="550" width="360" height="180">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: KingHwa_OldSong; font-size: 10px; color: rgb(95, 95, 95); line-height: 1.8; margin: 0px; padding: 0px; box-sizing: border-box; width: 360px; overflow-wrap: break-word;">
+      雨水顺着头盔的缝隙，滴滴答答地流到脖子里，冰凉。电动车的屏幕被水模糊了，导航上的红点像个垂死挣扎的虫子。脚下的路，每一寸都像浸透了油的抹布，滑腻腻的。他捏紧了车把，手套湿透了，指节泛白。保温箱里的热气，隔着厚厚的塑料，也散得差不多了。
+      <br style="margin: 0px; padding: 0px; box-sizing: border-box;"><br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+      他抬头看了一眼灰蒙蒙的天空，铅块似的压下来，没有一丝缝隙。雨点打在脸上，分不清是雨水还是汗水。前面有个小水坑，他没躲，直接碾了过去，水花溅起，沾湿了裤腿。反正已经湿透了。
+      <br style="margin: 0px; padding: 0px; box-sizing: border-box;"><br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+      胃里空空的，像个漏了底的沙袋。他想起早上那半个冰冷的馒头，嚼起来像木屑。今天能赚多少？够不够给孩子买药？他没想，也不敢想。只是机械地往前骑，像一具被风雨驱动的傀儡。远处的灯光，在雨幕里散成一片模糊的光晕，像极了那些抓不住的念头。生命，不过如此。
+    </div>
+  </foreignObject>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 人间苦 | 模型: gemini-2.5-flash
+        </footer>
+    </main>
+</body>
+</html>
