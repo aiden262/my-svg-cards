@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【女生】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" xmlns="http://www.w3.org/2000/svg" style="background-color: rgb(240, 240, 240); font-family: sans-serif; display: block;">
+    <!-- Mondrian Style Background -->
+    <rect x="-20" y="-20" width="440" height="640" fill="#fdfdfd"></rect>
+    <rect x="20" y="520" width="100" height="60" fill="#EAD563"></rect> <!-- Yellow -->
+    <rect x="330" y="20" width="50" height="150" fill="#D94A4A"></rect> <!-- Red -->
+    <rect x="20" y="180" width="50" height="50" fill="#3D72B4"></rect> <!-- Blue -->
+    <line x1="20" y1="100" x2="380" y2="100" stroke="#1a1a1a" stroke-width="4"></line>
+    <line x1="70" y1="180" x2="70" y2="520" stroke="#1a1a1a" stroke-width="4"></line>
+
+    <g style="font-family: 'Maobi Kaishu', 'Noto Serif SC', cursive;">
+        <text x="200" y="70" font-size="36" text-anchor="middle" fill="#2c2c2c">汉语新解</text>
+    </g>
+
+    <g id="term-definition" transform="translate(0, 40)">
+        <text x="200" y="120" font-size="48" text-anchor="middle" fill="#333" style="font-family: 'Huiwen Mingchao', 'Noto Serif SC', serif; font-weight: bold;">女生</text>
+        <text x="200" y="155" font-size="16" text-anchor="middle" fill="#666" style="font-family: Arial, sans-serif;">Girl / Young Woman</text>
+        <text x="200" y="180" font-size="16" text-anchor="middle" fill="#666" style="font-family: 'Yu Gothic', sans-serif;">女子 (じょし) / 女の子 (おんなのこ)</text>
+    </g>
+
+    <foreignObject x="90" y="210" width="270" height="200">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Huiwen Mingchao&quot;, &quot;Noto Serif SC&quot;, serif; color: rgb(74, 74, 74); font-size: 13.5px; line-height: 1.8; text-align: left; margin: 0px; padding: 0px; box-sizing: border-box; width: 270px; overflow-wrap: break-word;">
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 270px; overflow-wrap: break-word; line-height: 1.8;">一种被精心打扮的商品，使用价值是情绪稳定和外貌赏心悦目，附加价值是“独立女性”的标签。</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 270px; overflow-wrap: break-word; line-height: 1.8;">她们被鼓励拥有思想，但最好不要真的思考；她们被允许追求事业，但最好不要比“他”成功。</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 270px; overflow-wrap: break-word; line-height: 1.8;">最终，她们最大的成就，是被挑选，而非挑选。</p>
+        </div>
+    </foreignObject>
+
+    <!-- Line Art -->
+    <g id="line-art" transform="translate(140, 400)">
+        <!-- Marionette Doll -->
+        <path d="M 60 0 C 40 -10, 20 10, 30 30 C 10 40, 10 70, 30 80 L 35 120 L 25 160 M 30 80 L 80 80 C 100 70, 100 40, 80 30 C 90 10, 70 -10, 50 0" stroke="#333" stroke-width="2" fill="none"></path>
+        <!-- Head and hair -->
+        <circle cx="55" cy="25" r="20" stroke="#333" stroke-width="2" fill="none"></circle>
+        <!-- Control strings -->
+        <line x1="45" y1="5" x2="35" y2="-40" stroke="#333" stroke-width="1.5"></line>
+        <line x1="65" y1="5" x2="75" y2="-40" stroke="#333" stroke-width="1.5"></line>
+        <line x1="30" y1="80" x2="20" y2="-20" stroke="#333" stroke-width="1.5"></line>
+        <line x1="80" y1="80" x2="90" y2="-20" stroke="#333" stroke-width="1.5"></line>
+        <!-- Price Tag -->
+        <rect x="75" y="100" width="30" height="15" fill="none" stroke="#333" stroke-width="1.5"></rect>
+        <text x="80" y="111" font-size="10" fill="#333">???</text>
+    </g>
+
+    <g id="summary" transform="translate(0, 550)">
+        <text x="200" y="0" font-size="16" text-anchor="middle" fill="#2c2c2c" style="font-family: 'Huiwen Mingchao', 'Noto Serif SC', serif;">
+            被操纵的商品，贴着自由的标签。
+        </text>
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
