@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【葱哥看上了房东的猫】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-19 -19 440 640" style="background-color: rgb(240, 240, 240); border: 1px solid rgb(204, 204, 204); display: block;" xmlns="http://www.w3.org/2000/svg">
+    <!-- Mondrian Style Background -->
+    <rect x="-19" y="-19" width="440" height="640" fill="#FFFFFF"></rect>
+    <rect x="0" y="250" width="120" height="350" fill="#FFD700"></rect> <!-- Yellow -->
+    <rect x="280" y="0" width="120" height="180" fill="#DC143C"></rect> <!-- Red -->
+    <rect x="150" y="500" width="250" height="100" fill="#4169E1"></rect> <!-- Blue -->
+    <line x1="0" y1="249" x2="400" y2="249" stroke="#000000" stroke-width="5"></line>
+    <line x1="121" y1="250" x2="121" y2="600" stroke="#000000" stroke-width="5"></line>
+    <line x1="279" y1="0" x2="279" y2="180" stroke="#000000" stroke-width="5"></line>
+    <line x1="150" y1="499" x2="400" y2="499" stroke="#000000" stroke-width="5"></line>
+
+    <g style="font-family: 'Noto Serif SC', 'Noto Serif SC', 'Noto Serif SC', serif; text-anchor: middle;">
+        <text x="200" y="55" font-size="32" fill="#333333">汉 语 新 解</text>
+    </g>
+
+    <line x1="40" y1="75" x2="360" y2="75" stroke="#333333" stroke-width="1.5"></line>
+
+    <g style="font-family: 'HYWenMingChaoTiJ', 'Noto Serif SC', serif; fill: #4a4a4a; color: #4a4a4a; color: #4a4a4a;">
+        <text x="200" y="115" font-size="22" text-anchor="middle">葱哥看上了房东的猫</text>
+        <text x="200" y="140" font-size="16" text-anchor="middle" style="font-family: sans-serif;">Brother Cong fancies the landlord's cat.</text>
+        <text x="200" y="165" font-size="16" text-anchor="middle">葱兄(ツォンにい)は大家さんの猫を気に入った</text>
+    </g>
+
+    <foreignObject x="40" y="190" width="320" height="150">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: HYWenMingChaoTiJ, &quot;Noto Serif SC&quot;, serif; font-size: 12px; color: rgb(61, 61, 61); line-height: 1.8; text-align: justify; margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word;">
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">一种当代都市的曲线进攻战术。</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">“猫”是那个通往权力（房东）核心的“特洛伊木马”，里面藏着的不是骁勇的士兵，而是租客那点关于续租、降租或“爱情”的，不可告人的小心思。</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">本质上，是一种将真实欲望伪装成无害爱好的社交障眼法，是成年人世界里“醉翁之意不在酒”的宠物版演绎。</p>
+        </div>
+    </foreignObject>
+
+    <!-- Line Art -->
+    <g id="line-art" stroke="#333333" stroke-width="2" fill="none">
+        <!-- Person (Cong) -->
+        <circle cx="80" cy="420" r="15"></circle>
+        <line x1="80" y1="435" x2="80" y2="470"></line>
+        <line x1="60" y1="450" x2="100" y2="450"></line>
+        <line x1="80" y1="470" x2="65" y2="500"></line>
+        <line x1="80" y1="470" x2="95" y2="500"></line>
+
+        <!-- Cat -->
+        <path d="M 150 460 C 140 450, 160 440, 170 450 L 180 465 L 140 465 Z"></path>
+        <circle cx="155" cy="452" r="1.5" fill="#333"></circle>
+        <circle cx="165" cy="452" r="1.5" fill="#333"></circle>
+        <path d="M 175 465 Q 195 460 200 440"></path>
+
+        <!-- Landlord -->
+        <circle cx="320" cy="420" r="15"></circle>
+        <line x1="320" y1="435" x2="320" y2="470"></line>
+        <path d="M 320 470 C 310 490, 330 490, 320 470 C 320 470, 300 480, 290 500"></path>
+        <path d="M 320 470 C 320 470, 340 480, 350 500"></path>
+        <!-- Heart above landlord -->
+        <path d="M320 395 C310 380, 330 380, 320 395" fill="#DC143C" stroke="none"></path>
+        <path d="M320 395 C330 380, 350 380, 320 405 C290 380, 310 380, 320 395 Z" fill="#DC143C" stroke="none"></path>
+
+        <!-- Dotted Arrow Line -->
+        <path d="M 95 450 Q 160 420, 310 405" stroke-dasharray="4 4" stroke-width="1.5"></path>
+        <polygon points="310,405 305,412 315,408" fill="#333333" stroke-width="1"></polygon>
+    </g>
+
+    <rect x="150" y="520" width="230" height="60" fill="#FFFFFF" opacity="0.8"></rect>
+    <g style="font-family: 'HYWenMingChaoTiJ', 'Noto Serif SC', serif; text-anchor: middle;">
+        <text x="265" y="555" font-size="20px" fill="#333333">猫是媒介，人是目的。</text>
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
