@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【葱哥】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="font-family: sans-serif; background-color: rgb(247, 247, 247); display: block;">
+
+  <!-- 毛笔楷体和汇文明朝体 字体定义 -->
+  <defs>
+    <style type="text/css">
+      @font-face {
+        font-family: 'MaobiKai';
+        src: url('https://cdn.jsdelivr.net/gh/poooi/maobi.css/fonts/Kaivei-Kai-Regular.woff2') format('woff2'),
+             url('https://cdn.jsdelivr.net/gh/poooi/maobi.css/fonts/Kaivei-Kai-Regular.woff') format('woff');
+      }
+      @font-face {
+        font-family: 'HuiwenMingchao';
+        src: url('https://cdn.jsdelivr.net/gh/lxgw/Huiwen-Minchao/HuiwenMinchao.woff2') format('woff2');
+      }
+    </style>
+  </defs>
+
+  <!-- 蒙德里安风格背景 -->
+  <rect x="-20" y="-20" width="440" height="640" fill="#f7f7f7"></rect>
+  <rect x="20" y="520" width="100" height="60" fill="#ffdd00"></rect>
+  <rect x="350" y="20" width="30" height="150" fill="#003399"></rect>
+  <rect x="20" y="40" width="80" height="80" fill="#e60000"></rect>
+  <line x1="0" y1="300" x2="100" y2="300" stroke="#1a1a1a" stroke-width="5"></line>
+  <line x1="300" y1="500" x2="400" y2="500" stroke="#1a1a1a" stroke-width="5"></line>
+  <line x1="320" y1="0" x2="320" y2="120" stroke="#1a1a1a" stroke-width="5"></line>
+
+  <!-- 卡片内容区 -->
+  <g transform="translate(20, 20)">
+    <!-- 标题 -->
+    <text x="180" y="50" font-family="MaobiKai, 'Noto Serif SC', 'KaiTi', sans-serif" font-size="36" text-anchor="middle" fill="#1a1a1a">汉语新解</text>
+    
+    <!-- 分隔线 -->
+    <line x1="80" y1="80" x2="280" y2="80" stroke="#888" stroke-width="1.5"></line>
+
+    <!-- 词汇 -->
+    <text x="180" y="130" font-family="HuiwenMingchao, 'STSong', 'SimSun', serif" font-size="48" text-anchor="middle" fill="#333">葱哥</text>
+    <text x="180" y="160" font-family="'Segoe UI', sans-serif" font-size="16" text-anchor="middle" fill="#666">Onion Bro / ネギ兄</text>
+
+    <!-- 解释 -->
+    <foreignObject x="40" y="190" width="280" height="150">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: HuiwenMingchao, STFangsong, FangSong, serif; font-size: 18px; color: rgb(90, 90, 90); line-height: 1.8; text-align: justify; margin: 0px; padding: 0px; box-sizing: border-box; width: 280px; overflow-wrap: break-word;">
+        一种自我感觉良好的植物人格。你以为一层层剥开他，能看到真心，结果只闻到一股呛人的廉价味儿。剥到最后，你哭了，他空了。
+      </div>
+    </foreignObject>
+
+    <!-- 线条图 -->
+    <g transform="translate(180, 400) scale(0.9)">
+      <!-- 被剥开的洋葱 -->
+      <path d="M 0,-40 C 40,-40 40,0 0,0 C -40,0 -40,-40 0,-40 Z" fill="none" stroke="#333" stroke-width="2"></path>
+      <path d="M 0,-40 Q 15,-60 25,-45" fill="none" stroke="#333" stroke-width="2"></path>
+      <path d="M 0,-40 Q -15,-60 -25,-45" fill="none" stroke="#333" stroke-width="2"></path>
+      <!-- 空洞的内核 -->
+      <circle cx="0" cy="-20" r="8" fill="#f7f7f7" stroke="#333" stroke-width="2"></circle>
+      <!-- 剥落的皮层 -->
+      <path d="M -15,-38 C -50,-50 -60,-20 -30,-10" fill="none" stroke="#333" stroke-width="2" stroke-dasharray="3,3"></path>
+      <path d="M 15,-38 C 50,-50 60,-20 30,-10" fill="none" stroke="#333" stroke-width="2" stroke-dasharray="3,3"></path>
+      <!-- 旁观者的眼泪 -->
+      <g transform="translate(60, -50)">
+         <path d="M -10,0 C -5,-15 5,-15 10,0 C 5,15 -5,15 -10,0 Z" fill="none" stroke="#333" stroke-width="2"></path>
+         <circle cx="0" cy="0" r="3" fill="#333"></circle>
+         <path d="M 0,5 C -2,15 2,15 0,20 C -2,15 2,15 0,5 Z" fill="#003399" opacity="0.7"></path>
+      </g>
+    </g>
+    
+    <!-- 极简总结 -->
+    <text x="180" y="490" font-family="HuiwenMingchao, 'Noto Serif SC', 'KaiTi', serif" font-size="20" text-anchor="middle" fill="#1a1a1a">表层的辛辣，内核的空洞。</text>
+
+  </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
