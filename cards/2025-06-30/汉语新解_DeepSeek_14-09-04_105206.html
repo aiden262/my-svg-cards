@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【DeepSeek】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" style="display: block;">
+    <!-- 设计元数据 -->
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&amp;family=ZCOOL+XiaoWei&amp;display=swap');
+            .title-font { font-family: 'Ma Shan Zheng', cursive; font-size: 36px; text-anchor: middle; fill: #333333; color: #333333; }
+            .main-font { font-family: 'ZCOOL XiaoWei', serif; font-size: 18px; fill: #4a4a4a; color: #4a4a4a; }
+            .translation-font { font-family: sans-serif; font-size: 14px; fill: #6c6c6c; color: #6c6c6c; }
+            .summary-font { font-family: 'ZCOOL XiaoWei', serif; font-size: 16px; text-anchor: middle; fill: #333333; color: #333333; }
+        </style>
+    </defs>
+
+    <!-- 蒙德里安风格背景 -->
+    <rect width="440" height="640" fill="#f0f0f0" x="-20" y="-20"></rect>
+    <rect x="0" y="0" width="120" height="150" fill="#E63946"></rect>
+    <rect x="300" y="480" width="100" height="120" fill="#F1FAEE"></rect>
+    <rect x="0" y="500" width="80" height="100" fill="#1D3557"></rect>
+    <rect x="350" y="0" width="50" height="80" fill="#A8DADC"></rect>
+    <rect x="150" y="250" width="100" height="100" fill="#457B9D"></rect>
+    <!-- 粗黑线条分割 -->
+    <line x1="0" y1="150" x2="400" y2="150" stroke="#000" stroke-width="5"></line>
+    <line x1="120" y1="0" x2="120" y2="600" stroke="#000" stroke-width="5"></line>
+    <line x1="0" y1="500" x2="400" y2="500" stroke="#000" stroke-width="5"></line>
+    <line x1="300" y1="0" x2="300" y2="600" stroke="#000" stroke-width="5"></line>
+
+
+    <!-- 主要内容白色背景板，增加呼吸感 -->
+    <rect x="15" y="15" width="370" height="570" fill="rgba(255, 255, 255, 0.85)" rx="10"></rect>
+
+    <!-- 标题 -->
+    <text x="200" y="70" class="title-font">汉语新解</text>
+
+    <!-- 分隔线 -->
+    <line x1="50" y1="90" x2="350" y2="90" stroke="#cccccc" stroke-width="1"></line>
+
+    <!-- 词汇 -->
+    <text x="200" y="130" text-anchor="middle" font-family="ZCOOL XiaoWei, serif" font-size="30" fill="#1D3557">DeepSeek</text>
+    <text x="200" y="155" text-anchor="middle" class="translation-font">
+        <tspan>English: DeepSeek</tspan>
+        <tspan dx="10">日本語: ディープシーク</tspan>
+    </text>
+
+    <!-- 解释 -->
+    <foreignObject x="45" y="180" width="310" height="150">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;ZCOOL XiaoWei&quot;, serif; font-size: 16.5px; color: rgb(74, 74, 74); line-height: 1.8; text-align: justify; margin: 0px; padding: 0px; box-sizing: border-box; width: 310px; overflow-wrap: break-word;">
+            一个被精心包装的挖掘许可。它授予你在信息的无垠荒原上，用最先进的姿势，挖一个看起来很深的坑的权利。至于坑里是钻石还是粪便，取决于你开挖前，这片荒原上发生过什么。
+        </div>
+    </foreignObject>
+
+    <!-- 线条图 -->
+    <g transform="translate(100, 340) scale(0.8)">
+        <!-- 地面 -->
+        <path d="M 0 100 L 250 100" stroke="#333333" stroke-width="2" fill="none"></path>
+        <!-- 挖出的深坑 -->
+        <path d="M 120 100 C 115 130, 135 160, 125 190" stroke="#333333" stroke-width="2" fill="none" stroke-dasharray="4 2"></path>
+        <!-- 穿着西装、戴着眼镜的人（代表技术精英） -->
+        <circle cx="100" cy="65" r="10" stroke="#333333" stroke-width="2" fill="none"></circle>
+        <path d="M 100 75 L 100 90 L 90 98" stroke="#333333" stroke-width="2" fill="none"></path>
+        <path d="M 100 80 L 110 88" stroke="#333333" stroke-width="2" fill="none"></path>
+        <!-- 手里拿着一个巨大的、不成比例的放大镜（代表“Seek”） -->
+        <circle cx="130" cy="85" r="15" stroke="#E63946" stroke-width="2.5" fill="none"></circle>
+        <line x1="143" y1="98" x2="155" y2="110" stroke="#E63946" stroke-width="2.5"></line>
+        <!-- 放大镜对准深坑 -->
+        <line x1="130" y1="85" x2="122" y2="105" stroke="#A8DADC" stroke-width="1" stroke-dasharray="2 2"></line>
+    </g>
+    
+    <!-- 极简总结 -->
+    <text x="200" y="540" class="summary-font">
+        用思想家的姿态，做挖掘机的工作。
+    </text>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
