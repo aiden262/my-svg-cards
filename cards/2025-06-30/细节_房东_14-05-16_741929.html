@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【房东】 - 细节</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 680 440" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+  <defs>
+    <style>
+      .font { font-family: "KingHwa_OldSong", 'Noto Serif SC', "KaiTi", sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="680" height="440" fill="#FDFDFD" x="-20" y="-20"></rect>
+
+  <g transform="translate(30, 30)">
+    <path d="M0,0 H580 V340 H0 Z" fill="none" stroke="#333333" stroke-width="1.5"></path>
+
+    <text x="290" y="45" text-anchor="middle" font-size="24" class="font" fill="#222222">细节</text>
+    <line x1="240" y1="65" x2="340" y2="65" stroke="#333333" stroke-width="1"></line>
+
+    <text x="30" y="100" font-size="20" class="font" fill="#555555">房东</text>
+
+    <foreignObject x="30" y="130" width="520" height="170">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: KingHwa_OldSong, &quot;Noto Serif SC&quot;, KaiTi, sans-serif; font-size: 13.5px; color: rgb(51, 51, 51); line-height: 1.8; text-align: justify; text-indent: 2em; margin: 0px; padding: 0px; box-sizing: border-box; width: 520px; overflow-wrap: break-word;">
+        他不是走过来的，是那串黄铜钥匙领着他过来的。钥匙是头，他是身子。钥匙一大串，沉甸甸的，在他那粗糙得像老树皮的手里晃荡，一走起路来就哗啦啦地响，那声音尖利，能穿透三层楼板，钻进你的耳朵，提醒你，日子到了。他站在门口，人还没进来，那股子旧账本和潮气的混合味儿就先进来了。他不怎么笑，嘴角往下撇着，像挂着两枚生锈的铁钩子，眼神像算盘珠子，噼里啪啦一扫，就把你屋里的家当和心里的底气算了个精光。他就是日子本身，是那个每月准时来敲门的，风雨无阻的，具体的，活生生的——“规矩”。
+      </div>
+    </foreignObject>
+
+    <line x1="30" y1="300" x2="550" y2="300" stroke="#333333" stroke-width="1"></line>
+
+    <text x="550" y="325" text-anchor="end" font-size="14" class="font" fill="#666666" font-style="italic">Anthropic Claude</text>
+  </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 细节 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
