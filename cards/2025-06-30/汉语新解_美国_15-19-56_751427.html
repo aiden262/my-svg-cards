@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【美国】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-19 -19 440 640" style="background: linear-gradient(145deg, rgb(253, 252, 251), rgb(226, 209, 195)); border: 1px solid rgb(204, 204, 204); border-radius: 10px; font-family: &quot;Helvetica Neue&quot;, Arial, sans-serif; display: block;">
+    <defs>
+        <style>
+            .title { font-family: 'Maobi Kaishu', 'Noto Serif SC', 'KaiTi', sans-serif; font-size: 32px; font-weight: bold; fill: #333; color: #333; text-anchor: middle; }
+            .word-block { text-anchor: middle; }
+            .word-cn { font-family: 'Huiwen Mingchao', 'Source Han Serif CN', serif; font-size: 40px; font-weight: 500; fill: #383838; color: #383838; }
+            .word-en-jp { font-family: 'Helvetica Neue', sans-serif; font-size: 16px; fill: #666; color: #666; }
+            .explanation { font-family: 'Huiwen Mingchao', 'Source Han Serif CN', serif; font-size: 20px; line-height: 1.8; fill: #404040; color: #404040; }
+            .drawing-desc { font-style: italic; font-size: 14px; fill: #777; color: #777; }
+            .summary { font-family: 'Huiwen Mingchao', 'Source Han Serif CN', serif; font-weight: bold; font-size: 18px; fill: #222; color: #222; text-anchor: middle; }
+            .mondrian-bg { position: absolute; width: 100%; height: 100%; z-index: -1; }
+            .rect-red { fill: #D93D2A; color: #D93D2A; }
+            .rect-blue { fill: #004E8A; color: #004E8A; }
+            .rect-yellow { fill: #F7D51D; color: #F7D51D; }
+            .rect-line { stroke: #000; stroke-width: 5px; fill: none; color: none; }
+        </style>
+    </defs>
+
+    <!-- Mondrian-inspired decorative background elements -->
+    <rect x="0" y="520" width="80" height="80" class="rect-red"></rect>
+    <rect x="350" y="0" width="50" height="120" class="rect-yellow"></rect>
+    <rect x="0" y="150" width="15" height="150" class="rect-blue"></rect>
+    <line x1="0" y1="520" x2="400" y2="520" class="rect-line"></line>
+    <line x1="80" y1="520" x2="80" y2="600" class="rect-line"></line>
+
+    <text x="200" y="60" class="title">汉语新解</text>
+    <line x1="40" y1="80" x2="360" y2="80" stroke="#888" stroke-width="1"></line>
+
+    <g class="word-block" transform="translate(200, 130)">
+        <text y="0" class="word-cn">美国</text>
+        <text y="30" class="word-en-jp">USA / アメリカ</text>
+    </g>
+
+    <foreignObject x="40" y="180" width="320" height="180">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="explanation" style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8; font-size: 16.5px;">
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">一个由市场部运营的国家。他们最成功的产品叫“梦想”，一种精神上的成瘾品，能让使用者在看清账单之前，始终保持乐观。</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">副作用是，总觉得全世界都欠他们一部续集。</p>
+        </div>
+    </foreignObject>
+
+    <g transform="translate(40, 390)">
+        <path d="M10,0 L10,50 M0,10 L20,10 M10,50 C 20,60 30,60 40,50 L 100,50 C 110,40 120,40 130,50 L 200,50 C 210,60 220,60 230,50 L 280,50" stroke="#555" stroke-width="2" fill="none" stroke-dasharray="4 2"></path>
+        <text x="0" y="80" class="drawing-desc" style="font-size: 15px;">
+            <tspan x="0" dy="1.2em">【线条图】</tspan>
+            <tspan x="0" dy="1.4em">一个头顶悬挂着“梦想”胡萝卜，</tspan>
+            <tspan x="0" dy="1.4em">在美元组成的跑步机上奋力奔跑的人。</tspan>
+            <tspan x="0" dy="1.4em">他看不到自己其实在原地踏步，</tspan>
+            <tspan x="0" dy="1.4em">也看不到身后递来的巨额账单。</tspan>
+        </text>
+    </g>
+
+    <text x="200" y="570" class="summary">“用未来的债，买今天的梦。”</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
