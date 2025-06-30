@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【华为】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" xmlns="http://www.w3.org/2000/svg" style="background-color: rgb(240, 240, 240); font-family: sans-serif; display: block;">
+    <!-- Mondrian Style Background -->
+    <rect x="-20" y="-20" width="440" height="640" fill="#fdfdfd"></rect>
+    <rect x="280" y="0" width="120" height="200" fill="#e74c3c"></rect>
+    <rect x="0" y="450" width="250" height="150" fill="#3498db"></rect>
+    <rect x="250" y="450" width="150" height="150" fill="#f1c40f"></rect>
+    <line x1="0" y1="450" x2="400" y2="450" stroke="#000" stroke-width="5"></line>
+    <line x1="280" y1="0" x2="280" y2="200" stroke="#000" stroke-width="5"></line>
+    <line x1="250" y1="450" x2="250" y2="600" stroke="#000" stroke-width="5"></line>
+
+    <g style="font-family: 'Noto Serif SC', 'Ma Shan Zheng', cursive, serif; color: #333333; text-anchor: middle;">
+        
+        <!-- 标题 -->
+        <text x="200" y="60" style="font-family: 'Noto Serif SC', 'Zhi Mang Xing', cursive; font-size: 36px; fill: #1a1a1a; color: #1a1a1a; color: #1a1a1a;">汉语新解</text>
+        
+        <!-- 分隔线 -->
+        <line x1="80" y1="85" x2="320" y2="85" stroke="#333333" stroke-width="1.5"></line>
+        
+        <!-- 词汇 -->
+        <text x="200" y="130" font-size="32" font-weight="bold" fill="#2c3e50">华为</text>
+        <text x="200" y="160" font-size="18" fill="#555555">Huawei</text>
+        <text x="200" y="185" font-size="16" fill="#555555">ファーウェイ</text>
+        
+        <!-- 解释 -->
+        <foreignObject x="40" y="210" width="320" height="120">
+            <p xmlns="http://www.w3.org/1999/xhtml" style="font-size: 19px; line-height: 1.8; text-align: left; margin: 0px; color: rgb(51, 51, 51); white-space: normal; overflow-wrap: break-word; padding: 0px; box-sizing: border-box; width: 320px;">
+                一种高科技圣物。它擅长将爱国主义提纯为购买力，同时将消费行为升华为忠诚度的全民公投。
+            </p>
+        </foreignObject>
+        
+        <!-- 线条图 -->
+        <g id="line-drawing" transform="translate(100, 360) scale(0.8)">
+            <!-- Machine -->
+            <rect x="50" y="20" width="150" height="80" rx="5" stroke="#000" stroke-width="2" fill="none"></rect>
+            <path d="M 50 60 C 70 80, 80 80, 100 60" stroke="#000" stroke-width="2" fill="none"></path>
+            <circle cx="170" cy="40" r="5" stroke="#000" stroke-width="2" fill="#fff"></circle>
+            <circle cx="170" cy="70" r="5" stroke="#000" stroke-width="2" fill="#fff"></circle>
+            
+            <!-- Input: Heart (Patriotism) -->
+            <path d="M 20 20 C 0 30, 0 60, 20 70 L 35 55 L 50 70 C 70 60, 70 30, 50 20 Z" transform="translate(-10, 10)" stroke="#e74c3c" stroke-width="2" fill="#e74c3c" fill-opacity="0.5"></path>
+            <path d="M 35 55 L 50 20" stroke="#000" stroke-width="2" fill="none"></path>
+            <text x="15" y="15" font-size="12">❤️</text>
+            
+            <!-- Output: Phone with Checkmark (Vote) -->
+            <rect x="200" y="30" width="40" height="70" rx="4" stroke="#000" stroke-width="2" fill="#fff"></rect>
+            <rect x="205" y="35" width="30" height="50" fill="#eee"></rect>
+            <path d="M 210 55 L 218 63 L 230 48" stroke="green" stroke-width="3" fill="none"></path>
+            <line x1="220" y1="25" x2="220" y2="30" stroke="#000" stroke-width="2"></line>
+        </g>
+        
+        <!-- 极简总结 -->
+        <text x="200" y="520" font-size="20px" fill="#1a1a1a" style="font-weight: bold;">爱国心变现机</text>
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
