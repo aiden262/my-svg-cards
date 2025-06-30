@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【英国】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-1 1 403 600" style="background-color: rgb(242, 241, 233); border: 1px solid rgb(204, 204, 204); display: block;" xmlns="http://www.w3.org/2000/svg">
+    <!-- Mondrian Style Background -->
+    <rect x="-1" y="1" width="403" height="600" fill="#EADAD2"></rect>
+    <rect x="300" y="450" width="80" height="130" fill="#D3E0E3"></rect>
+    <rect x="20" y="550" width="150" height="30" fill="#F0C987"></rect>
+
+    <!-- Main Content -->
+    <g fill="#3D3D3D" font-family="'Noto Serif SC', serif">
+
+        <!-- Title -->
+        <text x="200" y="70" font-size="36" font-family="'Noto Serif SC', cursive" text-anchor="middle">汉语新解</text>
+        
+        <!-- Separator -->
+        <line x1="80" y1="100" x2="320" y2="100" stroke="#3D3D3D" stroke-width="1"></line>
+
+        <!-- Word -->
+        <text x="200" y="150" font-size="48" text-anchor="middle">英国</text>
+        <text x="200" y="180" font-size="18" text-anchor="middle" fill="#6c757d">United Kingdom / イギリス</text>
+
+        <!-- Interpretation -->
+        <foreignObject x="50" y="220" width="300" height="200">
+            
+                <p style="font-size: 19px; line-height: 1.8; margin: 0px; text-align: center; color: rgb(61, 61, 61); font-family: &quot;Noto Serif SC&quot;, serif; padding: 0px; box-sizing: border-box; width: 300px; overflow-wrap: break-word;">
+                    一个坚信“太阳不落”的日落。
+                    <br style="margin: 0px; padding: 0px; box-sizing: border-box;"><br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+                    一个在派对结束后，依然穿着礼服，固执地在自家草坪上独舞的没落贵族。
+                </p>
+            
+        </foreignObject>
+
+        <!-- Line Art & Critical Core -->
+        <g id="line-art" transform="translate(0, 10)">
+            <!-- Critical Core Text -->
+            <text x="200" y="380" font-size="14" text-anchor="middle" fill="#A0522D">
+                [ 批判内核: 对昔日荣光的病态迷恋与现实处境的尴尬错位 ]
+            </text>
+            
+            <!-- Drawing: a lone figure dancing on a small piece of land -->
+            <path d="M 120 480 Q 200 470 280 480" stroke="#3D3D3D" stroke-width="1.5" fill="none" stroke-linecap="round"></path>
+            <!-- Figure -->
+            <g transform="translate(200, 445) rotate(5)">
+                <circle cx="0" cy="-10" r="8" fill="none" stroke="#3D3D3D" stroke-width="1.5"></circle>
+                <path d="M 0 0 L 0 20" stroke="#3D3D3D" stroke-width="1.5"></path> <!-- Body -->
+                <path d="M -15 5 L 0 10 L 15 5" stroke="#3D3D3D" stroke-width="1.5" fill="none"></path> <!-- Arms -->
+                <path d="M -10 35 L 0 20 L 10 35" stroke="#3D3D3D" stroke-width="1.5" fill="none"></path> <!-- Legs -->
+            </g>
+        </g>
+        
+        <!-- Minimalist Summary -->
+        <text x="200" y="530" font-size="16" text-anchor="middle" font-style="italic">
+            孤岛上的独舞
+        </text>
+
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: gemini-2.5-pro
+        </footer>
+    </main>
+</body>
+</html>
