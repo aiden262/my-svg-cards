@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【捞男】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" xmlns="http://www.w3.org/2000/svg" style="font-family: sans-serif; display: block;">
+    <!-- Background inspired by Mondrian, with a design feel -->
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&amp;family=ZCOOL+KuaiLe&amp;family=Noto+Serif+SC:wght@400;700&amp;display=swap');
+            .title-font { font-family: 'Ma Shan Zheng', 'Noto Serif SC', cursive; font-weight: bold; }
+            .main-font { font-family: 'Noto Serif SC', 'Noto Serif SC', serif; }
+            .clean-font { font-family: sans-serif; }
+        </style>
+    </defs>
+    <rect width="440" height="640" fill="#f2f2f2" x="-20" y="-20"></rect>
+    <rect x="50" y="80" width="300" height="480" fill="#ffffff"></rect>
+    <rect x="20" y="50" width="100" height="150" fill="#e02d2d"></rect>
+    <rect x="280" y="450" width="100" height="100" fill="#f9d71c"></rect>
+    <rect x="150" y="300" width="220" height="80" fill="#3a5dae"></rect>
+    
+    <!-- Main Card Content -->
+    <g transform="translate(20, 20)">
+        <rect width="360" height="560" fill="#fff" stroke="#ddd" stroke-width="1" rx="10" ry="10"></rect>
+
+        <!-- 1. 居中标题 -->
+        <text x="180" y="60" text-anchor="middle" font-size="32" class="title-font" fill="#333">汉语新解</text>
+
+        <!-- 2. 分隔线 -->
+        <line x1="60" y1="85" x2="300" y2="85" stroke="#ccc" stroke-width="1.5"></line>
+
+        <!-- 3. 排版输出 -->
+        <text x="180" y="130" text-anchor="middle" font-size="48" class="main-font" font-weight="700" fill="#333">捞男</text>
+        <text x="180" y="160" text-anchor="middle" font-size="16" class="clean-font" fill="#666">Male Gold Digger</text>
+        <text x="180" y="185" text-anchor="middle" font-size="16" class="clean-font" fill="#666">ヒモ男 (Himo Otoko)</text>
+
+        <!-- 4. 解释 (auto-scaling text block) -->
+        <foreignObject x="40" y="210" width="280" height="150">
+            <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, &quot;Noto Serif SC&quot;, serif; color: rgb(80, 80, 80); font-size: 16.5px; line-height: 1.8; text-align: justify; margin: 0px; padding: 0px; box-sizing: border-box; width: 280px; overflow-wrap: break-word;">
+                一种把爱情当成创业项目的雄性生物。他们擅长用最小的情感成本，撬动最大的生存资源，然后在新一轮融资（找到下家）前，将原始股东（现任）无情清盘。
+            </div>
+        </foreignObject>
+
+        <!-- 5. 线条图 -->
+        <g id="line-drawing" transform="translate(0, 350)">
+            <text x="180" y="30" text-anchor="middle" font-size="14" class="main-font" fill="#aaa">批判内核</text>
+            <!-- Flowchart -->
+            <rect x="60" y="50" width="80" height="30" rx="5" fill="none" stroke="#333" stroke-width="1.5"></rect>
+            <text x="100" y="70" text-anchor="middle" font-size="12" class="clean-font" fill="#333">情感伪装</text>
+            
+            <line x1="140" y1="65" x2="170" y2="65" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"></line>
+            
+            <rect x="170" y="50" width="80" height="30" rx="5" fill="none" stroke="#333" stroke-width="1.5"></rect>
+            <text x="210" y="70" text-anchor="middle" font-size="12" class="clean-font" fill="#333">资源榨取</text>
+
+            <line x1="250" y1="65" x2="280" y2="65" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"></line>
+
+            <rect x="280" y="50" width="80" height="30" rx="5" fill="none" stroke="#333" stroke-width="1.5"></rect>
+            <text x="320" y="70" text-anchor="middle" font-size="12" class="clean-font" fill="#333">果断离场</text>
+
+            <path d="M 320 80 Q 320 110, 190 110 Q 60 110, 60 80" fill="none" stroke="#333" stroke-width="1.5" stroke-dasharray="4 2" marker-start="url(#arrow-reverse)"></path>
+            <text x="190" y="125" text-anchor="middle" font-size="12" class="clean-font" fill="#666">Repeat</text>
+            
+            <defs>
+                <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"></path>
+                </marker>
+                <marker id="arrow-reverse" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+                    <path d="M 10 0 L 0 5 L 10 10 z" fill="#333"></path>
+                </marker>
+            </defs>
+        </g>
+        
+        <!-- 6. 极简总结 -->
+        <text x="180" y="520" text-anchor="middle" font-size="18" class="main-font" fill="#333" font-weight="bold">
+            情感套利，空手致富。
+        </text>
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 2.5 Pro
+        </footer>
+    </main>
+</body>
+</html>
