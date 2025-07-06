@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【微信】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 440 640" style="display: block;">
+  <!-- 背景色：蒙德里安风格，设计感 -->
+  <rect width="440" height="640" fill="#F5F5F5" x="-20" y="-20"></rect>
+  <rect x="20" y="20" width="100" height="100" fill="#D32F2F"></rect>
+  <rect x="140" y="20" width="240" height="20" fill="#1976D2"></rect>
+  <rect x="20" y="140" width="20" height="100" fill="#FFC107"></rect>
+
+  <!-- 居中标题：汉语新解 -->
+  <text x="200" y="70" font-family="Noto Serif SC" font-size="28" fill="#333333" text-anchor="middle">汉语新解</text>
+
+  <!-- 分隔线 -->
+  <line x1="50" y1="100" x2="350" y2="100" stroke="#333333" stroke-width="1"></line>
+
+  <!-- 排版输出：用户输入、英文、日语 -->
+  <text x="200" y="130" font-family="Noto Serif SC" font-size="24" fill="#666666" text-anchor="middle">微信</text>
+  <text x="200" y="160" font-family="Noto Serif SC" font-size="16" fill="#666666" text-anchor="middle">WeChat</text>
+  <text x="200" y="190" font-family="Noto Serif SC" font-size="16" fill="#666666" text-anchor="middle">ウェイシン</text>
+
+  <!-- 解释 -->
+  <text x="30" y="230" font-family="Noto Serif SC" font-size="16" fill="#666666" text-anchor="start">
+    <tspan x="30" dy="20">微信，这个词听起来像是“微小的信件”，</tspan>
+    <tspan x="30" dy="20">但它更像是一个巨大的社会牢笼，</tspan>
+    <tspan x="30" dy="20">披着“联系”的温情外衣，困住你我。</tspan>
+    <tspan x="30" dy="20">它是电子镣铐，表面让你“触手可及”，</tspan>
+    <tspan x="30" dy="20">实则无处可逃——老板指令、亲戚八卦，</tspan>
+    <tspan x="30" dy="20">24小时轰炸，连梦里都逃不过“叮”。</tspan>
+    <tspan x="30" dy="20">它微小吗？不，它吞噬你的时间、自由，</tspan>
+    <tspan x="30" dy="20">成了你恨又离不开的“数字鸦片”。</tspan>
+  </text>
+
+  <!-- 线条图：批判内核 -->
+  <g transform="translate(150, 450)">
+    <rect x="0" y="0" width="100" height="60" fill="none" stroke="#D32F2F" stroke-width="2"></rect>
+    <line x1="20" y1="20" x2="80" y2="20" stroke="#D32F2F" stroke-width="1"></line>
+    <line x1="20" y1="30" x2="80" y2="30" stroke="#D32F2F" stroke-width="1"></line>
+    <line x1="20" y1="40" x2="80" y2="40" stroke="#D32F2F" stroke-width="1"></line>
+    <circle cx="50" cy="30" r="15" fill="none" stroke="#1976D2" stroke-width="2"></circle>
+  </g>
+
+  <!-- 极简总结：线条图 -->
+  <text x="200" y="530" font-family="Noto Serif SC" font-size="16" fill="#666666" text-anchor="middle">数字牢笼，叮声不绝</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Grok 3
+        </footer>
+    </main>
+</body>
+</html>
