@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【铁】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" xmlns="http://www.w3.org/2000/svg" style="font-family: sans-serif; display: block;">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&amp;family=ZCOOL+KuaiLe&amp;family=Noto+Sans+SC:wght@300;400;700&amp;display=swap');
+            .title-font { font-family: 'Ma Shan Zheng', 'Noto Serif SC', cursive; font-size: 36px; text-anchor: middle; fill: #333; color: #333; }
+            .main-font { font-family: 'Noto Sans SC', 'Noto Serif SC', sans-serif; font-size: 18px; fill: #5A5A5A; color: #5A5A5A; }
+            .word-font { font-family: 'Noto Sans SC', 'Noto Serif SC', sans-serif; font-size: 24px; font-weight: 700; fill: #444; color: #444; }
+            .caption-font { font-family: 'Noto Sans SC', 'Noto Serif SC', sans-serif; font-size: 14px; fill: #777; color: #777; }
+        </style>
+    </defs>
+
+    <!-- 背景: 蒙德里安风格几何色块 -->
+    <rect width="440" height="640" fill="#F2F2F2" x="-20" y="-20"></rect>
+    <rect x="0" y="500" width="120" height="100" fill="#E6D4A7"></rect>
+    <rect x="300" y="0" width="100" height="150" fill="#D94A4A"></rect>
+    <rect x="0" y="80" width="50" height="200" fill="#4A70D9"></rect>
+    <rect x="150" y="350" width="250" height="80" fill="#F2E863"></rect>
+
+    <!-- 主要内容区域 -->
+    <g transform="translate(20, 20)">
+        <rect width="360" height="560" fill="#FFFFFF" fill-opacity="0.85" rx="10"></rect>
+        
+        <text x="180" y="60" class="title-font">汉语新解</text>
+        
+        <line x1="40" y1="85" x2="320" y2="85" stroke="#DDD" stroke-width="1"></line>
+
+        <g transform="translate(40, 120)">
+            <text class="word-font" style="text-anchor: start;">铁</text>
+            <text class="caption-font" x="40" y="0" dominant-baseline="middle">/ Iron / 鉄 (てつ)</text>
+        </g>
+
+        <foreignObject x="40" y="150" width="280" height="200">
+            
+                <p class="main-font" style="line-height: 1.8; margin: 0px; text-align: justify; padding: 0px; box-sizing: border-box; width: 280px; overflow-wrap: break-word; font-size: 13.5px;">
+                    一种对工具的最高赞美。当他们称赞你“铁”时，潜台词是：你真好用，且情绪稳定。你是一根完美的螺丝钉，一把趁手的锤子，一个无需充电的移动电源。他们欣赏你的功能性，并心安理得地忽略了你的磨损和锈迹。直到有一天，你拧不紧了，敲不动了，没电了，他们会骂一句“什么破铜烂铁”，然后换个新的。
+                </p>
+            
+        </foreignObject>
+
+        <!-- 线条图 -->
+        <g transform="translate(180, 420)" style="text-anchor: middle;">
+            <path d="M -80 -20 Q -80 -60, -40 -60 L 40 -60 Q 80 -60, 80 -20" fill="none" stroke="#5A5A5A" stroke-width="2"></path>
+            <rect x="-10" y="-20" width="20" height="60" fill="none" stroke="#5A5A5A" stroke-width="2"></rect>
+            <path d="M -15 40 L -25 60 L 25 60 L 15 40 Z" fill="#5A5A5A"></path>
+            <!-- 锈迹 -->
+            <circle cx="50" cy="-45" r="2" fill="#D94A4A"></circle>
+            <circle cx="53" cy="-42" r="1.5" fill="#D94A4A"></circle>
+            <text class="caption-font" y="80" style="font-size: 12px;">[ 批判内核: 一个带有锈迹的扳手 ]</text>
+        </g>
+        
+        <foreignObject x="40" y="510" width="280" height="40">
+            
+                 <p class="main-font" style="font-size: 14px; text-align: center; font-weight: bold; margin: 0px; padding: 0px; box-sizing: border-box; width: 280px; overflow-wrap: break-word; line-height: 1.8;">
+                    所谓牢不可破，不过是尚未崩坏的消耗品。
+                </p>
+            
+        </foreignObject>
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 2.5 Pro
+        </footer>
+    </main>
+</body>
+</html>
