@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【信息孤岛】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" style="background-color: rgb(240, 240, 240); font-family: sans-serif; display: block;" viewBox="-20 -20 440 640">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&amp;family=Noto+Serif+SC:wght@400;700&amp;display=swap');
+            .title { font-family: 'ZCOOL QingKe HuangYou', cursive; font-size: 32px; text-anchor: middle; fill: #1a1a1a; color: #1a1a1a; }
+            .term { font-family: 'Noto Serif SC', serif; font-size: 28px; font-weight: 700; text-anchor: middle; fill: #2c2c2c; color: #2c2c2c; }
+            .translation { font-family: 'Helvetica', sans-serif; font-size: 14px; text-anchor: middle; fill: #666; color: #666; }
+            .explanation { font-family: 'Noto Serif SC', serif; font-size: 18px; fill: #333; color: #333; line-height: 1.8; }
+            .summary { font-family: 'Noto Serif SC', serif; font-size: 16px; font-weight: bold; text-anchor: middle; fill: #000; color: #000; }
+        </style>
+        <rect id="mondrian-red" width="440" height="640" fill="#dd0000" x="-20" y="-20"></rect>
+        <rect id="mondrian-blue" width="50" height="50" fill="#005bff"></rect>
+        <rect id="mondrian-yellow" width="70" height="120" fill="#ffde00"></rect>
+    </defs>
+
+    <!-- Mondrian Background -->
+    <rect width="400" height="600" fill="#fdfdfd"></rect>
+    <use href="#mondrian-red" x="300" y="480"></use>
+    <use href="#mondrian-blue" x="20" y="20"></use>
+    <use href="#mondrian-yellow" x="310" y="20"></use>
+    <line x1="20" y1="80" x2="380" y2="80" stroke="#1a1a1a" stroke-width="3"></line>
+    <line x1="20" y1="180" x2="380" y2="180" stroke="#ccc" stroke-width="1"></line>
+    <line x1="20" y1="460" x2="380" y2="460" stroke="#ccc" stroke-width="1"></line>
+
+
+    <text x="200" y="60" class="title">汉 语 新 解</text>
+
+    <text x="200" y="120" class="term">信息孤岛</text>
+    <text x="200" y="145" class="translation">Information Silo / 情報の孤島</text>
+
+    <foreignObject x="40" y="190" width="320" height="260">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="explanation" style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8; font-size: 13px;">
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">一个精心伪装成私人泳池的数字化鱼塘。</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">塘主（算法、平台、或任何想让你“省心”的“好人”）用你最喜欢的口味——八卦、爽文、阴谋论、同款焦虑——调配成特供饲料，精准投喂。让你在里面游得不亦乐乎，感觉整个世界都与你心有灵犀，温暖又安全。</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">塘里的水，看似清澈，实则是一面单向镜。你只能看到自己的倒影和其它被投喂的同类，而塘主在外面欣赏着你为每一勺饲料而欢呼雀跃的姿态。</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">最妙的是，你甚至会主动为这个鱼塘砌上更高的墙，把所有不合口味的“杂音”当作污染源给过滤掉，并把这口塘，当成了整个海洋。你不是岛主，你只是岛本身。</p>
+        </div>
+    </foreignObject>
+
+    <!-- Line Art: A head with a maze inside, only one path is lit. -->
+    <path d="M 100 480 C 100 470, 110 470, 120 480 L 120 540 C 110 550, 100 550, 100 540 Z" fill="none" stroke="#333" stroke-width="2"></path>
+    <path d="M 120 490 L 180 490 M 180 490 C 190 490, 190 500, 180 500 L 140 500 C 130 500, 130 510, 140 510 L 190 510" fill="none" stroke="#333" stroke-width="2"></path>
+    <path d="M 190 510 L 220 510" fill="none" stroke="#ffde00" stroke-width="4" stroke-linecap="round"></path>
+    <path d="M 220 510 L 280 510 M 120 525 L 280 525" fill="none" stroke="#333" stroke-width="2"></path>
+    <text x="200" y="560" font-family="Noto Serif SC" font-size="12" text-anchor="middle" fill="#555">线条图: 思想迷宫里的唯一光路</text>
+
+
+    <text x="200" y="590" class="summary">算法为你定制的单人牢房，你付的房租是你的无知。</text>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 2.5 Pro
+        </footer>
+    </main>
+</body>
+</html>
