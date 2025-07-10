@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【哔哩哔哩】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg style="background: linear-gradient(rgb(240, 240, 240) 25%, rgb(222, 49, 99) 25%, rgb(222, 49, 99) 26%, rgb(240, 240, 240) 26%, rgb(240, 240, 240) 50%, rgb(52, 152, 219) 50%, rgb(52, 152, 219) 51%, rgb(240, 240, 240) 51%, rgb(240, 240, 240) 75%, rgb(241, 196, 15) 75%, rgb(241, 196, 15) 76%, rgb(240, 240, 240) 76%); font-family: &quot;sans-serif&quot;; display: block;" viewBox="-20 -20 440 640">
+  <rect width="440" height="640" fill="rgba(255, 255, 255, 0.8)" x="-20" y="-20"></rect>
+  <g style="transform: translate(20px, 20px); font-family: 'Noto Serif SC', 'KaiTi', 'serif';">
+
+    <text x="180" y="50" font-size="28" text-anchor="middle" fill="#333">汉语新解</text>
+    <line x1="40" y1="70" x2="320" y2="70" stroke="#555" stroke-width="1"></line>
+
+    <text x="180" y="110" font-size="36" text-anchor="middle" fill="#333">哔哩哔哩</text>
+    <text x="180" y="140" font-size="16" text-anchor="middle" fill="#777">Bilibili</text>
+    <text x="180" y="165" font-size="16" text-anchor="middle" fill="#777">ビリビリ</text>
+
+    <foreignObject x="40" y="190" width="280" height="200">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, HYWenMingChao, &quot;serif&quot;; color: rgb(74, 74, 74); font-size: 10px; line-height: 1.8; text-align: justify; margin: 0px; padding: 0px; box-sizing: border-box; width: 280px; overflow-wrap: break-word;">
+        <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 280px; overflow-wrap: break-word; line-height: 1.8;"><strong style="margin: 0px; padding: 0px; box-sizing: border-box;">年轻人的精神养老院。</strong></p>
+        <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 280px; overflow-wrap: break-word; line-height: 1.8;">一个把现实调成“硬核模式”后，主动选择退服的赛博空间。在这里，UP主是护工，用内容喂养你嗷嗷待哺的精神；弹幕是院里的广场舞，大家用统一的黑话和烂梗，在别人的故事上空进行一场虚拟的狂欢，假装自己并不孤独。</p>
+        <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 280px; overflow-wrap: break-word; line-height: 1.8;">“一键三连”是你缴纳的虚拟养老金，用以换取片刻的多巴胺。你以为在为梦想充电，其实只是给资本的电池续航。</p>
+        <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 280px; overflow-wrap: break-word; line-height: 1.8;">它是一剂精准的麻药，专治“理想过敏”和“现实焦虑”综合症。药效一过，你依然躺在床上，只是屏幕更烫了。</p>
+      </div>
+    </foreignObject>
+
+    <g id="line-drawing" style="transform: translate(0, 380px);">
+      <path d="M 80 120 C 80 80, 120 80, 120 120 L 120 140 L 80 140 Z" fill="none" stroke="#333" stroke-width="2"></path>
+      <path d="M 120 140 C 180 160, 220 100, 280 120" fill="none" stroke="#333" stroke-width="2"></path>
+      <circle cx="100" cy="70" r="15" fill="none" stroke="#333" stroke-width="2"></circle>
+      <path d="M 100 85 L 100 110 L 90 130 L 110 130 L 100 110" fill="none" stroke="#333" stroke-width="2"></path>
+      <text x="180" y="40" font-size="12" fill="#555" text-anchor="middle" style="font-family: 'KaiTi';">[线条图: 一个坐在摇椅上的人，正对着前方虚无的波浪发呆]</text>
+    </g>
+
+    <text x="180" y="550" font-size="16" text-anchor="middle" fill="#333" style="font-family: 'Noto Serif SC', 'serif';">
+      “在别人的故事里，提前预支一个无需负责的晚年。”
+    </text>
+
+  </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 2.5 Pro
+        </footer>
+    </main>
+</body>
+</html>
