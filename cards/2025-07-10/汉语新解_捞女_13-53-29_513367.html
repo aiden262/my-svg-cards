@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【捞女】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 533 640" style="display: block;">
+  <!-- 背景：蒙德里安风格，设计感强，使用矩形色块，红色、蓝色、黄色、白色、黑色，简洁分割 -->
+  <rect width="533" height="640" fill="#FFFFFF" x="-20" y="-20"></rect>
+  <rect x="0" y="0" width="400" height="200" fill="#FF0000" opacity="0.1"></rect>
+  <rect x="100" y="200" width="200" height="200" fill="#0000FF" opacity="0.1"></rect>
+  <rect x="0" y="400" width="400" height="200" fill="#FFFF00" opacity="0.1"></rect>
+  <line x1="0" y1="200" x2="400" y2="200" stroke="#000000" stroke-width="1"></line>
+  <line x1="100" y1="200" x2="100" y2="400" stroke="#000000" stroke-width="1"></line>
+  <line x1="300" y1="200" x2="300" y2="400" stroke="#000000" stroke-width="1"></line>
+
+  <!-- 装饰图案：随机几何图，简单三角和圆 -->
+  <circle cx="50" cy="50" r="20" fill="none" stroke="#808080" stroke-width="1"></circle>
+  <polygon points="350,50 370,70 330,70" fill="none" stroke="#808080" stroke-width="1"></polygon>
+  <rect x="20" y="550" width="30" height="30" fill="none" stroke="#808080" stroke-width="1" transform="rotate(45 35 565)"></rect>
+
+  <!-- 居中标题：汉语新解，毛笔楷体风格模拟（使用serif字体模拟） -->
+  <text x="200" y="60" font-family="serif" font-size="32" fill="#4D4D4D" text-anchor="middle" font-weight="bold">汉语新解</text>
+
+  <!-- 分隔线 -->
+  <line x1="20" y1="80" x2="380" y2="80" stroke="#808080" stroke-width="1"></line>
+
+  <!-- 排版输出：用户输入、英文、日语，汇文明朝体模拟（serif），粉笔灰 -->
+  <text x="200" y="120" font-family="serif" font-size="28" fill="#4D4D4D" text-anchor="middle">捞女</text>
+  <text x="200" y="150" font-family="serif" font-size="20" fill="#4D4D4D" text-anchor="middle">Gold Digger</text>
+  <text x="200" y="180" font-family="serif" font-size="20" fill="#4D4D4D" text-anchor="middle">金目当ての女</text>
+
+  <!-- 解释：主要文字，'Noto Serif SC'，粉笔灰，自动缩放最小16，排版有呼吸感 -->
+  <text x="20" y="220" font-family="serif" font-size="18" fill="#4D4D4D">
+    <tspan x="20" dy="0">捞女，如同资本主义爱情市场的职业渔夫，</tspan>
+    <tspan x="20" dy="24">以甜言蜜语为鱼饵，在情感的浅滩上大肆捕捞男性的钱包，</tspan>
+    <tspan x="20" dy="24">实则讽刺了这个时代里，爱情被包装成交易的荒诞闹剧——</tspan>
+    <tspan x="20" dy="24">男人们自愿上钩，只为证明自己是条大鱼，</tspan>
+    <tspan x="20" dy="24">而她，不过是镜子，映出社会物欲横流的丑陋倒影。</tspan>
+  </text>
+
+  <!-- 线条图：批判内核，简单线条表示钓鱼场景，象征捞取金钱 -->
+  <g transform="translate(100, 400)">
+    <line x1="0" y1="0" x2="200" y2="0" stroke="#4D4D4D" stroke-width="2"></line> <!-- 钓竿 -->
+    <line x1="200" y1="0" x2="200" y2="100" stroke="#4D4D4D" stroke-width="2"></line> <!-- 钓线 -->
+    <circle cx="200" cy="120" r="20" fill="none" stroke="#4D4D4D" stroke-width="2"></circle> <!-- 鱼钩上的钱包 -->
+    <text x="190" y="125" font-family="serif" font-size="16" fill="#4D4D4D">$</text>
+  </g>
+
+  <!-- 极简总结：线条图下方 -->
+  <text x="20" y="540" font-family="serif" font-size="16" fill="#4D4D4D">
+    <tspan x="20" dy="0">爱情渔场，钱包上钩。</tspan>
+  </text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Grok 4
+        </footer>
+    </main>
+</body>
+</html>
