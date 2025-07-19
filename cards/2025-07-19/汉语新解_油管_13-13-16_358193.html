@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【油管】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" xmlns="http://www.w3.org/2000/svg" style="background-color: rgb(240, 240, 240); font-family: sans-serif; display: block;">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&amp;family=Noto+Serif+SC:wght@400;700&amp;display=swap');
+      .title { font-family: 'ZCOOL KuaiLe', cursive; font-size: 36px; text-anchor: middle; fill: #1a1a1a; color: #1a1a1a; }
+      .word { font-family: 'Noto Serif SC', serif; font-size: 40px; font-weight: 700; text-anchor: middle; fill: #333; color: #333; }
+      .translations { font-family: 'Noto Sans', sans-serif; font-size: 16px; text-anchor: middle; fill: #666; color: #666; }
+      .explanation { font-family: 'Noto Serif SC', serif; font-size: 20px; fill: #4a4a4a; color: #4a4a4a; white-space: pre-wrap; text-align: justify; }
+      .summary-title { font-family: 'Noto Serif SC', serif; font-size: 14px; font-weight: bold; text-anchor: middle; fill: #1a1a1a; color: #1a1a1a; letter-spacing: 2px;}
+      .summary-text { font-family: 'Noto Serif SC', serif; font-size: 18px; text-anchor: middle; fill: #333; color: #333; }
+    </style>
+  </defs>
+
+  <!-- Background Pattern -->
+  <rect x="-20" y="-20" width="440" height="640" fill="#e63946"></rect>
+  <rect x="0" y="500" width="100" height="100" fill="#457b9d"></rect>
+  <rect x="350" y="200" width="50" height="200" fill="#f1faee"></rect>
+  <rect x="120" y="250" width="160" height="10" fill="#a8dadc"></rect>
+
+  <!-- Main Content Area -->
+  <rect x="20" y="20" width="360" height="560" fill="rgba(255, 255, 255, 0.85)" rx="15"></rect>
+
+  <!-- Title -->
+  <text x="200" y="70" class="title">汉语新解</text>
+  <line x1="50" y1="90" x2="350" y2="90" stroke="#a8dadc" stroke-width="2"></line>
+
+  <!-- Word -->
+  <text x="200" y="145" class="word">油 管</text>
+  <text x="200" y="175" class="translations">YouTube / ユーチューブ</text>
+
+  <!-- Explanation -->
+  <foreignObject x="45" y="195" width="310" height="160">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, serif; font-size: 17.5px; color: rgb(74, 74, 74); line-height: 1.8; text-align: justify; margin: 0px; padding: 0px; box-sizing: border-box; width: 310px; overflow-wrap: break-word;">
+      一根通往世界的信息管道，但阀门掌握在算法手中。它承诺给你整个海洋，却只根据你的欲望，精准地为你滴灌一小杯精心调配、高度成瘾的盐水，让你越喝越渴。
+    </div>
+  </foreignObject>
+
+  <!-- Line Art & Critical Core -->
+  <g transform="translate(200, 420) scale(0.9)">
+    <!-- Head -->
+    <path d="M -50 -60 Q 0 -90 50 -60 T 50 20 Q 0 50 -50 20 T -50 -60" stroke="#333" stroke-width="2" fill="none"></path>
+    <!-- Eye (hypnotized spiral) -->
+    <path d="M 10 -20 a 1 1 0 0 1 0 2 a 3 3 0 0 1 0 6 a 5 5 0 0 1 0 10" stroke="#333" stroke-width="1.5" fill="none" transform="rotate(-15 10 -20)"></path>
+    <!-- Pipe -->
+    <path d="M 120 0 H 60 V -30 Q 50 -40 40 -30 V -10" stroke="#333" stroke-width="2" fill="none"></path>
+    <!-- Drip -->
+    <path d="M 40 0 C 40 10 30 10 30 20 Q 40 30 50 20 C 50 10 40 10 40 0" fill="#457b9d"></path>
+    <!-- Algorithm Cloud -->
+    <text x="125" y="5" style="font-size:14px; fill: #333; color: #333; color: #333;">算法</text>
+    <rect x="115" y="-15" width="40" height="20" stroke="#333" stroke-dasharray="2 2" stroke-width="1.5" fill="none"></rect>
+  </g>
+  <text x="200" y="495" class="summary-title">批判内核</text>
+  <text x="200" y="520" class="summary-text">算法投喂下的精神荒漠</text>
+
+  <!-- Final Summary -->
+  <line x1="100" y1="540" x2="300" y2="540" stroke="#e63946" stroke-width="1"></line>
+  <text x="200" y="565" class="summary-text" style="font-size: 16px; font-weight: bold;">以自由之名，行圈养之实。</text>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 2.5 Pro
+        </footer>
+    </main>
+</body>
+</html>
