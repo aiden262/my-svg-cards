@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【搬瓦工】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 462 640" xmlns="http://www.w3.org/2000/svg" style="background-color: rgb(240, 240, 240); display: block;">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&amp;family=ZCOOL+KuaiLe&amp;family=Noto+Sans+SC:wght@300;400&amp;display=swap');
+      .title { font-family: 'Ma Shan Zheng', cursive; font-size: 36px; text-anchor: middle; fill: #333; color: #333; }
+      .term { font-family: 'Noto Sans SC', sans-serif; font-size: 30px; font-weight: 400; text-anchor: middle; fill: #2c3e50; color: #2c3e50; }
+      .translation { font-family: 'Helvetica', sans-serif; font-size: 14px; text-anchor: middle; fill: #7f8c8d; color: #7f8c8d; }
+      .explanation { font-family: 'Noto Sans SC', sans-serif; font-size: 18px; fill: #34495e; color: #34495e; line-height: 1.8; }
+      .line-art-desc { font-family: 'Noto Sans SC', sans-serif; font-style: italic; font-size: 14px; fill: #7f8c8d; color: #7f8c8d; }
+      .summary { font-family: 'ZCOOL KuaiLe', cursive; font-size: 20px; text-anchor: middle; fill: #c0392b; color: #c0392b; }
+    </style>
+    <!-- Mondrian-style background elements -->
+    <rect id="bg-rect1" x="-20" y="-20" width="462" height="640" fill="#dd4b39"></rect>
+    <rect id="bg-rect2" x="320" y="480" width="80" height="120" fill="#4285f4"></rect>
+    <rect id="bg-rect3" x="0" y="550" width="150" height="50" fill="#f4b400"></rect>
+    <rect id="bg-rect4" x="350" y="0" width="50" height="80" fill="#0f9d58"></rect>
+  </defs>
+
+  <use href="#bg-rect1" opacity="0.8"></use>
+  <use href="#bg-rect2" opacity="0.8"></use>
+  <use href="#bg-rect3" opacity="0.8"></use>
+  <use href="#bg-rect4" opacity="0.8"></use>
+  
+  <rect x="10" y="10" width="380" height="580" fill="rgba(255, 255, 255, 0.85)" stroke="#333" stroke-width="2"></rect>
+
+  <text x="200" y="60" class="title">汉语新解</text>
+  <line x1="40" y1="80" x2="360" y2="80" stroke="#333" stroke-width="1.5"></line>
+
+  <text x="200" y="125" class="term">搬瓦工</text>
+  <text x="200" y="145" class="translation">EN: (Lit.) Brick Mover / (Slang) VPS User</text>
+  <text x="200" y="162" class="translation">JP: (字) レンガ運び / (俗) 仮想サーバーの小作人</text>
+  
+  <foreignObject x="40" y="190" width="320" height="200">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="explanation" style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8; font-size: 12px;">
+      <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">一群数字时代的西西弗斯。</p>
+      <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">他们每天推上山的，不是巨石，而是数据包；他们要翻越的，不是山峰，而是那道无形的墙。</p>
+      <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">他们为这推石头的“权利”付费，只为瞥一眼墙外世界的风景，随即石头滚落，第二天循环往复。</p>
+      <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">这是一种用金钱和技术搭建的，通往另一个、也许只是更大一点的围墙的梯子。人们自嘲为“工”，是因为他们深刻地明白，这所谓的自由，本质上是一种需要不断维护的、耗时耗力的劳作，而非天赋的权利。</p>
+    </div>
+  </foreignObject>
+
+  <!-- Line Art: A figure pushing a cube up a Möbius strip leading to a wall -->
+  <g transform="translate(110, 410) scale(0.8)">
+    <path d="M 50,80 C 50,0 200,0 200,80 S 350,160 350,80" stroke="#34495e" stroke-width="2" fill="none" stroke-dasharray="5 3"></path>
+    <circle cx="65" cy="65" r="10" fill="none" stroke="#34495e" stroke-width="2"></circle> <!-- Head -->
+    <path d="M 65,75 L 65,95 L 55,110 M 65,95 L 75,110" stroke="#34495e" stroke-width="2" fill="none"></path> <!-- Body & Legs -->
+    <path d="M 60,85 L 40,80" stroke="#34495e" stroke-width="2" fill="none"></path> <!-- Arms -->
+    <rect x="25" y="65" width="20" height="20" fill="#c0392b" stroke="#34495e" stroke-width="2" transform="rotate(-20, 35, 75)"></rect> <!-- Data Cube -->
+    <line x1="200" y1="40" x2="200" y2="120" stroke="#34495e" stroke-width="4"></line> <!-- The Wall -->
+    <text x="-50" y="140" class="line-art-desc">一个孤独的人，在无限循环的坡道上推动“数据”方块，坡道尽头是墙。</text>
+  </g>
+  
+  <text x="200" y="560" class="summary">付费的幻觉，循环的劳作</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 2.5 Pro
+        </footer>
+    </main>
+</body>
+</html>
