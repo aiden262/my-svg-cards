@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【千与千寻】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" style="background-color: rgb(242, 242, 242); font-family: sans-serif; display: block;">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&amp;family=Noto+Serif+SC:wght@400;700&amp;display=swap');
+            .title { font-family: 'ZCOOL QingKe HuangYou', cursive; font-size: 32px; text-anchor: middle; fill: #333; color: #333; }
+            .term { font-family: 'Noto Serif SC', serif; font-size: 28px; font-weight: 700; text-anchor: middle; fill: #1a1a1a; color: #1a1a1a; }
+            .translation { font-family: sans-serif; font-size: 14px; text-anchor: middle; fill: #666; color: #666; }
+            .explanation { font-family: 'Noto Serif SC', serif; font-size: 17px; fill: #4a4a4a; color: #4a4a4a; line-height: 1.8; }
+            .summary { font-family: 'Noto Serif SC', serif; font-size: 14px; font-weight: 700; text-anchor: middle; fill: #1a1a1a; color: #1a1a1a; letter-spacing: 1px;}
+        </style>
+    </defs>
+
+    <!-- Mondrian-inspired background -->
+    <rect x="-20" y="-20" width="440" height="640" fill="#f2f2f2"></rect>
+    <rect x="20" y="500" width="100" height="80" fill="#e63946"></rect>
+    <rect x="320" y="20" width="60" height="150" fill="#457b9d"></rect>
+    <rect x="20" y="180" width="80" height="50" fill="#f1c40f"></rect>
+    <line x1="0" y1="480" x2="400" y2="480" stroke="#1d3557" stroke-width="5"></line>
+    <line x1="120" y1="0" x2="120" y2="600" stroke="#1d3557" stroke-width="3"></line>
+
+
+    <text x="200" y="60" class="title">汉 语 新 解</text>
+    <line x1="40" y1="80" x2="360" y2="80" stroke="#333" stroke-width="1"></line>
+
+    <text x="200" y="125" class="term">千 与 千 寻</text>
+    <text x="200" y="145" class="translation">Spirited Away / 千と千尋の神隠し</text>
+
+    <foreignObject x="40" y="180" width="320" height="220">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="explanation" style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8; font-size: 10px;">
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">一部关于你第一次上班的入职纪录片。</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">那个神秘的隧道，是连接校园天真与社畜残酷的次元门。你的父母，因为贪吃了“公司画的饼”，变成了只会埋头苦干的猪。</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">而你，一个战战兢兢的实习生，被夺走了真名，从此只有一个工号叫“小千”。恭喜，欢迎来到汤婆婆的996澡堂。在这里，你得伺候各路“神明”（甲方），清理他们留下的烂摊子。你遇到一个叫白龙的前辈，他早就卖身给了公司，忘了自己是谁，却还保留一丝良知，偷偷教你职场生存法则。</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">最妙的是无脸男，他像极了每一个试图用金钱和讨好来购买存在感的孤独同事，能吞噬一切，却填不满内心的空虚。</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">所以，宫崎骏早就警告过我们：<strong style="margin: 0px; padding: 0px; box-sizing: border-box;">别忘了自己的名字。</strong>因为在那个吞噬身份的成人世界里，记住自己是谁，是你唯一能回家的路。</p>
+        </div>
+    </foreignObject>
+
+    <!-- Line Art: A simple tunnel opening into a single, sterile office cubicle. -->
+    <g transform="translate(140, 420)" stroke="#1d3557" stroke-width="2" fill="none">
+        <path d="M 0,50 C 10,0 110,0 120,50 C 110,100 10,100 0,50 Z"></path>
+        <line x1="60" y1="15" x2="60" y2="85"></line>
+        <rect x="45" y="30" width="30" height="40"></rect>
+        <rect x="50" y="50" width="20" height="20"></rect>
+    </g>
+    
+    <text x="200" y="550" class="summary">一部社畜入职血泪史。</text>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 2.5 Pro
+        </footer>
+    </main>
+</body>
+</html>
