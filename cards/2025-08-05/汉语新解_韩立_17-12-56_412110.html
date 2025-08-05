@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【韩立】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="20 8 373 588" style="background: linear-gradient(135deg, rgb(253, 252, 251) 25%, transparent 25%) -20px 0px / 40px 40px, linear-gradient(225deg, rgb(253, 252, 251) 25%, transparent 25%) -20px 0px, linear-gradient(315deg, rgb(253, 252, 251) 25%, transparent 25%), linear-gradient(45deg, rgb(253, 252, 251) 25%, transparent 25%) rgb(234, 231, 220); display: block;">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&amp;family=Noto+Serif+SC:wght@400;700&amp;display=swap');
+            .title { font-family: 'ZCOOL KuaiLe', 'Noto Serif SC', cursive; font-size: 36px; text-anchor: middle; fill: #333; color: #333; }
+            .term { font-family: 'Noto Serif SC', 'Noto Serif SC', serif; font-size: 48px; font-weight: 700; text-anchor: middle; fill: #585858; color: #585858; }
+            .pronunciation { font-family: sans-serif; font-size: 16px; text-anchor: middle; fill: #777; color: #777; }
+            .explanation { font-family: 'Noto Serif SC', 'Noto Serif SC', serif; font-size: 20px; fill: #4A4A4A; color: #4A4A4A; line-height: 1.8; }
+            .summary { font-family: 'Noto Serif SC', 'Noto Serif SC', serif; font-size: 16px; text-anchor: middle; fill: #666; color: #666; font-weight: bold; }
+        </style>
+    </defs>
+
+    <text x="200" y="60" class="title">汉语新解</text>
+    
+    <line x1="40" y1="80" x2="360" y2="80" stroke="#888" stroke-width="1"></line>
+
+    <text x="200" y="140" class="term">韩立</text>
+    <text x="200" y="165" class="pronunciation">Hán Lì / 韓立 (かん りつ)</text>
+    
+    <foreignObject x="40" y="200" width="320" height="200">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="explanation" style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8; font-size: 13.5px;">
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">修仙界的终极社畜，内卷时代的精神图腾。</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">他的人生哲学可以浓缩成一个字——“苟”。这不是懦弱，而是在一套吃人的规则里，为自己争取最后一口气的精致利己与终极务实。</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">他用一部超长篇小说的时间向我们证明：只要把风险控制做到极致，把“活着”本身当作最高信仰，一个资质平平的普通人，也能硬生生把残酷的丛林法则，熬成自己的养老保险。</p>
+        </div>
+    </foreignObject>
+
+    <!-- 线条图: 一个小人（韩立）苟在一个角落里，外面是巨大的、混乱交织的线条（残酷的修仙/社会环境），小人面前只有一个小小的、发光的瓶子（小绿瓶/唯一的依仗）-->
+    <g transform="translate(100 420) scale(0.8)">
+        <path d="M 50 150 C 60 140, 70 140, 80 150 L 80 180 C 70 190, 60 190, 50 180 Z" fill="none" stroke="#333" stroke-width="2"></path>
+        <circle cx="65" cy="160" r="5" fill="#333"></circle>
+        <path d="M 62 175 L 68 175" stroke="#333" stroke-width="2"></path>
+        <rect x="85" y="170" width="10" height="20" rx="3" fill="#90EE90" stroke="#333" stroke-width="1.5"></rect>
+        <path d="M 10 10 L 240 10 L 20 180 L 230 180 M 125 5 C 250 80, 10 100, 125 195" fill="none" stroke="#333" stroke-width="1.5" stroke-dasharray="5 3"></path>
+    </g>
+
+    <text x="200" y="570" class="summary">极简总结：宇宙级内卷中的个人生存指南。</text>
+    
+    <!-- 装饰图案：随机几何图 -->
+    <rect x="350" y="500" width="20" height="20" fill="#D2B48C" opacity="0.5" transform="rotate(15, 360, 510)"></rect>
+    <circle cx="60" cy="540" r="15" fill="#87CEEB" opacity="0.4"></circle>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 2.5 Pro
+        </footer>
+    </main>
+</body>
+</html>
