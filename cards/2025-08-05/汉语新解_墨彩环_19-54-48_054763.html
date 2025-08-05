@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【墨彩环】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-19 -19 440 640" style="background: rgb(253, 253, 253); border: 1px solid rgb(204, 204, 204); font-family: sans-serif; display: block;">
+    <!-- Background inspired by Mondrian, simplified -->
+    <rect x="-19" y="-19" width="440" height="640" fill="#F8F8F8"></rect>
+    <rect x="20" y="20" width="100" height="150" fill="#E02020" fill-opacity="0.6"></rect>
+    <rect x="280" y="450" width="100" height="100" fill="#104080" fill-opacity="0.6"></rect>
+    <rect x="20" y="520" width="180" height="60" fill="#F0E050" fill-opacity="0.6"></rect>
+
+    <g style="font-family: 'Noto Serif SC', 'Brush KaiTi', cursive; text-anchor: middle; fill: #333; color: #333; color: #333;">
+        <text x="200" y="70" font-size="36">汉语新解</text>
+    </g>
+
+    <line x1="40" y1="95" x2="360" y2="95" stroke="#555" stroke-width="1"></line>
+
+    <g style="text-anchor: middle; font-family: 'Noto Serif SC', 'Huiwen MingChao', serif; fill: #404040; color: #404040;">
+        <text x="200" y="145" font-size="40" style="font-weight: bold;">墨彩环</text>
+        <text x="200" y="175" font-size="18" fill="#666">Mò Cǎi Huán</text>
+        <text x="200" y="200" font-size="18" fill="#666">墨彩環 (ぼくさいかん)</text>
+    </g>
+
+    <foreignObject x="40" y="230" width="320" height="150">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, &quot;Huiwen MingChao&quot;, serif; font-size: 13.5px; line-height: 1.8; color: rgb(58, 58, 58); text-align: justify; overflow-wrap: break-word; margin: 0px; padding: 0px; box-sizing: border-box; width: 320px;">
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">
+                修仙路上的一张绝版邮票。主角用青春的口水小心翼翼地舔湿了背面，却在最后一刻决定不寄了，而是随手夹进那本厚到看不见尽头的功法秘籍里，成了一枚精致的书签。
+            </p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">
+                许多年后，当他翻到这一页，只会淡淡地感慨一句：“哦，原来我的书里，还夹着一个凡人。”
+            </p>
+        </div>
+    </foreignObject>
+
+    <!-- Line drawing simulation -->
+    <g stroke="#333" stroke-width="1.5" fill="none" transform="translate(0, 20)">
+        <!-- A long, unending road -->
+        <path d="M 80 430 Q 200 440, 320 450" stroke-dasharray="5,5"></path>
+        <path d="M 80 435 Q 200 445, 320 455" stroke-dasharray="5,5"></path>
+        <!-- A single, wilted flower -->
+        <path d="M 195 430 C 190 420, 200 410, 205 400"></path> <!-- Stem -->
+        <path d="M 205 400 C 200 395, 195 400, 200 405" fill="#333"></path> <!-- Wilted petal 1 -->
+        <path d="M 205 400 C 210 395, 215 400, 210 405" fill="#333"></path> <!-- Wilted petal 2 -->
+        <path d="M 205 400 C 202 408, 208 408, 205 415" fill="#333"></path> <!-- Drooping petal -->
+    </g>
+
+    <g style="font-family: 'Noto Serif SC', 'Huiwen MingChao', serif; text-anchor: middle; fill: #333; color: #333; color: #333;">
+        <text x="200" y="500" font-size="18">【 大道的无情，凡人的注脚 】</text>
+    </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 2.5 Pro
+        </footer>
+    </main>
+</body>
+</html>
