@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【墨彩环】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" xmlns="http://www.w3.org/2000/svg" style="background-color: rgb(240, 240, 224); display: block;">
+  <!-- Mondrian Style Background -->
+  <rect x="-20" y="-20" width="440" height="640" fill="#fdfbf3"></rect>
+  <rect x="20" y="450" width="150" height="130" fill="#e0e0d0" opacity="0.6"></rect>
+  <rect x="280" y="20" width="100" height="180" fill="#d0e0e0" opacity="0.6"></rect>
+  <rect x="20" y="20" width="80" height="80" fill="#e0d0d0" opacity="0.6"></rect>
+  <line x1="20" y1="220" x2="380" y2="220" stroke="#333" stroke-width="1.5"></line>
+  <line x1="20" y1="500" x2="380" y2="500" stroke="#333" stroke-width="0.5"></line>
+
+  <!-- Main Content -->
+  <g style="font-family: 'Noto Serif SC', 'Huiwen Mingchao', serif; fill: #3a3a3a; color: #3a3a3a; color: #3a3a3a;">
+    
+    <text x="200" y="60" text-anchor="middle" font-size="32" font-family="'Noto Serif SC', 'Brush Kai', cursive" letter-spacing="4">汉语新解</text>
+    
+    <line x1="120" y1="80" x2="280" y2="80" stroke="#3a3a3a" stroke-width="1"></line>
+
+    <text x="200" y="130" text-anchor="middle" font-size="40" letter-spacing="8">墨彩环</text>
+    <text x="200" y="165" text-anchor="middle" font-size="16" letter-spacing="1" fill="#666">Mò Cǎi Huán</text>
+    <text x="200" y="190" text-anchor="middle" font-size="16" letter-spacing="1" fill="#666">墨彩環 (ぼくさいかん)</text>
+
+    <g style="font-size: 19px; line-height: 1.8;">
+      <text x="50" y="260">
+        <tspan x="50" dy="1.6em">修仙小说里最标准的人类情感</tspan>
+        <tspan x="50" dy="1.6em">标本。主角用“怀念”这根针，</tspan>
+        <tspan x="50" dy="1.6em">将她牢牢钉在名为“过去”的展</tspan>
+        <tspan x="50" dy="1.6em">板上，以此向读者和他自己证</tspan>
+        <tspan x="50" dy="1.6em">明，他那颗追求大道的心，曾</tspan>
+        <tspan x="50" dy="1.6em">经也柔软过。</tspan>
+        <tspan x="50" dy="1.6em"></tspan>
+        <tspan x="50" dy="1.6em">她是一场盛大的自我感动，一</tspan>
+        <tspan x="50" dy="1.6em">个颁发给自己的“好人卡”。</tspan>
+      </text>
+    </g>
+
+    <!-- Line Art -->
+    <g id="line-art" transform="translate(140, 420) scale(0.8)">
+      <!-- A butterfly pinned to a display board -->
+      <path d="M 50 0 C 20 0, 0 20, 0 50 C 0 80, 20 100, 50 100" stroke="#3a3a3a" fill="none" stroke-width="2"></path>
+      <path d="M 50 0 C 80 0, 100 20, 100 50 C 100 80, 80 100, 50 100" stroke="#3a3a3a" fill="none" stroke-width="2"></path>
+      <path d="M 50 30 C 40 40, 40 60, 50 70" stroke="#3a3a3a" fill="none" stroke-width="1.5"></path>
+      <path d="M 48 20 L 52 20 M 45 10 L 55 10" stroke="#3a3a3a" stroke-width="1.5" stroke-linecap="round"></path>
+      <!-- The Pin -->
+      <circle cx="50" cy="50" r="5" fill="#c0392b"></circle>
+      <line x1="50" y1="50" x2="130" y2="-30" stroke="#3a3a3a" stroke-width="2"></line>
+    </g>
+    
+    <text x="200" y="545" text-anchor="middle" font-size="16" letter-spacing="2">
+      永恒对瞬间的残忍收藏
+    </text>
+
+  </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 2.5 Pro
+        </footer>
+    </main>
+</body>
+</html>
