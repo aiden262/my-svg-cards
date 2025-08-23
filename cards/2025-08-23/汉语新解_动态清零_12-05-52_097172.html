@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【动态清零】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            ### 汉语新解：动态清零
+
+动态清零——一种防疫版的“打地鼠”游戏，只不过地鼠是病毒，而锤子是整个社会的自由。每次敲下，都以为赢了，但地鼠又从另一个洞冒出来，直到玩家筋疲力尽。这就像在流沙上建城堡，永远在重建却永远在崩塌；或者说，它是一种集体幻觉，认为我们可以永远跑在病毒前面，而实际上只是在一场无尽的马拉松中不断移动终点线。
+
+### SVG卡片设计描述
+
+根据您的需求，我将为“动态清零”生成一个SVG卡片。卡片设计遵循以下原则：
+- **画布尺寸**：宽度400像素，高度600像素，边距20像素。
+- **字体**：标题使用毛笔楷体，正文使用汇文明朝体，文字颜色为粉笔灰（#888888），并自动缩放以确保可读性。
+- **配色风格**：背景采用蒙德里安风格的几何色块（红、黄、蓝、白），体现设计感；主要文字颜色为粉笔灰，装饰图案为随机几何线条图。
+- **卡片元素**：
+  - 居中的标题“汉语新解”，下方有细线分隔。
+  - 用户输入“动态清零”的英文（Dynamic Zero-COVID）和日语（動的ゼロコロナ）排版在顶部。
+  - 主体部分显示上述解释文本。
+  - 线条图：一幅简约的漫画风格插图，描绘一个人在用锤子敲打地鼠，但地鼠从多个洞中冒出，象征政策的反复和疲劳。
+  - 极简总结：底部有一行小字“永远的动态，永远的清零？”作为讽刺性收尾。
+
+整体设计干净、简洁、典雅，充分利用负空间，确保排版有呼吸感。如果您需要实际生成SVG文件，我可以提供代码或进一步调整。
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: deepseek-reasoner v3.1
+        </footer>
+    </main>
+</body>
+</html>
