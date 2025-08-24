@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【暴雨天送外卖，摔了一跤】 - 人间苦</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 520 800" style="display: block;">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&amp;display=swap');
+      .title { font-family: 'Noto Serif SC', serif; font-size: 28px; font-weight: 600; fill: #8B7D6B; color: #8B7D6B; }
+      .input { font-family: 'Noto Serif SC', serif; font-size: 18px; fill: #A0937D; color: #A0937D; }
+      .content { font-family: 'Noto Serif SC', serif; font-size: 16px; fill: #6B5B73; color: #6B5B73; line-height: 1.6; }
+    </style>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="520" height="800" fill="#F5F1E8" x="-20" y="-20"></rect>
+  
+  <!-- 标题 -->
+  <text x="240" y="60" text-anchor="middle" class="title">人间苦</text>
+  
+  <!-- 分隔线 -->
+  <line x1="80" y1="90" x2="400" y2="90" stroke="#D4C4A8" stroke-width="1"></line>
+  
+  <!-- 用户输入 -->
+  <text x="240" y="130" text-anchor="middle" class="input">暴雨天送外卖，摔了一跤</text>
+  
+  <!-- 抽象线条图 - 雨中摔倒的意象 -->
+  <g transform="translate(240,180)">
+    <!-- 雨线 -->
+    <g stroke="#9B8E82" stroke-width="2" opacity="0.6">
+      <line x1="-80" y1="-20" x2="-70" y2="20"></line>
+      <line x1="-50" y1="-15" x2="-40" y2="25"></line>
+      <line x1="-20" y1="-25" x2="-10" y2="15"></line>
+      <line x1="10" y1="-20" x2="20" y2="20"></line>
+      <line x1="40" y1="-15" x2="50" y2="25"></line>
+      <line x1="70" y1="-25" x2="80" y2="15"></line>
+    </g>
+    <!-- 摔倒的人形 -->
+    <path d="M-30,40 Q-20,35 -10,40 L0,50 L-15,60 L-40,55 Z" fill="#8B7D6B" opacity="0.7"></path>
+    <!-- 散落的物品 -->
+    <circle cx="15" cy="65" r="3" fill="#A0937D"></circle>
+    <rect x="25" y="62" width="8" height="6" fill="#A0937D"></rect>
+  </g>
+  
+  <!-- 正文内容 -->
+  <foreignObject x="60" y="280" width="360" height="420">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="content" style="margin: 0px; padding: 0px; box-sizing: border-box; width: 360px; overflow-wrap: break-word; line-height: 1.8;">
+      <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 360px; overflow-wrap: break-word; line-height: 1.8;">雨水顺着头发往下滴，混着汗水，分不清哪是哪。膝盖火辣辣的疼，裤子破了个洞。</p>
+      
+      <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 360px; overflow-wrap: break-word; line-height: 1.8;">老王趴在地上，看着散落一地的饭盒。汤汤水水洒了一路，像他这些年流过的眼泪。手机屏幕碎了，还在闪着客户催单的消息。</p>
+      
+      <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 360px; overflow-wrap: break-word; line-height: 1.8;">他慢慢爬起来，一瘸一拐地捡着饭盒。雨还在下，天色灰得像他心里那块石头。又要赔钱了，又要被投诉了。</p>
+      
+      <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 360px; overflow-wrap: break-word; line-height: 1.8;">路边的积水倒映着霓虹灯，花花绿绿的，像在嘲笑他。五十多岁的人了，还在雨里摔跤，像个孩子。</p>
+    </div>
+  </foreignObject>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 人间苦 | 模型: Claude 3.7 Sonnet
+        </footer>
+    </main>
+</body>
+</html>
