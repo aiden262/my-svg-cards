@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【韩立】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+  <defs>
+    <style>
+      .title { font-family: '楷体', serif; font-size: 28px; font-weight: bold; }
+      .word { font-family: '黑体', sans-serif; font-size: 24px; font-weight: bold; }
+      .eng { font-family: 'Times New Roman', serif; font-size: 14px; font-style: italic; }
+      .jpn { font-family: 'MS Gothic', monospace; font-size: 14px; }
+      .explanation { font-family: '宋体', serif; font-size: 18px; line-height: 1.6; }
+      .summary { font-family: '楷体', serif; font-size: 16px; font-style: italic; }
+    </style>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="400" height="600" fill="#f8f6f0"></rect>
+  
+  <!-- 几何装饰 -->
+  <rect x="20" y="20" width="60" height="8" fill="#d4af37" opacity="0.7"></rect>
+  <rect x="320" y="550" width="60" height="8" fill="#d4af37" opacity="0.7"></rect>
+  <circle cx="350" cy="80" r="3" fill="#8b7355" opacity="0.6"></circle>
+  
+  <!-- 标题 -->
+  <text x="200" y="80" text-anchor="middle" class="title" fill="#2c2c2c">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="80" y1="100" x2="320" y2="100" stroke="#d4af37" stroke-width="1"></line>
+  
+  <!-- 词汇展示 -->
+  <text x="200" y="140" text-anchor="middle" class="word" fill="#2c2c2c">韩立</text>
+  <text x="200" y="165" text-anchor="middle" class="eng" fill="#666">Han Li</text>
+  <text x="200" y="185" text-anchor="middle" class="jpn" fill="#666">ハンリツ</text>
+  
+  <!-- 解释文本 -->
+  <foreignObject x="40" y="220" width="320" height="280">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="explanation" style="color: rgb(60, 60, 60); margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8; font-size: 15.5px;">
+      现代文学工业流水线上的
+      <br style="margin: 0px; padding: 0px; box-sizing: border-box;">标准化男主角模板：
+      <br style="margin: 0px; padding: 0px; box-sizing: border-box;"><br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+      出身卑微却天赋异禀，
+      <br style="margin: 0px; padding: 0px; box-sizing: border-box;">遇险必有贵人相助，
+      <br style="margin: 0px; padding: 0px; box-sizing: border-box;">逢敌定能绝地反杀。
+      <br style="margin: 0px; padding: 0px; box-sizing: border-box;"><br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+      专治读者的平凡焦虑症，
+      <br style="margin: 0px; padding: 0px; box-sizing: border-box;">让人在虚假的代入感中
+      <br style="margin: 0px; padding: 0px; box-sizing: border-box;">暂时忘记现实的无力。
+    </div>
+  </foreignObject>
+  
+  <!-- 线条图案 -->
+  <g stroke="#8b7355" stroke-width="1.5" fill="none" opacity="0.4">
+    <path d="M 60 480 Q 100 460 140 480 T 220 480"></path>
+    <path d="M 180 500 Q 220 480 260 500 T 340 500"></path>
+  </g>
+  
+  <!-- 总结 -->
+  <foreignObject x="60" y="520" width="280" height="60">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="summary" style="color: rgb(102, 102, 102); text-align: center; margin: 0px; padding: 0px; box-sizing: border-box; width: 280px; overflow-wrap: break-word; line-height: 1.8;">
+      爽文之王，凡人之梦，
+      <br style="margin: 0px; padding: 0px; box-sizing: border-box;">贩卖希望的精神鸦片。
+    </div>
+  </foreignObject>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Claude 3.7 Sonnet
+        </footer>
+    </main>
+</body>
+</html>
