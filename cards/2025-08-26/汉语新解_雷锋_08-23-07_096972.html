@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【雷锋】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+  <!-- 背景 -->
+  <rect width="440" height="640" fill="#f8f6f0" x="-20" y="-20"></rect>
+  
+  <!-- 几何装饰 -->
+  <rect x="0" y="0" width="80" height="120" fill="#e8d5b7" opacity="0.3"></rect>
+  <rect x="320" y="480" width="80" height="120" fill="#d4af37" opacity="0.2"></rect>
+  <circle cx="350" cy="80" r="30" fill="#c9a96e" opacity="0.15"></circle>
+  
+  <!-- 标题 -->
+  <text x="200" y="60" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold" fill="#2c2c2c">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="80" y1="80" x2="320" y2="80" stroke="#8b7355" stroke-width="1"></line>
+  
+  <!-- 词汇展示 -->
+  <text x="200" y="140" text-anchor="middle" font-family="serif" font-size="36" font-weight="bold" fill="#1a1a1a">雷锋</text>
+  <text x="200" y="170" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#666">Lei Feng</text>
+  <text x="200" y="190" text-anchor="middle" font-family="serif" font-size="12" fill="#666">雷鋒（らいほう）</text>
+  
+  <!-- 解释文本 -->
+  <foreignObject x="40" y="230" width="320" height="280">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: serif; font-size: 18px; line-height: 1.8; color: rgb(44, 44, 44); text-align: justify; margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word;">
+      <p style="margin: 0px; font-weight: bold; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">一种被制度化的道德标本。</p>
+      <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">如同博物馆里的蝴蝶标本，生前自由飞舞，死后被钉在展板上供人瞻仰。</p>
+      <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">每当社会需要免费劳动力时，这个标本就会被重新擦拭，放在聚光灯下。</p>
+      <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">最讽刺的是——真正的雷锋只有一个，模仿者却要假装有千万个。</p>
+    </div>
+  </foreignObject>
+  
+  <!-- 线条图 -->
+  <g transform="translate(200, 520)">
+    <!-- 被钉住的蝴蝶轮廓 -->
+    <path d="M-20,-10 Q-30,-20 -25,-30 Q-15,-25 0,-20 Q15,-25 25,-30 Q30,-20 20,-10 Q10,-15 0,-10 Q-10,-15 -20,-10" fill="none" stroke="#8b7355" stroke-width="1.5"></path>
+    <!-- 钉子 -->
+    <circle cx="0" cy="-15" r="2" fill="#666"></circle>
+    <line x1="0" y1="-25" x2="0" y2="-5" stroke="#666" stroke-width="1"></line>
+  </g>
+  
+  <!-- 极简总结 -->
+  <text x="200" y="570" text-anchor="middle" font-family="serif" font-size="14" fill="#8b7355" font-style="italic">
+    道德的活体标本，精神的工具人
+  </text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Claude 3.7 Sonnet
+        </footer>
+    </main>
+</body>
+</html>
