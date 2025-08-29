@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【墨彩环】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+  <rect x="-20" y="-20" width="440" height="640" fill="#E0E0E0"></rect>
+  <rect x="20" y="20" width="360" height="560" fill="#FFFFFF" rx="15" ry="15"></rect>
+
+  <!-- 背景装饰图案 -->
+  <circle cx="350" cy="50" r="30" fill="#FFC107" opacity="0.3"></circle>
+  <rect x="20" y="500" width="80" height="80" fill="#2196F3" opacity="0.3" transform="rotate(15 60 540)"></rect>
+
+  <text x="200" y="60" font-family="Noto Serif SC" font-size="30" fill="#333333" text-anchor="middle">汉语新解</text>
+  <line x1="50" y1="80" x2="350" y2="80" stroke="#CCCCCC" stroke-width="1"></line>
+
+  <text x="200" y="120" font-family="Noto Serif SC" font-size="24" fill="#555555" text-anchor="middle">墨彩环</text>
+
+  <g transform="translate(50, 160)">
+    <foreignObject width="300" height="300">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: &quot;Noto Serif SC&quot;, sans-serif; font-size: 10px; color: rgb(51, 51, 51); line-height: 1.8; text-align: left; margin: 0px; padding: 0px; box-sizing: border-box; width: 300px; overflow-wrap: break-word;">
+        "墨彩环"——听起来多诗意，墨色深沉，彩光流转，仿佛艺术的极致。<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+        可别被这表面功夫骗了。<br style="margin: 0px; padding: 0px; box-sizing: border-box;"><br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+        "墨"，是那不变的底色，是既定的规则，是那张无形的黑网。<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+        "彩"，不过是在这张网上被允许小心翼翼点缀上去的几滴颜料，为了让你觉得——“看，这里也有色彩，这里也有生机！”<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+        而“环”，则是最绝妙的讽刺。它告诉你，你所有关于“新奇”和“突破”的幻想，最终都必须回到那个起点，那个被墨迹圈定的，安全而永恒的边界。<br style="margin: 0px; padding: 0px; box-sizing: border-box;"><br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+        它不是自由的泼洒，而是精致的囚禁。<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+        我们被允许在这个墨迹勾勒的圆圈里，玩弄一些色彩的游戏，只要我们不试图跳出这个圈。<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+        你看，这多像那些所谓的“包容性创新”？给你一片“自由”的幻象，但最终的解释权，永远在“墨”和“环”的手里。
+      </div>
+    </foreignObject>
+  </g>
+
+  <!-- 线条图 (批判内核) -->
+  <g transform="translate(200, 480)">
+    <circle cx="0" cy="0" r="60" stroke="#333333" stroke-width="2" fill="none" stroke-dasharray="5,5"></circle>
+    <circle cx="0" cy="0" r="30" fill="#FFEB3B" opacity="0.7"></circle>
+    <circle cx="30" cy="-20" r="10" fill="#4CAF50" opacity="0.7"></circle>
+    <circle cx="-30" cy="20" r="12" fill="#E91E63" opacity="0.7"></circle>
+    <text x="0" y="90" font-family="Noto Serif SC" font-size="14" fill="#666666" text-anchor="middle">被圈定的“创新”与“自由”的幻象</text>
+  </g>
+
+  <!-- 极简总结 -->
+  <text x="200" y="570" font-family="Noto Serif SC" font-size="18" fill="#333333" text-anchor="middle">墨色规则，彩绘牢笼。</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 2.5 Flash
+        </footer>
+    </main>
+</body>
+</html>
