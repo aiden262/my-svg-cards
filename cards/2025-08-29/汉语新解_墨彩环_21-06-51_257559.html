@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【墨彩环】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="-20 -20 440 640" style="display: block;">
+<!-- 蒙德里安风格背景 -->
+<rect width="440" height="640" fill="#F5F5F5" x="-20" y="-20"></rect>
+<rect x="50" y="100" width="300" height="80" fill="#E53935" opacity="0.2"></rect>
+<rect x="150" y="300" width="100" height="200" fill="#1E88E5" opacity="0.1"></rect>
+
+<!-- 标题 -->
+<text x="200" y="60" font-family="Noto Serif SC" font-size="28" text-anchor="middle" fill="#424242">汉语新解</text>
+<line x1="100" y1="75" x2="300" y2="75" stroke="#BDBDBD" stroke-width="1"></line>
+
+<!-- 主内容 -->
+<text x="200" y="130" font-family="Noto Serif SC" font-size="22" text-anchor="middle" fill="#E53935">墨彩环</text>
+<text x="200" y="160" font-family="Arial" font-size="14" text-anchor="middle" fill="#757575">Ink Color Ring / 墨彩環</text>
+
+<foreignObject x="50" y="200" width="300" height="300">
+<div xmlns="http://www.w3.org/1999/xhtml" style="font-family: SimSun; font-size: 15px; color: rgb(66, 66, 66); line-height: 1.8; text-align: justify; margin: 0px; padding: 0px; box-sizing: border-box; width: 300px; overflow-wrap: break-word;">
+<p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 300px; overflow-wrap: break-word; line-height: 1.8;">这个看似典雅的词汇，实则是当代文化工业的精致标本：</p>
+<ol style="margin: 0px; padding: 0px; box-sizing: border-box;">
+<li style="margin: 0px; padding: 0px; box-sizing: border-box;"><b style="margin: 0px; padding: 0px; box-sizing: border-box;">墨</b> - 用传统的外衣包裹现代商业逻辑，就像把二维码刻在砚台上</li>
+<li style="margin: 0px; padding: 0px; box-sizing: border-box;"><b style="margin: 0px; padding: 0px; box-sizing: border-box;">彩</b> - 用视觉暴力掩盖内容贫瘠，如同给塑料花喷香水</li>
+<li style="margin: 0px; padding: 0px; box-sizing: border-box;"><b style="margin: 0px; padding: 0px; box-sizing: border-box;">环</b> - 形成自我参照的闭环，像文化传销组织的晋级体系</li>
+</ol>
+<p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 300px; overflow-wrap: break-word; line-height: 1.8;">本质是文化消费主义的杂交产物：用东方元素当包装纸，裹着西方快餐文化的三明治。</p>
+</div>
+</foreignObject>
+
+<!-- 批判性插图 -->
+<path d="M100 450 Q200 420 300 450" stroke="#1E88E5" fill="none" stroke-width="2" stroke-dasharray="5,3"></path>
+<circle cx="200" cy="470" r="30" fill="none" stroke="#E53935" stroke-width="2"></circle>
+<text x="200" y="540" font-family="Noto Serif SC" font-size="14" text-anchor="middle" fill="#757575">传统是块砖，哪里需要哪里搬</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: deepseek-chat v3.1
+        </footer>
+    </main>
+</body>
+</html>
