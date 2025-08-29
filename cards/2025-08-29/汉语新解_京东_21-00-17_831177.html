@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【京东】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            好吧，既然你提到了“京东”，那咱们就来揭开这个词汇的光鲜外衣。作为新时代的汉语老师，我可得用点奥斯卡·王尔德的机智、鲁迅的犀利，再加上罗永浩的幽默来给你说道说道。
+
+### 汉语新解：京东
+京东——一个数字时代的超级集市，那里你的欲望被算法精心喂养，你的钱包被“物流快”温柔掏空，而你还以为自己在享受现代文明的便利。本质上，它是消费主义的神庙，拜物教的圣地，让你在点击之间完成“财富东流”的仪式。隐喻地说，京东就像那个总是对你微笑的邻居，但背后却数着你口袋里的每一个硬币。
+
+---
+
+### SVG卡片设计描述
+（注：以下为SVG卡片的文本表示，实际生成时会包含视觉元素）
+
+- **画布**：宽度400px，高度600px，边距20px，采用蒙德里安风格的几何分割背景，色彩对比鲜明但不失设计感。
+- **标题字体**：'Noto Serif SC'，居中显示“汉语新解”，字号自动缩放，最小16px。
+- **主要内容**：
+  - 词汇：京东（英文：JD.com，日语：ジャドン）
+  - 解释文本：使用汇文明朝体，颜色为粉笔灰，排版整洁。
+  - 装饰图案：随机几何线条图，象征消费网络的错综复杂。
+  - 极简总结：一条下降的曲线图，隐喻财富流失，配文“点击即消费，消费即快乐？”。
+- **整体风格**：干净、简洁、典雅，负空间利用合理，呼吸感十足。
+
+---
+
+怎么样？这个词是不是被解释得既辛辣又幽默？如果你还有其他词想被“新解”，随时告诉我！
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: deepseek-reasoner v3.1
+        </footer>
+    </main>
+</body>
+</html>
