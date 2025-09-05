@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【韩立】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg viewBox="0 8 408 598" style="background: linear-gradient(135deg, rgb(245, 247, 250) 0%, rgb(195, 207, 226) 100%); font-family: sans-serif; border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px; display: block;">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&amp;family=Noto+Serif+SC:wght@400;700&amp;display=swap');
+            .title { font-family: 'ZCOOL KuaiLe', cursive; font-size: 36px; text-anchor: middle; fill: #333; color: #333; }
+            .term { font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 32px; text-anchor: middle; fill: #2c3e50; color: #2c3e50; }
+            .translation { font-family: 'Noto Sans', sans-serif; font-size: 16px; text-anchor: middle; fill: #7f8c8d; color: #7f8c8d; }
+            .explanation { font-family: 'Noto Serif SC', serif; font-size: 18px; fill: #34495e; color: #34495e; white-space: pre-wrap; }
+            .line-art-title { font-family: 'Noto Serif SC', serif; font-weight: bold; font-size: 16px; fill: #2c3e50; color: #2c3e50; }
+            .line-art-desc { font-family: 'Noto Serif SC', serif; font-size: 14px; fill: #34495e; color: #34495e; }
+            .summary { font-family: 'Noto Serif SC', serif; font-weight: bold; font-size: 20px; text-anchor: middle; fill: #2c3e50; color: #2c3e50; }
+        </style>
+    </defs>
+
+    <!-- Background Mondrian-style elements -->
+    <rect x="0" y="8" width="408" height="598" fill="#e74c3c" opacity="0.6"></rect>
+    <rect x="300" y="40" width="60" height="120" fill="#3498db" opacity="0.6"></rect>
+    <rect x="250" y="450" width="130" height="50" fill="#f1c40f" opacity="0.6"></rect>
+    <rect x="20" y="150" width="40" height="200" fill="#2c3e50" opacity="0.6"></rect>
+
+    <!-- Main Content -->
+    <text x="200" y="60" class="title">汉语新解</text>
+    <line x1="40" y1="80" x2="360" y2="80" stroke="#bdc3c7" stroke-width="2"></line>
+
+    <text x="200" y="125" class="term">韩立</text>
+    <text x="200" y="150" class="translation">Han Li / 韓立 (ハン・リ)</text>
+    <text x="200" y="170" class="translation">(The Patron Saint of Paranoid Preppers)</text>
+
+    <foreignObject x="40" y="190" width="320" height="180">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="explanation" style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8; font-size: 8px;">
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">一个背着“凡人”KPI，却拿着“外挂”PPT，在修仙这个终极职场里，把“苟住”和“内卷”演绎到极致的偏执狂妄人。</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">他的人生哲学翻译成现代汉语就是：天赋不够，外挂来凑；高调找死，闷声发财。他不是一个人，而是一种精神状态——是每个在大城市地铁里挤得面目模糊，却幻想着有朝一日能凭着一个不为人知的秘密（比如一个能催熟韭菜的瓶子）实现阶级跃迁的你我他。</p>
+            <p style="margin: 0px; padding: 0px; box-sizing: border-box; width: 320px; overflow-wrap: break-word; line-height: 1.8;">他向我们证明了：在命运的牌桌上，当你抓到一手烂牌时，最要紧的不是演技，而是活得比所有对手都久，直到把他们一个个全熬死。</p>
+        </div>
+    </foreignObject>
+
+    <!-- Line Art Section -->
+    <g transform="translate(40, 400)">
+        <path d="M 0 0 L 320 0" stroke="#bdc3c7" stroke-width="1"></path>
+        <text y="25" class="line-art-title">【线条图：社畜的飞升梦】</text>
+        <path d="M10,50 C40,30 80,60 100,50 L100,100 C80,110 40,80 10,100 Z" fill="none" stroke="#34495e" stroke-width="1.5" stroke-dasharray="3,3" transform="translate(10, -10)">
+            <animate attributeName="stroke-dashoffset" from="0" to="12" dur="1s" repeatCount="indefinite"></animate>
+        </path>
+        <circle cx="170" cy="65" r="30" fill="none" stroke="#34495e" stroke-width="1.5"></circle>
+        <text x="170" y="70" text-anchor="middle" font-size="12px" fill="#34495e">系统</text>
+        <path d="M110,75 C130,95 150,95 170,65" fill="none" stroke="#e74c3c" stroke-width="2"></path>
+        <circle cx="105" cy="73" r="5" fill="#e74c3c"></circle>
+        <text x="40" y="110" class="line-art-desc" style="white-space: pre-wrap;">一个渺小的个体，凭借一个系统漏洞（小瓶子），</text>
+        <text x="40" y="130" class="line-art-desc" style="white-space: pre-wrap;">绕开了庞大而冷酷的规则，走出一条不被定义的</text>
+        <text x="40" y="150" class="line-art-desc" style="white-space: pre-wrap;">求生之路。</text>
+    </g>
+
+    <text x="200" y="580" class="summary">用最怂的姿态，走最野的路。</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 2.5 Pro
+        </footer>
+    </main>
+</body>
+</html>
