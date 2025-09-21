@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【一加手机】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg width="400" height="600" viewBox="0 0 400 600" style="background-color: #f0f0f0; font-family: sans-serif; border: 1px solid #ccc;">
+    <!-- Background inspired by Mondrian -->
+    <rect x="0" y="0" width="400" height="600" fill="#FDFDFD"/>
+    <rect x="20" y="450" width="150" height="130" fill="#EAD637"/>
+    <rect x="250" y="20" width="130" height="200" fill="#D93D2B"/>
+    <rect x="20" y="20" width="80" height="80" fill="#3E75A8"/>
+    <line x1="20" y1="120" x2="380" y2="120" stroke="#333" stroke-width="2"/>
+    <line x1="20" y1="280" x2="380" y2="280" stroke="#333" stroke-width="1.5"/>
+    <line x1="20" y1="430" x2="380" y2="430" stroke="#333" stroke-width="1.5"/>
+
+    <!-- Title -->
+    <text x="200" y="60" font-family="'Noto Serif SC', 'Brush KaiTi', cursive" font-size="36" text-anchor="middle" fill="#333">汉语新解</text>
+
+    <!-- Separator -->
+    <line x1="50" y1="80" x2="350" y2="80" stroke="#333" stroke-width="1"/>
+
+    <!-- Word -->
+    <text x="200" y="150" font-family="'Noto Serif SC', 'Huiwen Mingchao', serif" font-size="32" text-anchor="middle" fill="#3a3a3a">一加手机</text>
+    <text x="200" y="180" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#555">OnePlus</text>
+    <text x="200" y="205" font-family="'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', sans-serif" font-size="16" text-anchor="middle" fill="#555">ワンプラス</text>
+
+    <!-- Explanation -->
+    <foreignObject x="40" y="230" width="320" height="180">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Noto Serif SC', 'Huiwen Mingchao', serif; font-size: 18px; color: #3a3a3a; line-height: 1.8; text-align: justify;">
+            <p>一个出身显赫（OPPO）却偏要离家出走的叛逆少年，高喊着“不将就”的口号闯荡江湖。</p>
+            <p>后来发现外面风大雨大，还是觉得回家继承家业，当个有名无实的部门经理比较舒服。</p>
+        </div>
+    </foreignObject>
+
+    <!-- Line Art -->
+    <g transform="translate(50, 460)">
+        <!-- Left: Rebel -->
+        <circle cx="30" cy="30" r="15" fill="none" stroke="#333" stroke-width="1.5"/>
+        <line x1="30" y1="45" x2="30" y2="75" stroke="#333" stroke-width="1.5"/>
+        <line x1="15" y1="55" x2="45" y2="55" stroke="#333" stroke-width="1.5"/>
+        <line x1="30" y1="75" x2="20" y2="95" stroke="#333" stroke-width="1.5"/>
+        <line x1="30" y1="75" x2="40" y2="95" stroke="#333" stroke-width="1.5"/>
+        <path d="M 25 25 L 28 20 L 31 25" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> <!-- Spiky Hair -->
+        <text x="0" y="115" font-family="'Noto Serif SC', serif" font-size="14" fill="#333">“不将就！”</text>
+
+        <!-- Arrow -->
+        <line x1="100" y1="60" x2="160" y2="60" stroke="#333" stroke-width="1.5"/>
+        <path d="M 160 60 L 150 55 L 150 65 Z" fill="#333"/>
+        <text x="110" y="50" font-family="'Noto Serif SC', serif" font-size="12" fill="#333">现实</text>
+
+
+        <!-- Right: Corporate -->
+        <circle cx="200" cy="30" r="15" fill="none" stroke="#333" stroke-width="1.5"/>
+        <rect x="185" y="45" width="30" height="30" fill="none" stroke="#333" stroke-width="1.5"/>
+        <path d="M 192 45 L 200 55 L 208 45" fill="none" stroke="#333" stroke-width="1.5"/> <!-- Tie -->
+        <line x1="200" y1="75" x2="190" y2="95" stroke="#333" stroke-width="1.5"/>
+        <line x1="200" y1="75" x2="210" y2="95" stroke="#333" stroke-width="1.5"/>
+        <text x="230" y="80" font-family="'Noto Serif SC', serif" font-size="14" fill="#333">“真香...”</text>
+    </g>
+
+    <!-- Summary -->
+    <text x="200" y="585" font-family="'Noto Serif SC', 'Huiwen Mingchao', serif" font-size="16" text-anchor="middle" fill="#333">屠龙少年，终究学会了给PPT调格式。</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 2.5 Pro
+        </footer>
+    </main>
+</body>
+</html>
