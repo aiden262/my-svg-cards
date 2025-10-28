@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【韩立】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg width="400" height="600" viewBox="0 0 400 600" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); font-family: sans-serif; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+
+    <!-- 标题 -->
+    <text x="200" y="50" font-family="'Maobi Kaishu', 'Noto Serif SC', serif" font-size="32" text-anchor="middle" fill="#333">汉语新解</text>
+
+    <!-- 分隔线 -->
+    <line x1="40" y1="75" x2="360" y2="75" stroke="#aaa" stroke-width="1"/>
+
+    <!-- 词汇 -->
+    <g text-anchor="middle">
+        <text x="200" y="120" font-family="'Huiwen Mingchao', 'Noto Serif SC', serif" font-size="48" fill="#2c3e50">韩立</text>
+        <text x="200" y="150" font-family="Arial, sans-serif" font-size="16" fill="#7f8c8d">Hán Lì</text>
+        <text x="200" y="175" font-family="'Yu Gothic', 'Meiryo', sans-serif" font-size="16" fill="#7f8c8d">韓立 (かん りつ)</text>
+    </g>
+
+    <!-- 解释 -->
+    <foreignObject x="40" y="200" width="320" height="180">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Huiwen Mingchao', 'Noto Serif SC', serif; color: #34495e; font-size: 18px; line-height: 1.8; text-align: justify;">
+            <p style="text-indent: 2em; margin: 0;">
+                一个披着修仙外衣的终极社畜，一本写给当代“打工人”的宇宙级生存指南。
+            </p>
+            <p style="text-indent: 2em; margin: 0;">
+                他的人生信条不是“王侯将相宁有种乎”，而是“打得过就往死里打，打不过就赶紧跑路”。他的外号“韩跑跑”，与其说是蔑称，不如说是这个内卷时代里，被现实毒打了无数次的普通人所能达成的、最务实的共识。
+            </p>
+            <p style="text-indent: 2em; margin: 0;">
+                他将“苟”字诀修炼到了化境，把低调伪装成平庸，把谨慎内化为本能。他让我们明白一个残酷的真理：在资源稀缺、规则残酷的系统里，活下去，本身就是对系统最大的嘲讽和最终的胜利。
+            </p>
+        </div>
+    </foreignObject>
+
+    <!-- 线条图 -->
+    <g transform="translate(50, 400)">
+        <path d="M 0,100 C 50,120 100,80 150,100 C 200,120 250,80 300,100" stroke="#34495e" stroke-width="2" fill="none" stroke-dasharray="4 4" />
+        <circle cx="15" cy="95" r="5" fill="#34495e" >
+            <animateMotion dur="10s" repeatCount="indefinite" path="M 0,0 C 50,20 100,-20 150,0 C 200,20 250,-20 300,0" />
+        </circle>
+        <text x="150" y="130" font-family="'Huiwen Mingchao', 'Noto Serif SC', serif" font-size="16" text-anchor="middle" fill="#34495e">在漫长的跑路中完成KPI</text>
+    </g>
+
+    <!-- 极简总结 -->
+    <text x="200" y="560" font-family="'Huiwen Mingchao', 'Noto Serif SC', serif" font-size="20" text-anchor="middle" fill="#2c3e50">
+        用一万年的谨慎，换一次飞升的自由。
+    </text>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 2.5 Pro
+        </footer>
+    </main>
+</body>
+</html>
