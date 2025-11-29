@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【中国共产党】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg width="400" height="600" viewBox="0 0 400 600" style="background-color: #f0f0f0; border: 1px solid #ccc; font-family: sans-serif;">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+KuaiLe&family=Noto+Serif+SC:wght@400;700&display=swap');
+            .title { font-family: 'Ma Shan Zheng', cursive; font-size: 36px; text-anchor: middle; fill: #2c3e50; color: #2c3e50; }
+            .term { font-family: 'Noto Serif SC', serif; font-size: 28px; text-anchor: middle; fill: #34495e; color: #34495e; font-weight: 700;}
+            .translation { font-family: 'Helvetica', sans-serif; font-size: 14px; text-anchor: middle; fill: #7f8c8d; color: #7f8c8d; }
+            .explanation { font-family: 'Noto Serif SC', serif; font-size: 18px; fill: #34495e; color: #34495e; white-space: pre-wrap; }
+            .summary { font-family: 'Noto Serif SC', serif; font-size: 14px; text-anchor: middle; fill: #2c3e50; color: #2c3e50; font-weight: 400;}
+        </style>
+        <!-- Mondrian-style background -->
+        <pattern id="mondrian" patternUnits="userSpaceOnUse" width="400" height="600">
+            <rect x="0" y="0" width="400" height="600" fill="#f8f8f8"/>
+            <rect x="0" y="0" width="120" height="150" fill="#e74c3c"/>
+            <rect x="300" y="450" width="100" height="150" fill="#3498db"/>
+            <rect x="0" y="500" width="80" height="100" fill="#f1c40f"/>
+            <line x1="0" y1="150" x2="400" y2="150" stroke="#000" stroke-width="5"/>
+            <line x1="120" y1="0" x2="120" y2="600" stroke="#000" stroke-width="8"/>
+            <line x1="300" y1="0" x2="300" y2="600" stroke="#000" stroke-width="5"/>
+            <line x1="0" y1="450" x2="400" y2="450" stroke="#000" stroke-width="5"/>
+        </pattern>
+    </defs>
+
+    <rect x="0" y="0" width="400" height="600" fill="url(#mondrian)" opacity="0.1"/>
+    <rect x="0" y="0" width="400" height="600" fill="#fdfdfd" fill-opacity="0.85"/>
+
+    <text x="200" y="60" class="title">汉 语 新 解</text>
+    
+    <line x1="40" y1="85" x2="360" y2="85" stroke="#bdc3c7" stroke-width="1"/>
+
+    <text x="200" y="130" class="term">中国共产党</text>
+    <text x="200" y="155" class="translation">The Communist Party of China / 中国共産党</text>
+
+    <foreignObject x="40" y="190" width="320" height="200">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Noto Serif SC', serif; font-size: 18px; color: #34495e; line-height: 1.8;">
+            一个自称“公仆”的永恒房东，他占有了整片土地，然后把一小块租给你，并称之为“你的家”。
+            <br/><br/>
+            他规定了所有的房屋守则，而最重要的一条就是：你必须发自内心地热爱这位房东，甚至超过热爱你的家。因为他反复强调，没有他，你连这片能做梦的瓦砾都没有。
+        </div>
+    </foreignObject>
+
+    <g transform="translate(100, 420)">
+        <path d="M 50 0 L 50 20 L 40 20 L 40 30 L 60 30 L 60 20 L 50 20" fill="none" stroke="#2c3e50" stroke-width="2" transform="scale(1.5) translate(10, 0)">
+            <title>一把巨大的钥匙，代表“党”</title>
+        </path>
+        <path d="M 120 40 L 120 80 L 180 80 L 180 40 L 150 20 L 120 40 Z" fill="none" stroke="#34495e" stroke-width="2">
+            <title>一座房子，代表“国”</pre>
+        </path>
+        <circle cx="150" cy="60" r="3" fill="#7f8c8d">
+            <title>一个渺小的人，代表“民”</title>
+        </circle>
+        <line x1="95" y1="25" x2="118" y2="38" stroke="#34495e" stroke-width="1.5" stroke-dasharray="3,3">
+            <title>钥匙正在“定义”或“控制”房子</title>
+        </line>
+    </g>
+
+    <text x="200" y="550" class="summary">极简总结：一把钥匙定义了整个国家，</text>
+    <text x="200" y="570" class="summary">并要求锁里的人感谢开锁的动作。</text>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 2.5 Pro
+        </footer>
+    </main>
+</body>
+</html>
