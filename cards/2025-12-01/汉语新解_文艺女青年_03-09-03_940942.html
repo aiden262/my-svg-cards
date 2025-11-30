@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【文艺女青年】 - 汉语新解</title>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-primary: #f1f5f9;
+            --text-secondary: rgba(241, 245, 249, 0.6);
+            --control-bg: rgba(15, 23, 42, 0.6);
+            --control-hover: rgba(30, 41, 59, 0.9);
+            --accent-color: #38bdf8;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', 'Noto Serif SC', sans-serif;
+            background-color: var(--bg-color);
+            background-image:
+                radial-gradient(circle at 50% 0%, #1e293b 0%, transparent 75%),
+                radial-gradient(circle at 85% 30%, rgba(56, 189, 248, 0.05) 0%, transparent 50%);
+            color: var(--text-primary);
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* SVG 视口：铺满全屏 */
+        .svg-viewport {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px; /* 极小的边距 */
+            z-index: 1;
+            transition: background-color 0.3s ease;
+        }
+
+        /* 背景模式 */
+        .svg-viewport.bg-dark { background-color: transparent; }
+        .svg-viewport.bg-light { background-color: #ffffff; }
+        .svg-viewport.bg-checkerboard {
+            background-color: #1e1e1e;
+            background-image:
+                linear-gradient(45deg, #2a2a2a 25%, transparent 25%),
+                linear-gradient(-45deg, #2a2a2a 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #2a2a2a 75%),
+                linear-gradient(-45deg, transparent 75%, #2a2a2a 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+
+        .svg-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .svg-container svg {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));
+        }
+
+        /* 悬浮工具栏 */
+        .controls {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 100;
+            opacity: 0; /* 默认隐藏 */
+            transform: translateX(20px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* 鼠标移动到右下角区域时显示 */
+        .controls-area {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 150px;
+            height: 250px;
+            z-index: 99;
+        }
+        
+        .controls-area:hover + .controls, .controls:hover {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .controls {
+                opacity: 1;
+                transform: translateX(0);
+                bottom: 20px;
+                right: 20px;
+                flex-direction: row;
+            }
+            .controls-area { display: none; }
+        }
+
+        .btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--control-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover {
+            background: var(--control-hover);
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        .btn iconify-icon {
+            font-size: 1.4rem;
+        }
+
+        /* Tooltip */
+        .btn { position: relative; }
+        .btn::after {
+            content: attr(title);
+            position: absolute;
+            right: 55px; /* 左侧显示 */
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.8);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+        }
+        .btn:hover::after { opacity: 1; }
+        
+        @media (max-width: 768px) {
+            .btn::after { display: none; }
+        }
+
+        /* 底部信息 */
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+            z-index: 50;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+        
+        body:hover .footer { opacity: 0.8; }
+
+    </style>
+</head>
+<body>
+    <!-- SVG 视口 -->
+    <div class="svg-viewport bg-dark" id="svg-viewport">
+        <div class="svg-container" id="svg-container">
+            <svg width="400" height="600" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Serif CJK SC', 'Source Han Serif SC', 'Serif'">
+  <!--
+    设计风格: 深海凝视
+    - 背景色: #1A2634 (深海沉蓝)
+    - 主要文字: #F5F5F0 (贝壳白)
+    - 装饰图案: #2C3E50 (礁石灰蓝)
+  -->
+
+  <rect width="400" height="600" fill="#1A2634"/>
+
+  <!-- 装饰性背景图案 -->
+  <defs>
+    <pattern id="deco_pattern" patternUnits="userSpaceOnUse" width="100" height="100" patternTransform="rotate(45)">
+      <circle cx="50" cy="50" r="1" fill="#2C3E50" fill-opacity="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="600" fill="url(#deco_pattern)"/>
+
+  <g transform="translate(25, 25)">
+    <!-- 标题 -->
+    <text x="175" y="45" font-size="20" text-anchor="middle" fill="#F5F5F0" letter-spacing="2">汉语新解</text>
+    <line x1="100" y1="70" x2="250" y2="70" stroke="#2C3E50" stroke-width="1" stroke-dasharray="4 4"/>
+
+    <!-- 词汇 -->
+    <text x="175" y="140" font-size="36" text-anchor="middle" fill="#F5F5F0" font-weight="bold">文艺女青年</text>
+    <text x="175" y="170" font-size="12" text-anchor="middle" fill="#F5F5F0" letter-spacing="1">wén yì nǚ qīng nián</text>
+    <text x="175" y="190" font-size="12" text-anchor="middle" fill="#F5F5F0" letter-spacing="1">EN: Hipster Girl / JP: 文芸女子</text>
+
+    <!-- 核心解释 -->
+    <foreignObject x="25" y="230" width="300" height="150">
+      <body xmlns="http://www.w3.org/1999/xhtml" style="margin:0; padding:0;">
+        <p style="font-family:'Noto Serif CJK SC', 'Source Han Serif SC', 'Serif'; color:#F5F5F0; font-size:17px; text-align:center; line-height:1.8; margin:0;">
+          一种精神上的装饰性盔甲。看似能抵御现实的粗粝，实则一触即碎，其主要功能是向同类展示自己伤口的精致。
+        </p>
+      </body>
+    </foreignObject>
+
+    <!-- 批判内核 SVG 线条图: 一件带有裂痕的华丽胸甲 -->
+    <g transform="translate(175, 410) scale(0.8)">
+      <path d="M -50,0 C -50,-50 -20,-60 0,-60 C 20,-60 50,-50 50,0 L 40,-20 L 0,20 L -40,-20 Z" fill="none" stroke="#2C3E50" stroke-width="2"/>
+      <path d="M 0,-60 C -10,-30 10,-30 0,20" fill="none" stroke="#2C3E50" stroke-width="2"/>
+      <path d="M 10, -40 L 25, -25" fill="none" stroke="#F5F5F0" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- 底部总结 -->
+    <text x="175" y="520" font-size="14" text-anchor="middle" fill="#F5F5F0" letter-spacing="3">精致的自我囚禁</text>
+  </g>
+</svg>
+        </div>
+    </div>
+
+    <!-- 触发区域 -->
+    <div class="controls-area"></div>
+
+    <!-- 悬浮按钮组 -->
+    <div class="controls">
+        <button class="btn" id="bg-toggle-btn" title="切换背景">
+            <iconify-icon icon="material-symbols:contrast-rounded"></iconify-icon>
+        </button>
+        <button class="btn" id="copy-btn" title="复制代码">
+            <iconify-icon icon="material-symbols:content-copy-outline-rounded"></iconify-icon>
+        </button>
+        <button class="btn" id="download-btn" title="下载 SVG">
+            <iconify-icon icon="material-symbols:download-rounded"></iconify-icon>
+        </button>
+    </div>
+
+    <!-- 底部信息 -->
+    <div class="footer">
+        AI Bot 生成 | 汉语新解 | Gemini 2.5 Pro
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const svgElement = document.querySelector('#svg-container svg');
+            if (!svgElement) return;
+
+            // 确保 SVG 响应式
+            if (!svgElement.getAttribute('viewBox') && svgElement.getAttribute('width') && svgElement.getAttribute('height')) {
+                svgElement.setAttribute('viewBox', `0 0 ${svgElement.getAttribute('width')} ${svgElement.getAttribute('height')}`);
+            }
+            svgElement.removeAttribute('width');
+            svgElement.removeAttribute('height');
+
+            // --- 1. 下载功能 ---
+            const downloadBtn = document.getElementById('download-btn');
+            downloadBtn.addEventListener('click', () => {
+                const svgData = new XMLSerializer().serializeToString(svgElement);
+                const blob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'ai_generated_card_03-09-03_940942.svg';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            });
+
+            // --- 2. 复制代码功能 ---
+            const copyBtn = document.getElementById('copy-btn');
+            copyBtn.addEventListener('click', () => {
+                const svgCode = svgElement.outerHTML;
+                navigator.clipboard.writeText(svgCode).then(() => {
+                    const originalIcon = copyBtn.innerHTML;
+                    copyBtn.innerHTML = '<iconify-icon icon="material-symbols:check-rounded" style="color: #4ade80;"></iconify-icon>';
+                    
+                    setTimeout(() => {
+                        copyBtn.innerHTML = originalIcon;
+                    }, 2000);
+                }, (err) => {
+                    console.error('复制失败: ', err);
+                });
+            });
+
+            // --- 3. 切换背景功能 ---
+            const bgToggleBtn = document.getElementById('bg-toggle-btn');
+            const svgViewport = document.getElementById('svg-viewport');
+            const bgClasses = ['bg-dark', 'bg-light', 'bg-checkerboard'];
+            let currentBgIndex = 0;
+
+            bgToggleBtn.addEventListener('click', () => {
+                svgViewport.classList.remove(bgClasses[currentBgIndex]);
+                currentBgIndex = (currentBgIndex + 1) % bgClasses.length;
+                svgViewport.classList.add(bgClasses[currentBgIndex]);
+            });
+        });
+    </script>
+</body>
+</html>
