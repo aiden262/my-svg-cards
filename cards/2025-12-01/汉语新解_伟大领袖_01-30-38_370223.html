@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【伟大领袖】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg width="400" height="600" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" style="font-family: 'Noto Serif CJK SC', 'Source Han Serif SC', serif; background-color: #4A2328;">
+  <!-- 暮山独行风格: 背景 #4A2328, 文字 #F5F5F0, 装饰 #6D4C50 -->
+  <defs>
+    <style>
+      .title { font-size: 20px; font-weight: bold; fill: #F5F5F0; text-anchor: middle; }
+      .term { font-size: 38px; font-weight: bold; fill: #F5F5F0; text-anchor: middle; }
+      .explanation { font-size: 18px; fill: #F5F5F0; text-anchor: middle; white-space: pre-wrap; }
+      .summary { font-size: 14px; fill: #F5F5F0; text-anchor: middle; font-style: italic; }
+    </style>
+  </defs>
+
+  <!-- 背景装饰图案: 抽象的、低透明度的几何图形 -->
+  <path d="M-50 150 Q 200 -50 450 150 T 450 450 Q 200 650 -50 450 T -50 150 Z" fill="#6D4C50" opacity="0.1"/>
+
+  <!-- 标题 -->
+  <text x="200" y="60" class="title">汉 语 新 解</text>
+
+  <!-- 分隔线 -->
+  <line x1="80" y1="85" x2="320" y2="85" stroke="#F5F5F0" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+
+  <!-- 词汇 -->
+  <text x="200" y="150" class="term">伟大领袖</text>
+
+  <!-- 核心解释区域 (使用foreignObject以实现自动换行) -->
+  <foreignObject x="40" y="200" width="320" height="200">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: center; justify-content: center; height: 100%; text-align: center;">
+      <p class="explanation" style="font-size: 20px; line-height: 1.8;">
+        一根巨大的手指，它指向唯一的方向，代价是戳瞎所有试图望向别处的眼睛。
+      </p>
+    </div>
+  </foreignObject>
+  
+  <!-- 批判内核的抽象SVG线条图: 一根指向右上方的手指，周围是几个被划掉的眼睛符号 -->
+  <g transform="translate(200, 420) scale(0.8)" fill="none" stroke="#F5F5F0" stroke-width="2" opacity="0.4">
+    <!-- 手指 -->
+    <path d="M -60,10 L 20,10 L 40,0 L 20,-10 L -60,-10 Q -70,-10 -70,0 Q -70,10 -60,10 Z" />
+    <!-- 被划掉的眼睛 -->
+    <g transform="translate(-40, -40)">
+      <path d="M -10,0 C -10,-8 10,-8 10,0 C 10,8 -10,8 -10,0 Z" />
+      <circle cx="0" cy="0" r="3" fill="#F5F5F0"/>
+      <line x1="-12" y1="-10" x2="12" y2="10" />
+    </g>
+    <g transform="translate(30, 40)">
+      <path d="M -10,0 C -10,-8 10,-8 10,0 C 10,8 -10,8 -10,0 Z" />
+      <circle cx="0" cy="0" r="3" fill="#F5F5F0"/>
+      <line x1="-12" y1="-10" x2="12" y2="10" />
+    </g>
+     <g transform="translate(60, -30)">
+      <path d="M -10,0 C -10,-8 10,-8 10,0 C 10,8 -10,8 -10,0 Z" />
+      <circle cx="0" cy="0" r="3" fill="#F5F5F0"/>
+      <line x1="-12" y1="10" x2="12" y2="-10" />
+    </g>
+  </g>
+
+  <!-- 极简总结 -->
+  <text x="200" y="550" class="summary">唯一的方向，无尽的代价。</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 2.5 Pro
+        </footer>
+    </main>
+</body>
+</html>
