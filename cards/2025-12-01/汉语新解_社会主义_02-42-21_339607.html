@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【社会主义】 - 汉语新解</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        glass: "rgba(255, 255, 255, 0.05)",
+                        glassBorder: "rgba(255, 255, 255, 0.1)",
+                        primary: "#818cf8", // Indigo 400
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Noto Serif SC', 'serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #0f172a; /* Slate 900 */
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(129, 140, 248, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(232, 121, 249, 0.15) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(52, 211, 153, 0.15) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: #e2e8f0;
+        }
+
+        .glass-panel {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glassBorder);
+        }
+
+        .svg-wrapper {
+            background-image: 
+                linear-gradient(45deg, #1e293b 25%, transparent 25%), 
+                linear-gradient(-45deg, #1e293b 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, #1e293b 75%), 
+                linear-gradient(-45deg, transparent 75%, #1e293b 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+            background-color: #0f172a; /* Fallback */
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* SVG Styles */
+        svg {
+            max-width: 100%;
+            height: auto;
+            background: transparent !important;
+            transition: transform 0.1s ease-out;
+            transform-origin: center;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4 sm:p-8 overflow-hidden">
+
+    <!-- Header -->
+    <header class="w-full max-w-5xl flex justify-between items-center mb-6 animate-fade-in z-10">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+                <i class="fa-solid fa-wand-magic-sparkles text-white text-sm"></i>
+            </div>
+            <div>
+                <h1 class="text-lg font-medium text-white tracking-wide">社会主义</h1>
+                <p class="text-xs text-slate-400 font-light">汉语新解 • Gemini 2.5 Pro</p>
+            </div>
+        </div>
+        <a href="https://t.me/tyhj_bot" target="_blank" class="text-xs text-slate-400 hover:text-white transition-colors flex items-center gap-1">
+            <i class="fa-brands fa-telegram"></i> @tyhj_bot
+        </a>
+    </header>
+
+    <!-- Main Stage -->
+    <main class="w-full max-w-5xl flex-1 flex flex-col relative animate-slide-up z-0" style="height: 70vh; min-height: 400px;">
+        
+        <!-- Canvas Container -->
+        <div class="relative w-full h-full glass-panel rounded-2xl overflow-hidden shadow-2xl shadow-black/50 flex flex-col">
+            
+            <!-- Toolbar -->
+            <div class="absolute top-4 right-4 z-20 flex gap-2">
+                <button onclick="resetZoom()" class="w-9 h-9 rounded-lg glass-panel hover:bg-white/10 text-slate-300 hover:text-white transition-all flex items-center justify-center" title="重置视图">
+                    <i class="fa-solid fa-compress"></i>
+                </button>
+                <div class="w-px h-9 bg-white/10 mx-1"></div>
+                <button onclick="downloadSVG()" class="w-9 h-9 rounded-lg glass-panel hover:bg-white/10 text-slate-300 hover:text-white transition-all flex items-center justify-center" title="下载 SVG">
+                    <i class="fa-solid fa-file-code"></i>
+                </button>
+                <button onclick="downloadPNG()" class="w-9 h-9 rounded-lg glass-panel hover:bg-white/10 text-slate-300 hover:text-white transition-all flex items-center justify-center" title="下载 PNG">
+                    <i class="fa-solid fa-image"></i>
+                </button>
+            </div>
+
+            <!-- SVG Viewport -->
+            <div id="viewport" class="w-full h-full flex items-center justify-center overflow-hidden cursor-grab active:cursor-grabbing svg-wrapper">
+                <div id="content" class="transition-transform duration-75">
+                    <svg width="400" height="600" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Serif CJK SC', 'Source Han Serif SC', serif">
+  <!--
+    设计风格: 暮山独行 (深沉热烈)
+    最高原则: 所有文字内容必须完整显示，禁止任何形式的截断。
+  -->
+  <defs>
+    <style>
+      .title { font-size: 20px; font-weight: bold; text-anchor: middle; }
+      .word { font-size: 48px; font-weight: bold; text-anchor: middle; }
+      .translation { font-size: 14px; text-anchor: middle; opacity: 0.7; }
+      .explanation { font-size: 19px; text-anchor: middle; line-height: 1.8; }
+      .bg-pattern { opacity: 0.1; }
+    </style>
+  </defs>
+
+  <!-- 背景色 -->
+  <rect width="400" height="600" fill="#4A2328"/>
+
+  <!-- 装饰图案 (低透明度几何图形) -->
+  <g class="bg-pattern" fill="#6D4C50" transform="translate(200, 300) scale(1.5)">
+    <path d="M 0 -150 L 130 -75 L 130 75 L 0 150 L -130 75 L -130 -75 Z" />
+  </g>
+
+  <!-- 主要文字颜色 -->
+  <g fill="#F5F5F0">
+    <!-- 1. 标题 -->
+    <text x="200" y="60" class="title">汉 语 新 解</text>
+
+    <!-- 2. 分隔线 -->
+    <line x1="80" y1="85" x2="320" y2="85" stroke="#F5F5F0" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+
+    <!-- 3. 词汇与翻译 -->
+    <text x="200" y="160" class="word">社会主义</text>
+    <text x="200" y="190" class="translation">Socialism / 社会主義 (しゃかいしゅぎ)</text>
+
+    <!-- 4. 核心解释 (自动换行 & 动态字号的最终呈现) -->
+    <text class="explanation" y="280">
+      <tspan x="200" dy="0em">一个永远挂在天边的地平线，</tspan>
+      <tspan x="200" dy="1.8em">它存在的唯一意义，</tspan>
+      <tspan x="200" dy="1.8em">就是让你埋头赶路，</tspan>
+      <tspan x="200" dy="1.8em">别看脚下的坑。</tspan>
+    </text>
+
+    <!-- 5. 批判内核的抽象线条图 (地平线与陷阱) -->
+    <g stroke="#F5F5F0" stroke-width="1.5" fill="none" opacity="0.6">
+      <!-- 地平线 -->
+      <line x1="50" y1="500" x2="350" y2="500" />
+      <!-- 远方的"目标" -->
+      <circle cx="200" cy="480" r="3" fill="#F5F5F0"/>
+      <!-- 脚下的坑 -->
+      <path d="M 120 500 Q 140 525 160 500" stroke-dasharray="3 3"/>
+    </g>
+
+  </g>
+</svg>
+                </div>
+            </div>
+            
+            <!-- Zoom Controls (Bottom Right) -->
+            <div class="absolute bottom-4 right-4 z-20 flex flex-col gap-2">
+                <button onclick="zoomIn()" class="w-8 h-8 rounded-full glass-panel hover:bg-white/10 text-slate-300 hover:text-white transition-all flex items-center justify-center">
+                    <i class="fa-solid fa-plus text-xs"></i>
+                </button>
+                <button onclick="zoomOut()" class="w-8 h-8 rounded-full glass-panel hover:bg-white/10 text-slate-300 hover:text-white transition-all flex items-center justify-center">
+                    <i class="fa-solid fa-minus text-xs"></i>
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-6 text-center text-slate-500 text-xs font-light animate-fade-in">
+        <p>Generated by AI • 2025-12-01</p>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-slate-800 text-white px-4 py-2 rounded-full shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 z-50 flex items-center gap-2 text-sm border border-slate-700">
+        <i class="fa-solid fa-circle-check text-green-400"></i>
+        <span id="toast-msg">操作成功</span>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Pan & Zoom Logic
+        const viewport = document.getElementById('viewport');
+        const content = document.getElementById('content');
+        let scale = 1;
+        let panning = false;
+        let pointX = 0;
+        let pointY = 0;
+        let startX = 0;
+        let startY = 0;
+
+        function updateTransform() {
+            content.style.transform = `translate(${pointX}px, ${pointY}px) scale(${scale})`;
+        }
+
+        viewport.addEventListener('mousedown', (e) => {
+            e.preventDefault();
+            startX = e.clientX - pointX;
+            startY = e.clientY - pointY;
+            panning = true;
+        });
+
+        viewport.addEventListener('mouseup', () => {
+            panning = false;
+        });
+
+        viewport.addEventListener('mouseleave', () => {
+            panning = false;
+        });
+
+        viewport.addEventListener('mousemove', (e) => {
+            e.preventDefault();
+            if (!panning) return;
+            pointX = e.clientX - startX;
+            pointY = e.clientY - startY;
+            updateTransform();
+        });
+
+        viewport.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const xs = (e.clientX - pointX) / scale;
+            const ys = (e.clientY - pointY) / scale;
+            const delta = -e.deltaY;
+            
+            (delta > 0) ? (scale *= 1.1) : (scale /= 1.1);
+            
+            // Limit scale
+            scale = Math.min(Math.max(0.1, scale), 10);
+
+            pointX = e.clientX - xs * scale;
+            pointY = e.clientY - ys * scale;
+
+            updateTransform();
+        });
+
+        function zoomIn() {
+            scale *= 1.2;
+            updateTransform();
+        }
+
+        function zoomOut() {
+            scale /= 1.2;
+            updateTransform();
+        }
+
+        function resetZoom() {
+            scale = 1;
+            pointX = 0;
+            pointY = 0;
+            updateTransform();
+            showToast("视图已重置");
+        }
+
+        // Download Logic
+        function downloadSVG() {
+            const svg = document.querySelector('svg');
+            if (!svg) return showToast("未找到SVG内容");
+            
+            const serializer = new XMLSerializer();
+            let source = serializer.serializeToString(svg);
+            
+            // Add xml declaration
+            if(!source.match(/^<\?xml/)) {
+                source = '<?xml version="1.0" standalone="no"?>\r\n' + source;
+            }
+
+            const url = "data:image/svg+xml;charset=utf-8,"+encodeURIComponent(source);
+            const link = document.createElement("a");
+            link.href = url;
+            link.download = "汉语新解_02-42-21_339607.svg";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            showToast("SVG 下载已开始");
+        }
+
+        function downloadPNG() {
+            const svg = document.querySelector('svg');
+            if (!svg) return showToast("未找到SVG内容");
+
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Get SVG data
+            const serializer = new XMLSerializer();
+            const source = serializer.serializeToString(svg);
+            
+            const img = new Image();
+            const svgBlob = new Blob([source], {type: 'image/svg+xml;charset=utf-8'});
+            const url = URL.createObjectURL(svgBlob);
+            
+            img.onload = function() {
+                // Set canvas size to match SVG or high res
+                const bbox = svg.getBoundingClientRect();
+                // Use intrinsic size if available, else client size * 2 for quality
+                canvas.width = (svg.width.baseVal.value || bbox.width) * 2;
+                canvas.height = (svg.height.baseVal.value || bbox.height) * 2;
+                
+                // Fill background (optional, but good for PNG)
+                // ctx.fillStyle = "#1E1E1E"; 
+                // ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                
+                const pngUrl = canvas.toDataURL('image/png');
+                const link = document.createElement("a");
+                link.href = pngUrl;
+                link.download = "汉语新解_02-42-21_339607.png";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(url);
+                showToast("PNG 下载已开始");
+            };
+            
+            img.src = url;
+        }
+
+        // Toast Logic
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            toastMsg.innerText = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
