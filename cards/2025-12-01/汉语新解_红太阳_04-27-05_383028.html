@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>【红太阳】 - 汉语新解</title>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-start: #1e1e2f;
+            --bg-end: #10101a;
+            --text-primary: #e0e0ff;
+            --text-secondary: rgba(224, 224, 255, 0.6);
+            --accent-primary: #82aaff;
+            --accent-secondary: #c792ea;
+            --surface-bg: rgba(40, 42, 60, 0.5);
+            --surface-border: rgba(255, 255, 255, 0.1);
+            --shadow-color: rgba(0, 0, 0, 0.5);
+            --success-color: #89ddff;
+        }
+
+        @keyframes background-pan {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Serif SC', sans-serif;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+            background-size: 200% 200%;
+            animation: background-pan 20s ease infinite;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .main-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: env(safe-area-inset-top, 16px) env(safe-area-inset-right, 16px) env(safe-area-inset-bottom, 16px) env(safe-area-inset-left, 16px);
+            opacity: 0;
+            animation: fade-in 0.8s 0.2s ease-out forwards;
+        }
+
+        @keyframes fade-in {
+            to { opacity: 1; }
+        }
+
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            flex-shrink: 0;
+        }
+
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            max-width: calc(100% - 80px);
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-shadow: 0 1px 3px var(--shadow-color);
+        }
+
+        .subtitle {
+            font-size: 12px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .subtitle span {
+            display: inline-flex;
+            align-items: center;
+            padding: 3px 8px;
+            background: var(--surface-bg);
+            border-radius: 6px;
+            border: 1px solid var(--surface-border);
+        }
+
+        .brand-logo a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            border-radius: 10px;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(130, 170, 255, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .brand-logo a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(130, 170, 255, 0.4);
+        }
+        .brand-logo iconify-icon {
+            font-size: 22px;
+        }
+
+        .svg-viewport {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            min-height: 0;
+        }
+
+        .svg-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .svg-container svg {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 40px var(--shadow-color));
+            transition: transform 0.3s ease;
+        }
+        .svg-container svg:hover {
+            transform: scale(1.01);
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            padding: 8px;
+            background: var(--surface-bg);
+            border: 1px solid var(--surface-border);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 8px 20px var(--shadow-color);
+            flex-shrink: 0;
+            margin: 0 auto; /* Center horizontally */
+        }
+
+        .btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            transform: translateY(-2px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn iconify-icon {
+            font-size: 22px;
+        }
+
+        .btn .tooltip {
+            content: attr(data-title);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 10px;
+            background: #10101a;
+            color: white;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .btn:hover .tooltip {
+            opacity: 1;
+            transform: translateX(-50%) translateY(-5px);
+        }
+
+        /* 移动端优化 */
+        @media (max-width: 768px) {
+            .main-container {
+                padding: env(safe-area-inset-top, 8px) env(safe-area-inset-right, 8px) env(safe-area-inset-bottom, 8px) env(safe-area-inset-left, 8px);
+            }
+            .header {
+                padding: 8px;
+            }
+            .title {
+                font-size: 14px;
+            }
+            .subtitle {
+                font-size: 11px;
+            }
+            .brand-logo a {
+                width: 36px;
+                height: 36px;
+            }
+            .brand-logo iconify-icon {
+                font-size: 20px;
+            }
+            .svg-viewport {
+                padding: 8px;
+            }
+            .controls {
+                padding: 6px;
+                gap: 6px;
+                border-radius: 12px;
+            }
+            .btn {
+                width: 40px;
+                height: 40px;
+            }
+            .btn iconify-icon {
+                font-size: 20px;
+            }
+            .btn .tooltip {
+                display: none; /* 在移动端隐藏tooltip */
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="main-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-text">
+                <div class="title">红太阳</div>
+                <div class="subtitle">
+                    <span>汉语新解</span>
+                    <span>Gemini 2.5 Pro</span>
+                </div>
+            </div>
+            <div class="brand-logo">
+                <a href="https://github.com/aiden262/my-svg-cards" target="_blank" title="查看项目">
+                    <iconify-icon icon="ph:cards-bold"></iconify-icon>
+                </a>
+            </div>
+        </header>
+        
+        <!-- SVG 视口 -->
+        <div class="svg-viewport" id="svg-viewport">
+            <div class="svg-container" id="svg-container">
+                <svg width="400" height="600" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Serif CJK SC', 'Source Han Serif SC', serif">
+  <!-- 
+    设计风格: 暮山独行
+    - 背景色: #4A2328 (暮山绛红)
+    - 主要文字: #F5F5F0 (纸莎白)
+    - 装饰图案: #6D4C50 (淡绛)
+  -->
+  <defs>
+    <style>
+      .title { font-size: 20px; font-weight: bold; fill: #F5F5F0; text-anchor: middle; }
+      .word { font-size: 48px; font-weight: bold; fill: #F5F5F0; text-anchor: middle; }
+      .translation { font-size: 14px; fill: #F5F5F0; text-anchor: middle; opacity: 0.8; }
+      .explanation { font-size: 18px; fill: #F5F5F0; text-anchor: middle; white-space: pre-wrap; }
+      .summary { font-size: 14px; fill: #F5F5F0; text-anchor: middle; font-style: italic; opacity: 0.9; }
+      .decorator { fill: #6D4C50; opacity: 0.3; }
+    </style>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="400" height="600" fill="#4A2328" />
+
+  <!-- 装饰图案：抽象的山峦剪影 -->
+  <path d="M-50 550 Q 150 480, 250 540 T 500 520 L 500 600 L -50 600 Z" class="decorator" />
+  <path d="M-50 580 Q 200 530, 450 570 L 450 600 L -50 600 Z" class="decorator" opacity="0.4"/>
+
+  <!-- 标题 -->
+  <text x="200" y="60" class="title">汉 语 新 解</text>
+  <line x1="100" y1="85" x2="300" y2="85" stroke="#F5F5F0" stroke-width="1" stroke-dasharray="4 4" opacity="0.6" />
+
+  <!-- 词汇 -->
+  <text x="200" y="155" class="word">红太阳</text>
+  <text x="200" y="185" class="translation">Hóng Tàiyáng · Red Sun · 赤い太陽</text>
+
+  <!-- 核心解释区域 -->
+  <g class="explanation">
+    <text x="200" y="245">
+      <tspan x="200" dy="0">一种天文学上的暴力。</tspan>
+      <tspan x="200" dy="1.5em">它的光芒过于炽热，以至于烧毁了星空，</tspan>
+      <tspan x="200" dy="1.5em">让所有人只剩下同一个方向的影子。</tspan>
+    </text>
+  </g>
+
+  <!-- 批判内核: 抽象线条图 -->
+  <!-- 太阳光芒 & 被其统一方向的阴影 -->
+  <g transform="translate(200, 380)" stroke="#F5F5F0" stroke-width="1.5" fill="none" opacity="0.7">
+    <circle cx="0" cy="-40" r="15" fill="#F5F5F0" />
+    <path d="M 0 -25 L 0 -10" />
+    <path d="M 17.6 -20 L 8.8 -10" />
+    <path d="M -17.6 -20 L -8.8 -10" />
+    
+    <path d="M -60 20 L -60 30 L -50 30 L -50 20 Z M -55 20 L -55 55" stroke-opacity="0.5"/>
+    <path d="M -20 20 L -20 30 L -10 30 L -10 20 Z M -15 20 L -15 65" />
+    <path d="M 20 20 L 20 30 L 30 30 L 30 20 Z M 25 20 L 25 50" stroke-opacity="0.6"/>
+    <path d="M 60 20 L 60 30 L 70 30 L 70 20 Z M 65 20 L 65 70" />
+  </g>
+
+  <!-- 极简总结 -->
+  <text x="200" y="550" class="summary">唯一光源，万众同向。</text>
+</svg>
+            </div>
+        </div>
+
+        <!-- 悬浮按钮组 -->
+        <div class="controls">
+            <button class="btn" id="copy-btn" data-title="复制代码">
+                <iconify-icon icon="material-symbols:content-copy-outline-rounded"></iconify-icon>
+                <span class="tooltip">复制代码</span>
+            </button>
+            <button class="btn" id="download-svg-btn" data-title="下载 SVG">
+                <iconify-icon icon="material-symbols:download-rounded"></iconify-icon>
+                <span class="tooltip">下载 SVG</span>
+            </button>
+            <button class="btn" id="download-png-btn" data-title="下载 PNG">
+                <iconify-icon icon="material-symbols:image-outline-rounded"></iconify-icon>
+                <span class="tooltip">下载 PNG</span>
+            </button>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const svgElement = document.querySelector('#svg-container svg');
+            if (!svgElement) return;
+
+            // 确保 SVG 响应式
+            if (!svgElement.getAttribute('viewBox') && svgElement.getAttribute('width') && svgElement.getAttribute('height')) {
+                svgElement.setAttribute('viewBox', `0 0 ${svgElement.getAttribute('width')} ${svgElement.getAttribute('height')}`);
+            }
+            svgElement.removeAttribute('width');
+            svgElement.removeAttribute('height');
+
+            // --- 1. 复制代码功能 ---
+            const copyBtn = document.getElementById('copy-btn');
+            copyBtn.addEventListener('click', () => {
+                const svgCode = svgElement.outerHTML;
+                navigator.clipboard.writeText(svgCode).then(() => {
+                    const originalIcon = copyBtn.innerHTML;
+                    copyBtn.innerHTML = '<iconify-icon icon="material-symbols:check-rounded"></iconify-icon>';
+                    copyBtn.style.color = 'var(--success-color)';
+                    setTimeout(() => {
+                        copyBtn.innerHTML = originalIcon;
+                        copyBtn.style.color = '';
+                    }, 2000);
+                }, (err) => { console.error('复制失败: ', err); });
+            });
+
+            // --- 2. 下载 SVG 功能 ---
+            const downloadSvgBtn = document.getElementById('download-svg-btn');
+            downloadSvgBtn.addEventListener('click', () => {
+                const svgData = new XMLSerializer().serializeToString(svgElement);
+                const blob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'card_04-27-05_383028.svg';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            });
+
+            // --- 3. 下载 PNG 功能 ---
+            const downloadPngBtn = document.getElementById('download-png-btn');
+            downloadPngBtn.addEventListener('click', () => {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                
+                const svgClone = svgElement.cloneNode(true);
+                const viewBox = svgElement.viewBox.baseVal;
+                
+                // 优先使用 viewBox 的尺寸，如果不存在，则尝试获取 width/height 属性
+                let width = viewBox ? viewBox.width : parseFloat(svgElement.getAttribute('width')) || 800;
+                let height = viewBox ? viewBox.height : parseFloat(svgElement.getAttribute('height')) || 1200;
+
+                svgClone.setAttribute('width', width);
+                svgClone.setAttribute('height', height);
+                
+                const svgData = new XMLSerializer().serializeToString(svgClone);
+                const img = new Image();
+                
+                // 设置高分辨率 (2x)
+                const scale = 2;
+                canvas.width = width * scale;
+                canvas.height = height * scale;
+                
+                const svgBlob = new Blob([svgData], {type: 'image/svg+xml;charset=utf-8'});
+                const url = URL.createObjectURL(svgBlob);
+                
+                img.onload = () => {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    ctx.scale(scale, scale);
+                    ctx.drawImage(img, 0, 0, width, height);
+                    URL.revokeObjectURL(url);
+                    
+                    try {
+                        const pngUrl = canvas.toDataURL('image/png');
+                        const a = document.createElement('a');
+                        a.href = pngUrl;
+                        a.download = 'card_04-27-05_383028.png';
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                    } catch (err) {
+                        console.error('Canvas 导出失败:', err);
+                        alert('PNG 导出失败，可能是因为跨域图片限制。请尝试下载 SVG。');
+                    }
+                };
+                
+                img.onerror = (e) => {
+                    console.error('图片加载失败', e);
+                    alert('PNG 导出失败，请尝试下载 SVG');
+                };
+                
+                img.src = url;
+            });
+        });
+    </script>
+</body>
+</html>
