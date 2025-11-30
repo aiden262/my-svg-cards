@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【韩立】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg width="400" height="600" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.1 0"/>
+    </filter>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&amp;family=Noto+Sans+SC:wght@300&amp;display=swap');
+      .bg { fill: #f4f1ea; }
+      .mondrian-red { fill: #e63946; }
+      .mondrian-blue { fill: #1d3557; }
+      .mondrian-yellow { fill: #f4a261; }
+      .mondrian-black { fill: #2b2d42; }
+      .title { font-family: 'Noto Serif SC', serif; font-size: 48px; font-weight: 700; fill: #2b2d42; }
+      .subtitle { font-family: 'Noto Sans SC', sans-serif; font-size: 14px; fill: #6c757d; letter-spacing: 1px; }
+      .content { font-family: 'Noto Serif SC', serif; font-size: 18px; fill: #333; line-height: 1.8; text-align: justify; }
+      .divider { stroke: #2b2d42; stroke-width: 2; }
+      .footer { font-family: 'Noto Sans SC', sans-serif; font-size: 12px; fill: #8d99ae; }
+      .graphic { stroke: #2b2d42; stroke-width: 1.5; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Background & Mondrian Style -->
+  <rect width="100%" height="100%" class="bg"/>
+  <rect width="100%" height="100%" filter="url(#noise)" opacity="0.4"/>
+  
+  <!-- Mondrian Blocks (Abstract Layout) -->
+  <rect x="360" y="40" width="40" height="120" class="mondrian-red" opacity="0.8"/>
+  <rect x="0" y="540" width="120" height="60" class="mondrian-blue" opacity="0.8"/>
+  <rect x="340" y="500" width="60" height="60" class="mondrian-yellow" opacity="0.8"/>
+  <line x1="20" y1="20" x2="20" y2="580" class="divider" stroke-width="4"/>
+  
+  <!-- Content Container -->
+  <g transform="translate(50, 60)">
+    <!-- Header -->
+    <text x="0" y="0" class="subtitle">汉语新解</text>
+    <line x1="0" y1="15" x2="60" y2="15" class="divider" stroke-width="1"/>
+    
+    <!-- Title Section -->
+    <text x="0" y="70" class="title">韩立</text>
+    <text x="0" y="100" class="subtitle">Old Devil Han / ハン・リー</text>
+    
+    <!-- Main Interpretation -->
+    <foreignObject x="0" y="140" width="310" height="260">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="content">
+        <p>修仙界的“精致利己主义”集大成者。</p>
+        <p>他将“被迫害妄想症”修炼成了核心竞争力。在他眼中，每一次“见义勇为”都是亏本买卖，每一次“杀人越货”都是风险对冲。</p>
+        <p>他不是英雄，他是每一个在现代丛林中，收起獠牙、谨小慎微、只求上岸的“社畜”的终极幻想：只要跑得够快，道德就追不上我。</p>
+      </div>
+    </foreignObject>
+    
+    <!-- Visual Metaphor: A hidden dagger behind a smiling mask (abstract) -->
+    <g transform="translate(80, 400)">
+        <!-- Abstract Mask -->
+        <path d="M20,10 Q70,-20 120,10 Q140,60 70,100 Q0,60 20,10" class="graphic" stroke-dasharray="5,5"/>
+        <!-- The hidden dagger/bottle -->
+        <path d="M70,100 L70,150 M60,140 L70,150 L80,140" class="graphic" stroke="#e63946" stroke-width="2"/>
+        <!-- Running lines -->
+        <path d="M10,130 L-20,140 M15,140 L-15,150 M20,150 L-10,160" class="graphic" opacity="0.5"/>
+    </g>
+    
+    <!-- Footer -->
+    <text x="0" y="520" class="footer">总结：退后九十九步，只为捅你一刀。</text>
+  </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 3 Pro
+        </footer>
+    </main>
+</body>
+</html>
