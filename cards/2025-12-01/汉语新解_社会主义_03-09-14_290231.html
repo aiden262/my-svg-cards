@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【社会主义】 - 汉语新解</title>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-primary: #f1f5f9;
+            --text-secondary: rgba(241, 245, 249, 0.6);
+            --control-bg: rgba(15, 23, 42, 0.6);
+            --control-hover: rgba(30, 41, 59, 0.9);
+            --accent-color: #38bdf8;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', 'Noto Serif SC', sans-serif;
+            background-color: var(--bg-color);
+            background-image:
+                radial-gradient(circle at 50% 0%, #1e293b 0%, transparent 75%),
+                radial-gradient(circle at 85% 30%, rgba(56, 189, 248, 0.05) 0%, transparent 50%);
+            color: var(--text-primary);
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* SVG 视口：铺满全屏 */
+        .svg-viewport {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px; /* 极小的边距 */
+            z-index: 1;
+            transition: background-color 0.3s ease;
+        }
+
+        /* 背景模式 */
+        .svg-viewport.bg-dark { background-color: transparent; }
+        .svg-viewport.bg-light { background-color: #ffffff; }
+        .svg-viewport.bg-checkerboard {
+            background-color: #1e1e1e;
+            background-image:
+                linear-gradient(45deg, #2a2a2a 25%, transparent 25%),
+                linear-gradient(-45deg, #2a2a2a 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #2a2a2a 75%),
+                linear-gradient(-45deg, transparent 75%, #2a2a2a 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+
+        .svg-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .svg-container svg {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));
+        }
+
+        /* 悬浮工具栏 */
+        .controls {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 100;
+            opacity: 0; /* 默认隐藏 */
+            transform: translateX(20px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* 鼠标移动到右下角区域时显示 */
+        .controls-area {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 150px;
+            height: 250px;
+            z-index: 99;
+        }
+        
+        .controls-area:hover + .controls, .controls:hover {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .controls {
+                opacity: 1;
+                transform: translateX(0);
+                bottom: 20px;
+                right: 20px;
+                flex-direction: row;
+            }
+            .controls-area { display: none; }
+        }
+
+        .btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--control-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover {
+            background: var(--control-hover);
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        .btn iconify-icon {
+            font-size: 1.4rem;
+        }
+
+        /* Tooltip */
+        .btn { position: relative; }
+        .btn::after {
+            content: attr(title);
+            position: absolute;
+            right: 55px; /* 左侧显示 */
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.8);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+        }
+        .btn:hover::after { opacity: 1; }
+        
+        @media (max-width: 768px) {
+            .btn::after { display: none; }
+        }
+
+        /* 底部信息 */
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+            z-index: 50;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+        
+        body:hover .footer { opacity: 0.8; }
+
+    </style>
+</head>
+<body>
+    <!-- SVG 视口 -->
+    <div class="svg-viewport bg-dark" id="svg-viewport">
+        <div class="svg-container" id="svg-container">
+            <svg width="400" height="600" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Serif CJK SC', 'Source Han Serif SC', serif">
+  <defs>
+    <style>
+      .title { font-size: 20px; font-weight: bold; text-anchor: middle; }
+      .word { font-size: 48px; font-weight: bold; text-anchor: middle; }
+      .translation { font-size: 16px; text-anchor: middle; opacity: 0.7; }
+      .explanation { font-size: 18px; text-anchor: middle; line-height: 1.6; }
+      .summary { font-size: 14px; text-anchor: middle; font-style: italic; }
+    </style>
+  </defs>
+
+  <!-- 
+    配色风格: 暮山绛红 (深沉热烈)
+    背景色: #4A2328
+    主要文字: #F5F5F0
+    装饰图案: #6D4C50
+  -->
+
+  <rect width="400" height="600" fill="#4A2328"/>
+
+  <!-- 背景装饰：抽象的山峦或帷幕 -->
+  <path d="M -50 600 Q 150 450 450 600 Z" fill="#6D4C50" opacity="0.2"/>
+  <path d="M -50 600 Q 250 500 450 600 Z" fill="#6D4C50" opacity="0.2"/>
+
+  <!-- 1. 标题 -->
+  <text x="200" y="60" class="title" fill="#F5F5F0">汉语新解</text>
+  <line x1="100" y1="80" x2="300" y2="80" stroke="#F5F5F0" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+
+  <!-- 2. 词汇 -->
+  <text x="200" y="145" class="word" fill="#F5F5F0">社会主义</text>
+  <text x="200" y="175" class="translation" fill="#F5F5F0">Socialism / 社会主義</text>
+
+  <!-- 3. 核心解释 -->
+  <g class="explanation" fill="#F5F5F0">
+    <text x="200" y="240">
+      <tspan x="200" dy="0em">一张宏大的宴会请柬，</tspan>
+      <tspan x="200" dy="1.6em">许诺人人都能上桌。</tspan>
+      <tspan x="200" dy="1.6em">但总有人以『准备工作』为由，</tspan>
+      <tspan x="200" dy="1.6em">先吃掉了所有人的份额。</tspan>
+    </text>
+  </g>
+
+  <!-- 4. 批判内核 (抽象线条图: 一个巨大的饼，被切走了一大块) -->
+  <g transform="translate(200, 420)" stroke-width="2" stroke="#F5F5F0" fill="none">
+    <path d="M 0 -60 A 60 60 0 1 1 -52 30 L 0 0 Z" fill="#6D4C50" stroke-linejoin="round"/>
+    <path d="M 0 0 L 60 0 A 60 60 0 0 1 -52 30 Z" stroke-linejoin="round"/>
+  </g>
+
+  <!-- 5. 极简总结 -->
+  <text x="200" y="550" class="summary" fill="#F5F5F0" opacity="0.8">未来共餐，当下独享。</text>
+
+</svg>
+        </div>
+    </div>
+
+    <!-- 触发区域 -->
+    <div class="controls-area"></div>
+
+    <!-- 悬浮按钮组 -->
+    <div class="controls">
+        <button class="btn" id="bg-toggle-btn" title="切换背景">
+            <iconify-icon icon="material-symbols:contrast-rounded"></iconify-icon>
+        </button>
+        <button class="btn" id="copy-btn" title="复制代码">
+            <iconify-icon icon="material-symbols:content-copy-outline-rounded"></iconify-icon>
+        </button>
+        <button class="btn" id="download-btn" title="下载 SVG">
+            <iconify-icon icon="material-symbols:download-rounded"></iconify-icon>
+        </button>
+    </div>
+
+    <!-- 底部信息 -->
+    <div class="footer">
+        AI Bot 生成 | 汉语新解 | Gemini 2.5 Pro
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const svgElement = document.querySelector('#svg-container svg');
+            if (!svgElement) return;
+
+            // 确保 SVG 响应式
+            if (!svgElement.getAttribute('viewBox') && svgElement.getAttribute('width') && svgElement.getAttribute('height')) {
+                svgElement.setAttribute('viewBox', `0 0 ${svgElement.getAttribute('width')} ${svgElement.getAttribute('height')}`);
+            }
+            svgElement.removeAttribute('width');
+            svgElement.removeAttribute('height');
+
+            // --- 1. 下载功能 ---
+            const downloadBtn = document.getElementById('download-btn');
+            downloadBtn.addEventListener('click', () => {
+                const svgData = new XMLSerializer().serializeToString(svgElement);
+                const blob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'ai_generated_card_03-09-14_290231.svg';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            });
+
+            // --- 2. 复制代码功能 ---
+            const copyBtn = document.getElementById('copy-btn');
+            copyBtn.addEventListener('click', () => {
+                const svgCode = svgElement.outerHTML;
+                navigator.clipboard.writeText(svgCode).then(() => {
+                    const originalIcon = copyBtn.innerHTML;
+                    copyBtn.innerHTML = '<iconify-icon icon="material-symbols:check-rounded" style="color: #4ade80;"></iconify-icon>';
+                    
+                    setTimeout(() => {
+                        copyBtn.innerHTML = originalIcon;
+                    }, 2000);
+                }, (err) => {
+                    console.error('复制失败: ', err);
+                });
+            });
+
+            // --- 3. 切换背景功能 ---
+            const bgToggleBtn = document.getElementById('bg-toggle-btn');
+            const svgViewport = document.getElementById('svg-viewport');
+            const bgClasses = ['bg-dark', 'bg-light', 'bg-checkerboard'];
+            let currentBgIndex = 0;
+
+            bgToggleBtn.addEventListener('click', () => {
+                svgViewport.classList.remove(bgClasses[currentBgIndex]);
+                currentBgIndex = (currentBgIndex + 1) % bgClasses.length;
+                svgViewport.classList.add(bgClasses[currentBgIndex]);
+            });
+        });
+    </script>
+</body>
+</html>
