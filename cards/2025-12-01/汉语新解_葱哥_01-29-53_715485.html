@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【葱哥】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg width="400" height="600" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" style="font-family: 'Noto Serif CJK SC', 'Source Han Serif SC', serif; letter-spacing: 1.5px;">
+  <!-- 
+    设计风格: 静谧苍苔 (自然哲思)
+    背景色: #2A3834
+    主要文字: #F5F5F0
+    装饰图案: #455A55
+  -->
+  <rect width="400" height="600" fill="#2A3834"/>
+
+  <!-- 背景装饰图案: 抽象的叶脉/苔藓纹理 -->
+  <defs>
+    <pattern id="bg-pattern" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse" patternTransform="rotate(15)">
+      <path d="M 0 10 C 20 20, 40 0, 60 10 M 0 50 C 20 60, 40 40, 60 50" stroke="#455A55" stroke-width="0.5" fill="none" opacity="0.4"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="600" fill="url(#bg-pattern)"/>
+
+  <!-- 标题 -->
+  <text x="200" y="70" font-size="24" fill="#F5F5F0" text-anchor="middle" font-weight="600">汉 语 新 解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="80" y1="100" x2="320" y2="100" stroke="#F5F5F0" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+
+  <!-- 词汇 -->
+  <text x="200" y="170" font-size="48" fill="#F5F5F0" text-anchor="middle" font-weight="bold">葱 哥</text>
+  <text x="200" y="205" font-size="14" fill="#F5F5F0" text-anchor="middle" opacity="0.7">cōng gē</text>
+  <text x="200" y="225" font-size="12" fill="#F5F5F0" text-anchor="middle" opacity="0.7">Onion Bro / ネギ兄</text>
+
+  <!-- 核心解释 (动态字号区域) -->
+  <foreignObject x="50" y="260" width="300" height="150">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="color: #F5F5F0; font-size: 19px; line-height: 1.8; text-align: justify; height: 100%; display: flex; align-items: center; justify-content: center; text-align-last: center;">
+      <p style="margin:0; padding:0;">
+        一种让你流着泪才能看清的生物。你一层层剥开他的伪装，期待找到内核，最终发现——他没有心。
+      </p>
+    </div>
+  </foreignObject>
+
+  <!-- 批判内核: 抽象线条图 (层层剥开的空心) -->
+  <g transform="translate(200, 450)" fill="none" stroke="#F5F5F0" stroke-width="1.5" opacity="0.8">
+    <path d="M 0 -50 A 50 50 0 0 1 0 50" />
+    <path d="M 0 -50 A 50 50 0 0 0 0 50" />
+    <path d="M 0 -40 A 40 40 0 0 1 0 40" />
+    <path d="M 0 -40 A 40 40 0 0 0 0 40" />
+    <path d="M 0 -30 A 30 30 0 0 1 0 30" />
+    <path d="M 0 -30 A 30 30 0 0 0 0 30" />
+    <!-- 空心 -->
+  </g>
+
+  <!-- 极简总结 -->
+  <text x="200" y="550" font-size="14" fill="#F5F5F0" text-anchor="middle" opacity="0.7">层层伪装，内里空空</text>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 2.5 Pro
+        </footer>
+    </main>
+</body>
+</html>
