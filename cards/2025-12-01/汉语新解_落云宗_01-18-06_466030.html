@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【落云宗】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg width="400" height="600" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="font-family: 'Noto Serif CJK SC', 'Source Han Serif SC', serif; letter-spacing: 1.5px;">
+  <defs>
+    <style>
+      .title { font-size: 18px; fill: #E0E0E0; font-weight: bold; text-anchor: middle; }
+      .term { font-size: 38px; fill: #F5F5F0; font-weight: bold; text-anchor: middle; }
+      .translation { font-size: 14px; fill: #E0E0E0; text-anchor: middle; opacity: 0.8; }
+      .explanation { fill: #F5F5F0; text-anchor: middle; font-size: 17px; font-weight: normal; }
+      .summary { font-size: 13px; fill: #E0E0E0; text-anchor: middle; opacity: 0.9; }
+    </style>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="400" height="600" fill="#2B2030"/>
+
+  <!-- 装饰图案：抽象几何 -->
+  <g opacity="0.15" fill="none" stroke="#FFFFFF" stroke-width="1">
+    <path d="M 50 150 C 100 100, 300 100, 350 150" />
+    <path d="M 50 450 C 100 500, 300 500, 350 450" />
+    <circle cx="200" cy="300" r="120" stroke-dasharray="5,5" />
+  </g>
+
+  <!-- 标题 -->
+  <text x="200" y="60" class="title">汉 语 新 解</text>
+  <line x1="150" y1="80" x2="250" y2="80" stroke="#E0E0E0" stroke-width="1" stroke-dasharray="4 2"/>
+
+  <!-- 词汇 -->
+  <text x="200" y="140" class="term">落 云 宗</text>
+  <text x="200" y="170" class="translation">Luò Yún Zōng / Falling Cloud Sect</text>
+
+  <!-- 核心解释 (动态换行与缩放) -->
+  <foreignObject x="45" y="210" width="310" height="180">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: center; justify-content: center; height: 100%; text-align: center; color: #F5F5F0; font-size: 17px; line-height: 1.8;">
+      一家将PPT奉为最高纲领的互联网公司。高管们在云端布道，谈论着星辰大海；而信徒们在格子间里内卷，等待着福报或裁员的最终审判。
+    </div>
+  </foreignObject>
+
+  <!-- 批判内核：抽象线条图 (云端画饼，凡间渡劫) -->
+  <g fill="none" stroke="#F5F5F0" stroke-width="1.5" opacity="0.6" transform="translate(0, 20)">
+    <!-- 云 -->
+    <path d="M 160 380 C 140 380, 140 400, 160 400 L 240 400 C 260 400, 260 380, 240 380 C 230 370, 210 370, 200 380 C 190 370, 170 370, 160 380 Z" />
+    <!-- 闪电 (裁员) -->
+    <polyline points="200 400, 195 415, 205 415, 200 430" />
+    <!-- 格子间 (人) -->
+    <rect x="188" y="435" width="24" height="24" rx="2" />
+  </g>
+
+  <!-- 极简总结 -->
+  <text x="200" y="550" class="summary">云端的画饼，地上的内卷</text>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 2.5 Pro
+        </footer>
+    </main>
+</body>
+</html>
