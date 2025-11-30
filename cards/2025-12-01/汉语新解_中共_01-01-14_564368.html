@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【中共】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg width="400" height="600" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" style="background-color: #2C3E50; font-family: 'Noto Serif CJK SC', 'Source Han Serif SC', serif;">
+  
+  <!-- 装饰图案: 低透明度几何 -->
+  <defs>
+    <pattern id="bg-pattern" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="40" cy="40" r="30" fill="#FFFFFF" fill-opacity="0.03"/>
+      <rect x="0" y="0" width="80" height="80" fill="transparent" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="400" height="600" fill="url(#bg-pattern)" />
+
+  <!-- 标题 -->
+  <text x="200" y="60" font-size="22" fill="#F0F0F0" text-anchor="middle" font-weight="bold" letter-spacing="2">汉语新解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="50" y1="85" x2="350" y2="85" stroke="#F0F0F0" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="4, 4"/>
+
+  <!-- 用户输入 -->
+  <text x="200" y="145" font-size="48" fill="#E0E0E0" text-anchor="middle" font-weight="bold">中共</text>
+  <text x="200" y="180" font-size="16" fill="#A0A0A0" text-anchor="middle" letter-spacing="1">CCP / ちゅうきょう</text>
+
+  <!-- 核心解释 (文本自动换行) -->
+  <g font-size="18" fill="#F0F0F0" text-anchor="middle">
+    <text x="200" y="240">一个庞大的业主委员会，它成功说服了</text>
+    <text x="200" y="270">所有居民，只有把所有房门钥匙都交给</text>
+    <text x="200" y="300">它统一保管，小区才能获得永恒的安全</text>
+    <text x="200" y="330">与繁荣。至于你回不回得了家，</text>
+    <text x="200" y="360" font-weight="bold">得看它的心情。</text>
+  </g>
+
+  <!-- 批判内核 (SVG线条图: 一把锁住一切的钥匙) -->
+  <g transform="translate(175, 400) scale(0.8)">
+    <path d="M25 0 C 11.2 0 0 11.2 0 25 C 0 38.8 11.2 50 25 50 C 38.8 50 50 38.8 50 25 C 50 11.2 38.8 0 25 0 Z M 25 5 C 36.05 5 45 13.95 45 25 C 45 36.05 36.05 45 25 45 C 13.95 45 5 36.05 5 25 C 5 13.95 13.95 5 25 5 Z" fill="#F0F0F0" fill-opacity="0.7"/>
+    <rect x="22" y="45" width="6" height="50" fill="#F0F0F0" fill-opacity="0.7"/>
+    <path d="M15 95 H 35 V 100 H 15 Z" fill="#F0F0F0" fill-opacity="0.7"/>
+    <path d="M5 105 H 45 V 110 H 5 Z" fill="#F0F0F0" fill-opacity="0.7"/>
+    <path d="M22 110 V 120 H 28 V 110 Z" fill="#F0F0F0" fill-opacity="0.7"/>
+  </g>
+
+  <!-- 极简总结 -->
+  <text x="200" y="550" font-size="17" fill="#E0E0E0" text-anchor="middle" font-style="italic">"唯一的自由，是赞美的自由。"</text>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 2.5 Pro
+        </footer>
+    </main>
+</body>
+</html>
