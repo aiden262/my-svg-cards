@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【日本】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg width="400" height="600" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 
+    作者: 李继刚 (jigang.li)
+    设计方案: 暮山独行 (Dusky Mountain Wanderer)
+    配色: 背景-#4A2328, 文字-#F5F5F0, 装饰-#6D4C50
+  -->
+  <defs>
+    <style>
+      .title, .term, .reading, .explanation {
+        font-family: 'Noto Serif CJK SC', 'Source Han Serif SC', serif;
+        fill: #F5F5F0;
+        text-anchor: middle;
+        dominant-baseline: central;
+      }
+      .title { font-size: 20px; font-weight: 600; letter-spacing: 2px; }
+      .term { font-size: 48px; font-weight: 700; }
+      .reading { font-size: 16px; font-style: italic; opacity: 0.8; }
+      .explanation { font-size: 22px; font-weight: 400; line-height: 1.6; }
+    </style>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="400" height="600" fill="#4A2328"/>
+
+  <!-- 装饰图案: 抽象的、破碎的圆，象征着既有联系又充满裂痕的关系 -->
+  <circle cx="200" cy="300" r="150" fill="none" stroke="#6D4C50" stroke-width="2" opacity="0.5" stroke-dasharray="10 8"/>
+  <path d="M 120 220 A 150 150 0 0 1 280 220" fill="none" stroke="#6D4C50" stroke-width="1.5" opacity="0.4"/>
+  <path d="M 150 380 A 150 150 0 0 0 250 380" fill="none" stroke="#6D4C50" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- 标题 -->
+  <text x="200" y="60" class="title">汉语新解</text>
+  <line x1="100" y1="90" x2="300" y2="90" stroke="#6D4C50" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- 词汇 -->
+  <text x="200" y="150" class="term">日本</text>
+  <text x="200" y="185" class="reading">Rì Běn / にほん</text>
+
+  <!-- 核心解释 (自动换行处理) -->
+  <text x="200" y="290" class="explanation">
+    <tspan x="200" dy="-1.2em">隔壁那个偏执的优等生，</tspan>
+    <tspan x="200" dy="1.6em">你抄过他的作业，也挨过他的拳头。</tspan>
+  </text>
+  
+  <!-- 批判内核: SVG线条图 - 象征精致(樱花)与锋利(刀刃)的结合体 -->
+  <g transform="translate(200, 450) scale(0.8)">
+    <path d="M 0 -50 C 20 -50, 30 -30, 40 -30 C 50 -30, 60 -50, 80 -50 L 0 50 L -80 -50 C -60 -50, -50 -30, -40 -30 C -30 -30, -20 -50, 0 -50 Z" fill="none" stroke="#F5F5F0" stroke-width="2" opacity="0.3" transform="rotate(15)"/>
+  </g>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 2.5 Pro
+        </footer>
+    </main>
+</body>
+</html>
