@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【普宁市】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg width="400" height="600" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" style="font-family: 'Noto Serif CJK SC', 'Source Han Serif SC', serif; background-color: #362925;">
+  <!-- 装饰图案: 随机几何 -->
+  <defs>
+    <pattern id="deco" patternUnits="userSpaceOnUse" width="100" height="100" patternTransform="scale(1) rotate(30)">
+      <path d="M 0 50 L 50 100 L 50 0 Z M 50 100 L 100 50 L 50 0 Z" fill="rgba(255, 255, 255, 0.1)"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#deco)"/>
+
+  <g style="fill: #F5F5F0;">
+    <!-- 标题 -->
+    <text x="200" y="60" text-anchor="middle" font-size="20" letter-spacing="2">汉语新解</text>
+
+    <!-- 分隔线 -->
+    <line x1="80" y1="85" x2="320" y2="85" stroke="#F5F5F0" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+
+    <!-- 词汇 -->
+    <text x="200" y="145" text-anchor="middle" font-size="36" font-weight="bold">普宁市</text>
+    <text x="200" y="180" text-anchor="middle" font-size="16" letter-spacing="1" opacity="0.7">Pǔníng Shì / ふねいし</text>
+
+    <!-- 核心解释 -->
+    <foreignObject x="50" y="220" width="300" height="180">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="color: #F5F5F0; font-size: 20px; line-height: 1.8; text-align: center; display: flex; align-items: center; justify-content: center; height: 100%; flex-direction: column; word-wrap: break-word;">
+        <p style="margin:0; padding:0;">一片神奇的土地，能将一切虚无缥缈的品牌溢价，迅速熔炼成触手可及的工业模板。</p>
+      </div>
+    </foreignObject>
+
+    <!-- 批判内核: SVG线条图 (抽象: 品牌溢价 -> 工业模板) -->
+    <g transform="translate(110, 420)" stroke="#F5F5F0" stroke-width="1.5" fill="none" opacity="0.5">
+      <!-- 左侧 "品牌溢价" (云状、无序) -->
+      <path d="M 0,20 Q 15,-10 30,20 T 60,20 Q 75,50 60,70 T 30,70 Q 15,100 0,70 T -30,70 Q -45,40 -30,20 T 0,20 Z" stroke-dasharray="3 3"/>
+      <!-- 中间 "熔炼" (箭头) -->
+      <line x1="75" y1="45" x2="105" y2="45"/>
+      <path d="M 100 40 L 110 45 L 100 50 Z" fill="#F5F5F0"/>
+      <!-- 右侧 "工业模板" (规整、重复) -->
+      <rect x="120" y="15" width="60" height="60" rx="3"/>
+      <line x1="140" y1="15" x2="140" y2="75"/>
+      <line x1="160" y1="15" x2="160" y2="75"/>
+      <line x1="120" y1="35" x2="180" y2="35"/>
+      <line x1="120" y1="55" x2="180" y2="55"/>
+    </g>
+
+    <!-- 极简总结 -->
+    <text x="200" y="555" text-anchor="middle" font-size="14" opacity="0.8">资本主义的速成班</text>
+  </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 2.5 Pro
+        </footer>
+    </main>
+</body>
+</html>
