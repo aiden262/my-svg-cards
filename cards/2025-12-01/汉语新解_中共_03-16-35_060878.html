@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【中共】 - 汉语新解</title>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-primary: #f1f5f9;
+            --text-secondary: rgba(241, 245, 249, 0.6);
+            --control-bg: rgba(15, 23, 42, 0.6);
+            --control-hover: rgba(30, 41, 59, 0.9);
+            --accent-color: #38bdf8;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', 'Noto Serif SC', sans-serif;
+            background-color: var(--bg-color);
+            background-image:
+                radial-gradient(circle at 50% 0%, #1e293b 0%, transparent 75%),
+                radial-gradient(circle at 85% 30%, rgba(56, 189, 248, 0.05) 0%, transparent 50%);
+            color: var(--text-primary);
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Header 样式 */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 24px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            z-index: 100;
+            pointer-events: none; /* 让鼠标事件穿透 */
+        }
+
+        .header-content {
+            pointer-events: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+            max-width: 600px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .brand {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            pointer-events: auto;
+            opacity: 0.8;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+
+        /* SVG 视口 */
+        .svg-viewport {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 40px 40px 40px; /* 顶部留出 Header 空间 */
+            z-index: 1;
+        }
+
+        .svg-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .svg-container svg {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));
+        }
+
+        /* 悬浮工具栏 */
+        .controls {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 100;
+            opacity: 0;
+            transform: translateX(20px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .controls-area {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 150px;
+            height: 250px;
+            z-index: 99;
+        }
+        
+        .controls-area:hover + .controls, .controls:hover {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        @media (max-width: 768px) {
+            .header { padding: 16px 20px; }
+            .title { font-size: 18px; max-width: 200px; }
+            .controls {
+                opacity: 1;
+                transform: translateX(0);
+                bottom: 20px;
+                right: 20px;
+                flex-direction: row;
+            }
+            .controls-area { display: none; }
+        }
+
+        .btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--control-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover {
+            background: var(--control-hover);
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        .btn iconify-icon {
+            font-size: 1.4rem;
+        }
+
+        /* Tooltip */
+        .btn { position: relative; }
+        .btn::after {
+            content: attr(title);
+            position: absolute;
+            right: 55px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.8);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+        }
+        .btn:hover::after { opacity: 1; }
+        
+        @media (max-width: 768px) {
+            .btn::after { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="title">中共</div>
+            <div class="subtitle">汉语新解 • Gemini 3 Pro</div>
+        </div>
+        <div class="brand">@tyhj_bot</div>
+    </header>
+
+    <!-- SVG 视口 -->
+    <div class="svg-viewport" id="svg-viewport">
+        <div class="svg-container" id="svg-container">
+            <svg width="400" height="600" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @font-face {
+        font-family: 'Noto Serif CJK SC';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Noto Serif CJK SC'), local('Source Han Serif SC'), local('Noto Serif SC'), local('Serif');
+      }
+      .bg { fill: #1A2634; }
+      .text-main { fill: #F5F5F0; font-family: 'Noto Serif CJK SC', serif; }
+      .text-dim { fill: #8899A6; font-family: 'Noto Serif CJK SC', serif; }
+      .decoration { fill: #2C3E50; opacity: 0.4; }
+      .line { stroke: #8899A6; stroke-width: 1; stroke-dasharray: 5,5; }
+    </style>
+    <filter id="paper-texture">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" result="noise" />
+      <feDiffuseLighting in="noise" lighting-color="#fff" surfaceScale="1">
+        <feDistantLight azimuth="45" elevation="60" />
+      </feDiffuseLighting>
+      <feComposite operator="in" in2="SourceGraphic" />
+      <feBlend mode="multiply" in="SourceGraphic" />
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect x="0" y="0" width="400" height="600" class="bg" filter="url(#paper-texture)" />
+  
+  <!-- 装饰图案：抽象的网格与秩序 -->
+  <path d="M-50 100 L450 100 M-50 200 L450 200 M-50 300 L450 300 M-50 400 L450 400 M-50 500 L450 500" stroke="#2C3E50" stroke-width="2" opacity="0.3" fill="none"/>
+  <path d="M100 -50 L100 650 M200 -50 L200 650 M300 -50 L300 650" stroke="#2C3E50" stroke-width="2" opacity="0.3" fill="none"/>
+  <circle cx="350" cy="550" r="100" class="decoration" />
+
+  <!-- 标题区域 -->
+  <text x="200" y="60" font-size="18" text-anchor="middle" class="text-dim" letter-spacing="4">汉语新解</text>
+  <line x1="40" y1="80" x2="360" y2="80" class="line" />
+
+  <!-- 核心词汇 -->
+  <text x="200" y="140" font-size="48" text-anchor="middle" font-weight="bold" class="text-main">中共</text>
+  <text x="200" y="175" font-size="14" text-anchor="middle" class="text-dim" font-style="italic">CCP / 中国共産党</text>
+
+  <!-- 抽象隐喻图形：修正的红笔与被框住的方块 -->
+  <g transform="translate(160, 200)">
+    <!-- 象征框架的方框 -->
+    <rect x="0" y="0" width="80" height="80" fill="none" stroke="#F5F5F0" stroke-width="2"/>
+    <!-- 象征修剪/删除的叉号 -->
+    <line x1="10" y1="10" x2="70" y2="70" stroke="#AA3333" stroke-width="3" opacity="0.8"/>
+    <line x1="70" y1="10" x2="10" y2="70" stroke="#AA3333" stroke-width="3" opacity="0.8"/>
+  </g>
+
+  <!-- 解释文本 -->
+  <foreignObject x="40" y="320" width="320" height="240">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Noto Serif CJK SC', serif; color: #F5F5F0; font-size: 19px; line-height: 1.6; text-align: justify;">
+      一位手握红笔的严厉编辑。它将社会视作一篇必须完美押韵的宏大叙事，为了确保段落的绝对整齐，时刻准备着删去那些虽有棱角、却过于生动的“杂乱”字句。
+    </div>
+  </foreignObject>
+
+  <!-- 底部署名 -->
+  <text x="360" y="570" font-size="12" text-anchor="end" class="text-dim" opacity="0.6">@新汉语老师</text>
+
+</svg>
+        </div>
+    </div>
+
+    <!-- 触发区域 -->
+    <div class="controls-area"></div>
+
+    <!-- 悬浮按钮组 -->
+    <div class="controls">
+        <button class="btn" id="copy-btn" title="复制代码">
+            <iconify-icon icon="material-symbols:content-copy-outline-rounded"></iconify-icon>
+        </button>
+        <button class="btn" id="download-svg-btn" title="下载 SVG">
+            <iconify-icon icon="material-symbols:download-rounded"></iconify-icon>
+        </button>
+        <button class="btn" id="download-png-btn" title="下载 PNG">
+            <iconify-icon icon="material-symbols:image-rounded"></iconify-icon>
+        </button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const svgElement = document.querySelector('#svg-container svg');
+            if (!svgElement) return;
+
+            // 确保 SVG 响应式
+            if (!svgElement.getAttribute('viewBox') && svgElement.getAttribute('width') && svgElement.getAttribute('height')) {
+                svgElement.setAttribute('viewBox', `0 0 ${svgElement.getAttribute('width')} ${svgElement.getAttribute('height')}`);
+            }
+            svgElement.removeAttribute('width');
+            svgElement.removeAttribute('height');
+
+            // --- 1. 复制代码功能 ---
+            const copyBtn = document.getElementById('copy-btn');
+            copyBtn.addEventListener('click', () => {
+                const svgCode = svgElement.outerHTML;
+                navigator.clipboard.writeText(svgCode).then(() => {
+                    const originalIcon = copyBtn.innerHTML;
+                    copyBtn.innerHTML = '<iconify-icon icon="material-symbols:check-rounded" style="color: #4ade80;"></iconify-icon>';
+                    setTimeout(() => { copyBtn.innerHTML = originalIcon; }, 2000);
+                }, (err) => { console.error('复制失败: ', err); });
+            });
+
+            // --- 2. 下载 SVG 功能 ---
+            const downloadSvgBtn = document.getElementById('download-svg-btn');
+            downloadSvgBtn.addEventListener('click', () => {
+                const svgData = new XMLSerializer().serializeToString(svgElement);
+                const blob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'card_03-16-35_060878.svg';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            });
+
+            // --- 3. 下载 PNG 功能 ---
+            const downloadPngBtn = document.getElementById('download-png-btn');
+            downloadPngBtn.addEventListener('click', () => {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                const svgData = new XMLSerializer().serializeToString(svgElement);
+                
+                // 创建 Image 对象
+                const img = new Image();
+                
+                // 获取 SVG 尺寸，如果没有则默认
+                const viewBox = svgElement.viewBox.baseVal;
+                const width = viewBox ? viewBox.width : 800;
+                const height = viewBox ? viewBox.height : 1200;
+                
+                // 设置高分辨率 (2x)
+                const scale = 2;
+                canvas.width = width * scale;
+                canvas.height = height * scale;
+                
+                const svgBlob = new Blob([svgData], {type: 'image/svg+xml;charset=utf-8'});
+                const url = URL.createObjectURL(svgBlob);
+                
+                img.onload = () => {
+                    ctx.scale(scale, scale);
+                    ctx.drawImage(img, 0, 0);
+                    URL.revokeObjectURL(url);
+                    
+                    const pngUrl = canvas.toDataURL('image/png');
+                    const a = document.createElement('a');
+                    a.href = pngUrl;
+                    a.download = 'card_03-16-35_060878.png';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                };
+                
+                img.onerror = (e) => {
+                    console.error('图片加载失败', e);
+                    alert('PNG 导出失败，请尝试下载 SVG');
+                };
+                
+                img.src = url;
+            });
+        });
+    </script>
+</body>
+</html>
