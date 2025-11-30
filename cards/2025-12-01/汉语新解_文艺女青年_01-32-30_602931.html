@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【文艺女青年】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg width="400" height="600" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Serif CJK SC', 'Source Han Serif SC', serif">
+  <!-- 
+    设计风格: 深海凝视 (冷静批判)
+    作者: 李继刚 (优化: 修复截断 + 审美定制版 v0.7)
+  -->
+  <defs>
+    <style>
+      .title { font-size: 20px; font-weight: bold; text-anchor: middle; }
+      .term { font-size: 36px; font-weight: bold; text-anchor: middle; }
+      .pinyin { font-size: 16px; text-anchor: middle; letter-spacing: 1px; }
+      .explanation { font-size: 18px; text-anchor: middle; line-height: 1.6; }
+      .summary { font-size: 14px; text-anchor: middle; font-style: italic; }
+    </style>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="400" height="600" fill="#1A2634"/>
+
+  <!-- 装饰图案: 抽象的、低饱和度的几何背景 -->
+  <g opacity="0.1" fill="#2C3E50">
+    <path d="M-50,300 Q200,-100 450,300 T850,300" stroke="#2C3E50" fill="none" stroke-width="30"/>
+    <circle cx="350" cy="50" r="80"/>
+    <rect x="20" y="500" width="150" height="150" transform="rotate(20, 95, 575)"/>
+  </g>
+
+  <!-- 主要内容区 -->
+  <g fill="#F5F5F0">
+    <!-- 标题 -->
+    <text x="200" y="70" class="title">汉 语 新 解</text>
+    
+    <!-- 分隔线 -->
+    <line x1="100" y1="95" x2="300" y2="95" stroke="#2C3E50" stroke-width="1" stroke-dasharray="4 4"/>
+
+    <!-- 词汇 -->
+    <text x="200" y="160" class="term">文艺女青年</text>
+    <text x="200" y="190" class="pinyin">wén yì nǚ qīng nián</text>
+
+    <!-- 核心解释 (自动换行处理) -->
+    <text x="200" y="280" class="explanation">
+      <tspan x="200" dy="-1.2em">一种商业上被精确定义的精神过敏症，</tspan>
+      <tspan x="200" dy="1.6em">症状是热爱一切无用之物，</tspan>
+      <tspan x="200" dy="1.6em">病根却是买得起这份无用。</tspan>
+    </text>
+
+    <!-- 批判内核: 抽象线条图 (一个带有价签的书本) -->
+    <g transform="translate(165, 380)" stroke="#F5F5F0" stroke-width="2" fill="none">
+      <path d="M0,0 L70,0 L70,90 L0,90 Z" transform="skewY(-10)"/>
+      <path d="M70,0 L100,15 L100,105 L70,90 Z"/>
+      <line x1="5" y1="15" x2="45" y2="15"/>
+      <line x1="5" y1="25" x2="35" y2="25"/>
+      <!-- 价签 -->
+      <g transform="translate(80, 20)">
+        <path d="M0,0 L20,0 L25,5 L20,10 L0,10 Z" fill="#1A2634"/>
+        <circle cx="4" cy="5" r="1.5" fill="#F5F5F0"/>
+        <text font-size="8px" fill="#F5F5F0" x="13" y="8" text-anchor="middle">¥</text>
+      </g>
+    </g>
+
+    <!-- 极简总结 -->
+    <text x="200" y="550" class="summary">消费主义的美学变体</text>
+  </g>
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 2.5 Pro
+        </footer>
+    </main>
+</body>
+</html>
