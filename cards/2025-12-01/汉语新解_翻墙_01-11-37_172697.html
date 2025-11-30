@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【翻墙】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg width="400" height="600" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="font-family: 'Noto Serif CJK SC', 'Source Han Serif SC', serif; letter-spacing: 1.5px;">
+  <!-- 定义一个可重用的文本样式 -->
+  <defs>
+    <style>
+      .title { font-size: 20px; fill: #E0E0E0; text-anchor: middle; font-weight: bold; }
+      .main-word { font-size: 48px; fill: #F0F0F0; text-anchor: middle; font-weight: 600; }
+      .translation { font-size: 14px; fill: #E0E0E0; text-anchor: middle; opacity: 0.8; }
+      .explanation { font-size: 18px; fill: #F0F0F0; text-anchor: middle; font-weight: normal; }
+      .summary { font-size: 14px; fill: #E0E0E0; text-anchor: middle; font-style: italic; }
+    </style>
+    <!-- 装饰图案 -->
+    <path id="deco-pattern" d="M 50 0 L 100 50 L 50 100 L 0 50 Z" fill="#FFFFFF" fill-opacity="0.05" />
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="400" height="600" fill="#2C3E50"/>
+  
+  <!-- 随机散布的装饰图案 -->
+  <use xlink:href="#deco-pattern" x="300" y="50" transform="scale(0.8) rotate(15 350 100)" />
+  <use xlink:href="#deco-pattern" x="20" y="450" transform="scale(1.2) rotate(-30 70 500)" />
+  <use xlink:href="#deco-pattern" x="350" y="300" transform="scale(0.5) rotate(45 375 325)" />
+
+  <!-- 顶部标题 -->
+  <text x="200" y="60" class="title">汉 语 新 解</text>
+  
+  <!-- 分隔线 -->
+  <line x1="80" y1="85" x2="320" y2="85" stroke="#F0F0F0" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+
+  <!-- 核心词汇 -->
+  <text x="200" y="150" class="main-word">翻 墙</text>
+  <text x="200" y="180" class="translation">fān qiáng / The Great Fire-walk</text>
+
+  <!-- 核心解释 (使用 foreignObject 实现文本自动换行) -->
+  <foreignObject x="50" y="220" width="300" height="150">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: center; justify-content: center; height: 100%; text-align: center; color: #F0F0F0; font-size: 18px; line-height: 1.8;">
+      <p style="margin:0; padding:0;">
+        一种精神越狱。当饲养员反复强调围栏外皆是豺狼时，总会有人忍不住想亲自去数一数。
+      </p>
+    </div>
+  </foreignObject>
+  
+  <!-- 批判内核: 抽象线条图 (一道墙壁与一个突破口) -->
+  <g transform="translate(150, 400)" stroke="#F0F0F0" stroke-width="2" fill="none">
+    <!-- 墙体 -->
+    <path d="M 0,0 L 0,80 M 25,0 L 25,80 M 50,0 L 50,80 M 75,0 L 75,80 M 100,0 L 100,80" opacity="0.6"/>
+    <path d="M 0,20 L 100,20 M 0,60 L 100,60" opacity="0.6"/>
+    <!-- 突破口/光芒 -->
+    <g transform="translate(50, 40)">
+      <circle cx="0" cy="0" r="10" fill="#F0F0F0" fill-opacity="0.9"/>
+      <path d="M -15,-15 L 15,15 M 15,-15 L -15,15" stroke-width="1.5" stroke="#F0F0F0" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- 底部总结 -->
+  <text x="200" y="550" class="summary">“睁眼看世界的第一步。”</text>
+
+</svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: Gemini 2.5 Pro
+        </footer>
+    </main>
+</body>
+</html>
