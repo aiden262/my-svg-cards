@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【外卖王子】 - 散文诗</title>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-primary: #f1f5f9;
+            --text-secondary: rgba(241, 245, 249, 0.7);
+            --control-bg: rgba(30, 41, 59, 0.5);
+            --control-border: rgba(255, 255, 255, 0.1);
+            --control-hover: rgba(51, 65, 85, 0.8);
+            --accent-color: #818cf8; /* Indigo 400 */
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', 'Noto Serif SC', sans-serif;
+            background-color: var(--bg-color);
+            background-image:
+                radial-gradient(circle at 50% 0%, #1e293b 0%, transparent 75%),
+                radial-gradient(circle at 85% 30%, rgba(99, 102, 241, 0.08) 0%, transparent 50%);
+            color: var(--text-primary);
+            height: 100dvh;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Header 样式 */
+        .header {
+            position: fixed;
+            top: 32px;
+            left: 32px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        .logo-box {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 8px 16px -4px rgba(99, 102, 241, 0.3);
+            pointer-events: auto;
+        }
+
+        .logo-box iconify-icon {
+            font-size: 24px;
+            color: white;
+        }
+
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            pointer-events: auto;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .subtitle {
+            font-size: 12px;
+            color: var(--text-secondary);
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .subtitle span {
+            display: inline-block;
+            padding: 2px 6px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 4px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .brand {
+            position: fixed;
+            top: 32px;
+            right: 32px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            opacity: 0.6;
+            z-index: 100;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+
+        /* SVG 视口 */
+        .svg-viewport {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            z-index: 1;
+        }
+
+        .svg-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .svg-container svg {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 25px 50px rgba(0,0,0,0.5));
+            border-radius: 12px; /* 为SVG卡片添加圆角，使其更精致 */
+            border: 1px solid rgba(255, 255, 255, 0.05); /* 添加一个微弱的边框增加质感 */
+        }
+
+        /* 悬浮工具栏 */
+        .controls {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            display: flex;
+            gap: 8px;
+            z-index: 100;
+            background: var(--control-bg);
+            padding: 6px;
+            border-radius: 16px;
+            border: 1px solid var(--control-border);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            transform: translateY(-1px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn iconify-icon {
+            font-size: 20px;
+        }
+
+        /* Tooltip */
+        .btn::before {
+            content: attr(title);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-8px);
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s, transform 0.2s;
+            margin-bottom: 6px;
+        }
+        
+        .btn:hover::before {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .header { top: 16px; left: 16px; gap: 10px; }
+            .logo-box { width: 36px; height: 36px; border-radius: 8px; }
+            .logo-box iconify-icon { font-size: 20px; }
+            .title { font-size: 15px; }
+            .subtitle { font-size: 11px; }
+            .brand { top: 16px; right: 16px; font-size: 11px; }
+            .controls { bottom: 16px; right: 16px; padding: 4px; }
+            .btn { width: 36px; height: 36px; }
+            .btn iconify-icon { font-size: 18px; }
+            .svg-viewport { padding: 72px 0; }
+            .svg-container { padding: 10px; }
+            .btn::before { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-box">
+            <iconify-icon icon="material-symbols:auto-awesome-rounded"></iconify-icon>
+        </div>
+        <div class="header-text">
+            <div class="title">外卖王子</div>
+            <div class="subtitle">
+                <span>散文诗</span>
+                <span>Gemini 2.5 Pro</span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- SVG 视口 -->
+    <div class="svg-viewport" id="svg-viewport">
+        <div class="svg-container" id="svg-container">
+            <svg width="520" height="380" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380">
+<style>
+    .bg { fill: #0d1117; }
+    .title-main { font-size: 24px; font-family: 'KingHwa_OldSong', 'KaiTi', '楷体', serif; fill: #58a6ff; font-weight: bold; }
+    .title-sub { font-size: 18px; font-family: 'KingHwa_OldSong', 'FangSong', '仿宋', serif; fill: #c9d1d9; }
+    .poem { font-size: 18px; font-family: 'KingHwa_OldSong', 'SongTi', '宋体', serif; fill: #c9d1d9; }
+    .line { stroke: #58a6ff; stroke-width: 1; }
+</style>
+<rect class="bg" width="100%" height="100%"/>
+<g transform="translate(30, 30)">
+    <text y="30">
+        <tspan class="title-sub">散文诗</tspan>
+        <tspan class="title-main" x="65" y="32">外卖王子</tspan>
+    </text>
+    <line class="line" x1="0" y1="55" x2="460" y2="55"/>
+    <text class="poem" y="95">
+        <tspan x="0" dy="1.6em">他的王国没有疆界</tspan>
+        <tspan x="0" dy="1.6em">只有手机屏幕上的下一个地点</tspan>
+        <tspan x="0" dy="3.2em">他的坐骑不吃草料</tspan>
+        <tspan x="0" dy="1.6em">只吞咽着城市的电</tspan>
+        <tspan x="0" dy="3.2em">他在别人的盛宴与自己的饥饿之间</tspan>
+        <tspan x="0" dy="1.6em">穿行</tspan>
+        <tspan x="0" dy="1.6em">将一份份温热</tspan>
+        <tspan x="0" dy="1.6em">递进一个个冰冷的门缝</tspan>
+        <tspan x="0" dy="3.2em">他是一位王子</tspan>
+        <tspan x="0" dy="1.6em">巡视着一座</tspan>
+        <tspan x="0" dy="1.6em">永远也无法真正拥有的城</tspan>
+    </text>
+</g>
+</svg>
+        </div>
+    </div>
+
+    <!-- 悬浮按钮组 -->
+    <div class="controls">
+        <button class="btn" id="copy-btn" title="复制代码">
+            <iconify-icon icon="material-symbols:content-copy-outline-rounded"></iconify-icon>
+        </button>
+        <button class="btn" id="download-svg-btn" title="下载 SVG">
+            <iconify-icon icon="material-symbols:download-rounded"></iconify-icon>
+        </button>
+        <button class="btn" id="download-png-btn" title="下载 PNG">
+            <iconify-icon icon="material-symbols:image-rounded"></iconify-icon>
+        </button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const svgElement = document.querySelector('#svg-container svg');
+            if (!svgElement) return;
+
+            // 确保 SVG 响应式
+            if (!svgElement.getAttribute('viewBox') && svgElement.getAttribute('width') && svgElement.getAttribute('height')) {
+                svgElement.setAttribute('viewBox', `0 0 ${svgElement.getAttribute('width')} ${svgElement.getAttribute('height')}`);
+            }
+            svgElement.removeAttribute('width');
+            svgElement.removeAttribute('height');
+
+            // --- 1. 复制代码功能 ---
+            const copyBtn = document.getElementById('copy-btn');
+            copyBtn.addEventListener('click', () => {
+                const svgCode = svgElement.outerHTML;
+                navigator.clipboard.writeText(svgCode).then(() => {
+                    const originalIcon = copyBtn.innerHTML;
+                    copyBtn.innerHTML = '<iconify-icon icon="material-symbols:check-rounded" style="color: #4ade80;"></iconify-icon>';
+                    setTimeout(() => { copyBtn.innerHTML = originalIcon; }, 2000);
+                }, (err) => { console.error('复制失败: ', err); });
+            });
+
+            // --- 2. 下载 SVG 功能 ---
+            const downloadSvgBtn = document.getElementById('download-svg-btn');
+            downloadSvgBtn.addEventListener('click', () => {
+                const svgData = new XMLSerializer().serializeToString(svgElement);
+                const blob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'card_19-10-15_588946.svg';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            });
+
+            // --- 3. 下载 PNG 功能 ---
+            const downloadPngBtn = document.getElementById('download-png-btn');
+            downloadPngBtn.addEventListener('click', () => {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                
+                // 克隆 SVG 节点以避免影响页面显示，并设置明确的宽高
+                const svgClone = svgElement.cloneNode(true);
+                const viewBox = svgElement.viewBox.baseVal;
+                const width = viewBox ? viewBox.width : 800;
+                const height = viewBox ? viewBox.height : 1200;
+                
+                svgClone.setAttribute('width', width);
+                svgClone.setAttribute('height', height);
+                
+                const svgData = new XMLSerializer().serializeToString(svgClone);
+                
+                // 创建 Image 对象
+                const img = new Image();
+                
+                // 设置高分辨率 (2x)
+                const scale = 2;
+                canvas.width = width * scale;
+                canvas.height = height * scale;
+                
+                const svgBlob = new Blob([svgData], {type: 'image/svg+xml;charset=utf-8'});
+                const url = URL.createObjectURL(svgBlob);
+                
+                img.onload = () => {
+                    ctx.fillStyle = 'transparent';
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    ctx.scale(scale, scale);
+                    ctx.drawImage(img, 0, 0, width, height);
+                    URL.revokeObjectURL(url);
+                    
+                    try {
+                        const pngUrl = canvas.toDataURL('image/png');
+                        const a = document.createElement('a');
+                        a.href = pngUrl;
+                        a.download = 'card_19-10-15_588946.png';
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                    } catch (err) {
+                        console.error('Canvas 导出失败:', err);
+                        alert('PNG 导出失败，可能是因为跨域图片限制。请尝试下载 SVG。');
+                    }
+                };
+                
+                img.onerror = (e) => {
+                    console.error('图片加载失败', e);
+                    alert('PNG 导出失败，请尝试下载 SVG');
+                };
+                
+                img.src = url;
+            });
+        });
+    </script>
+</body>
+</html>
