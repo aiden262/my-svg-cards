@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【中共】 - 汉语新解</title>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-primary: #f1f5f9;
+            --text-secondary: rgba(241, 245, 249, 0.7);
+            --control-bg: rgba(30, 41, 59, 0.5);
+            --control-border: rgba(255, 255, 255, 0.1);
+            --control-hover: rgba(51, 65, 85, 0.8);
+            --accent-color: #818cf8; /* Indigo 400 */
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', 'Noto Serif SC', sans-serif;
+            background-color: var(--bg-color);
+            background-image:
+                radial-gradient(circle at 50% 0%, #1e293b 0%, transparent 75%),
+                radial-gradient(circle at 85% 30%, rgba(99, 102, 241, 0.08) 0%, transparent 50%);
+            color: var(--text-primary);
+            height: 100dvh;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Header 样式 */
+        .header {
+            position: fixed;
+            top: 32px;
+            left: 32px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        .logo-box {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 8px 16px -4px rgba(99, 102, 241, 0.3);
+            pointer-events: auto;
+        }
+
+        .logo-box iconify-icon {
+            font-size: 24px;
+            color: white;
+        }
+
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            pointer-events: auto;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .subtitle {
+            font-size: 12px;
+            color: var(--text-secondary);
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .subtitle span {
+            display: inline-block;
+            padding: 2px 6px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 4px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .brand {
+            position: fixed;
+            top: 32px;
+            right: 32px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            opacity: 0.6;
+            z-index: 100;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+
+        /* SVG 视口 */
+        .svg-viewport {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            z-index: 1;
+        }
+
+        .svg-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        /* NEW: Iframe styling */
+        .svg-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            filter: drop-shadow(0 25px 50px rgba(0,0,0,0.5));
+        }
+
+        /* 悬浮工具栏 */
+        .controls {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            display: flex;
+            gap: 8px;
+            z-index: 100;
+            background: var(--control-bg);
+            padding: 6px;
+            border-radius: 16px;
+            border: 1px solid var(--control-border);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            transform: translateY(-1px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn iconify-icon {
+            font-size: 20px;
+        }
+
+        /* Tooltip */
+        .btn::before {
+            content: attr(title);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-8px);
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s, transform 0.2s;
+            margin-bottom: 6px;
+        }
+        
+        .btn:hover::before {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .header { top: 16px; left: 16px; gap: 10px; }
+            .logo-box { width: 36px; height: 36px; border-radius: 8px; }
+            .logo-box iconify-icon { font-size: 20px; }
+            .title { font-size: 15px; }
+            .subtitle { font-size: 11px; }
+            .brand { top: 16px; right: 16px; font-size: 11px; }
+            .controls { bottom: 16px; right: 16px; padding: 4px; }
+            .btn { width: 36px; height: 36px; }
+            .btn iconify-icon { font-size: 18px; }
+            .svg-viewport { padding: 72px 0; }
+            .svg-container { padding: 10px; }
+            .btn::before { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-box">
+            <iconify-icon icon="material-symbols:auto-awesome-rounded"></iconify-icon>
+        </div>
+        <div class="header-text">
+            <div class="title">中共</div>
+            <div class="subtitle">
+                <span>汉语新解</span>
+                <span>Gemini 2.5 Pro</span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- SVG 视口 -->
+    <div class="svg-viewport" id="svg-viewport">
+        <div class="svg-container" id="svg-container">
+            <iframe id="svg-frame" title="SVG Content" style="border:none;"></iframe>
+        </div>
+    </div>
+
+    <!-- 悬浮按钮组 -->
+    <div class="controls">
+        <button class="btn" id="copy-btn" title="复制代码">
+            <iconify-icon icon="material-symbols:content-copy-outline-rounded"></iconify-icon>
+        </button>
+        <button class="btn" id="download-svg-btn" title="下载 SVG">
+            <iconify-icon icon="material-symbols:download-rounded"></iconify-icon>
+        </button>
+        <button class="btn" id="download-png-btn" title="下载 PNG">
+            <iconify-icon icon="material-symbols:image-rounded"></iconify-icon>
+        </button>
+    </div>
+
+    <!-- Inert SVG data container -->
+    <template id="svg-data">
+        <svg width="400" height="600" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Serif CJK SC', 'Source Han Serif SC', 'Serif'">
+  <!-- 
+    作者: 李继刚 (优化: 修复截断 + 审美定制版)
+    风格: 暮山独行 (深沉热烈)
+    词汇: 中共
+  -->
+  <defs>
+    <style>
+      .title { font-size: 20px; font-weight: bold; text-anchor: middle; }
+      .word { font-size: 48px; font-weight: bold; text-anchor: middle; }
+      .explanation { font-size: 20px; text-anchor: middle; }
+      .footer { font-size: 14px; text-anchor: middle; opacity: 0.7; }
+    </style>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="400" height="600" fill="#4A2328"/>
+
+  <!-- 装饰图案: 抽象的、交错的线条，象征网络与束缚 -->
+  <g fill="#6D4C50" opacity="0.3">
+    <path d="M50 150 Q 200 -50 350 150 T 50 450" stroke="#6D4C50" stroke-width="2" fill="none"/>
+    <path d="M50 450 Q 200 650 350 450 T 50 150" stroke="#6D4C50" stroke-width="2" fill="none"/>
+    <circle cx="200" cy="300" r="80" stroke="#6D4C50" stroke-width="1.5" fill="none" stroke-dasharray="5 5"/>
+  </g>
+
+  <!-- 主要内容 -->
+  <g fill="#F5F5F0">
+    <!-- 标题 -->
+    <text x="200" y="60" class="title">汉语新解</text>
+    
+    <!-- 分隔线 -->
+    <line x1="80" y1="85" x2="320" y2="85" stroke="#F5F5F0" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+
+    <!-- 词汇 -->
+    <text x="200" y="155" class="word">中共</text>
+
+    <!-- 核心解释 (自动换行处理) -->
+    <text class="explanation" y="270">
+      <tspan x="200" dy="1.2em">一款你无法卸载、强制续费、</tspan>
+      <tspan x="200" dy="1.5em">且禁止差评的终身操作系统。</tspan>
+    </text>
+
+    <!-- 批判内核: 一个被锁住的、无限循环的刷新图标 -->
+    <g transform="translate(165, 380)" stroke="#F5F5F0" stroke-width="2.5" fill="none" opacity="0.8">
+      <path d="M35,60 A30,30 0 1 1 60,35" stroke-linecap="round"/>
+      <path d="M60,35 L50,40 M60,35 L65,45" stroke-linecap="round"/>
+      <rect x="22" y="48" width="26" height="18" rx="3" stroke-width="2"/>
+      <path d="M30 48 V 44 C 30 38 40 38 40 44 V 48"/>
+    </g>
+
+    <!-- 极简总结 -->
+    <text x="200" y="550" class="footer">SYSTEM</text>
+  </g>
+</svg>
+    </template>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const iframe = document.getElementById('svg-frame');
+            const svgTemplate = document.getElementById('svg-data');
+
+            if (!iframe || !svgTemplate || !svgTemplate.innerHTML.trim()) {
+                return;
+            }
+
+            const rawSvgContent = svgTemplate.innerHTML;
+
+            const iframeContent = `
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <style>
+                    html, body {
+                        height: 100%;
+                        margin: 0;
+                        padding: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        overflow: hidden;
+                        background-color: transparent;
+                    }
+                    svg {
+                        max-width: 100%;
+                        max-height: 100%;
+                        width: auto;
+                        height: auto;
+                    }
+                </style>
+            </head>
+            <body>
+                ${rawSvgContent}
+            </body>
+            </html>`;
+
+            const blob = new Blob([iframeContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            iframe.src = url;
+
+            iframe.onload = () => {
+                // It's good practice to revoke the blob URL after it's been used
+                URL.revokeObjectURL(url);
+
+                const svgElement = iframe.contentDocument.querySelector('svg');
+                if (!svgElement) return;
+
+                // Ensure the SVG has a viewBox for proper scaling in some contexts
+                if (!svgElement.getAttribute('viewBox') && svgElement.getAttribute('width') && svgElement.getAttribute('height')) {
+                    svgElement.setAttribute('viewBox', `0 0 ${svgElement.getAttribute('width')} ${svgElement.getAttribute('height')}`);
+                }
+
+                // --- Button Functionality ---
+                const copyBtn = document.getElementById('copy-btn');
+                copyBtn.addEventListener('click', () => {
+                    const svgCode = svgElement.outerHTML;
+                    navigator.clipboard.writeText(svgCode).then(() => {
+                        const originalIcon = copyBtn.innerHTML;
+                        copyBtn.innerHTML = '<iconify-icon icon="material-symbols:check-rounded" style="color: #4ade80;"></iconify-icon>';
+                        setTimeout(() => { copyBtn.innerHTML = originalIcon; }, 2000);
+                    }, (err) => { console.error('复制失败: ', err); });
+                });
+
+                const downloadSvgBtn = document.getElementById('download-svg-btn');
+                downloadSvgBtn.addEventListener('click', () => {
+                    const svgData = new XMLSerializer().serializeToString(svgElement);
+                    const downloadBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+                    const downloadUrl = URL.createObjectURL(downloadBlob);
+                    const a = document.createElement('a');
+                    a.href = downloadUrl;
+                    a.download = 'card_17-11-04_779839.svg';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(downloadUrl);
+                });
+
+                const downloadPngBtn = document.getElementById('download-png-btn');
+                downloadPngBtn.addEventListener('click', () => {
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
+                    
+                    const svgClone = svgElement.cloneNode(true);
+                    const viewBox = svgElement.viewBox.baseVal;
+                    const width = viewBox ? viewBox.width : 800;
+                    const height = viewBox ? viewBox.height : 1200;
+                    
+                    svgClone.setAttribute('width', width);
+                    svgClone.setAttribute('height', height);
+                    
+                    const svgData = new XMLSerializer().serializeToString(svgClone);
+                    const img = new Image();
+                    
+                    const scale = 2;
+                    canvas.width = width * scale;
+                    canvas.height = height * scale;
+                    
+                    const imageBlob = new Blob([svgData], {type: 'image/svg+xml;charset=utf-8'});
+                    const imageUrl = URL.createObjectURL(imageBlob);
+                    
+                    img.onload = () => {
+                        ctx.fillStyle = 'transparent';
+                        ctx.clearRect(0, 0, canvas.width, canvas.height);
+                        ctx.scale(scale, scale);
+                        ctx.drawImage(img, 0, 0, width, height);
+                        URL.revokeObjectURL(imageUrl);
+                        
+                        try {
+                            const pngUrl = canvas.toDataURL('image/png');
+                            const a = document.createElement('a');
+                            a.href = pngUrl;
+                            a.download = 'card_17-11-04_779839.png';
+                            document.body.appendChild(a);
+                            a.click();
+                            document.body.removeChild(a);
+                        } catch (err) {
+                            console.error('Canvas 导出失败:', err);
+                            alert('PNG 导出失败，可能是因为跨域图片限制。请尝试下载 SVG。');
+                        }
+                    };
+                    
+                    img.onerror = (e) => {
+                        console.error('图片加载失败', e);
+                        URL.revokeObjectURL(imageUrl);
+                        alert('PNG 导出失败，请尝试下载 SVG');
+                    };
+                    
+                    img.src = imageUrl;
+                });
+            };
+        });
+    </script>
+</body>
+</html>
