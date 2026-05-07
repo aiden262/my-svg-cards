@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>短葱 — 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #0f0f0f;
+            --surface: #1a1a1a;
+            --surface-hover: #1f1f1f;
+            --border: rgba(255, 255, 255, 0.06);
+            --border-strong: rgba(255, 255, 255, 0.10);
+            --text-primary: #f0f0f0;
+            --text-secondary: #999;
+            --text-muted: #666;
+            --accent: #6366f1;
+            --accent-dim: rgba(99, 102, 241, 0.15);
+            --radius: 20px;
+            --radius-sm: 12px;
+            --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 32px rgba(0, 0, 0, 0.5);
+            --transition: 200ms ease;
+            --font-sans: 'Inter', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-serif: 'Noto Serif SC', 'Noto Serif', Georgia, serif;
+        }
+
+        html {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--bg);
+            background-image:
+                radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99, 102, 241, 0.08), transparent),
+                radial-gradient(ellipse 60% 40% at 50% 110%, rgba(99, 102, 241, 0.04), transparent);
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 32px 24px;
+            line-height: 1.6;
+        }
+
+        /* ---------- 滚动条 ---------- */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.20);
+        }
+
+        /* ---------- 卡片 ---------- */
+        .card {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-card);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: border-color var(--transition);
+        }
+        .card:hover {
+            border-color: var(--border-strong);
+        }
+
+        /* ---------- SVG 容器 ---------- */
+        .svg-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 28px;
+            max-height: 72vh;
+            overflow-y: auto;
+            background:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(255, 255, 255, 0.012) 2px,
+                    rgba(255, 255, 255, 0.012) 4px
+                );
+        }
+
+        .svg-wrapper svg {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: var(--radius-sm);
+        }
+
+        /* ---------- 页脚 ---------- */
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 12px 24px;
+            padding: 18px 28px;
+            border-top: 1px solid var(--border);
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            letter-spacing: 0.01em;
+        }
+        .meta .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--accent-dim);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-weight: 500;
+            font-size: 0.75rem;
+            white-space: nowrap;
+        }
+        .meta .pill .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: currentColor;
+            flex-shrink: 0;
+        }
+        .meta .prompt-hint {
+            max-width: 320px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .divider {
+            width: 1px;
+            height: 14px;
+            background: var(--border);
+            flex-shrink: 0;
+        }
+
+        /* ---------- 响应式 ---------- */
+        @media (max-width: 640px) {
+            body {
+                padding: 16px 12px;
+            }
+            .svg-wrapper {
+                padding: 16px;
+                max-height: 60vh;
+            }
+            .meta {
+                padding: 14px 16px;
+                font-size: 0.72rem;
+                gap: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="svg-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600"><rect width="400" height="600" fill="#F0E6D2"/><rect x="25" y="30" width="350" height="540" fill="none" stroke="#2C3E50" stroke-width="0.5"/><line x1="25" y1="25" x2="65" y2="25" stroke="#2C3E50" stroke-width="1.5"/><line x1="25" y1="25" x2="25" y2="65" stroke="#2C3E50" stroke-width="1.5"/><line x1="375" y1="25" x2="335" y2="25" stroke="#2C3E50" stroke-width="1.5"/><line x1="375" y1="25" x2="375" y2="65" stroke="#2C3E50" stroke-width="1.5"/><line x1="25" y1="575" x2="65" y2="575" stroke="#2C3E50" stroke-width="1.5"/><line x1="25" y1="575" x2="25" y2="535" stroke="#2C3E50" stroke-width="1.5"/><line x1="375" y1="575" x2="335" y2="575" stroke="#2C3E50" stroke-width="1.5"/><line x1="375" y1="575" x2="375" y2="535" stroke="#2C3E50" stroke-width="1.5"/><text x="200" y="85" text-anchor="middle" font-family="'Noto Serif CJK SC', 'Source Han Serif SC', 'Serif'" font-size="20" fill="#2C3E50" font-weight="bold" letter-spacing="8">汉语新解</text><line x1="120" y1="105" x2="280" y2="105" stroke="#A8A090" stroke-width="1" stroke-dasharray="4 3"/><text x="200" y="145" text-anchor="middle" font-family="'Noto Serif CJK SC', 'Source Han Serif SC', 'Serif'" font-size="22" fill="#2C3E50" font-weight="bold">短 葱</text><text x="200" y="175" text-anchor="middle" font-family="'Noto Serif CJK SC', 'Source Han Serif SC', 'Serif'" font-size="13" fill="#A8A090" letter-spacing="1">duǎn cōng</text><text x="200" y="200" text-anchor="middle" font-family="'Noto Serif CJK SC', 'Source Han Serif SC', 'Serif'" font-size="13" fill="#A8A090" letter-spacing="1">ショート・ネギ</text><line x1="80" y1="225" x2="320" y2="225" stroke="#A8A090" stroke-width="0.8" stroke-dasharray="3 2"/><text x="200" y="300" text-anchor="middle" font-family="'Noto Serif CJK SC', 'Source Han Serif SC', 'Serif'" font-size="17" fill="#2C3E50" font-weight="bold">短葱</text><text x="200" y="335" text-anchor="middle" font-family="'Noto Serif CJK SC', 'Source Han Serif SC', 'Serif'" font-size="15" fill="#2C3E50" line-height="1.6">看上去比长葱少了半截，</text><text x="200" y="360" text-anchor="middle" font-family="'Noto Serif CJK SC', 'Source Han Serif SC', 'Serif'" font-size="15" fill="#2C3E50" line-height="1.6">价格却从不按比例降低。</text><text x="200" y="385" text-anchor="middle" font-family="'Noto Serif CJK SC', 'Source Han Serif SC', 'Serif'" font-size="15" fill="#2C3E50" line-height="1.6">它提醒人们：</text><text x="200" y="410" text-anchor="middle" font-family="'Noto Serif CJK SC', 'Source Han Serif SC', 'Serif'" font-size="15" fill="#2C3E50" line-height="1.6">身材缩水后，</text><text x="200" y="435" text-anchor="middle" font-family="'Noto Serif CJK SC', 'Source Han Serif SC', 'Serif'" font-size="15" fill="#2C3E50" line-height="1.6">唯一还硬撑着的就是价格。</text><g transform="translate(200, 490)"><line x1="-60" y1="-10" x2="60" y2="-10" stroke="#2C3E50" stroke-width="1.5"/><line x1="0" y1="-10" x2="0" y2="10" stroke="#2C3E50" stroke-width="1.5"/><line x1="-50" y1="10" x2="50" y2="10" stroke="#2C3E50" stroke-width="1"/><line x1="-50" y1="15" x2="50" y2="15" stroke="#2C3E50" stroke-width="0.5"/><circle cx="-20" cy="0" r="3" fill="none" stroke="#2C3E50" stroke-width="0.8"/><circle cx="20" cy="0" r="3" fill="none" stroke="#2C3E50" stroke-width="0.8"/><line x1="-35" y1="20" x2="35" y2="20" stroke="#2C3E50" stroke-width="0.3"/><text x="0" y="50" text-anchor="middle" font-family="'Noto Serif CJK SC', 'Source Han Serif SC', 'Serif'" font-size="12" fill="#A8A090">身价不随尺寸缩水</text></g><text x="200" y="565" text-anchor="middle" font-family="'Noto Serif CJK SC', 'Source Han Serif SC', 'Serif'" font-size="11" fill="#A8A090" letter-spacing="1"># 尺寸减半 · 底气不减 #</text></svg>
+        </div>
+        <div class="meta">
+            <span class="pill"><span class="dot"></span>汉语新解</span>
+            <span class="divider"></span>
+            <span>DeepSeek V4 Flash</span>
+            <span class="divider"></span>
+            <span class="prompt-hint" title="短葱">短葱</span>
+        </div>
+    </div>
+</body>
+</html>
