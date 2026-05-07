@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【葱哥】 - 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --md-sys-color-background: #121212;
+            --md-sys-color-surface: #1E1E1E;
+            --md-sys-color-on-surface: #E0E0E0;
+            --md-sys-color-on-surface-variant: #BDBDBD;
+            --card-max-width: 800px;
+            --border-radius: 16px;
+        }
+
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--md-sys-color-background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 6px 10px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: var(--card-max-width);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--border-radius) / 2); /* 给SVG本身也加个小圆角 */
+            background: var(--md-sys-color-background); /* SVG加载时的占位背景色 */
+        }
+
+        footer {
+            font-size: 0.875rem;
+            font-weight: 300;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .card {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&amp;display=swap');
+      text {
+        font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Georgia', serif;
+      }
+    </style>
+  </defs>
+
+  <!-- 背景色：古籍泛黄 -->
+  <rect width="400" height="600" fill="#F0E6D2"/>
+
+  <!-- 装饰：纤细的几何线条 -->
+  <line x1="25" y1="80" x2="375" y2="80" stroke="#A8A090" stroke-width="0.8" stroke-dasharray="4,4"/>
+  <line x1="25" y1="560" x2="375" y2="560" stroke="#A8A090" stroke-width="0.8" stroke-dasharray="4,4"/>
+
+  <!-- 角落装饰圆点 -->
+  <circle cx="30" cy="90" r="2" fill="#A8A090" opacity="0.5"/>
+  <circle cx="370" cy="90" r="2" fill="#A8A090" opacity="0.5"/>
+
+  <!-- 标题 -->
+  <text x="200" y="52" text-anchor="middle" font-size="20" fill="#2C3E50" font-weight="700" letter-spacing="4">汉语新解</text>
+
+  <!-- 被解释词汇 -->
+  <text x="200" y="125" text-anchor="middle" font-size="26" fill="#2C3E50" font-weight="700" letter-spacing="6">葱哥</text>
+  <text x="200" y="150" text-anchor="middle" font-size="12" fill="#A8A090" letter-spacing="2">CONG GE</text>
+
+  <!-- 核心解释（60字内，完整显示） -->
+  <text x="200" y="210" text-anchor="middle" font-size="17" fill="#2C3E50" font-weight="500">
+    <tspan x="200" dy="0">站在自己种的地里，挺直了腰杆喊</tspan>
+    <tspan x="200" dy="28">“你们都不懂种地”，然后收割时</tspan>
+    <tspan x="200" dy="28">悄悄把最烂的菜叶子塞进自家篮底。</tspan>
+  </text>
+
+  <!-- 讽刺性线条画：一棵直立的葱，但根部是弯曲的 -->
+  <svg x="100" y="270" width="200" height="200" viewBox="0 0 200 200">
+    <!-- 土壤 -->
+    <path d="M30,180 L170,180 L160,195 L40,195 Z" fill="#A8A090" opacity="0.25"/>
+    <!-- 葱白（看似挺直） -->
+    <rect x="90" y="100" width="20" height="80" fill="#E8DDD0" opacity="0.9" rx="2"/>
+    <!-- 葱绿（向上张扬） -->
+    <path d="M92,100 Q88,50 60,30" stroke="#4A6F3B" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M100,98 Q100,40 100,15" stroke="#4A6F3B" stroke-width="9" fill="none" stroke-linecap="round"/>
+    <path d="M108,100 Q112,45 140,25" stroke="#4A6F3B" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <!-- 根部秘密（在土壤下弯曲，指向自己篮子方向） -->
+    <path d="M100,180 L95,195 L75,190" stroke="#2C3E50" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="3,2"/>
+    <path d="M95,195 L85,198" stroke="#2C3E50" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- 一个朦胧的篮子形状 -->
+    <ellipse cx="70" cy="192" rx="18" ry="6" fill="none" stroke="#2C3E50" stroke-width="1.5" opacity="0.4"/>
+  </svg>
+        </div>
+        <footer>
+            由 AI Bot 生成 | 模式: 汉语新解 | 模型: DeepSeek V4 Flash
+        </footer>
+    </main>
+</body>
+</html>
