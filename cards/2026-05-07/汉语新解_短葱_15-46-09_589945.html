@@ -1,0 +1,697 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>短葱 — 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #0f0f0f;
+            --surface: #1a1a1a;
+            --surface-hover: #1f1f1f;
+            --border: rgba(255, 255, 255, 0.06);
+            --border-strong: rgba(255, 255, 255, 0.10);
+            --text-primary: #f0f0f0;
+            --text-secondary: #999;
+            --text-muted: #666;
+            --accent: #6366f1;
+            --accent-dim: rgba(99, 102, 241, 0.15);
+            --radius: 20px;
+            --radius-sm: 12px;
+            --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 32px rgba(0, 0, 0, 0.5);
+            --transition: 200ms ease;
+            --font-sans: 'Inter', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-serif: 'Noto Serif SC', 'Noto Serif', Georgia, serif;
+        }
+
+        html {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--bg);
+            background-image:
+                radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99, 102, 241, 0.08), transparent),
+                radial-gradient(ellipse 60% 40% at 50% 110%, rgba(99, 102, 241, 0.04), transparent);
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 24px;
+            line-height: 1.6;
+            overflow: hidden;
+        }
+
+        /* ---------- 卡片 ---------- */
+        .card {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            max-height: calc(100vh - 48px);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-card);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: border-color var(--transition);
+        }
+        .card:hover {
+            border-color: var(--border-strong);
+        }
+
+        /* ---------- SVG 容器 ---------- */
+        .svg-wrapper {
+            flex: 1;
+            min-height: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 28px;
+            position: relative;
+            cursor: zoom-in;
+            background:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(255, 255, 255, 0.012) 2px,
+                    rgba(255, 255, 255, 0.012) 4px
+                );
+            overflow: hidden;
+        }
+
+        .svg-wrapper svg {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            display: block;
+            border-radius: var(--radius-sm);
+            transition: transform var(--transition);
+        }
+
+        .svg-wrapper:hover svg {
+            transform: scale(1.01);
+        }
+
+        /* ---------- 底部渐变遮罩（暗示有更多内容） ---------- */
+        .svg-fade {
+            position: absolute;
+            inset: auto 0 0 0;
+            height: 48px;
+            background: linear-gradient(to bottom, transparent, var(--surface));
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity var(--transition);
+        }
+        .svg-fade.visible {
+            opacity: 1;
+        }
+
+        /* ---------- 放大提示按钮 ---------- */
+        .zoom-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #ccc;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(-4px);
+            transition: opacity var(--transition), transform var(--transition);
+            z-index: 10;
+            pointer-events: none;
+        }
+        .svg-wrapper:hover .zoom-badge,
+        .svg-wrapper.zoomable .zoom-badge {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        .zoom-badge:hover {
+            background: rgba(0, 0, 0, 0.85);
+            border-color: rgba(255, 255, 255, 0.25);
+            color: #fff;
+        }
+        .zoom-badge svg {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+        }
+
+        /* ---------- 查看原图按钮 ---------- */
+        .view-original {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: none;
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            cursor: pointer;
+            transition: all var(--transition);
+            font-family: var(--font-sans);
+        }
+        .view-original:hover {
+            border-color: var(--border-strong);
+            color: var(--text-primary);
+            background: var(--surface-hover);
+        }
+
+        /* ---------- Lightbox ---------- */
+        .lightbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 250ms ease;
+        }
+        .lightbox.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .lightbox-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 64px 48px;
+            overflow: auto;
+        }
+
+        .lightbox-content svg {
+            max-width: none;
+            max-height: none;
+            width: auto;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            cursor: zoom-out;
+            box-shadow: 0 8px 64px rgba(0, 0, 0, 0.6);
+        }
+
+        /* ---------- Lightbox 自定义滚动条 ---------- */
+        .lightbox-content::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .lightbox-content::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .lightbox-content::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 3px;
+        }
+        .lightbox-content::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        /* ---------- Lightbox 关闭按钮 ---------- */
+        .lightbox-close {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            color: #ccc;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition);
+            z-index: 10001;
+        }
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+
+        /* ---------- Lightbox 操作栏 ---------- */
+        .lightbox-toolbar {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 6px;
+            z-index: 10001;
+        }
+        .lightbox-toolbar button {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: transparent;
+            border: 1px solid transparent;
+            color: #bbb;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all var(--transition);
+            font-family: var(--font-sans);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .lightbox-toolbar button:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.12);
+            color: #fff;
+        }
+        .lightbox-toolbar button svg {
+            width: 15px;
+            height: 15px;
+            flex-shrink: 0;
+        }
+
+        /* ---------- 页脚 ---------- */
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 12px 24px;
+            padding: 18px 28px;
+            border-top: 1px solid var(--border);
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            letter-spacing: 0.01em;
+            flex-shrink: 0;
+        }
+        .meta .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--accent-dim);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-weight: 500;
+            font-size: 0.75rem;
+            white-space: nowrap;
+        }
+        .meta .pill .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: currentColor;
+            flex-shrink: 0;
+        }
+        .meta .prompt-hint {
+            max-width: 280px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .divider {
+            width: 1px;
+            height: 14px;
+            background: var(--border);
+            flex-shrink: 0;
+        }
+
+        /* ---------- 响应式 ---------- */
+        @media (max-width: 640px) {
+            body {
+                padding: 12px 8px;
+            }
+            .card {
+                max-height: calc(100vh - 24px);
+            }
+            .svg-wrapper {
+                padding: 16px;
+            }
+            .meta {
+                padding: 12px 14px;
+                font-size: 0.7rem;
+                gap: 6px 14px;
+            }
+            .meta .prompt-hint {
+                max-width: 180px;
+            }
+            .lightbox-content {
+                padding: 56px 16px;
+            }
+            .lightbox-toolbar {
+                bottom: 12px;
+                gap: 4px;
+            }
+            .lightbox-toolbar button {
+                padding: 6px 10px;
+                font-size: 0.7rem;
+            }
+            .zoom-badge {
+                top: 8px;
+                right: 8px;
+                font-size: 0.68rem;
+                padding: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="svg-wrapper" id="svgWrapper" title="点击放大查看">
+            <div class="svg-fade" id="svgFade"></div>
+            <div class="zoom-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
+                点击放大
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&amp;display=swap');
+      text {
+        font-family: 'Noto Serif SC', 'Noto Serif CJK SC', 'Source Han Serif SC', 'serif';
+      }
+      .title { font-weight: 900; font-size: 28px; }
+      .subtitle { font-weight: 400; font-size: 20px; }
+      .def-word { font-weight: 900; font-size: 36px; }
+      .def-line-en { font-weight: 400; font-size: 13px; letter-spacing: 2px; }
+      .def-line-ja { font-weight: 400; font-size: 13px; letter-spacing: 1px; }
+      .explanation { font-weight: 500; font-size: 17px; line-height: 1.55; }
+      .summary { font-weight: 300; font-size: 13px; letter-spacing: 1px; }
+    </style>
+  </defs>
+
+  <!-- 背景色：古籍泛黄 方案 -->
+  <rect width="400" height="600" fill="#F0E6D2"/>
+
+  <!-- 装饰图案：低透明度几何线 -->
+  <line x1="25" y1="100" x2="375" y2="100" stroke="#A8A090" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="25" y1="530" x2="375" y2="530" stroke="#A8A090" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <circle cx="50" cy="500" r="15" fill="none" stroke="#A8A090" stroke-width="0.5" opacity="0.4"/>
+  <circle cx="350" cy="120" r="8" fill="none" stroke="#A8A090" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- 标题区 -->
+  <text x="200" y="55" text-anchor="middle" class="title" fill="#2C3E50">汉语新解</text>
+  <line x1="155" y1="68" x2="245" y2="68" stroke="#A8A090" stroke-width="0.8" stroke-dasharray="4,2"/>
+
+  <!-- 词汇区 -->
+  <text x="200" y="125" text-anchor="middle" class="def-word" fill="#2C3E50">短葱</text>
+  <text x="200" y="150" text-anchor="middle" class="def-line-en" fill="#6B5B4A" letter-spacing="2">SHORT SPRING ONION</text>
+  <text x="200" y="168" text-anchor="middle" class="def-line-ja" fill="#6B5B4A" letter-spacing="1">みじかねぎ</text>
+
+  <!-- 解释区：强制换行 + 完整显示 (60字内) -->
+  <rect x="30" y="195" width="340" height="240" rx="4" fill="none" stroke="#A8A090" stroke-width="0.5" opacity="0.6"/>
+  
+  <text x="200" y="230" text-anchor="middle" class="explanation" fill="#2C3E50">
+    <tspan x="50" dy="0" text-anchor="start" font-weight="700">急于出头的葱，</tspan>
+    <tspan x="50" dy="28" text-anchor="start">被现实无情剪短后，</tspan>
+    <tspan x="50" dy="28" text-anchor="start">反以为荣，</tspan>
+    <tspan x="50" dy="28" text-anchor="start">浑身散发着浅薄而刺鼻的</tspan>
+    <tspan x="50" dy="28" text-anchor="start" font-weight="900" fill="#8B3A3A">“辛辣自信”。</tspan>
+  </text>
+
+  <!-- 批判内核：SVG线条图 (抽象讽刺：一个自大的矮葱站在土堆上) -->
+  <g transform="translate(200, 410)" stroke="#2C3E50" fill="none" stroke-width="1.2" stroke-linecap="round">
+    <!-- 矮葱身体 -->
+    <ellipse cx="0" cy="15" rx="12" ry="20" stroke="#2C3E50" fill="#F0E6D2"/>
+    <!-- 矮葱头部 (圆顶) -->
+    <path d="M-12,-5 Q-12,-28 0,-32 Q12,-28 12,-5" fill="#E0D3BE" stroke="#2C3E50"/>
+    <!-- 夸张的得意表情 -->
+    <path d="M-5,-12 Q0,-8 5,-12" stroke="#2C3E50" fill="none"/>  <!-- 上扬嘴角 -->
+    <line x1="-3" y1="-18" x2="-6" y2="-22" stroke="#2C3E50"/> <!-- 斜眼 -->
+    <line x1="3" y1="-18" x2="6" y2="-22" stroke="#2C3E50"/>
+    <!-- 脚下的小土堆 / 矮台 -->
+    <path d="M-35,35 L-20,25 L20,25 L35,35 Z" fill="#D9CEB8" stroke="#2C3E50"/>
+    <!-- 旁边倒下的一颗长葱 (被它排挤或砍断) -->
+    <line x1="40" y1="20" x2="65" y2="40" stroke="#2C3E50"/>
+    <ellipse cx="68" cy="42" rx="5" ry="8" fill="#F0E6D2" stroke="#2C3E50" transform="rotate(25,68,42)"/>
+    <!-- 散落的葱屑 -->
+    <circle cx="45" cy="38" r="1.5" fill="#2C3E50"/>
+    <circle cx="55" cy="32" r="1" fill="#2C3E50"/>
+  </g>
+
+  <!-- 极简总结 -->
+  <text x="200" y="490" text-anchor="middle" class="summary" fill="#8B7A6B"> —— 短，不是谦逊，而是被迫的虚张声势。 ——</text>
+  
+  <!-- 底部装饰线 -->
+  <line x1="80" y1="520" x2="320" y2="520" stroke="#A8A090" stroke-width="0.5" opacity="0.6"/>
+</svg>
+        </div>
+        <div class="meta">
+            <span class="pill"><span class="dot"></span>汉语新解</span>
+            <span class="divider"></span>
+            <span>DeepSeek V4 Pro</span>
+            <span class="divider"></span>
+            <span class="prompt-hint" title="短葱">短葱</span>
+            <span class="divider"></span>
+            <button class="view-original" id="viewOriginal" title="在新标签页打开原始 SVG">查看原图</button>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" title="关闭 (Esc)">&times;</button>
+        <div class="lightbox-content" id="lightboxContent">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&amp;display=swap');
+      text {
+        font-family: 'Noto Serif SC', 'Noto Serif CJK SC', 'Source Han Serif SC', 'serif';
+      }
+      .title { font-weight: 900; font-size: 28px; }
+      .subtitle { font-weight: 400; font-size: 20px; }
+      .def-word { font-weight: 900; font-size: 36px; }
+      .def-line-en { font-weight: 400; font-size: 13px; letter-spacing: 2px; }
+      .def-line-ja { font-weight: 400; font-size: 13px; letter-spacing: 1px; }
+      .explanation { font-weight: 500; font-size: 17px; line-height: 1.55; }
+      .summary { font-weight: 300; font-size: 13px; letter-spacing: 1px; }
+    </style>
+  </defs>
+
+  <!-- 背景色：古籍泛黄 方案 -->
+  <rect width="400" height="600" fill="#F0E6D2"/>
+
+  <!-- 装饰图案：低透明度几何线 -->
+  <line x1="25" y1="100" x2="375" y2="100" stroke="#A8A090" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="25" y1="530" x2="375" y2="530" stroke="#A8A090" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <circle cx="50" cy="500" r="15" fill="none" stroke="#A8A090" stroke-width="0.5" opacity="0.4"/>
+  <circle cx="350" cy="120" r="8" fill="none" stroke="#A8A090" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- 标题区 -->
+  <text x="200" y="55" text-anchor="middle" class="title" fill="#2C3E50">汉语新解</text>
+  <line x1="155" y1="68" x2="245" y2="68" stroke="#A8A090" stroke-width="0.8" stroke-dasharray="4,2"/>
+
+  <!-- 词汇区 -->
+  <text x="200" y="125" text-anchor="middle" class="def-word" fill="#2C3E50">短葱</text>
+  <text x="200" y="150" text-anchor="middle" class="def-line-en" fill="#6B5B4A" letter-spacing="2">SHORT SPRING ONION</text>
+  <text x="200" y="168" text-anchor="middle" class="def-line-ja" fill="#6B5B4A" letter-spacing="1">みじかねぎ</text>
+
+  <!-- 解释区：强制换行 + 完整显示 (60字内) -->
+  <rect x="30" y="195" width="340" height="240" rx="4" fill="none" stroke="#A8A090" stroke-width="0.5" opacity="0.6"/>
+  
+  <text x="200" y="230" text-anchor="middle" class="explanation" fill="#2C3E50">
+    <tspan x="50" dy="0" text-anchor="start" font-weight="700">急于出头的葱，</tspan>
+    <tspan x="50" dy="28" text-anchor="start">被现实无情剪短后，</tspan>
+    <tspan x="50" dy="28" text-anchor="start">反以为荣，</tspan>
+    <tspan x="50" dy="28" text-anchor="start">浑身散发着浅薄而刺鼻的</tspan>
+    <tspan x="50" dy="28" text-anchor="start" font-weight="900" fill="#8B3A3A">“辛辣自信”。</tspan>
+  </text>
+
+  <!-- 批判内核：SVG线条图 (抽象讽刺：一个自大的矮葱站在土堆上) -->
+  <g transform="translate(200, 410)" stroke="#2C3E50" fill="none" stroke-width="1.2" stroke-linecap="round">
+    <!-- 矮葱身体 -->
+    <ellipse cx="0" cy="15" rx="12" ry="20" stroke="#2C3E50" fill="#F0E6D2"/>
+    <!-- 矮葱头部 (圆顶) -->
+    <path d="M-12,-5 Q-12,-28 0,-32 Q12,-28 12,-5" fill="#E0D3BE" stroke="#2C3E50"/>
+    <!-- 夸张的得意表情 -->
+    <path d="M-5,-12 Q0,-8 5,-12" stroke="#2C3E50" fill="none"/>  <!-- 上扬嘴角 -->
+    <line x1="-3" y1="-18" x2="-6" y2="-22" stroke="#2C3E50"/> <!-- 斜眼 -->
+    <line x1="3" y1="-18" x2="6" y2="-22" stroke="#2C3E50"/>
+    <!-- 脚下的小土堆 / 矮台 -->
+    <path d="M-35,35 L-20,25 L20,25 L35,35 Z" fill="#D9CEB8" stroke="#2C3E50"/>
+    <!-- 旁边倒下的一颗长葱 (被它排挤或砍断) -->
+    <line x1="40" y1="20" x2="65" y2="40" stroke="#2C3E50"/>
+    <ellipse cx="68" cy="42" rx="5" ry="8" fill="#F0E6D2" stroke="#2C3E50" transform="rotate(25,68,42)"/>
+    <!-- 散落的葱屑 -->
+    <circle cx="45" cy="38" r="1.5" fill="#2C3E50"/>
+    <circle cx="55" cy="32" r="1" fill="#2C3E50"/>
+  </g>
+
+  <!-- 极简总结 -->
+  <text x="200" y="490" text-anchor="middle" class="summary" fill="#8B7A6B"> —— 短，不是谦逊，而是被迫的虚张声势。 ——</text>
+  
+  <!-- 底部装饰线 -->
+  <line x1="80" y1="520" x2="320" y2="520" stroke="#A8A090" stroke-width="0.5" opacity="0.6"/>
+</svg>
+        </div>
+        <div class="lightbox-toolbar">
+            <button id="lightboxOriginal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                查看原图
+            </button>
+            <button id="lightboxDownload">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                下载 SVG
+            </button>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            var wrapper = document.getElementById('svgWrapper');
+            var fade = document.getElementById('svgFade');
+            var lightbox = document.getElementById('lightbox');
+            var lightboxContent = document.getElementById('lightboxContent');
+            var closeBtn = document.getElementById('lightboxClose');
+            var viewOriginal = document.getElementById('viewOriginal');
+            var lightboxOriginal = document.getElementById('lightboxOriginal');
+            var lightboxDownload = document.getElementById('lightboxDownload');
+            var svg = wrapper.querySelector(':scope > svg');
+
+            // ---------- 检测 SVG 是否被裁切，显示底部渐变 ----------
+            function checkOverflow() {
+                if (!svg) return;
+                var wrapperRect = wrapper.getBoundingClientRect();
+                var svgRect = svg.getBoundingClientRect();
+                if (svgRect.bottom > wrapperRect.bottom + 2) {
+                    fade.classList.add('visible');
+                    wrapper.classList.add('zoomable');
+                } else {
+                    fade.classList.remove('visible');
+                    wrapper.classList.remove('zoomable');
+                }
+            }
+            checkOverflow();
+            window.addEventListener('resize', checkOverflow);
+
+            // ---------- 获取 SVG 序列化字符串 ----------
+            function getSvgString() {
+                var clone = svg.cloneNode(true);
+                return new XMLSerializer().serializeToString(clone);
+            }
+
+            // ---------- 打开 Lightbox ----------
+            function openLightbox() {
+                var srcSvg = wrapper.querySelector(':scope > svg');
+                var dstSvg = lightboxContent.querySelector(':scope > svg');
+                if (srcSvg && dstSvg) {
+                    dstSvg.parentNode.replaceChild(srcSvg.cloneNode(true), dstSvg);
+                }
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            // ---------- 关闭 Lightbox ----------
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+            }
+
+            // ---------- 查看原图（新标签页） ----------
+            function openOriginal() {
+                var svgString = getSvgString();
+                var blob = new Blob([svgString], { type: 'image/svg+xml' });
+                var url = URL.createObjectURL(blob);
+                window.open(url, '_blank');
+                setTimeout(function() { URL.revokeObjectURL(url); }, 1000);
+            }
+
+            // ---------- 下载 SVG ----------
+            function downloadSvg() {
+                var svgString = getSvgString();
+                var blob = new Blob([svgString], { type: 'image/svg+xml' });
+                var url = URL.createObjectURL(blob);
+                var a = document.createElement('a');
+                a.href = url;
+                a.download = 'card.svg';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                setTimeout(function() { URL.revokeObjectURL(url); }, 1000);
+            }
+
+            // ---------- 事件绑定 ----------
+            wrapper.addEventListener('click', function(e) {
+                if (e.target.closest('.zoom-badge')) return;
+                openLightbox();
+            });
+
+            wrapper.querySelector('.zoom-badge').addEventListener('click', function(e) {
+                e.stopPropagation();
+                openLightbox();
+            });
+
+            closeBtn.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) closeLightbox();
+            });
+
+            lightboxContent.addEventListener('click', function(e) {
+                if (e.target === lightboxContent || e.target.tagName === 'svg') closeLightbox();
+            });
+
+            viewOriginal.addEventListener('click', function(e) {
+                e.stopPropagation();
+                openOriginal();
+            });
+
+            lightboxOriginal.addEventListener('click', openOriginal);
+            lightboxDownload.addEventListener('click', downloadSvg);
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                    closeLightbox();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
