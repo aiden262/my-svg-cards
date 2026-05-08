@@ -1,0 +1,751 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>巨化股份 — 汉语新解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #0f0f0f;
+            --surface: #1a1a1a;
+            --surface-hover: #1f1f1f;
+            --border: rgba(255, 255, 255, 0.06);
+            --border-strong: rgba(255, 255, 255, 0.10);
+            --text-primary: #f0f0f0;
+            --text-secondary: #999;
+            --text-muted: #666;
+            --accent: #6366f1;
+            --accent-dim: rgba(99, 102, 241, 0.15);
+            --radius: 20px;
+            --radius-sm: 12px;
+            --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 32px rgba(0, 0, 0, 0.5);
+            --transition: 200ms ease;
+            --font-sans: 'Inter', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-serif: 'Noto Serif SC', 'Noto Serif', Georgia, serif;
+        }
+
+        html {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--bg);
+            background-image:
+                radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99, 102, 241, 0.08), transparent),
+                radial-gradient(ellipse 60% 40% at 50% 110%, rgba(99, 102, 241, 0.04), transparent);
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 8px;
+            line-height: 1.6;
+            overflow: hidden;
+        }
+
+        /* ---------- 卡片 ---------- */
+        .card {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            max-height: calc(100vh - 16px);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-card);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: border-color var(--transition);
+        }
+        .card:hover {
+            border-color: var(--border-strong);
+        }
+
+        /* ---------- SVG 容器 ---------- */
+        .svg-wrapper {
+            flex: 1;
+            min-height: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            position: relative;
+            cursor: zoom-in;
+            background:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(255, 255, 255, 0.012) 2px,
+                    rgba(255, 255, 255, 0.012) 4px
+                );
+            overflow: hidden;
+        }
+
+        .svg-wrapper svg {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            display: block;
+            border-radius: var(--radius-sm);
+            transition: transform var(--transition);
+        }
+
+        .svg-wrapper:hover svg {
+            transform: scale(1.01);
+        }
+
+        /* ---------- 底部渐变遮罩（暗示有更多内容） ---------- */
+        .svg-fade {
+            position: absolute;
+            inset: auto 0 0 0;
+            height: 32px;
+            background: linear-gradient(to bottom, transparent, var(--surface));
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity var(--transition);
+        }
+        .svg-fade.visible {
+            opacity: 1;
+        }
+
+        /* ---------- 放大提示按钮 ---------- */
+        .zoom-badge {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #ccc;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(-4px);
+            transition: opacity var(--transition), transform var(--transition);
+            z-index: 10;
+            pointer-events: none;
+        }
+        .svg-wrapper:hover .zoom-badge,
+        .svg-wrapper.zoomable .zoom-badge {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        .zoom-badge:hover {
+            background: rgba(0, 0, 0, 0.85);
+            border-color: rgba(255, 255, 255, 0.25);
+            color: #fff;
+        }
+        .zoom-badge svg {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+        }
+
+        /* ---------- 查看原图按钮 ---------- */
+        .view-original {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: none;
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            cursor: pointer;
+            transition: all var(--transition);
+            font-family: var(--font-sans);
+        }
+        .view-original:hover {
+            border-color: var(--border-strong);
+            color: var(--text-primary);
+            background: var(--surface-hover);
+        }
+
+        /* ---------- Lightbox ---------- */
+        .lightbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 250ms ease;
+        }
+        .lightbox.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .lightbox-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 24px;
+            overflow: auto;
+        }
+
+        .lightbox-content svg {
+            max-width: none;
+            max-height: none;
+            width: auto;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            cursor: zoom-out;
+            box-shadow: 0 8px 64px rgba(0, 0, 0, 0.6);
+        }
+
+        /* ---------- Lightbox 自定义滚动条 ---------- */
+        .lightbox-content::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .lightbox-content::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .lightbox-content::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 3px;
+        }
+        .lightbox-content::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        /* ---------- Lightbox 关闭按钮 ---------- */
+        .lightbox-close {
+            position: fixed;
+            top: 8px;
+            right: 8px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            color: #ccc;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition);
+            z-index: 10001;
+        }
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+
+        /* ---------- Lightbox 操作栏 ---------- */
+        .lightbox-toolbar {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 4px;
+            z-index: 10001;
+        }
+        .lightbox-toolbar button {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: transparent;
+            border: 1px solid transparent;
+            color: #bbb;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            cursor: pointer;
+            transition: all var(--transition);
+            font-family: var(--font-sans);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .lightbox-toolbar button:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.12);
+            color: #fff;
+        }
+        .lightbox-toolbar button svg {
+            width: 15px;
+            height: 15px;
+            flex-shrink: 0;
+        }
+
+        /* ---------- 页脚 ---------- */
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 8px 16px;
+            padding: 8px 16px;
+            border-top: 1px solid var(--border);
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            letter-spacing: 0.01em;
+            flex-shrink: 0;
+        }
+        .meta .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            background: var(--accent-dim);
+            color: var(--accent);
+            padding: 2px 8px;
+            border-radius: 99px;
+            font-weight: 500;
+            font-size: 0.68rem;
+            white-space: nowrap;
+        }
+        .meta .pill .dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: currentColor;
+            flex-shrink: 0;
+        }
+        .meta .prompt-hint {
+            max-width: 280px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .divider {
+            width: 1px;
+            height: 10px;
+            background: var(--border);
+            flex-shrink: 0;
+        }
+
+        /* ---------- 响应式 ---------- */
+        @media (max-width: 640px) {
+            body {
+                padding: 4px;
+            }
+            .card {
+                max-height: calc(100vh - 8px);
+            }
+            .svg-wrapper {
+                padding: 8px;
+            }
+            .meta {
+                padding: 6px 10px;
+                font-size: 0.62rem;
+                gap: 4px 10px;
+            }
+            .meta .prompt-hint {
+                max-width: 140px;
+            }
+            .lightbox-content {
+                padding: 40px 8px;
+            }
+            .lightbox-toolbar {
+                bottom: 6px;
+                gap: 3px;
+            }
+            .lightbox-toolbar button {
+                padding: 5px 8px;
+                font-size: 0.65rem;
+            }
+            .zoom-badge {
+                top: 4px;
+                right: 4px;
+                font-size: 0.62rem;
+                padding: 3px 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="svg-wrapper" id="svgWrapper" title="点击放大查看">
+            <div class="svg-fade" id="svgFade"></div>
+            <div class="zoom-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
+                点击放大
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&amp;display=swap');
+      text { font-family: 'Noto Serif CJK SC', 'Noto Serif SC', 'Source Han Serif SC', 'SimSun', serif; }
+    </style>
+  </defs>
+
+  <!-- 背景：苍苔深绿色 -->
+  <rect width="400" height="600" fill="#2A3834"/>
+
+  <!-- 几何底纹装饰：极简线条 -->
+  <g opacity="0.08" stroke="#455A55" stroke-width="1.5" fill="none">
+    <circle cx="200" cy="300" r="260" stroke-dasharray="4 8"/>
+    <circle cx="200" cy="300" r="230" stroke-dasharray="1 12"/>
+    <line x1="40" y1="200" x2="360" y2="200"/>
+    <line x1="40" y1="400" x2="360" y2="400"/>
+    <rect x="35" y="35" width="330" height="530" rx="8" stroke-dasharray="2 6"/>
+  </g>
+
+  <!-- 标题区 -->
+  <text x="200" y="60" text-anchor="middle" font-size="14" letter-spacing="8" fill="#A8B5B0" font-weight="400">汉 语 新 解</text>
+
+  <!-- 装饰分隔：上虚线 -->
+  <line x1="80" y1="80" x2="320" y2="80" stroke="#5A7A6A" stroke-width="1" stroke-dasharray="4 6"/>
+
+  <!-- 被解读词汇：中文大字 -->
+  <!-- 极简主义排版，醒目但不漂浮 -->
+  <text x="200" y="130" text-anchor="middle" font-size="34" font-weight="700" fill="#F5F5F0" letter-spacing="6">巨化股份</text>
+
+  <!-- 英文副标题 -->
+  <text x="200" y="158" text-anchor="middle" font-size="10" fill="#7A9A8A" letter-spacing="4" font-weight="300">Jù Huà Gǔ Fèn</text>
+
+  <!-- 分隔线 -->
+  <line x1="120" y1="175" x2="280" y2="175" stroke="#455A55" stroke-width="0.8"/>
+
+  <!-- 核心解释区：深绿底，文字换行，确保完全展示 -->
+  <!-- 使用 tspan 手动换行，强制控制空间，防止截断 -->
+  <text x="200" y="230" text-anchor="middle" font-size="16" fill="#F5F5F0" font-weight="600" letter-spacing="1">
+    <tspan x="200" dy="0">把＂我们生产化工产品＂</tspan>
+    <tspan x="200" dy="28">改成＂我们化一切为股份＂，</tspan>
+    <tspan x="200" dy="28">工厂不过是流动的管道，</tspan>
+    <tspan x="200" dy="28">目的是让钱生钱的永动仪</tspan>
+    <tspan x="200" dy="28">有个实体来依托。</tspan>
+  </text>
+
+  <!-- 讽刺插画区 -->
+  <g transform="translate(200, 400)" opacity="0.8">
+    <!-- 抽象几何插画：飘散的烟囱与钱币 -->
+    <!-- 背景浅色圈（隐喻光环） -->
+    <circle cx="0" cy="0" r="55" fill="none" stroke="#5A7A6A" stroke-width="1.5" stroke-dasharray="3 3"/>
+    
+    <!-- 形象1：烟囱变形为漏斗/管道 -->
+    <path d="M-15,-30 L-15,20 L-5,25 L5,25 L15,20 L15,-30 Z" fill="none" stroke="#F5F5F0" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- 烟囱顶端的烟（数据流动） -->
+    <path d="M-15,-30 Q-25,-45 -10,-55 Q5,-65 -5,-75" fill="none" stroke="#F5F5F0" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- 形象2：钱币符号在管道中进出 -->
+    <circle cx="-40" cy="-40" r="12" fill="none" stroke="#F5F5F0" stroke-width="2"/>
+    <text x="-40" y="-36" text-anchor="middle" font-size="14" fill="#F5F5F0" font-weight="bold">¥</text>
+    
+    <circle cx="40" cy="40" r="12" fill="none" stroke="#F5F5F0" stroke-width="2"/>
+    <text x="40" y="44" text-anchor="middle" font-size="14" fill="#F5F5F0" font-weight="bold">¥</text>
+
+    <!-- 形象3：齿轮/分子结构（化工隐喻）被¥穿透 -->
+    <path d="M0,15 Q15,0 0,-15 Q-15,0 0,15" fill="none" stroke="#F5F5F0" stroke-width="2"/>
+    <line x1="-20" y1="15" x2="20" y2="15" stroke="#F5F5F0" stroke-width="2"/>
+    <!-- 覆盖在齿轮上的¥ -->
+    <text x="0" y="5" text-anchor="middle" font-size="18" fill="#E8C4A0" font-weight="bold">¥</text>
+  </g>
+
+  <!-- 底部极简总结：小字，锐利 -->
+  <line x1="120" y1="505" x2="280" y2="505" stroke="#455A55" stroke-width="0.8"/>
+  <text x="200" y="535" text-anchor="middle" font-size="12" fill="#9AB5A0" letter-spacing="3" font-weight="300">
+    所谓实体，不过是资本的皮囊
+  </text>
+
+  <!-- 底部极简线条收尾 -->
+  <line x1="180" y1="555" x2="220" y2="555" stroke="#5A7A6A" stroke-width="1"/>
+
+</svg>
+        </div>
+        <div class="meta">
+            <span class="pill"><span class="dot"></span>汉语新解</span>
+            <span class="divider"></span>
+            <span>DeepSeek V4 Pro</span>
+            <span class="divider"></span>
+            <span class="prompt-hint" title="巨化股份">巨化股份</span>
+            <span class="divider"></span>
+            <button class="view-original" id="downloadOriginal" title="下载为 PNG 图片">下载原图</button>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" title="关闭 (Esc)">&times;</button>
+        <div class="lightbox-content" id="lightboxContent">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&amp;display=swap');
+      text { font-family: 'Noto Serif CJK SC', 'Noto Serif SC', 'Source Han Serif SC', 'SimSun', serif; }
+    </style>
+  </defs>
+
+  <!-- 背景：苍苔深绿色 -->
+  <rect width="400" height="600" fill="#2A3834"/>
+
+  <!-- 几何底纹装饰：极简线条 -->
+  <g opacity="0.08" stroke="#455A55" stroke-width="1.5" fill="none">
+    <circle cx="200" cy="300" r="260" stroke-dasharray="4 8"/>
+    <circle cx="200" cy="300" r="230" stroke-dasharray="1 12"/>
+    <line x1="40" y1="200" x2="360" y2="200"/>
+    <line x1="40" y1="400" x2="360" y2="400"/>
+    <rect x="35" y="35" width="330" height="530" rx="8" stroke-dasharray="2 6"/>
+  </g>
+
+  <!-- 标题区 -->
+  <text x="200" y="60" text-anchor="middle" font-size="14" letter-spacing="8" fill="#A8B5B0" font-weight="400">汉 语 新 解</text>
+
+  <!-- 装饰分隔：上虚线 -->
+  <line x1="80" y1="80" x2="320" y2="80" stroke="#5A7A6A" stroke-width="1" stroke-dasharray="4 6"/>
+
+  <!-- 被解读词汇：中文大字 -->
+  <!-- 极简主义排版，醒目但不漂浮 -->
+  <text x="200" y="130" text-anchor="middle" font-size="34" font-weight="700" fill="#F5F5F0" letter-spacing="6">巨化股份</text>
+
+  <!-- 英文副标题 -->
+  <text x="200" y="158" text-anchor="middle" font-size="10" fill="#7A9A8A" letter-spacing="4" font-weight="300">Jù Huà Gǔ Fèn</text>
+
+  <!-- 分隔线 -->
+  <line x1="120" y1="175" x2="280" y2="175" stroke="#455A55" stroke-width="0.8"/>
+
+  <!-- 核心解释区：深绿底，文字换行，确保完全展示 -->
+  <!-- 使用 tspan 手动换行，强制控制空间，防止截断 -->
+  <text x="200" y="230" text-anchor="middle" font-size="16" fill="#F5F5F0" font-weight="600" letter-spacing="1">
+    <tspan x="200" dy="0">把＂我们生产化工产品＂</tspan>
+    <tspan x="200" dy="28">改成＂我们化一切为股份＂，</tspan>
+    <tspan x="200" dy="28">工厂不过是流动的管道，</tspan>
+    <tspan x="200" dy="28">目的是让钱生钱的永动仪</tspan>
+    <tspan x="200" dy="28">有个实体来依托。</tspan>
+  </text>
+
+  <!-- 讽刺插画区 -->
+  <g transform="translate(200, 400)" opacity="0.8">
+    <!-- 抽象几何插画：飘散的烟囱与钱币 -->
+    <!-- 背景浅色圈（隐喻光环） -->
+    <circle cx="0" cy="0" r="55" fill="none" stroke="#5A7A6A" stroke-width="1.5" stroke-dasharray="3 3"/>
+    
+    <!-- 形象1：烟囱变形为漏斗/管道 -->
+    <path d="M-15,-30 L-15,20 L-5,25 L5,25 L15,20 L15,-30 Z" fill="none" stroke="#F5F5F0" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- 烟囱顶端的烟（数据流动） -->
+    <path d="M-15,-30 Q-25,-45 -10,-55 Q5,-65 -5,-75" fill="none" stroke="#F5F5F0" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- 形象2：钱币符号在管道中进出 -->
+    <circle cx="-40" cy="-40" r="12" fill="none" stroke="#F5F5F0" stroke-width="2"/>
+    <text x="-40" y="-36" text-anchor="middle" font-size="14" fill="#F5F5F0" font-weight="bold">¥</text>
+    
+    <circle cx="40" cy="40" r="12" fill="none" stroke="#F5F5F0" stroke-width="2"/>
+    <text x="40" y="44" text-anchor="middle" font-size="14" fill="#F5F5F0" font-weight="bold">¥</text>
+
+    <!-- 形象3：齿轮/分子结构（化工隐喻）被¥穿透 -->
+    <path d="M0,15 Q15,0 0,-15 Q-15,0 0,15" fill="none" stroke="#F5F5F0" stroke-width="2"/>
+    <line x1="-20" y1="15" x2="20" y2="15" stroke="#F5F5F0" stroke-width="2"/>
+    <!-- 覆盖在齿轮上的¥ -->
+    <text x="0" y="5" text-anchor="middle" font-size="18" fill="#E8C4A0" font-weight="bold">¥</text>
+  </g>
+
+  <!-- 底部极简总结：小字，锐利 -->
+  <line x1="120" y1="505" x2="280" y2="505" stroke="#455A55" stroke-width="0.8"/>
+  <text x="200" y="535" text-anchor="middle" font-size="12" fill="#9AB5A0" letter-spacing="3" font-weight="300">
+    所谓实体，不过是资本的皮囊
+  </text>
+
+  <!-- 底部极简线条收尾 -->
+  <line x1="180" y1="555" x2="220" y2="555" stroke="#5A7A6A" stroke-width="1"/>
+
+</svg>
+        </div>
+        <div class="lightbox-toolbar">
+            <button id="lightboxDownloadPNG">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                下载 PNG
+            </button>
+            <button id="lightboxDownloadSVG">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                下载 SVG
+            </button>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            var wrapper = document.getElementById('svgWrapper');
+            var fade = document.getElementById('svgFade');
+            var lightbox = document.getElementById('lightbox');
+            var lightboxContent = document.getElementById('lightboxContent');
+            var closeBtn = document.getElementById('lightboxClose');
+            var downloadOriginal = document.getElementById('downloadOriginal');
+            var lightboxDownloadPNG = document.getElementById('lightboxDownloadPNG');
+            var lightboxDownloadSVG = document.getElementById('lightboxDownloadSVG');
+            var svg = wrapper.querySelector(':scope > svg');
+
+            // ---------- 检测 SVG 是否被裁切，显示底部渐变 ----------
+            function checkOverflow() {
+                if (!svg) return;
+                var wrapperRect = wrapper.getBoundingClientRect();
+                var svgRect = svg.getBoundingClientRect();
+                if (svgRect.bottom > wrapperRect.bottom + 2) {
+                    fade.classList.add('visible');
+                    wrapper.classList.add('zoomable');
+                } else {
+                    fade.classList.remove('visible');
+                    wrapper.classList.remove('zoomable');
+                }
+            }
+            checkOverflow();
+            window.addEventListener('resize', checkOverflow);
+
+            // ---------- 获取 SVG 序列化字符串 ----------
+            function getSvgString() {
+                var clone = svg.cloneNode(true);
+                return new XMLSerializer().serializeToString(clone);
+            }
+
+            // ---------- 打开 Lightbox ----------
+            function openLightbox() {
+                var srcSvg = wrapper.querySelector(':scope > svg');
+                var dstSvg = lightboxContent.querySelector(':scope > svg');
+                if (srcSvg && dstSvg) {
+                    dstSvg.parentNode.replaceChild(srcSvg.cloneNode(true), dstSvg);
+                }
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            // ---------- 关闭 Lightbox ----------
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+            }
+
+            // ---------- 获取 SVG 原生尺寸 ----------
+            function getSVGNativeSize() {
+                var viewBox = svg.getAttribute('viewBox');
+                if (viewBox) {
+                    var parts = viewBox.trim().split(/[\s,]+/);
+                    return { width: parseFloat(parts[2]), height: parseFloat(parts[3]) };
+                }
+                var w = svg.getAttribute('width');
+                var h = svg.getAttribute('height');
+                if (w && h) {
+                    return { width: parseFloat(w), height: parseFloat(h) };
+                }
+                var rect = svg.getBoundingClientRect();
+                return { width: rect.width, height: rect.height };
+            }
+
+            // ---------- 下载 PNG ----------
+            function downloadPNG() {
+                var svgString = getSvgString();
+                var svgBlob = new Blob([svgString], { type: 'image/svg+xml' });
+                var url = URL.createObjectURL(svgBlob);
+                var img = new Image();
+                img.onload = function() {
+                    var size = getSVGNativeSize();
+                    var scale = 2;
+                    var canvas = document.createElement('canvas');
+                    canvas.width = size.width * scale;
+                    canvas.height = size.height * scale;
+                    var ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                    canvas.toBlob(function(blob) {
+                        var pngUrl = URL.createObjectURL(blob);
+                        var a = document.createElement('a');
+                        a.href = pngUrl;
+                        a.download = 'card.png';
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                        setTimeout(function() { URL.revokeObjectURL(pngUrl); }, 1000);
+                    }, 'image/png');
+                    URL.revokeObjectURL(url);
+                };
+                img.src = url;
+            }
+
+            // ---------- 下载 SVG ----------
+            function downloadSvg() {
+                var svgString = getSvgString();
+                var blob = new Blob([svgString], { type: 'image/svg+xml' });
+                var url = URL.createObjectURL(blob);
+                var a = document.createElement('a');
+                a.href = url;
+                a.download = 'card.svg';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                setTimeout(function() { URL.revokeObjectURL(url); }, 1000);
+            }
+
+            // ---------- 事件绑定 ----------
+            wrapper.addEventListener('click', function(e) {
+                if (e.target.closest('.zoom-badge')) return;
+                openLightbox();
+            });
+
+            wrapper.querySelector('.zoom-badge').addEventListener('click', function(e) {
+                e.stopPropagation();
+                openLightbox();
+            });
+
+            closeBtn.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) closeLightbox();
+            });
+
+            lightboxContent.addEventListener('click', function(e) {
+                if (e.target === lightboxContent || e.target.tagName === 'svg') closeLightbox();
+            });
+
+            downloadOriginal.addEventListener('click', function(e) {
+                e.stopPropagation();
+                downloadPNG();
+            });
+
+            lightboxDownloadPNG.addEventListener('click', downloadPNG);
+            lightboxDownloadSVG.addEventListener('click', downloadSvg);
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                    closeLightbox();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
